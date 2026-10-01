@@ -131,7 +131,7 @@ function App() {
             <Sparkles size={25} />
           </span>
           <span>
-            小小发现家<small>LITTLE DISCOVERERS</small>
+            小小发现家<small>STEAM EXPLORER</small>
           </span>
         </a>
         <nav aria-label="主导航">
@@ -165,7 +165,7 @@ function App() {
             <div className="hero-copy">
               <span className="eyebrow">
                 <span />
-                给好奇的小脑袋，一个大世界
+                观察 · 实验 · 发现
               </span>
               <h1>
                 世界这么大，
@@ -180,9 +180,9 @@ function App() {
                 <span className="title-dot">。</span>
               </h1>
               <p className="hero-description">
-                转一转地球，搭一座小桥，给光涂上颜色。
+                转一转地球，搭一座小桥，看看光的颜色。
                 <br />
-                在看得见、摸得着的探索里，让好奇心发芽。
+                走近真实的物体，亲手发现身边的科学。
               </p>
               <div className="hero-actions">
                 <button
@@ -230,13 +230,13 @@ function App() {
             <div className="island-wrap">
               <div className="island-wash" />
               <div className="island-label">
-                <span className="tiny-sun">✳</span>好奇心，准备出发！
+                <span className="tiny-sun">✳</span>SCIENCE IN YOUR HANDS
               </div>
               <Suspense
                 fallback={
                   <div className="canvas-loading">
                     <LoaderCircle />
-                    小岛正在醒来…
+                    展台正在准备…
                   </div>
                 }
               >
@@ -251,7 +251,7 @@ function App() {
                 />
               </Suspense>
               <span className="island-note">
-                <span>↖</span> 点一点小岛，也能开始探索
+                <span>↖</span> 点击展台上的装置，开始探索
               </span>
               <span className="floating-spark spark-one">✧</span>
               <span className="floating-spark spark-two">✦</span>

@@ -353,7 +353,7 @@ test("rapid navigation and replay leave only the current clip playing", async ({
       page.evaluate(() =>
         window.__audioHarness.records
           .filter((record) => !record.paused)
-          .map((record) => record.src),
+          .map((record) => new URL(record.src, location.origin).pathname),
       ),
     )
     .toEqual(["/audio/water-cycle-4-5-0.mp3"]);
@@ -374,7 +374,7 @@ test("rapid navigation and replay leave only the current clip playing", async ({
       page.evaluate(() =>
         window.__audioHarness.records
           .filter((record) => !record.paused)
-          .map((record) => record.src),
+          .map((record) => new URL(record.src, location.origin).pathname),
       ),
     )
     .toEqual(["/audio/water-cycle-4-5-1.mp3"]);

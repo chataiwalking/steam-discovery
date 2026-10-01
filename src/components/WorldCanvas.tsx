@@ -1,15 +1,19 @@
 import {
   Component,
+  useCallback,
   Suspense,
   lazy,
   useEffect,
   useLayoutEffect,
+  useMemo,
   useState,
   type ReactNode,
 } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrthographicCamera } from "three";
+import { ACESFilmicToneMapping, OrthographicCamera, PCFSoftShadowMap, SRGBColorSpace } from "three";
+import { Environment } from "@react-three/drei";
 import type { WorldCanvasProps } from "../types";
+import { SceneHtmlPortalContext } from "./SceneHtml";
 
 const scenes = {
   island: lazy(() => import("../scenes/Island")),
@@ -233,7 +237,19 @@ function ContextGuard({ onLost }: { onLost: () => void }) {
   return null;
 }
 
+function SceneReady({onReady}:{onReady:()=>void}) {
+  useEffect(()=>{onReady()},[onReady]);
+  return null;
+}
+
 export default function WorldCanvas(props: WorldCanvasProps) {
+  const [readyLesson,setReadyLesson]=useState<string|null>(null);
+  const sceneReady=useCallback(()=>setReadyLesson(props.lesson),[props.lesson]);
+  const [overlayTarget, setOverlayTarget] = useState<HTMLDivElement | null>(null);
+  const overlayPortal = useMemo(
+    () => (overlayTarget ? { current: overlayTarget } : null),
+    [overlayTarget],
+  );
   const [hidden, setHidden] = useState(document.hidden);
   useEffect(() => {
     const update = () => setHidden(document.hidden);
@@ -255,45 +271,75 @@ export default function WorldCanvas(props: WorldCanvasProps) {
   const Scene = scenes[props.lesson];
   if (!available) return <Fallback lesson={props.lesson} />;
   return (
-    <CanvasBoundary lesson={props.lesson} key={props.lesson}>
-      <Canvas
-        orthographic
-        camera={{ position: [6, 8, 12], zoom: 50, near: 0.1, far: 100 }}
-        dpr={[1, 1.5]}
-        shadows
-        frameloop={sceneProps.paused ? "demand" : "always"}
-        gl={{
-          alpha: true,
-          antialias: true,
-          powerPreference: "high-performance",
-        }}
-        style={{ width: "100%", height: "100%", touchAction: "pan-y" }}
-        fallback={<Fallback lesson={props.lesson} />}
-        aria-label={`${names[props.lesson]}三维互动场景`}
-      >
-        <CameraFit island={props.lesson === "island"} lesson={props.lesson} />
-        <ContextGuard onLost={() => setAvailable(false)} />
-        {props.lesson !== "day-night" && (
-          <>
-            <ambientLight intensity={1} />
-            <hemisphereLight args={["#fff5dd", "#c6c4aa", 1.1]} />
-            <directionalLight
-              position={[-3, 8, 6]}
-              intensity={2.1}
-              castShadow
-              shadow-mapSize={[1024, 1024]}
-              shadow-camera-left={-8}
-              shadow-camera-right={8}
-              shadow-camera-top={8}
-              shadow-camera-bottom={-8}
-              shadow-normalBias={0.05}
-            />
-          </>
-        )}
-        <Suspense fallback={null}>
-          <Scene {...sceneProps} />
-        </Suspense>
-      </Canvas>
-    </CanvasBoundary>
+    <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      {readyLesson!==props.lesson&&<div className="scene-loading-overlay" role="status"><span className="scene-loading-ring"/>正在布置科学展台…</div>}
+      <div
+        ref={setOverlayTarget}
+        data-scene-overlays=""
+        style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1 }}
+      />
+      {overlayPortal && (
+        <CanvasBoundary lesson={props.lesson} key={props.lesson}>
+          <Canvas
+            orthographic
+            camera={{ position: [6, 8, 12], zoom: 50, near: 0.1, far: 100 }}
+            dpr={[1, 1.5]}
+            shadows={{ type: PCFSoftShadowMap }}
+            frameloop={sceneProps.paused ? "demand" : "always"}
+            gl={{
+              alpha: false,
+              toneMapping: ACESFilmicToneMapping,
+              toneMappingExposure: 1.02,
+              outputColorSpace: SRGBColorSpace,
+              antialias: true,
+              powerPreference: "high-performance",
+            }}
+            style={{ width: "100%", height: "100%", touchAction: "pan-y" }}
+            fallback={<Fallback lesson={props.lesson} />}
+            aria-label={`${names[props.lesson]}三维互动场景`}
+          >
+            <SceneHtmlPortalContext.Provider value={overlayPortal}>
+              <CameraFit island={props.lesson === "island"} lesson={props.lesson} />
+              <ContextGuard onLost={() => setAvailable(false)} />
+              <color attach="background" args={[props.lesson === "day-night" ? "#141e29" : "#d0d5d5"]} />
+              <Suspense fallback={null}>
+                <Environment files={`${import.meta.env.BASE_URL}textures/studio-small-09.hdr`}
+                  environmentIntensity={props.lesson === "day-night" ? 0 : 0.65} />
+              </Suspense>
+              {props.lesson !== "day-night" && (
+                <>
+                  <ambientLight intensity={0.15} />
+                  <hemisphereLight args={["#e7f0f4", "#6b6b64", 0.5]} />
+                  <directionalLight
+                    position={[-4, 9, 5]}
+                    intensity={2.4}
+                    castShadow
+                    shadow-mapSize={[1536, 1536]}
+                    shadow-camera-left={-8}
+                    shadow-camera-right={8}
+                    shadow-camera-top={8}
+                    shadow-camera-bottom={-8}
+                    shadow-normalBias={0.025}
+                    shadow-bias={-0.0001}
+                    shadow-radius={3}
+                  />
+                </>
+              )}
+              {props.lesson !== "day-night" && (
+                <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]}
+                  position={[0, props.lesson === "island" ? -1.87 : -0.46, 0]}>
+                  <planeGeometry args={[200, 200]} />
+                  <meshStandardMaterial color="#c4cbcb" roughness={0.94} />
+                </mesh>
+              )}
+              <Suspense fallback={null}>
+                <Scene {...sceneProps} />
+                <SceneReady onReady={sceneReady}/>
+              </Suspense>
+            </SceneHtmlPortalContext.Provider>
+          </Canvas>
+        </CanvasBoundary>
+      )}
+    </div>
   );
 }

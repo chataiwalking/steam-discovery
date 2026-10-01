@@ -1,8 +1,10 @@
 # 小小发现家 · STEAM Discovery
 
-面向2–8岁孩子的三维互动探索小岛。转动地球、追踪水滴、拨动齿轮、搭建桥梁、混合彩光和分类计数，配合普通话短句讲解认识世界。
+面向2–8岁孩子的写实三维科学探索馆。转动地球、追踪水滴、拨动齿轮、搭建桥梁、混合彩光和分类计数，配合普通话短句讲解认识世界。
 
 [在线探索](https://chataiwalking.github.io/steam-discovery/) · [GitHub仓库](https://github.com/chataiwalking/steam-discovery)
+
+当前视觉采用真实地理/云层贴图、摄影棚HDR环境光与PBR材质，实木展台、金属齿轮、木桥和光学装置均由Three.js实时绘制。课程卡预览由真实场景截图生成，见 `node scripts/generate-previews.mjs`。资源许可见 [ASSETS.md](ASSETS.md)。
 
 ## 内容
 
@@ -44,7 +46,7 @@ npm run preview
 
 ## 免费离线配音
 
-使用Kokoro中文专用模型 `hexgrad/Kokoro-82M-v1.1-zh`，音色 `zf_001`、CPU、速度0.9。默认系统Python 3.14不适合此依赖组合，使用独立Python 3.12环境。
+使用Kokoro中文专用模型 `hexgrad/Kokoro-82M-v1.1-zh`，音色 `zf_001`、CPU、速度0.9。童声风格在原始WAV合成后提高3.5半音并单独补偿语速，保持讲解节奏；详细参数见public/audio/generation.json。默认系统Python 3.14不适合此依赖组合，使用独立Python 3.12环境。
 
 ```bash
 uv venv --python 3.12 .venv-tts

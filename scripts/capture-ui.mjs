@@ -47,6 +47,7 @@ page.on("requestfailed", (request) =>
 async function sceneReady(selector) {
   await page.locator(selector).waitFor({ state: "visible" });
   await page.waitForLoadState("networkidle");
+  if(selector.includes("island"))await page.getByRole("button",{name:"探索昼夜的秘密",exact:true}).waitFor({state:"visible",timeout:90000});
   if (selector.includes("experiment")) {
     const id = new URL(page.url()).hash.match(/lesson\/([\w-]+)/)?.[1];
     const text = id === "day-night" ? "地球自转 · 找找小屋的白天" : "红 + 绿 + 蓝 = 白光";

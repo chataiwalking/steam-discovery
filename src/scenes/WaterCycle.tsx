@@ -1,133 +1,99 @@
-import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import { Group } from "three";
-import {
-  Ball,
-  Cloud,
-  Rod,
-  Tree,
-  WaterDrop,
-  SceneLabel,
-  ToyPlatform,
-  useSceneClock,
-  type SceneProps,
-} from "./shared";
+import { useEffect, useMemo, useRef } from 'react';
+import { useFrame } from '@react-three/fiber';
+import { Color, Float32BufferAttribute, Group, PlaneGeometry } from 'three';
+import { Cloud, Cube, Rod, Tree, SceneLabel, useSceneClock, type SceneProps } from './shared';
+import { PhysicalMaterial, surfaceTexture } from './materials';
+
+function terrainHeight(x: number, z: number) {
+  const lakeDistance = Math.sqrt(((x + .65) / 2.1) ** 2 + ((z - .35) / 1.22) ** 2);
+  const shore = Math.max(-.03, Math.min(.28, (lakeDistance - .88) * .5));
+  const mountain = Math.exp(-((x - 1.15) ** 2 / 2.4 + (z + 1.45) ** 2 / .42)) * 1.35
+    + Math.exp(-((x + 1.25) ** 2 / .9 + (z + 1.7) ** 2 / .24)) * .72;
+  const detail = (Math.sin(x * 11 + z * 5) * Math.cos(z * 8) * .035 + Math.sin(x * 27 - z * 19) * .017) * Math.min(1, Math.max(0, lakeDistance - .8));
+  return shore + mountain * (.8 + Math.sin(x * 5 + z * 4) * .16) + detail;
+}
+function Landscape() {
+  const geometry = useMemo(() => {
+    const geo = new PlaneGeometry(6.5, 4.6, 96, 68);
+    geo.rotateX(-Math.PI / 2);
+    const p = geo.attributes.position;
+    const colors = [];
+    for (let i = 0; i < p.count; i++) {
+      const x = p.getX(i), z = p.getZ(i), h = terrainHeight(x, z);
+      p.setY(i, h);
+      const slope = Math.abs(terrainHeight(x + .045, z) - h) + Math.abs(terrainHeight(x, z + .045) - h);
+      const color = new Color(h > .72 || slope > .06 ? '#777d75' : h < .13 ? '#c3b99b' : '#69765b');
+      color.multiplyScalar(.9 + Math.sin(x * 23 + z * 12) * .07);
+      colors.push(color.r, color.g, color.b);
+    }
+    geo.setAttribute('color', new Float32BufferAttribute(colors, 3));
+    geo.computeVertexNormals();
+    return geo;
+  }, []);
+  useEffect(() => () => geometry.dispose(), [geometry]);
+  return <group>
+    <Cube kind="stone" color="#747c77" position={[0, -.16, 0]} scale={[6.5, .28, 4.6]} />
+    <mesh geometry={geometry} castShadow receiveShadow>
+      <meshStandardMaterial vertexColors roughness={.96} map={surfaceTexture('ground')}
+        bumpMap={surfaceTexture('stone')} bumpScale={.07} />
+    </mesh>
+    <Cube kind="metal" color="#3f4e55" position={[0, -.34, 0]} scale={[6.65, .085, 4.75]} />
+  </group>;
+}
 
 export default function WaterCycle(props: SceneProps) {
   const drops = useRef<Group>(null);
   const time = useSceneClock(props);
-  const stage = props.demo
-    ? props.narrationActive
-      ? Math.min(3, Math.floor(props.narrationTime / 3))
-      : 0
-    : props.state.waterStage;
+  const waterMap = useMemo(() => {
+    const texture = surfaceTexture('water').clone(); texture.needsUpdate = true; return texture;
+  }, []);
+  useEffect(() => () => waterMap.dispose(), [waterMap]);
+  const stage = props.demo ? props.narrationActive ? Math.min(3, Math.floor(props.narrationTime / 3)) : 0 : props.state.waterStage;
   useFrame(() => {
+    waterMap.offset.set(time.current * .012, time.current * .007);
     if (!drops.current) return;
     drops.current.children.forEach((child, i) => {
-      const progress = (time.current * 0.42 + i / 10) % 1;
-      child.position.y =
-        stage === 1 ? 0.25 + progress * 2.45 : 2.7 - progress * 2.45;
-      child.position.x =
-        stage === 1
-          ? -1.4 + Math.sin(progress * Math.PI) * 0.22 + (i % 3) * 0.28
-          : 0.4 + (i % 4) * 0.4;
+      const progress = (time.current * (stage === 1 ? .23 : .75) + i / 20) % 1;
+      child.position.y = stage === 1 ? .3 + progress * 2.5 : 2.9 - progress * 2.75;
+      child.position.x = stage === 1 ? -1.6 + Math.sin(progress * Math.PI) * .25 : -.1 + (i % 5) * .29;
     });
   });
-  return (
-    <group>
-      <ToyPlatform radius={3.6} />
-      <Rod
-        color="#72bdc7"
-        position={[-0.8, 0.04, 0.2]}
-        scale={[2.3, 0.08, 1.65]}
-      />
-      <Rod
-        color="#91d2d6"
-        position={[-0.8, 0.09, 0.2]}
-        scale={[2, 0.015, 1.45]}
-      />
-      {[0.45, 0.8, 1.2].map((r, i) => (
-        <mesh
-          key={i}
-          position={[-0.8, 0.11 + i * 0.002, 0.2]}
-          rotation={[-Math.PI / 2, 0, 0]}
-        >
-          <ringGeometry args={[r, r + 0.018, 64]} />
-          <meshBasicMaterial color="#c6eded" />
-        </mesh>
-      ))}
-      <group
-        position={[-2.4, 3.3, -0.7]}
-        onClick={(e) => {
-          e.stopPropagation();
-          props.onAction?.({ type: "water", stage: 1 });
-        }}
-      >
-        <Ball color="#ffcf69" scale={0.48} />
-        {Array.from({ length: 8 }, (_, i) => (
-          <group key={i} rotation={[0, 0, (Math.PI * i) / 4]}>
-            <Rod
-              color="#ffcf69"
-              position={[0, 0.68, 0]}
-              scale={[0.022, 0.2, 0.022]}
-            />
-          </group>
-        ))}
-      </group>
-      <group
-        onClick={(e) => {
-          e.stopPropagation();
-          props.onAction?.({ type: "water", stage: stage === 2 ? 3 : 2 });
-        }}
-      >
-        <Cloud
-          position={[0.8, 3, -0.3]}
-          scale={stage >= 2 ? 1.05 : 0.82}
-          rain={stage === 3}
-        />
-      </group>
-      <group ref={drops} visible={stage === 1 || stage === 3}>
-        {Array.from({ length: 10 }, (_, i) => (
-          <group key={i} position={[0, 0, 0.3 + (i % 3) * 0.35]}>
-            {stage === 1 ? (
-              <Ball color="#f0ffff" scale={0.065} />
-            ) : (
-              <WaterDrop scale={0.14} />
-            )}
-          </group>
-        ))}
-      </group>
-      <group
-        onClick={(e) => {
-          e.stopPropagation();
-          props.onAction?.({ type: "water", stage: 0 });
-        }}
-      >
-        <WaterDrop position={[-0.9, 0.5, 1.5]} scale={0.64} />
-      </group>
-      <Tree position={[2.3, 0.03, 0.3]} scale={1.05} />
-      <Tree position={[2.3, 0.03, -1.2]} scale={0.7} />
-      <Tree position={[1.3, 0.03, -2]} scale={0.55} color="#aac27d" />
-      <Ball
-        color="#d0c6a6"
-        position={[2.1, 0.19, 1.4]}
-        scale={[0.35, 0.19, 0.24]}
-      />
-      <SceneLabel position={[-0.8, -0.1, 2.65]}>
-        {
-          [
-            "小水滴在这里",
-            "蒸发 ↑ 水变成水蒸气",
-            "凝结 · 小水滴聚成云",
-            "降雨 ↓ 水回到地面",
-          ][stage]
-        }
-      </SceneLabel>
-      {stage === 1 && (
-        <SceneLabel position={[-2.3, 2, 0.4]} color="#668b94">
-          小点只表示路径 · 水蒸气看不见
-        </SceneLabel>
-      )}
+  return <group>
+    <Landscape />
+    <group onClick={e => { e.stopPropagation(); props.onAction?.({ type: 'water', stage: 0 }); }}>
+      <mesh position={[-.65, .1, .35]} rotation={[-Math.PI / 2, 0, 0]} scale={[2.02, 1.15, 1]} receiveShadow>
+        <circleGeometry args={[1, 100]} />
+        <meshPhysicalMaterial color="#315c63" roughness={.13} metalness={.16} clearcoat={1}
+          clearcoatRoughness={.07} envMapIntensity={1.1} bumpMap={waterMap} bumpScale={.045} />
+      </mesh>
     </group>
-  );
+    <group position={[-2.4, 3.3, -.7]} onClick={e => {
+      e.stopPropagation(); props.onAction?.({ type: 'water', stage: 1 });
+    }}>
+      <mesh><sphereGeometry args={[.39, 40, 32]} /><meshBasicMaterial color="#ffe2a1" /></mesh>
+    </group>
+    <group onClick={e => {
+      e.stopPropagation(); props.onAction?.({ type: 'water', stage: stage === 2 ? 3 : 2 });
+    }}>
+      <Cloud position={[.55, 3, -.3]} scale={stage >= 2 ? 1.2 : .85} rain={stage === 3} />
+    </group>
+    <group ref={drops} visible={stage === 1 || stage === 3}>
+      {Array.from({ length: stage === 1 ? 10 : 20 }, (_, i) => <group key={i} position={[0, 0, -.15 + (i % 4) * .23]}>
+        {stage === 1 ? <mesh><sphereGeometry args={[.024, 8, 6]} /><meshBasicMaterial color="#d8a452" /></mesh>
+          : <mesh rotation={[0, 0, -.05]}><cylinderGeometry args={[.009, .008, .12, 5]} /><meshBasicMaterial color="#9dc9d1" transparent opacity={.7} /></mesh>}
+      </group>)}
+    </group>
+    <Tree position={[2.45, .23, .2]} scale={1.05} />
+    <Tree position={[2.55, .3, -1.2]} scale={.78} />
+    <Tree position={[1.95, .27, 1.2]} scale={.61} />
+    {[[-2.7, .19, .9, .21], [1.75, .2, 1.38, .33], [2.33, .3, -.5, .24], [-1.6, .27, 1.8, .24]].map(([x,y,z,s], i) =>
+      <mesh key={i} position={[x,y,z]} rotation={[i*.43,i*.97,.2]} scale={[s,s*.7,s*.86]} castShadow>
+        <icosahedronGeometry args={[1, 1]} /><PhysicalMaterial kind="stone" color="#9b9d90" />
+      </mesh>)}
+    <Rod kind="metal" color="#768a90" position={[-3.02, .05, 1.8]} scale={[.018,.25,.018]} />
+    <SceneLabel position={[-.8, -.1, 2.65]}>
+      {['小水滴在这里', '蒸发 ↑ 水变成水蒸气', '凝结 · 小水滴聚成云', '降雨 ↓ 水回到地面'][stage]}
+    </SceneLabel>
+    {stage === 1 && <SceneLabel position={[-2.3, 2, .4]} color="#b9dae5">小点只表示路径 · 水蒸气看不见</SceneLabel>}
+  </group>;
 }

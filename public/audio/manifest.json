@@ -1,326 +1,380 @@
 {
   "day-night-2-3-0": {
     "file": "audio/day-night-2-3-0.mp3",
-    "duration": 7.25,
+    "duration": 7.2215,
     "textHash": "0ac23f224de301ca3b9bd751ca5293cc386fe4f1d7dc19fc24815b01b53e0f45",
-    "text": "圆圆的地球上有一座小屋。太阳照到小屋的时候，那里就是白天啦。"
+    "text": "圆圆的地球上有一座小屋。太阳照到小屋的时候，那里就是白天啦。",
+    "audioHash": "91b27ae5780fafcf18a7187df9a68c6457f655e4ca80e20dc0ac7cc3a2a491b3"
   },
   "day-night-2-3-1": {
     "file": "audio/day-night-2-3-1.mp3",
-    "duration": 7.375,
+    "duration": 7.347,
     "textHash": "eea11901fb044b8bd100b1e06c2fb8aab645ae02084047a1806b12f42d8a4cda",
-    "text": "点一点，让地球慢慢转。小屋转到太阳照不到的那一面，那里就到了黑夜。"
+    "text": "点一点，让地球慢慢转。小屋转到太阳照不到的那一面，那里就到了黑夜。",
+    "audioHash": "dba397bf18ced0fce03b4f8927854f8c9abbcdcd587d8ba86b5e94915a0ecbe8"
   },
   "day-night-2-3-2": {
     "file": "audio/day-night-2-3-2.mp3",
-    "duration": 7.775,
+    "duration": 7.748,
     "textHash": "4b9e80d03345927958dd6cb3486d22bc77221c47ec792462e278e0859df16c8a",
-    "text": "小屋跟着地球转，白天和黑夜轮流来。再转一转，找找小屋的下一个白天。"
+    "text": "小屋跟着地球转，白天和黑夜轮流来。再转一转，找找小屋的下一个白天。",
+    "audioHash": "a17886783aeb2c92db76af0b126e6d67a0a3efb8c4b6eb08a8a0bd29891fbb34"
   },
   "day-night-4-5-0": {
     "file": "audio/day-night-4-5-0.mp3",
-    "duration": 7.95,
+    "duration": 7.9223,
     "textHash": "63c56553b848b3bec1fb2658b6c601fd6f6f376948889cbae02b1096ba9e3a65",
-    "text": "太阳一直照着地球的一面。地球会自己转动，这种运动有个名字，叫自转。"
+    "text": "太阳一直照着地球的一面。地球会自己转动，这种运动有个名字，叫自转。",
+    "audioHash": "ef2b778ed92a75c90fc21d6a3db4a1fbf27d08880cd3e6a0e9221ed14f9b12f2"
   },
   "day-night-4-5-1": {
     "file": "audio/day-night-4-5-1.mp3",
-    "duration": 8.125,
+    "duration": 8.0964,
     "textHash": "6d069a35a8473ccba2e2670563e16dc33e677ca89b98672f5f5e8b5f96a9053a",
-    "text": "让小屋跟着地球转，留意它什么时候变暗。转到背着太阳的一面，就到了黑夜。"
+    "text": "让小屋跟着地球转，留意它什么时候变暗。转到背着太阳的一面，就到了黑夜。",
+    "audioHash": "6dc054fb8f35cb60b5a3a3377d1e81b3eef899fde17d7b51cc3930fa30741a75"
   },
   "day-night-4-5-2": {
     "file": "audio/day-night-4-5-2.mp3",
-    "duration": 7.85,
+    "duration": 7.821,
     "textHash": "5fd1ce627b34ff7daa1356ac031c345f29a6d8b3c94270591d97b7eb69705198",
-    "text": "太阳没有在这里绕着小屋跑。是地球自转，带着小屋依次经过白天和黑夜。"
+    "text": "太阳没有在这里绕着小屋跑。是地球自转，带着小屋依次经过白天和黑夜。",
+    "audioHash": "0feb915553128c80053ce1fe1f91bf1f9f3b04fb0049b6d362b7e05ba21876eb"
   },
   "day-night-6-8-0": {
     "file": "audio/day-night-6-8-0.mp3",
-    "duration": 8.675,
+    "duration": 8.6472,
     "textHash": "1a95be9774f24db2d70dddf11f3a1eb2c6a0c8c78313f2f5544b0fd714216475",
-    "text": "地球大约每二十四小时自转一圈。对大多数地方来说，昼夜随着自转交替出现。"
+    "text": "地球大约每二十四小时自转一圈。对大多数地方来说，昼夜随着自转交替出现。",
+    "audioHash": "c87f768fba56876d5cefb436f8b2bc134bbc4853bbe0106f3a4a2dadd36f05b1"
   },
   "day-night-6-8-1": {
     "file": "audio/day-night-6-8-1.mp3",
-    "duration": 8.125,
+    "duration": 8.0964,
     "textHash": "3012cfcf450f2cd82848870e84e269da91ce12920913e3e1a2b9660296614c83",
-    "text": "先猜一猜，小屋转到哪里才会迎来白天？作出预测，再转动地球检查你的想法。"
+    "text": "先猜一猜，小屋转到哪里才会迎来白天？作出预测，再转动地球检查你的想法。",
+    "audioHash": "eb34c55c72fd3fcc1a59aefdd63b077b93bccb46d189926fde81923a6763f7b5"
   },
   "day-night-6-8-2": {
     "file": "audio/day-night-6-8-2.mp3",
-    "duration": 8.6,
+    "duration": 8.5704,
     "textHash": "58c8d384503ccf17ebb46cf6342be8535c8fc230330f310e5c7cf718f55434e5",
-    "text": "小屋转进朝向太阳的一面，就迎来白天。继续观察一圈，用看到的变化检验预测。"
+    "text": "小屋转进朝向太阳的一面，就迎来白天。继续观察一圈，用看到的变化检验预测。",
+    "audioHash": "7ebd266d0b00f8103aa49797be4d994f3644c3fbda169c7ab062fa9c03cf3867"
   },
   "water-cycle-2-3-0": {
     "file": "audio/water-cycle-2-3-0.mp3",
-    "duration": 7.75,
+    "duration": 7.7198,
     "textHash": "a107f665423b3fb20e10f7242c4b5561d87a9d217c22cf02322e420beb0d3dd9",
-    "text": "这里有蓝蓝的水，还有天上的云。云里有许许多多很小的水滴，有时也有小冰晶。"
+    "text": "这里有蓝蓝的水，还有天上的云。云里有许许多多很小的水滴，有时也有小冰晶。",
+    "audioHash": "f5aba4b10bcdee1393f0f35a6f3dd4a23db75f36906fa1ae5564d6c1db5ae080"
   },
   "water-cycle-2-3-1": {
     "file": "audio/water-cycle-2-3-1.mp3",
-    "duration": 8.4,
+    "duration": 8.3718,
     "textHash": "fefa0c875fda708cbb18f07b1c9a354653beb00f3768be989a05b161acc3cbc0",
-    "text": "点一点，看看水的旅行。水能变成看不见的水蒸气，画面上的小点是在给我们指路。"
+    "text": "点一点，看看水的旅行。水能变成看不见的水蒸气，画面上的小点是在给我们指路。",
+    "audioHash": "e09c228dfaad6d61f80098f0a8ddc93ec1feb28e544453781117b552b1adb6c2"
   },
   "water-cycle-2-3-2": {
     "file": "audio/water-cycle-2-3-2.mp3",
-    "duration": 7.575,
+    "duration": 7.5456,
     "textHash": "7c397921c69cd2af113c48a586975571c03bfcd389156c3958834b19a11188bc",
-    "text": "小雨滴从云里落下来，又回到地面。点一点小雨，看看它们在哪里集合。"
+    "text": "小雨滴从云里落下来，又回到地面。点一点小雨，看看它们在哪里集合。",
+    "audioHash": "0d9cbf8a3514c2bc6090d34e47b6ff1b4c3a65decbca822293d204136132ae58"
   },
   "water-cycle-4-5-0": {
     "file": "audio/water-cycle-4-5-0.mp3",
-    "duration": 8.275,
+    "duration": 8.2463,
     "textHash": "a503c666641f65f8f7fd3f01e0b0f5c24c3c2a241c5c9820a85bee3b4ce971e8",
-    "text": "水面上的水会变成水蒸气，进入空气，这叫蒸发。真实的水蒸气是看不见的。"
+    "text": "水面上的水会变成水蒸气，进入空气，这叫蒸发。真实的水蒸气是看不见的。",
+    "audioHash": "5b5be520ef45e02aafb4804b387e19ad70ad5de428c036556d8a1776e10fb60a"
   },
   "water-cycle-4-5-1": {
     "file": "audio/water-cycle-4-5-1.mp3",
-    "duration": 8.325,
+    "duration": 8.295,
     "textHash": "cdb04f2d86eeb2a22ef34374248e91f7762902a1824d774c83bb36268fd780fc",
-    "text": "让水先蒸发，再凝结成小水滴。云中的水滴长大到一定程度，就可能落成雨。"
+    "text": "让水先蒸发，再凝结成小水滴。云中的水滴长大到一定程度，就可能落成雨。",
+    "audioHash": "223f60fa6159aab0281c1d954f6c99946f11e7f73417c74c0e3b133447b9c4c5"
   },
   "water-cycle-4-5-2": {
     "file": "audio/water-cycle-4-5-2.mp3",
-    "duration": 8.525,
+    "duration": 8.498,
     "textHash": "7eaa16133e9dc8564efc0b1b5f5c7272c74fdd77abe217c573ba183aa33fe926",
-    "text": "水蒸气凝结成小水滴，雨水又回到地面。水在天空和地面之间，不停地旅行。"
+    "text": "水蒸气凝结成小水滴，雨水又回到地面。水在天空和地面之间，不停地旅行。",
+    "audioHash": "c1bf9ec2ace78746e8631bf377ee2c0395ef138cf562279e7bfd5909cdca9cfc"
   },
   "water-cycle-6-8-0": {
     "file": "audio/water-cycle-6-8-0.mp3",
-    "duration": 8.175,
+    "duration": 8.1451,
     "textHash": "4d4d4f586ba4e7bf6d21f1dd35fad72617a65c2303fcc3c217d66386ec91e67c",
-    "text": "太阳提供能量，帮助水蒸发。水蒸气遇到合适的冷却条件，会凝结成小水滴。"
+    "text": "太阳提供能量，帮助水蒸发。水蒸气遇到合适的冷却条件，会凝结成小水滴。",
+    "audioHash": "368c5791416b0a588b0e50837fcd980c98c495a7015eef9f8bbd479e483ce676"
   },
   "water-cycle-6-8-1": {
     "file": "audio/water-cycle-6-8-1.mp3",
-    "duration": 7.975,
+    "duration": 7.9465,
     "textHash": "431c2b3d0964fa6e041e08a19e1107beffc7602a8844a25bebaac0e7d32dd9d7",
-    "text": "从水面出发，给这段旅行排个顺序。先蒸发，再凝结，接下来会发生什么呢？"
+    "text": "从水面出发，给这段旅行排个顺序。先蒸发，再凝结，接下来会发生什么呢？",
+    "audioHash": "44dc6f0d2671cdb08686857f7fe30e89927cb47c308c2385573004de05d9c366"
   },
   "water-cycle-6-8-2": {
     "file": "audio/water-cycle-6-8-2.mp3",
-    "duration": 8.875,
+    "duration": 8.8458,
     "textHash": "6895a0dadfd41d2208182c64c39a15a058d04729b70feef14f4cc7cf6e44a6f2",
-    "text": "降雨把水带回地面，水还能继续流动或渗入地下。我们刚才追踪的是其中一条路线。"
+    "text": "降雨把水带回地面，水还能继续流动或渗入地下。我们刚才追踪的是其中一条路线。",
+    "audioHash": "b15bcd6816aecf9515d62971dd5ea98158bfa24278d5aa2063e954a0baecbcc2"
   },
   "gears-2-3-0": {
     "file": "audio/gears-2-3-0.mp3",
-    "duration": 7.25,
+    "duration": 7.2215,
     "textHash": "3ceb1d22ea8e7011401193812645d3d102b2df9dc0be65139c272376f9d48b66",
-    "text": "这两个圆圆的轮子，边上长着一格一格的小齿。它们的名字叫齿轮。"
+    "text": "这两个圆圆的轮子，边上长着一格一格的小齿。它们的名字叫齿轮。",
+    "audioHash": "6f9492c5793df35e4b681e0bad3b51196ff34f8189d5d16ed52a7bc934cd95c6"
   },
   "gears-2-3-1": {
     "file": "audio/gears-2-3-1.mp3",
-    "duration": 7.8,
+    "duration": 7.7723,
     "textHash": "c6312d39bbff4a6d6cb043902e8d4f0978db36b26d6a75d90218af015569f482",
-    "text": "点一点，让齿轮动起来。一个齿轮推着另一个转，再点一下，让它们一起停住。"
+    "text": "点一点，让齿轮动起来。一个齿轮推着另一个转，再点一下，让它们一起停住。",
+    "audioHash": "11ad6d16a0ff42a5883f2f80e056d153a1ec55fcccef407c942526694b06484b"
   },
   "gears-2-3-2": {
     "file": "audio/gears-2-3-2.mp3",
-    "duration": 7.925,
+    "duration": 7.898,
     "textHash": "fac35e2a4a9fcde5e090efc880548ba23c2e7623435b5dfd5422e0326835cd92",
-    "text": "两只齿轮的小齿碰在一起，你推我，我也跟着动。再玩一次，看看它们怎样转。"
+    "text": "两只齿轮的小齿碰在一起，你推我，我也跟着动。再玩一次，看看它们怎样转。",
+    "audioHash": "31b3d3c948bafaa42549b0a4d64167326886e21c725a928f834a9c62eca0325b"
   },
   "gears-4-5-0": {
     "file": "audio/gears-4-5-0.mp3",
-    "duration": 7.826,
+    "duration": 7.7967,
     "textHash": "e7856605fde13d5d4342146adc1e9eda26c8bcaf3c1d3b0a8f7050885215d4b6",
-    "text": "两只齿轮的小齿互相咬合在一起。转动其中一只，就能带动旁边的齿轮。"
+    "text": "两只齿轮的小齿互相咬合在一起。转动其中一只，就能带动旁边的齿轮。",
+    "audioHash": "28953e6b2c55a3fbf2013b98dffce975d3ff011c823dfdb8d3f56ecb9e74cf34"
   },
   "gears-4-5-1": {
     "file": "audio/gears-4-5-1.mp3",
-    "duration": 7.975,
+    "duration": 7.9465,
     "textHash": "ec252972cfa3bb44f72dccfb6dbf71cc9f2dad205dc007c2058dd7e89b6eea52",
-    "text": "让齿轮转起来，再换一个方向。仔细看看，旁边那只齿轮会怎样改变方向呢？"
+    "text": "让齿轮转起来，再换一个方向。仔细看看，旁边那只齿轮会怎样改变方向呢？",
+    "audioHash": "eb16f0e81cb944a096fec1ac7597075d42b006b156d24e0f9c5d10bffdb3185b"
   },
   "gears-4-5-2": {
     "file": "audio/gears-4-5-2.mp3",
-    "duration": 8.35,
+    "duration": 8.3193,
     "textHash": "e37f424a2d5a05494ed64515e761dbcf20d89708c866edad0b8768528af43a8e",
-    "text": "这两只相邻的外齿轮，总是朝相反方向转。换一个方向试试，这个规律还在吗？"
+    "text": "这两只相邻的外齿轮，总是朝相反方向转。换一个方向试试，这个规律还在吗？",
+    "audioHash": "56c6363d64dc033226515a41b5c9e8c6f8e7cc9a723afca4db9bded382614e1d"
   },
   "gears-6-8-0": {
     "file": "audio/gears-6-8-0.mp3",
-    "duration": 8.1,
+    "duration": 8.0721,
     "textHash": "5a77ddf3d9d94594b6bfc1daf419e3bdbe817d2bf92eae14dbdecb821c494234",
-    "text": "齿轮不只会改变方向，还能改变转速。互相咬合的齿轮，齿数越多，转得越慢。"
+    "text": "齿轮不只会改变方向，还能改变转速。互相咬合的齿轮，齿数越多，转得越慢。",
+    "audioHash": "0c4e4fcf2089bdbdceda5be937302706c62f7a24952d93edcbaa5f6033e5512f"
   },
   "gears-6-8-1": {
     "file": "audio/gears-6-8-1.mp3",
-    "duration": 8.175,
+    "duration": 8.1451,
     "textHash": "456c3777884f7c3ba210a274b6ab04b0282b0ecc7fa462867b683883901be202",
-    "text": "把一只齿轮从十二齿换成二十四齿。另一只保持十二齿，观察谁转得更快。"
+    "text": "把一只齿轮从十二齿换成二十四齿。另一只保持十二齿，观察谁转得更快。",
+    "audioHash": "e6194135dfa94612405459f982c21bd4b68e80d5cd5acb8a196ee70def804284"
   },
   "gears-6-8-2": {
     "file": "audio/gears-6-8-2.mp3",
-    "duration": 8.475,
+    "duration": 8.4448,
     "textHash": "35fb205f99509cdc31fc9639bc011df697c151c1d7df3c54341db4c8b8703590",
-    "text": "十二齿齿轮转一圈，二十四齿齿轮只转半圈。齿数变成两倍，转速就变成一半。"
+    "text": "十二齿齿轮转一圈，二十四齿齿轮只转半圈。齿数变成两倍，转速就变成一半。",
+    "audioHash": "3b0033474d3d97ed5d62bfb5769e75b7f9709b4e2d4c0ffbced327f01bb5556e"
   },
   "bridge-2-3-0": {
     "file": "audio/bridge-2-3-0.mp3",
-    "duration": 8.075,
+    "duration": 8.0478,
     "textHash": "fcc23c32e82f50a81caf64382ced0716b6896cc3d981ef960bc54b42ac8149af",
-    "text": "小车想去河对岸，可是中间有一条河。我们一起放上桥面，把两边连接起来。"
+    "text": "小车想去河对岸，可是中间有一条河。我们一起放上桥面，把两边连接起来。",
+    "audioHash": "54555dc7c7eda78a3ba3d54f0ea0799826b82b772d103a1bc3ffe1592cfb150a"
   },
   "bridge-2-3-1": {
     "file": "audio/bridge-2-3-1.mp3",
-    "duration": 7.55,
+    "duration": 7.5212,
     "textHash": "135c8490b308889fd2a4bf50c66af35f680526f7d071027bc54d8e48bc2e9f44",
-    "text": "点一点，放好桥面。路连起来啦，再让小车出发，看看它怎样开到河对岸。"
+    "text": "点一点，放好桥面。路连起来啦，再让小车出发，看看它怎样开到河对岸。",
+    "audioHash": "43e87528ad39a11b1a9bb33daae6f25eb95ab9c69472afd3980f1af3145b331b"
   },
   "bridge-2-3-2": {
     "file": "audio/bridge-2-3-2.mp3",
-    "duration": 8.175,
+    "duration": 8.1451,
     "textHash": "ed53757ea35bd7fa68b63a116b6d340979c25685b47e32f5feb621b28d975336",
-    "text": "桥面像一条跨过小河的路，把两岸连接起来。小车沿着桥面，就能到达另一边。"
+    "text": "桥面像一条跨过小河的路，把两岸连接起来。小车沿着桥面，就能到达另一边。",
+    "audioHash": "ab3e2029bba7dbc09e7138dff333486eea45905b2eeb72746602cf45d7b618cd"
   },
   "bridge-4-5-0": {
     "file": "audio/bridge-4-5-0.mp3",
-    "duration": 7.725,
+    "duration": 7.6955,
     "textHash": "62994e6e1c6fbec51fdeb827d19fedc83a185d5eca6b7c3fc000c60dc1571c6b",
-    "text": "桥面架在两岸之间，中间有一段悬空。加上一个桥墩，会发生什么变化呢？"
+    "text": "桥面架在两岸之间，中间有一段悬空。加上一个桥墩，会发生什么变化呢？",
+    "audioHash": "05669f163718dcdf1b65ab1d257d51300f0aae1ab463583cdf9f436ec0fbf5b7"
   },
   "bridge-4-5-1": {
     "file": "audio/bridge-4-5-1.mp3",
-    "duration": 8.125,
+    "duration": 8.0964,
     "textHash": "0af539c9429dd08472bff799d7732c4a7ffe64e7b502407937f427b141ef8b8e",
-    "text": "先让小车通过，看看桥面的变化。再加上中间的桥墩，让小车重新试一遍。"
+    "text": "先让小车通过，看看桥面的变化。再加上中间的桥墩，让小车重新试一遍。",
+    "audioHash": "497e4ca281f1084409b43f21e49cb0433bacf7ed688cc92323e29f545c9bcba5"
   },
   "bridge-4-5-2": {
     "file": "audio/bridge-4-5-2.mp3",
-    "duration": 8.8,
+    "duration": 8.7728,
     "textHash": "12ab0ba4755ab6bcedf06845b5befb4900d73fa1175615677a83cee11ff0e5ca",
-    "text": "桥墩给桥面增加了支撑，把长长的悬空部分分成两段。看看这次桥面怎样变化。"
+    "text": "桥墩给桥面增加了支撑，把长长的悬空部分分成两段。看看这次桥面怎样变化。",
+    "audioHash": "3d93f7b1e6f4a4a251d1005940e7e754f22bed5afa5d0e9c0de7969fbdb957a7"
   },
   "bridge-6-8-0": {
     "file": "audio/bridge-6-8-0.mp3",
-    "duration": 9.15,
+    "duration": 9.122,
     "textHash": "95aefb8dc8c47c047b25a96a0bf93b22c453fd23190e59f84912d3918f2b355b",
-    "text": "工程师会比较不同的支撑方式。给支架加上斜撑，形成三角形，能帮助它保持形状。"
+    "text": "工程师会比较不同的支撑方式。给支架加上斜撑，形成三角形，能帮助它保持形状。",
+    "audioHash": "db208aff4c78446d028250952d73b6bd0f3b4e9e9719d736e751215bf682aec7"
   },
   "bridge-6-8-1": {
     "file": "audio/bridge-6-8-1.mp3",
-    "duration": 8.426,
+    "duration": 8.3962,
     "textHash": "bf0ef8e1b381b3e99f459e7d4406a1e36545e67378bcf4f81b2eb39a317825ce",
-    "text": "先让小车通过没有斜撑的桥，观察变化。再加上斜撑，用同一辆小车重新试验。"
+    "text": "先让小车通过没有斜撑的桥，观察变化。再加上斜撑，用同一辆小车重新试验。",
+    "audioHash": "37f3b5166087a9450ff027baf9262d2a608306837a7a406b9e7017e37d33466d"
   },
   "bridge-6-8-2": {
     "file": "audio/bridge-6-8-2.mp3",
-    "duration": 9.675,
+    "duration": 9.6478,
     "textHash": "6792274261614e69893078cf77428abc07ae9d3548f0feac4acb10d6a9a85320",
-    "text": "这次只改变了斜撑，方便我们比较作用。动画帮助观察规律，真实桥梁还需要计算和测试。"
+    "text": "这次只改变了斜撑，方便我们比较作用。动画帮助观察规律，真实桥梁还需要计算和测试。",
+    "audioHash": "a689683503d18223c2c3217cae08785730ee23a1da79d44e7653d8991b65988f"
   },
   "light-2-3-0": {
     "file": "audio/light-2-3-0.mp3",
-    "duration": 8.225,
+    "duration": 8.1977,
     "textHash": "4b80bdff60961be34d136afa23abc087ca8c4f8878ca9103e9a4d2f4a1aada92",
-    "text": "这里有三盏小灯，分别能发出红光、绿光和蓝光。它们会把颜色照到画板上。"
+    "text": "这里有三盏小灯，分别能发出红光、绿光和蓝光。它们会把颜色照到画板上。",
+    "audioHash": "9fa065f5e91293144504995606c014acdabd258d64f83c29aed3d1f2d202f344"
   },
   "light-2-3-1": {
     "file": "audio/light-2-3-1.mp3",
-    "duration": 7.475,
+    "duration": 7.4443,
     "textHash": "e430569e1d8cac1c9924f19e19e8fc2452cd047ad0470ee9a25fcfe55a960b88",
-    "text": "点亮一盏灯，看看它是什么颜色。关掉它，再点亮另一盏，找找不同的颜色。"
+    "text": "点亮一盏灯，看看它是什么颜色。关掉它，再点亮另一盏，找找不同的颜色。",
+    "audioHash": "73bcb94dfad73d81ee7a95c37de2e2393e6435341535870d43af2f80e7e6e790"
   },
   "light-2-3-2": {
     "file": "audio/light-2-3-2.mp3",
-    "duration": 8.25,
+    "duration": 8.222,
     "textHash": "3c29fe1b4a9d5da407d225fed26a1cda880be75a4ccb13a541b2850437d97a34",
-    "text": "红光、绿光和蓝光，可以一起照到画板上。再打开一盏灯，看看颜色有什么变化。"
+    "text": "红光、绿光和蓝光，可以一起照到画板上。再打开一盏灯，看看颜色有什么变化。",
+    "audioHash": "037180c8454fb87e9d8bb2f7f128e1cc8621b20bca97e189aa079b762c9c2cc8"
   },
   "light-4-5-0": {
     "file": "audio/light-4-5-0.mp3",
-    "duration": 7.9,
+    "duration": 7.8696,
     "textHash": "2cec53b042eeacab5c8e419b6cc155a7d0d20e78906b83fed6340cda2504fff3",
-    "text": "这次我们用光来画画。两种颜色的光照在同一个地方，可能出现新的颜色。"
+    "text": "这次我们用光来画画。两种颜色的光照在同一个地方，可能出现新的颜色。",
+    "audioHash": "a8012fe18eb53d0d0a59cb41c2fc7e3418a5ec9c8d2c9c956b58f69cf489263e"
   },
   "light-4-5-1": {
     "file": "audio/light-4-5-1.mp3",
-    "duration": 7.65,
+    "duration": 7.6225,
     "textHash": "a35421a5c689e008a436f449c562b0c84f31489b561f393e14704170c649f18a",
-    "text": "打开红灯，再打开绿灯，让两束光相遇。看看画板，那里是不是出现了黄色？"
+    "text": "打开红灯，再打开绿灯，让两束光相遇。看看画板，那里是不是出现了黄色？",
+    "audioHash": "d3da91dcdf7c93e6267ea8720e25176da80e5ad2185a484acb2d9f84cb81c18b"
   },
   "light-4-5-2": {
     "file": "audio/light-4-5-2.mp3",
-    "duration": 8.775,
+    "duration": 8.7446,
     "textHash": "13d631a3ff93664d85bf0a4fada5905359a1ca8dab4d89c0f11ad4a2d0709c16",
-    "text": "红光加绿光，可以看到黄色。我们混合的是光，换成颜料，就不能照着这个规律调色。"
+    "text": "红光加绿光，可以看到黄色。我们混合的是光，换成颜料，就不能照着这个规律调色。",
+    "audioHash": "6e47583ed66a12948a95f95c37a31a4f50c7f82a5d5c7d754a99a062c66049ab"
   },
   "light-6-8-0": {
     "file": "audio/light-6-8-0.mp3",
-    "duration": 8.725,
+    "duration": 8.6959,
     "textHash": "7a0e2eeda4a490b534a1c2a186bd1833d6e7be982456f914084bc1bd8dafee00",
-    "text": "红光、绿光、蓝光，是这里调色的三种基本光。改变它们的亮度，就能组合出不同颜色。"
+    "text": "红光、绿光、蓝光，是这里调色的三种基本光。改变它们的亮度，就能组合出不同颜色。",
+    "audioHash": "452d4aa3912b07698118a42fbab240fa97201752618090c80bebb16902fb9714"
   },
   "light-6-8-1": {
     "file": "audio/light-6-8-1.mp3",
-    "duration": 8.325,
+    "duration": 8.295,
     "textHash": "c1bc0adae004ef7b434874155321ae3b4c36e46a70f637c3ca1a3f93ccaeb317",
-    "text": "试着把画板调成白色。打开三盏灯，调整它们的亮度，观察颜色怎样一起变化。"
+    "text": "试着把画板调成白色。打开三盏灯，调整它们的亮度，观察颜色怎样一起变化。",
+    "audioHash": "584aff97694d1e53734f163210e6f512ca3aed5672a9a7c79b10016bf3cc5143"
   },
   "light-6-8-2": {
     "file": "audio/light-6-8-2.mp3",
-    "duration": 8.675,
+    "duration": 8.6472,
     "textHash": "eb1683fb54203ba33ad8eae76ba6fedcbb48948ed366153ded218e37bf4c46ae",
-    "text": "三种光的比例合适时，我们就能看到白色。再改变其中一盏的亮度，创作自己的颜色。"
+    "text": "三种光的比例合适时，我们就能看到白色。再改变其中一盏的亮度，创作自己的颜色。",
+    "audioHash": "429d856f4bf366e141657e123032a4979c8b82131f9fadc4aa13ebc9b1070033"
   },
   "shapes-2-3-0": {
     "file": "audio/shapes-2-3-0.mp3",
-    "duration": 8.025,
+    "duration": 7.9952,
     "textHash": "36923345f2103d96ab65d3206e1c52d2befde5b4d8a6577a449c173ab23d06b6",
-    "text": "圆圆的是球，方方的积木叫立方体，还有上下圆圆的圆柱。找找哪个是球。"
+    "text": "圆圆的是球，方方的积木叫立方体，还有上下圆圆的圆柱。找找哪个是球。",
+    "audioHash": "65f34663e1586555f5528a577e33680f8e6c5de9adfb0440aa3ad629264494a5"
   },
   "shapes-2-3-1": {
     "file": "audio/shapes-2-3-1.mp3",
-    "duration": 7.775,
+    "duration": 7.748,
     "textHash": "aaa6dac4cb6de4b5655b12c41292626fc35f0ffa8a68772d9e6d5ac3cb90bba9",
-    "text": "先选出圆圆的球，再一个一个放进来。我们一起数，一、二、三，一共有三个球。"
+    "text": "先选出圆圆的球，再一个一个放进来。我们一起数，一、二、三，一共有三个球。",
+    "audioHash": "472ae84c56c2e5ee835cc61154ab00ed9a5e02398e20442c8e2844976066d6bf"
   },
   "shapes-2-3-2": {
     "file": "audio/shapes-2-3-2.mp3",
-    "duration": 8.0,
+    "duration": 7.9709,
     "textHash": "a250fb26adb348db0d334f79eb9811a9642e41968b3616401654ea89dde7a0ba",
-    "text": "数球的时候，一个球数一个数。每个都数到，也不重复数，就知道一共有几个啦。"
+    "text": "数球的时候，一个球数一个数。每个都数到，也不重复数，就知道一共有几个啦。",
+    "audioHash": "ac537190dff1faf8bdef3ea1f29b0fddb446198678d350b2e1ab06b9e8d03705"
   },
   "shapes-4-5-0": {
     "file": "audio/shapes-4-5-0.mp3",
-    "duration": 8.625,
+    "duration": 8.5947,
     "textHash": "adcd79ca3d07d341db6b6495109604496691cb822395c41e93fb85bf91cc07ae",
-    "text": "球、立方体和圆柱，形状各不相同。选一种喜欢的形状，把和它一样的物体放在一起。"
+    "text": "球、立方体和圆柱，形状各不相同。选一种喜欢的形状，把和它一样的物体放在一起。",
+    "audioHash": "eecf6d8196dbd1b0030fcac46d500a034c2bca3db8284e15bcf56b69e88cc55a"
   },
   "shapes-4-5-1": {
     "file": "audio/shapes-4-5-1.mp3",
-    "duration": 8.75,
+    "duration": 8.7203,
     "textHash": "c257c2237fd1c4b016416ad5827cb5d5cd1ee0fb81392e52428e124f15302f5f",
-    "text": "按照选好的形状，一个一个收集。每放一个就数一次，试试找到五个相同形状的物体。"
+    "text": "按照选好的形状，一个一个收集。每放一个就数一次，试试找到五个相同形状的物体。",
+    "audioHash": "7f23b10cea8499e0685b15b3cd96699e11388fcd2e8c35e148613f761d1b90f5"
   },
   "shapes-4-5-2": {
     "file": "audio/shapes-4-5-2.mp3",
-    "duration": 8.7,
+    "duration": 8.6716,
     "textHash": "0375bc9a0489f96ea4ebb5feeb0f268bd16cc3313a751b782201d428bea4a348",
-    "text": "把同样形状的物体放在一起，就是按形状分类。再数一数，这一组是不是正好有五个。"
+    "text": "把同样形状的物体放在一起，就是按形状分类。再数一数，这一组是不是正好有五个。",
+    "audioHash": "75c62bb984117c092828e615d360e538948ba19476695b590c2afec0139dcb9e"
   },
   "shapes-6-8-0": {
     "file": "audio/shapes-6-8-0.mp3",
-    "duration": 8.525,
+    "duration": 8.498,
     "textHash": "ddcaf06603afa10bc9edabc7ad99a29fb39ddfa294f7c7ab692f6b59ce10e120",
-    "text": "不同形状也能一起计数。这次用球和立方体，合起来放八个，两种形状都要有。"
+    "text": "不同形状也能一起计数。这次用球和立方体，合起来放八个，两种形状都要有。",
+    "audioHash": "8bc6ce4071aefe66dcd23477d68aeb25267c60dc44068b65a8f5c0911d27ec8a"
   },
   "shapes-6-8-1": {
     "file": "audio/shapes-6-8-1.mp3",
-    "duration": 8.05,
+    "duration": 8.0195,
     "textHash": "93afb5fca429aa9bf57005a2714ecaf2c93c4b18c1ad149d7c798a4d37baf3a8",
-    "text": "先放几个球，再添加立方体，一共凑成八个。每加一个，总数会怎样变化呢？"
+    "text": "先放几个球，再添加立方体，一共凑成八个。每加一个，总数会怎样变化呢？",
+    "audioHash": "699e66375754e3492ec48738fd7d8b8fade9dec69e663d6beaa8b6bb2830701a"
   },
   "shapes-6-8-2": {
     "file": "audio/shapes-6-8-2.mp3",
-    "duration": 8.475,
+    "duration": 8.4448,
     "textHash": "f48866745ccc8a0eee960fadbb2abb81476ab325d072d1f9b55d3f1d45fa5574",
-    "text": "三个球加五个立方体，一共是八个。四个加四个也是八，你还能找到别的组合吗？"
+    "text": "三个球加五个立方体，一共是八个。四个加四个也是八，你还能找到别的组合吗？",
+    "audioHash": "ca5440b8028be8a92e440dcf558d7ba2aa0160301d05975215a6cd2f494c475c"
   }
 }

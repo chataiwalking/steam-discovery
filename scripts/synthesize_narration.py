@@ -10,6 +10,9 @@ FFprobe must be on PATH. Model files stay in the ignored .venv-tts directory.
 
 The sample pass is a technical gate, not a substitute for a person listening.
 All yielded model chunks are concatenated; no sentence is silently discarded.
+The default style raises pitch and resonances by 3.5 semitones, then restores
+the original speaking tempo. It is a synthetic childlike effect, not a verified
+child speaker, and does not use voice cloning or a paid service.
 """
 
 from __future__ import annotations
@@ -30,6 +33,18 @@ MODEL_SHA256 = "b1d8410fa44dfb5c15471fd6c4225ea6b4e9ac7fa03c98e8bea47a9928476e2b
 VOICE = "zf_001"
 SPEED = 0.9
 RATE = 24000
+# A synthetic childlike style, not a claim that the source speaker is a child.
+# Resampling raises both pitch and resonances; independent time stretching then
+# restores the original speaking pace instead of making the narration faster.
+VOICE_STYLE = "playful-childlike"
+PITCH_SEMITONES = 3.5
+SHIFTED_RATE = round(RATE * 2 ** (PITCH_SEMITONES / 12))
+PITCH_RATIO = SHIFTED_RATE / RATE
+VOICE_FILTER = (
+    f"asetrate={SHIFTED_RATE},aresample={RATE},atempo={1 / PITCH_RATIO:.9f},"
+    "highpass=f=75,equalizer=f=5800:t=q:w=0.8:g=-1.5,"
+    "loudnorm=I=-18:TP=-2:LRA=7"
+)
 SAMPLES = [
     "你好，小小发现家。点一点，我们一起看太阳。",
     "一、二、三。三个圆圆的球，滚进小篮子。",
@@ -102,11 +117,15 @@ def verify(clips: list[dict], output: Path, manifest: dict) -> dict:
         volume_match = re.search(r"mean_volume: (-?[\d.]+) dB", decoded.stderr)
         if not volume_match or float(volume_match[1]) < -45:
             raise ValueError(f"Silent or unexpectedly quiet clip: {clip['id']}")
-        records.append({"id": clip["id"], **info, "meanVolumeDb": float(volume_match[1])})
+        peak_match = re.search(r"max_volume: (-?[\d.]+) dB", decoded.stderr)
+        if not peak_match or float(peak_match[1]) >= -0.1:
+            raise ValueError(f"Clipping or unexpected peak level: {clip['id']}")
+        records.append({"id": clip["id"], **info, "meanVolumeDb": float(volume_match[1]),
+                        "maxVolumeDb": float(peak_match[1])})
     report = {
         "count": len(records),
         "totalDuration": round(sum(record["duration"] for record in records), 2),
-        "technicalChecks": "All files decoded; MP3, mono 24 kHz, matching text hashes and measured durations; non-silent audio.",
+        "technicalChecks": "All files decoded; MP3, mono 24 kHz, matching text hashes and measured durations; non-silent audio with peak headroom.",
         "listeningStatus": "Human review is required for pronunciation, completeness and child suitability; technical checks alone do not verify those qualities.",
         "clips": records,
     }
@@ -150,8 +169,14 @@ def main() -> None:
     manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
     generation_path = output / "generation.json"
     settings = {"model": MODEL, "modelSha256": MODEL_SHA256, "voice": VOICE, "speed": SPEED, "device": "cpu", "sampleRate": RATE,
-                "encoding": "MP3 mono 96 kbps", "kokoro": "0.9.4", "misaki": "0.9.4", "scriptVersion": 1}
+                "encoding": "MP3 mono 96 kbps", "kokoro": "0.9.4", "misaki": "0.9.4", "scriptVersion": 2,
+                "voiceStyle": {"name": VOICE_STYLE, "sourceSpeakerAge": "not verified; childlike DSP style only",
+                               "pitchSemitones": PITCH_SEMITONES, "pitchRatio": PITCH_RATIO,
+                               "formants": "shifted with pitch by resampling", "tempoCompensation": 1 / PITCH_RATIO,
+                               "filter": VOICE_FILTER}}
     previous_settings = json.loads(generation_path.read_text()) if generation_path.exists() else None
+    if args.verify and previous_settings != settings:
+        raise SystemExit("Synthesis settings do not match this voice style; generate the updated audio before verifying.")
 
     if not args.verify:
         pending = [clip for clip in clips if args.force or previous_settings != settings
@@ -203,12 +228,13 @@ def main() -> None:
                     target = output / f"{clip['id']}.mp3"
                     subprocess.run(
                         ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(wav),
-                         "-af", "loudnorm=I=-18:TP=-2:LRA=7", "-ar", str(RATE), "-ac", "1",
+                         "-af", VOICE_FILTER, "-ar", str(RATE), "-ac", "1",
                          "-codec:a", "libmp3lame", "-b:a", "96k", str(target)], check=True,
                     )
                 info = probe(target)
                 manifest[clip["id"]] = {"file": f"audio/{clip['id']}.mp3", "duration": info["duration"],
-                                        "textHash": text_hash(clip["text"]), "text": clip["text"]}
+                                        "textHash": text_hash(clip["text"]), "text": clip["text"],
+                                        "audioHash": hashlib.sha256((output / f"{clip['id']}.mp3").read_bytes()).hexdigest()}
                 write_json(manifest_path, manifest)
                 print(f"  {info['duration']:.2f}s", flush=True)
             if not args.only or previous_settings == settings:

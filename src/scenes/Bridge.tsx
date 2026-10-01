@@ -5,9 +5,7 @@ import { Group } from "three";
 import {
   Ball,
   Cube,
-  Rod,
   SceneLabel,
-  Tree,
   ToyPlatform,
   useSceneClock,
   type SceneProps,
@@ -37,7 +35,7 @@ export default function Bridge(props: SceneProps) {
       car.current.position.x =
         hasRun && deck ? -3 + Math.min(1, elapsed / 5) * 6 : -2.7;
       car.current.position.y =
-        0.94 + (running && !braces && deck ? Math.sin(elapsed * 8) * 0.026 : 0);
+        0.846 + (running && !braces && deck ? Math.sin(elapsed * 8) * 0.026 : 0);
     }
     if (bridge.current)
       bridge.current.rotation.z =
@@ -57,14 +55,15 @@ export default function Bridge(props: SceneProps) {
   });
   return (
     <group>
-      <ToyPlatform radius={3.8} color="#c4d799" />
-      <Rod color="#81c1c9" position={[0, 0.03, 0]} scale={[3.55, 0.07, 2.15]} />
+      <ToyPlatform radius={3.8} color="#b8bfba" />
+      <Cube kind="stone" color="#77878a" position={[0, 0.02, 0]} scale={[7.05, 0.08, 4.25]} />
+      <Cube kind="water" color="#507c87" position={[0, 0.09, 0]} scale={[6.96, 0.1, 4.16]} />
       {[-1.7, -0.9, 1.3, 2].map((x, i) => (
         <Cube
           key={i}
-          color="#b5dedc"
-          position={[x, 0.081, i % 2 ? 1.65 : -1.5]}
-          scale={[0.65, 0.008, 0.025]}
+          kind="water" color="#b2c5c6"
+          position={[x, 0.148, i % 2 ? 1.65 : -1.5]}
+          scale={[0.65, 0.005, 0.015]}
         />
       ))}
       <group ref={bridge}>
@@ -72,7 +71,7 @@ export default function Bridge(props: SceneProps) {
       </group>
       <group
         ref={car}
-        position={[-2.7, 0.94, 0]}
+        position={[-2.7, 0.846, 0]}
         onClick={(e) => {
           e.stopPropagation();
           props.onAction?.({ type: "bridge" });
@@ -80,13 +79,13 @@ export default function Bridge(props: SceneProps) {
       >
         <ToyCar />
       </group>
-      <Tree position={[-2.5, 0.1, -1.8]} scale={0.8} />
-      <Tree position={[2.9, 0.1, -1.5]} scale={0.65} />
-      <Ball
-        color="#d5c8a6"
-        position={[-2.8, 0.23, 1.35]}
-        scale={[0.3, 0.22, 0.2]}
-      />
+      {[-3.05, 3.05].map(x => (
+        <group key={x}>
+          <Cube kind="ground" color="#747765" position={[x, 0.16, -1.43]} scale={[0.85, 0.3, 0.8]} />
+          <Ball kind="stone" color="#94978c" position={[x, 0.3, 1.4]} scale={[0.27, 0.22, 0.37]} />
+          <Ball kind="stone" color="#7d827c" position={[x - 0.23, 0.24, 1.13]} scale={[0.18, 0.15, 0.27]} />
+        </group>
+      ))}
       <SceneLabel position={[0, 2.1, -0.2]}>
         {!deck
           ? "铺上桥面，让两岸连起来"

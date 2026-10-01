@@ -35,6 +35,7 @@ export interface LessonDefinition {
   tracks: Record<AgeBand, AgeTrack>;
 }
 export interface AudioEntry {
+  audioHash?: string;
   file: string;
   duration: number;
   textHash: string;

@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef } from "react";
 import { useFrame, type ThreeElements } from "@react-three/fiber";
-import { Html } from "@react-three/drei";
-import { Color, ExtrudeGeometry, Shape, type Group } from "three";
+import { SceneHtml as Html } from "../components/SceneHtml";
+import { DoubleSide, ExtrudeGeometry, Path, Shape, type Group } from "three";
+import { PhysicalMaterial, cloudTexture, type MaterialKind } from "./materials";
 import type { WorldCanvasProps } from "../types";
 
 export type SceneProps = WorldCanvasProps;
-type MeshProps = ThreeElements["mesh"] & { color?: string; roughness?: number };
+type MeshProps = ThreeElements["mesh"] & { color?: string; roughness?: number; kind?: MaterialKind };
 
 export function useSceneClock(props: SceneProps) {
   const time = useRef(0);
@@ -20,34 +21,35 @@ export function useSceneClock(props: SceneProps) {
 
 export function Ball({
   color = "#ffca70",
-  roughness = 0.8,
+  roughness,
+  kind = "paint",
   ...props
 }: MeshProps) {
   return (
     <mesh castShadow receiveShadow {...props}>
       <sphereGeometry args={[1, 32, 24]} />
-      <meshStandardMaterial color={color} roughness={roughness} />
+      <PhysicalMaterial kind={kind} color={color} roughness={roughness} />
     </mesh>
   );
 }
-export function Cube({ color = "#ffca70", ...props }: MeshProps) {
+export function Cube({ color = "#c9c8bc", kind = "paint", roughness, ...props }: MeshProps) {
   return (
     <mesh castShadow receiveShadow {...props}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={color} roughness={0.8} />
+      <PhysicalMaterial kind={kind} color={color} roughness={roughness} />
     </mesh>
   );
 }
-export function Rod({ color = "#ffca70", ...props }: MeshProps) {
+export function Rod({ color = "#c9c8bc", kind = "paint", roughness, ...props }: MeshProps) {
   return (
     <mesh castShadow receiveShadow {...props}>
       <cylinderGeometry args={[1, 1, 1, 40]} />
-      <meshStandardMaterial color={color} roughness={0.8} />
+      <PhysicalMaterial kind={kind} color={color} roughness={roughness} />
     </mesh>
   );
 }
 export function ToyPlatform({
-  color = "#e6f1d0",
+  color = "#bcc2c1",
   radius = 3.7,
 }: {
   color?: string;
@@ -55,11 +57,12 @@ export function ToyPlatform({
 }) {
   return (
     <group position={[0, -0.24, 0]}>
-      <Rod color="#dcc6a4" scale={[radius, 0.36, radius]} />
+      <Rod kind="metal" color="#303b43" scale={[radius, 0.22, radius]} />
       <Rod
         color={color}
-        position={[0, 0.22, 0]}
-        scale={[radius, 0.16, radius]}
+        kind="stone"
+        position={[0, 0.15, 0]}
+        scale={[radius - 0.04, 0.09, radius - 0.04]}
       />
     </group>
   );
@@ -67,7 +70,7 @@ export function ToyPlatform({
 export function SceneLabel({
   children,
   position,
-  color = "#43513d",
+  color = "#dbe6ec",
 }: {
   children: React.ReactNode;
   position: [number, number, number];
@@ -83,12 +86,13 @@ export function SceneLabel({
         style={{
           display: "inline-block",
           padding: "7px 12px",
-          borderRadius: 16,
-          background: "rgba(255,253,245,.93)",
+          borderRadius: 6,
+          background: "rgba(24,38,50,.91)",
+          border: "1px solid rgba(191,214,226,.22)",
           color,
           fontSize: 12,
           fontWeight: 750,
-          boxShadow: "0 4px 16px #433b2010",
+          boxShadow: "0 4px 16px #0d18242b",
         }}
       >
         {children}
@@ -105,28 +109,25 @@ export function Cloud({
   scale?: number;
   rain?: boolean;
 }) {
+  const texture = cloudTexture();
   return (
     <group position={position} scale={scale}>
-      {[
-        [-0.65, 0, 0, 0.58],
-        [0, 0.23, 0, 0.8],
-        [0.73, -0.02, 0, 0.58],
-        [0.07, -0.17, 0.16, 0.61],
-      ].map(([x, y, z, s], i) => (
-        <Ball
-          key={i}
-          color={rain ? "#cfdee9" : "#fffef5"}
-          position={[x, y, z]}
-          scale={[s, s * 0.72, s * 0.64]}
-        />
+      {Array.from({ length: 7 }, (_, i) => (
+        <mesh key={i} position={[(i % 3 - 1) * .48, Math.sin(i * 2.4) * .2, (i / 3 - 1) * .22]}
+          rotation={[0, .42, (i - 3) * .045]}>
+          <planeGeometry args={[1.9, 1.02]} />
+          <meshStandardMaterial map={texture} transparent opacity={.59} depthWrite={false}
+            color={rain ? "#a9bac6" : "#f0f3f4"} roughness={1} side={DoubleSide} />
+        </mesh>
       ))}
     </group>
   );
 }
+
 export function Tree({
   position = [0, 0, 0],
   scale = 1,
-  color = "#789d54",
+  color = "#456242",
 }: {
   position?: [number, number, number];
   scale?: number;
@@ -134,12 +135,23 @@ export function Tree({
 }) {
   return (
     <group position={position} scale={scale}>
-      <Rod color="#b98d5e" position={[0, 0.38, 0]} scale={[0.09, 0.8, 0.09]} />
-      <Ball color={color} position={[0, 1, 0]} scale={[0.46, 0.66, 0.43]} />
-      <Ball color="#9cb96f" position={[0.21, 0.93, 0.1]} scale={0.29} />
+      <Rod kind="wood" color="#635343" position={[0, 0.58, 0]} scale={[0.047, 1.16, 0.047]} />
+      {Array.from({ length: 7 }, (_, level) => (
+        <group key={level} position={[0, .37 + level * .145, 0]} rotation={[0, level * 1.36, 0]}>
+          <mesh castShadow receiveShadow>
+            <coneGeometry args={[.36 - level * .041, .43, 9, 1]} />
+            <PhysicalMaterial kind="ground" color={color} />
+          </mesh>
+          {[0, 1, 2].map(i => <mesh key={i} rotation={[.52, i * 2.09, .25]} position={[.08, -.08, .03]} castShadow>
+            <coneGeometry args={[.12 - level * .012, .3, 5]} />
+            <PhysicalMaterial kind="ground" color={i % 2 ? "#415c42" : "#566a47"} />
+          </mesh>)}
+        </group>
+      ))}
     </group>
   );
 }
+
 export function Flower({
   position = [0, 0, 0],
   color = "#f4b856",
@@ -192,11 +204,21 @@ export function Gear({
       else outline.lineTo(x, y);
     }
     outline.closePath();
+    const bore = new Path();
+    bore.absarc(0, 0, radius * .18, 0, Math.PI * 2, true);
+    outline.holes.push(bore);
+    // Machined relief holes make the plate thickness and metal reflections legible.
+    for (let i = 0; i < 5; i++) {
+      const a = i * Math.PI * 2 / 5;
+      const relief = new Path();
+      relief.absarc(Math.cos(a) * radius * .54, Math.sin(a) * radius * .54, radius * .115, 0, Math.PI * 2, true);
+      outline.holes.push(relief);
+    }
     return new ExtrudeGeometry(outline, {
       depth: 0.26,
       bevelEnabled: true,
-      bevelThickness: 0.035,
-      bevelSize: 0.028,
+      bevelThickness: 0.016,
+      bevelSize: 0.015,
       bevelSegments: 2,
       steps: 1,
     });
@@ -205,26 +227,19 @@ export function Gear({
   return (
     <group rotation={[0, 0, angle]}>
       <mesh geometry={geometry} castShadow receiveShadow>
-        <meshStandardMaterial color={color} roughness={0.72} />
+        <PhysicalMaterial kind="metal" color="#adb8bd" roughness={.24} />
       </mesh>
-      <mesh position={[0, 0, 0.32]} rotation={[Math.PI / 2, 0, 0]}>
-        <cylinderGeometry args={[radius * 0.36, radius * 0.36, 0.08, 32]} />
-        <meshStandardMaterial color={new Color(color).multiplyScalar(0.86)} />
+      <mesh position={[0, 0, .29]}>
+        <torusGeometry args={[radius * .23, .04, 10, 48]} />
+        <PhysicalMaterial kind="metal" color="#666e72" roughness={.2} />
       </mesh>
-      <Rod
-        color="#fff3d4"
-        position={[0, 0, 0.35]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={[0.12, 0.15, 0.12]}
-      />
-      <Cube
-        color="#fff3d4"
-        position={[radius * 0.56, 0, 0.31]}
-        scale={[radius * 0.3, 0.1, 0.065]}
-      />
+      <Rod kind="metal" color="#454f57" position={[0, 0, .23]} rotation={[Math.PI / 2, 0, 0]}
+        scale={[radius * .1, .65, radius * .1]} />
+      <Cube color={color} position={[radius * .76, 0, .284]} scale={[radius * .12, .045, .009]} />
     </group>
   );
 }
+
 export function WaterDrop({
   position = [0, 0, 0],
   scale = 1,

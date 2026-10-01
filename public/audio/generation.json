@@ -8,5 +8,14 @@
   "encoding": "MP3 mono 96 kbps",
   "kokoro": "0.9.4",
   "misaki": "0.9.4",
-  "scriptVersion": 1
+  "scriptVersion": 2,
+  "voiceStyle": {
+    "name": "playful-childlike",
+    "sourceSpeakerAge": "not verified; childlike DSP style only",
+    "pitchSemitones": 3.5,
+    "pitchRatio": 1.2240416666666667,
+    "formants": "shifted with pitch by resampling",
+    "tempoCompensation": 0.8169656534023215,
+    "filter": "asetrate=29377,aresample=24000,atempo=0.816965653,highpass=f=75,equalizer=f=5800:t=q:w=0.8:g=-1.5,loudnorm=I=-18:TP=-2:LRA=7"
+  }
 }

@@ -3,7 +3,7 @@ import type { AudioEntry, NarrationClip } from '../types';
 type Status = 'idle' | 'loading' | 'playing' | 'paused' | 'ended' | 'error';
 let manifestPromise: Promise<Record<string, AudioEntry>> | undefined;
 function getManifest() {
-  return manifestPromise ??= fetch(`${import.meta.env.BASE_URL}audio/manifest.json`)
+  return manifestPromise ??= fetch(`${import.meta.env.BASE_URL}audio/manifest.json`, {cache:"no-cache"})
     .then(response => { if (!response.ok) throw new Error('语音尚未就绪'); return response.json(); })
     .catch(error => { manifestPromise = undefined; throw error; });
 }
@@ -50,7 +50,7 @@ export function useNarration(clip: NarrationClip) {
       const entries = await getManifest();
       if (seq !== sequence.current) return;
       const entry = entries[clip.id]; if (!entry) throw new Error('missing clip');
-      const element = new Audio(`${import.meta.env.BASE_URL}${entry.file}`);
+      const element = new Audio(`${import.meta.env.BASE_URL}${entry.file}?v=${(entry.audioHash||entry.textHash).slice(0,16)}`);
       audioRef.current = element; setDuration(entry.duration);
       element.onended = () => { if (seq === sequence.current) { setTime(element.duration || entry.duration); setStatus('ended'); } };
       element.onerror = () => { if (seq === sequence.current) setStatus('error'); };
