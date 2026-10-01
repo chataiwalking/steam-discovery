@@ -1,0 +1,6 @@
+kokoro==0.9.4
+misaki[zh]==0.9.4
+soundfile==0.13.1
+# Keep Kokoro's Albert model API and a Python 3.12-compatible tokenizer wheel.
+transformers==4.51.3
+tokenizers==0.21.4

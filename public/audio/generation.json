@@ -1,0 +1,12 @@
+{
+  "model": "hexgrad/Kokoro-82M-v1.1-zh",
+  "modelSha256": "b1d8410fa44dfb5c15471fd6c4225ea6b4e9ac7fa03c98e8bea47a9928476e2b",
+  "voice": "zf_001",
+  "speed": 0.9,
+  "device": "cpu",
+  "sampleRate": 24000,
+  "encoding": "MP3 mono 96 kbps",
+  "kokoro": "0.9.4",
+  "misaki": "0.9.4",
+  "scriptVersion": 1
+}
