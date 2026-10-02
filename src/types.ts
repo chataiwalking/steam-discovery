@@ -1,11 +1,13 @@
 export type AgeBand = "2-3" | "4-5" | "6-8";
-export type LessonId =
+export type CoreLessonId =
   | "day-night"
   | "water-cycle"
   | "gears"
   | "bridge"
   | "light"
   | "shapes";
+export type LessonId = string;
+export type Subject = "S" | "T" | "E" | "A" | "M";
 export type ShapeKind = "sphere" | "cube" | "cylinder";
 export interface NarrationClip {
   id: string;
@@ -24,6 +26,7 @@ export interface AgeTrack {
 }
 export interface LessonDefinition {
   id: LessonId;
+  subject: Subject;
   title: string;
   subtitle: string;
   category: string;
@@ -42,6 +45,9 @@ export interface AudioEntry {
   text: string;
 }
 export interface WorldState {
+  experimentValue: number;
+  experimentOption: number;
+  experimentRun: number;
   rotation: number;
   waterStage: number;
   waterOrder: number[];
@@ -58,6 +64,7 @@ export interface WorldState {
   sorted: number;
 }
 export type WorldAction =
+  | { type: "experiment-complete"; runId: number }
   | { type: "rotate" }
   | { type: "water"; stage: number }
   | { type: "gear" }

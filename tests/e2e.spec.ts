@@ -5,6 +5,8 @@ import type { LessonDefinition } from "../src/types";
 const lessonData = JSON.parse(
   readFileSync(new URL("../src/content/lessons.json", import.meta.url), "utf8"),
 ) as LessonDefinition[];
+const coreIds=["day-night","water-cycle","gears","bridge","light","shapes"];
+const coreLessons=lessonData.filter(lesson=>coreIds.includes(lesson.id));
 
 type LessonId =
   | "day-night"
@@ -239,13 +241,13 @@ async function solve(page: Page, id: LessonId, age: Age) {
 }
 
 test("all six scenes mount their actual 3D scene labels", async ({ page }) => {
-  for (const lesson of lessonData) {
+  for (const lesson of coreLessons) {
     await page.goto(`/#/lesson/${lesson.id}?age=4-5`);
     await expectSceneReady(page, lesson.id);
   }
 });
 
-for (const lesson of lessonData) {
+for (const lesson of coreLessons) {
   for (const age of ["2-3", "4-5", "6-8"] as const) {
     test(`${lesson.title} / ${age} completes through real controls and persists its star`, async ({
       page,

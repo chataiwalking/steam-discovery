@@ -8,14 +8,17 @@ import {
   useMemo,
   useState,
   type ReactNode,
+  type ComponentType,
 } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { ACESFilmicToneMapping, OrthographicCamera, PCFSoftShadowMap, SRGBColorSpace } from "three";
 import { Environment } from "@react-three/drei";
 import type { WorldCanvasProps } from "../types";
+import {getExperiment} from "../content/experiments";
+import {getLesson} from "../content/lessons";
 import { SceneHtmlPortalContext } from "./SceneHtml";
 
-const scenes = {
+const scenes: Record<string, ComponentType<WorldCanvasProps>> = {
   island: lazy(() => import("../scenes/Island")),
   "day-night": lazy(() => import("../scenes/DayNight")),
   "water-cycle": lazy(() => import("../scenes/WaterCycle")),
@@ -24,7 +27,14 @@ const scenes = {
   light: lazy(() => import("../scenes/Light")),
   shapes: lazy(() => import("../scenes/Shapes")),
 };
-const names = {
+const categoryScenes:Record<string,ComponentType<WorldCanvasProps>>={
+ S:lazy(()=>import("../scenes/ScienceExperiments")),
+ T:lazy(()=>import("../scenes/TechnologyExperiments")),
+ E:lazy(()=>import("../scenes/EngineeringExperiments")),
+ A:lazy(()=>import("../scenes/ArtExperiments")),
+ M:lazy(()=>import("../scenes/MathExperiments")),
+};
+const names:Record<string,string> = {
   island: "发现小岛",
   "day-night": "昼夜的秘密",
   "water-cycle": "小水滴旅行",
@@ -49,6 +59,7 @@ function CameraFit({
       size.height / (island ? 9.4 : 6.6),
     );
     if (island) camera.position.set(7.5, 9.5, 12);
+    else if (lesson === "balance-scale" || lesson === "lever") camera.position.set(0, 6.5, 11);
     else if (lesson === "gears" || lesson === "light")
       camera.position.set(1, 5, 13);
     else camera.position.set(5, 6.5, 10);
@@ -60,11 +71,12 @@ function CameraFit({
 }
 
 function Illustration({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
+ if(getExperiment(lesson))return <img src={`${import.meta.env.BASE_URL}previews/${lesson}.png`} alt={`${getLesson(lesson)?.title}的三维示意图`} style={{width:"min(100%,360px)",borderRadius:8}}/>;
   return (
     <svg
       viewBox="0 0 360 220"
       role="img"
-      aria-label={`${names[lesson]}的二维示意图`}
+      aria-label={`${names[lesson]??getLesson(lesson)?.title}的二维示意图`}
       style={{ width: "min(100%, 360px)", height: "auto" }}
     >
       <ellipse cx="180" cy="183" rx="143" ry="25" fill="#d5d8b9" />
@@ -191,7 +203,7 @@ function Fallback({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
     >
       <Illustration lesson={lesson} />
       <strong style={{ color: "#566348", fontSize: 18 }}>
-        {names[lesson]}
+        {names[lesson]??getLesson(lesson)?.title}
       </strong>
       <p
         style={{
@@ -268,7 +280,7 @@ export default function WorldCanvas(props: WorldCanvasProps) {
       return false;
     }
   });
-  const Scene = scenes[props.lesson];
+  const Scene = scenes[props.lesson] ?? categoryScenes[getExperiment(props.lesson)?.subject??"S"];
   if (!available) return <Fallback lesson={props.lesson} />;
   return (
     <div style={{ position: "relative", width: "100%", height: "100%" }}>
@@ -296,7 +308,7 @@ export default function WorldCanvas(props: WorldCanvasProps) {
             }}
             style={{ width: "100%", height: "100%", touchAction: "pan-y" }}
             fallback={<Fallback lesson={props.lesson} />}
-            aria-label={`${names[props.lesson]}三维互动场景`}
+            aria-label={`${names[props.lesson]??getLesson(props.lesson)?.title}三维互动场景`}
           >
             <SceneHtmlPortalContext.Provider value={overlayPortal}>
               <CameraFit island={props.lesson === "island"} lesson={props.lesson} />

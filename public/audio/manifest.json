@@ -376,5 +376,2777 @@
     "textHash": "f48866745ccc8a0eee960fadbb2abb81476ab325d072d1f9b55d3f1d45fa5574",
     "text": "三个球加五个立方体，一共是八个。四个加四个也是八，你还能找到别的组合吗？",
     "audioHash": "ca5440b8028be8a92e440dcf558d7ba2aa0160301d05975215a6cd2f494c475c"
+  },
+  "moon-phases-2-3-0": {
+    "file": "audio/moon-phases-2-3-0.mp3",
+    "duration": 7.5212,
+    "textHash": "65f624251c95bc561730a7eaeb0b1bbb255c4a2af51de4396b198ef8060a7ace",
+    "text": "天上的月亮，有时圆圆的，有时像小船。我们一起看看月亮亮亮的那一面。",
+    "audioHash": "ee6a510097139067a2f47fa2552ff3b722807a820a6eda42ffb51c0e010e6ee1"
+  },
+  "moon-phases-2-3-1": {
+    "file": "audio/moon-phases-2-3-1.mp3",
+    "duration": 7.6711,
+    "textHash": "7d61bc7d6e4ef10d86c7b12a1e37064290a091579867a0fd53eef6502b59ec9b",
+    "text": "点一下观察月相，等月亮慢慢走一段路。找一找，这次亮着的地方在哪里。",
+    "audioHash": "84b6efdd6e9751dfe4a3abcfdc6d2fe006d17921b45811b6cb385970ddc44ff2"
+  },
+  "moon-phases-2-3-2": {
+    "file": "audio/moon-phases-2-3-2.mp3",
+    "duration": 7.7967,
+    "textHash": "3269ba3325299320df0acf1812b5f9114d11e3b09c504c9f037178106db8b681",
+    "text": "月亮没有被谁咬掉一口，它还是圆圆的。我们看到的亮面，会随着位置改变。",
+    "audioHash": "4524183228f4410bd2c293bddce6e8718453f37b3d4ca23d7b0055a4152a8dd8"
+  },
+  "moon-phases-4-5-0": {
+    "file": "audio/moon-phases-4-5-0.mp3",
+    "duration": 7.9952,
+    "textHash": "0084f108ecd9e4d5830aecb08c25f6e88b33a3acb236fa93711a2de401ac8155",
+    "text": "月亮借着太阳的光被我们看见。绕着地球走时，我们能看见的亮面也会改变。",
+    "audioHash": "ec0b51de0dd7a6d07316e30339e6629542b287a0018c96d5dc6505cd95cf5a40"
+  },
+  "moon-phases-4-5-1": {
+    "file": "audio/moon-phases-4-5-1.mp3",
+    "duration": 7.8696,
+    "textHash": "17804392090b476e3f98b66f1ee5e48eea00793b9038f0ca8844d04a14bc9023",
+    "text": "先把月球轨道位置设为零并运行，再设为四运行。比较月亮亮面的形状。",
+    "audioHash": "2f9a39ad8844865fab4572d26fb69fa7df832011bf28a9c3161356d3e6d7ba35"
+  },
+  "moon-phases-4-5-2": {
+    "file": "audio/moon-phases-4-5-2.mp3",
+    "duration": 8.1694,
+    "textHash": "78d9626cb4047477db17ce018b3f878f0c38756254d16efc18c88255fdd90617",
+    "text": "位置不一样，看见的亮面也不一样。月亮本身没有变成小船，是我们的视角变了。",
+    "audioHash": "03c6d0f0c017cde209c8396baf33b990da8034525c6f6900fae199aef6d601f3"
+  },
+  "moon-phases-6-8-0": {
+    "file": "audio/moon-phases-6-8-0.mp3",
+    "duration": 8.6472,
+    "textHash": "a801da754bb8a7c52d068701503b16bb0a9f4fb788052ba2fafad042d1a14d18",
+    "text": "月球绕地球运动，受太阳照亮的一半仍然存在。月相取决于我们能看见其中多少。",
+    "audioHash": "a8cc576710a2044d808f7475310918c60cf895e59cc96fadbc6e24effe0d6a1e"
+  },
+  "moon-phases-6-8-1": {
+    "file": "audio/moon-phases-6-8-1.mp3",
+    "duration": 7.9223,
+    "textHash": "364f5038fc2088c0242eeb6ca698941198b0cb4da60f51ef8c61d4f3644e2cab",
+    "text": "把月球轨道位置设为四，选择从地球看，再点观察月相。观察实验结果。",
+    "audioHash": "61d0072871730fe0e9b759139992d34a7b64b32dc2a0347dc99c8cb7a538df15"
+  },
+  "moon-phases-6-8-2": {
+    "file": "audio/moon-phases-6-8-2.mp3",
+    "duration": 9.4453,
+    "textHash": "f260199335378fa812bdebf3d71db3eb04e64f3efeefe4ff2612e058423d4af5",
+    "text": "这次从地球观察指定位置的月亮。月相的变化来自位置与视角，不是月球忽然变了形状。",
+    "audioHash": "34016d1af773314bd3172fcd6806482ed2adc08234c5b20ac5bc7603d2f2cf42"
+  },
+  "solar-system-2-3-0": {
+    "file": "audio/solar-system-2-3-0.mp3",
+    "duration": 7.0473,
+    "textHash": "1ff6e8c6ad01612aad6daa69db5d1dd5fea248c64ed62bee79b2d1cfa83f2e42",
+    "text": "中间亮亮的是太阳，旁边有不同的行星。它们会绕着太阳，慢慢地走。",
+    "audioHash": "35a67b1cbb621228e50739f956ff75973a66c9652eba5eadd926104a4a44af1c"
+  },
+  "solar-system-2-3-1": {
+    "file": "audio/solar-system-2-3-1.mp3",
+    "duration": 7.7967,
+    "textHash": "5bd6b552c113bf3d32919b7721cd1978e7f8cdb6aac8de36015df7bcf0f949bf",
+    "text": "点一下开始绕日，跟着选中的行星看一看。它走过的路线，弯弯地围着太阳。",
+    "audioHash": "42c6a38e442717d6993e5c6eaafd5d31fd2a08a6009daafcec5265a000a554c9"
+  },
+  "solar-system-2-3-2": {
+    "file": "audio/solar-system-2-3-2.mp3",
+    "duration": 7.3227,
+    "textHash": "d9702cfc4d54e8bfb7be796e83efd600098d3f6b61a5af6662836edb2eca3cfe",
+    "text": "行星绕着太阳运动，这叫公转。地球也是行星，是我们一起生活的家。",
+    "audioHash": "260a8e3cc7b5388e15cca6e8c5f9b1e92f17feebe910e93822e6a4b918870b7f"
+  },
+  "solar-system-4-5-0": {
+    "file": "audio/solar-system-4-5-0.mp3",
+    "duration": 8.623,
+    "textHash": "6c9bd1b634d621cad706bf1d5e912078cd55abe6876e2b9f0d82eb2c51a2992a",
+    "text": "太阳系的行星沿各自轨道绕太阳运动。这里把漫长的旅程，变成容易观察的动画。",
+    "audioHash": "792829a7bd29caa8c9df0d879a85a5778c3c01f6e4f411d174b71f0515c67a47"
+  },
+  "solar-system-4-5-1": {
+    "file": "audio/solar-system-4-5-1.mp3",
+    "duration": 7.9952,
+    "textHash": "aa293c6ec00c1fdea550334e18c4fbddfdcdc60513449794576e17bd259552b1",
+    "text": "先把运行速度设为一并运行，再设为三运行。比较行星沿轨道移动的快慢。",
+    "audioHash": "12a9f0d9460bf017e5554d6f4ece479c8bdce3255ffd901da3a88b75e2ad099b"
+  },
+  "solar-system-4-5-2": {
+    "file": "audio/solar-system-4-5-2.mp3",
+    "duration": 8.7203,
+    "textHash": "3e74c5bd0ee3a13da9ece73a19e024d0a933bb17842faa57ce795a18c0612cbe",
+    "text": "调整运行速度，只是让模型播放得更快。真实行星的公转速度，不由我们的按钮决定。",
+    "audioHash": "6b93e667fbf37f907c87e22707cf92bfa30a40f4746841793de00648462b74c1"
+  },
+  "solar-system-6-8-0": {
+    "file": "audio/solar-system-6-8-0.mp3",
+    "duration": 8.3475,
+    "textHash": "150b39916bbd5c72795e493bc19a19d05bb364a03e0e6cfc7aa996cafb58c9b6",
+    "text": "地球、火星和木星有不同的轨道。先认出火星，再用模型追踪它绕太阳的路线。",
+    "audioHash": "65e507a27bdaf69171505f588efb9615993a569afe021a898c99c49a43a535d9"
+  },
+  "solar-system-6-8-1": {
+    "file": "audio/solar-system-6-8-1.mp3",
+    "duration": 6.8974,
+    "textHash": "b3d3dd5fb21f47a5481f92a4eef3042b12df1ae0ddda48e265644a46ec48b911",
+    "text": "把运行速度设为三，选择火星，再点开始绕日。观察实验结果。",
+    "audioHash": "76116848333d2c11240763df1f608b8910d308471ba3d8dc87871baf16f88e9e"
+  },
+  "solar-system-6-8-2": {
+    "file": "audio/solar-system-6-8-2.mp3",
+    "duration": 9.122,
+    "textHash": "a545e74ff49d006fe55fd8c8573a48df2d12bd0597b847dbd2e0e93ecd9bf6b4",
+    "text": "你追踪了火星的公转。图中的距离、大小和时间都经过简化，不能直接当作真实比例。",
+    "audioHash": "0dbf9f8e06eded588962be48673b6fd652cbd698b690d22b8b5bf152ebb965fc"
+  },
+  "magnetism-2-3-0": {
+    "file": "audio/magnetism-2-3-0.mp3",
+    "duration": 8.0195,
+    "textHash": "78050263cfea3c197d82c8779847921afe22f24ba519bab8c6e87223bfcc7531",
+    "text": "两块磁铁靠在一起，有时会贴近，有时会推开。我们看看这次会发生什么。",
+    "audioHash": "99661d1224f6d67886e3811fad70c37af41f603d62a5ef47d986bf73ce102438"
+  },
+  "magnetism-2-3-1": {
+    "file": "audio/magnetism-2-3-1.mp3",
+    "duration": 8.222,
+    "textHash": "6a1a8ee71bcb1cdb951e86f48f9e6b595cf9815ea142204024c2d1f173f5656d",
+    "text": "点一下试试磁力，看两块磁铁怎样动。它们还没有碰到，也可能推一推或拉一拉。",
+    "audioHash": "8029e31901c32f5f9a74cc1fa96c0b0e53627761d90ed6a6ec04b21f0c3bf3ae"
+  },
+  "magnetism-2-3-2": {
+    "file": "audio/magnetism-2-3-2.mp3",
+    "duration": 7.6225,
+    "textHash": "a6549c3eb30534d3221492a056fcd52d00a195003027e8cc605484a1f1dc8df9",
+    "text": "磁铁有不同的两头。换一头靠近，可能从互相推开，变成互相吸过来。",
+    "audioHash": "563d749ce11637cc24f5b8d5791d6dae7281a5ce8b44262f2124792a057185a6"
+  },
+  "magnetism-4-5-0": {
+    "file": "audio/magnetism-4-5-0.mp3",
+    "duration": 8.1451,
+    "textHash": "a7c7f4e4ccea177bde42c8a451a996ea30ea960b023cad916263ab025cc3e633",
+    "text": "磁铁不用接触，也能互相作用。先保持磁极不变，再比较靠近与离远的情况。",
+    "audioHash": "88b7e2f738538ef2faf0f11fbd1160aef1f5138c600576d8b31cb0369d68bb1d"
+  },
+  "magnetism-4-5-1": {
+    "file": "audio/magnetism-4-5-1.mp3",
+    "duration": 8.1451,
+    "textHash": "4220b7c8880075c158c721773a25f25d67a624464ff11748e79f76e277b0daf7",
+    "text": "先把两磁铁距离设为八并运行，再设为二运行。比较磁铁移动的方向和幅度。",
+    "audioHash": "154fc8c22b3dd5dc63de292049217b68531d4c49a516794c45a5ec0dcbc9375c"
+  },
+  "magnetism-4-5-2": {
+    "file": "audio/magnetism-4-5-2.mp3",
+    "duration": 8.1207,
+    "textHash": "9d3bb89073c90737371fea0305582cd89d0fe05c7c9301bd1a5eda5d6cab018f",
+    "text": "在这组磁铁里，靠近时作用更明显。同名磁极互相推开，异名磁极互相吸引。",
+    "audioHash": "e1d53f89f51ed7b2264b3656f8d5895cabeb5f964830af044491a1d55fb90c22"
+  },
+  "magnetism-6-8-0": {
+    "file": "audio/magnetism-6-8-0.mp3",
+    "duration": 8.7728,
+    "textHash": "c3de692f4d82185d82b024ea0837f594405826502f1137dcc0dd23194893d00d",
+    "text": "磁铁两端叫磁极，同名相斥，异名相吸。把异名磁极靠近，用动画检验这个判断。",
+    "audioHash": "48d1797062b2c6f9fb0743291809b907cd78e24d4f283028e375d6faf9691fbd"
+  },
+  "magnetism-6-8-1": {
+    "file": "audio/magnetism-6-8-1.mp3",
+    "duration": 7.4969,
+    "textHash": "7274d3e98e01a8c30cba159a5fc5ea84ade938e9ce8a58f0fbaf46d54cfc5d42",
+    "text": "把两磁铁距离设为二，选择异名磁极，再点试试磁力。观察实验结果。",
+    "audioHash": "e6c67d13b101a12136dc58aa19de8614d80b64da344ba4d7f4500deaac095861"
+  },
+  "magnetism-6-8-2": {
+    "file": "audio/magnetism-6-8-2.mp3",
+    "duration": 8.6959,
+    "textHash": "63376357933bfb7c2fd5ad91126e0a9385e5d6f2185992519cb8bc846dc09a0b",
+    "text": "你让异名磁极靠近，观察到相互吸引。只改变距离或磁极中的一个，比较会更清楚。",
+    "audioHash": "547bb09edbcd51d501cad5d83e013f290de60bdb3f3fc766ea05faebeeda2e07"
+  },
+  "floating-2-3-0": {
+    "file": "audio/floating-2-3-0.mp3",
+    "duration": 7.6225,
+    "textHash": "a53d391fa006052464b4d416f5554c3fcac96e77c70e18c5f539029694a40884",
+    "text": "木块和钢块都能放进水里。有的留在水面，有的沉下去，我们来找找看。",
+    "audioHash": "f58a7132ff0d9a8546be01e2486fb945a3070f671a07f392646f5cd8cac63d33"
+  },
+  "floating-2-3-1": {
+    "file": "audio/floating-2-3-1.mp3",
+    "duration": 7.8453,
+    "textHash": "23b04294f3873e702052115f87e0996d19c762796b805893d5a97904f22d2257",
+    "text": "点一下放进水里，看物体慢慢停在哪里。是在水面上，还是往水底去了呢？",
+    "audioHash": "0627c929998f8d5dc735b4e5312a5ea9e01aa24faca2216dc7e164702e500d29"
+  },
+  "floating-2-3-2": {
+    "file": "audio/floating-2-3-2.mp3",
+    "duration": 8.0964,
+    "textHash": "bf95009e5e0862036c0977de27e94975e7ba5ef2cf21e406f58a9bb25638f822",
+    "text": "浮起来的物体待在水面附近，沉下去的会落向水底。换一种材料，还会一样吗？",
+    "audioHash": "d6bbe2d7a9949821dc4ba32783ca33f95fca00fb13bed27c32cd9cd6fb40b482"
+  },
+  "floating-4-5-0": {
+    "file": "audio/floating-4-5-0.mp3",
+    "duration": 7.9952,
+    "textHash": "fc7aca433c584b106475a16439fcfe166b0bd39283edcaef3ad182318ca4afec",
+    "text": "同样大小的物体，材料不同，沉浮也可能不同。先固定材料，比较放入的数量。",
+    "audioHash": "cacc9c9bdb133ba192614708d3125212c9919bfb529fde602973c9c798d41bbe"
+  },
+  "floating-4-5-1": {
+    "file": "audio/floating-4-5-1.mp3",
+    "duration": 8.623,
+    "textHash": "f597b406af39c5a6910eeddda66dac15fc349ee90808e031776243cabbb560be",
+    "text": "先把放入水中的物体数设为一并运行，再设为三运行。比较物体的数量与沉浮位置。",
+    "audioHash": "7febdc435ef164c267669d4fb26d52ad69867ee8c72385944036046df057f836"
+  },
+  "floating-4-5-2": {
+    "file": "audio/floating-4-5-2.mp3",
+    "duration": 8.9227,
+    "textHash": "9bf61161b683deac45201581e74f63cec5166ef16f415bee03a0c6eaab41c55e",
+    "text": "单独放入的木块增加了，木块的材料没有改变。数量变多，不表示每一块都会沉下去。",
+    "audioHash": "683ba555d12a64038d421799b9b71884115f87d5a388350ce33fad552eee88cf"
+  },
+  "floating-6-8-0": {
+    "file": "audio/floating-6-8-0.mp3",
+    "duration": 9.1942,
+    "textHash": "8bf5db91b56ca48b9cf8621027f6f37e1ca8abac64c358a95663a6ec8f8d3c49",
+    "text": "沉浮要比较物体的平均密度与水的密度。这个实验先用三块木块，观察相同材料的表现。",
+    "audioHash": "5e37215560d260f03f3298901c473d3fe55c51a760424e689945be17bd784517"
+  },
+  "floating-6-8-1": {
+    "file": "audio/floating-6-8-1.mp3",
+    "duration": 7.821,
+    "textHash": "88de32ae28deb6018bd80ac8bc1dbdde0408f123538e67ad077388ef32baa505",
+    "text": "把放入水中的物体数设为三，选择木块，再点放进水里。观察实验结果。",
+    "audioHash": "18de383d00132e31f63d3d6bcf8fb0b2a5c6fffd3a1320330a3139ea7e6aef26"
+  },
+  "floating-6-8-2": {
+    "file": "audio/floating-6-8-2.mp3",
+    "duration": 9.2468,
+    "textHash": "50d70ed7f079ff25d0f71f6ccdf44e6029d77836faa5bdbe392f9e6d2d6cf73a",
+    "text": "三块木块各自受到水的浮力。换成实心钢块可以再比较，不能只凭大或小判断沉浮。",
+    "audioHash": "14ebe514285be0accd37da99965e56cf41667f3d6c477ba9d1355376d5e65be7"
+  },
+  "plant-growth-2-3-0": {
+    "file": "audio/plant-growth-2-3-0.mp3",
+    "duration": 8.1451,
+    "textHash": "d446925ce141d0d5c35e61df140f35a36f380f4cbf6509624dd168942fc1e938",
+    "text": "小种子住在土里，慢慢长出小芽和叶子。我们把时间快进，一起看它长大。",
+    "audioHash": "8a89fd34e18cfcf2f22ecafd08ed7acbe521dc47c70baf35aa7efeb44b3dcdfd"
+  },
+  "plant-growth-2-3-1": {
+    "file": "audio/plant-growth-2-3-1.mp3",
+    "duration": 8.3962,
+    "textHash": "27cd02c22af05a2e560638a3bebc86ab52d6dc7be353129b76f56f3dd864ffa0",
+    "text": "点一下观察生长，找找新长出来的叶子。画面变化很快，真实的小植物要慢慢等。",
+    "audioHash": "e48d7deb2423a6ae80a6be3866a107ee333d885622f6efe4f12fc503ae579dd1"
+  },
+  "plant-growth-2-3-2": {
+    "file": "audio/plant-growth-2-3-2.mp3",
+    "duration": 8.1694,
+    "textHash": "70c3f717a532abd743e2669441e277a16902ab80759377e8cd02268d33eae807",
+    "text": "小植物需要适量的水和光，也需要空气和养分。好好照顾它，才能健康地长大。",
+    "audioHash": "db13ddec6f191bb25a2543a1850b7a355ed5f7969c79e73b3a946919aebfcb35"
+  },
+  "plant-growth-4-5-0": {
+    "file": "audio/plant-growth-4-5-0.mp3",
+    "duration": 8.3962,
+    "textHash": "4533b5e0cfc14f657861c8202816ca65c56fce074365648d3f66b5533499623a",
+    "text": "植物的生长需要时间。保持种植条件相同，再看看不同生长时间里有什么变化。",
+    "audioHash": "d52088cb16a96bc139485993a1d8932df371d71cc18dcfbb4019e09a7ee286ce"
+  },
+  "plant-growth-4-5-1": {
+    "file": "audio/plant-growth-4-5-1.mp3",
+    "duration": 7.898,
+    "textHash": "320eb6e1c2f039dc73b6f7c05c455cfde874b9957367643eb697bc0c0e629a3a",
+    "text": "先把生长时间设为一并运行，再设为六运行。比较茎的高度与叶子的变化。",
+    "audioHash": "3c2a7b2e886a6be287780090410ff5b3b6d29221d12622804a6a009b5d9ae70b"
+  },
+  "plant-growth-4-5-2": {
+    "file": "audio/plant-growth-4-5-2.mp3",
+    "duration": 9.074,
+    "textHash": "3af9e6f9928b5a0064b50e7c0b1becf99398f1188f624ac68841062bec1febc8",
+    "text": "时间变长，条件合适的小植物能继续生长。动画加快了过程，并不是种子一会儿就长大。",
+    "audioHash": "d9058f2925a5a63840242e3ffa6a3bde687e4151df60d4f87c4e28c2b80d043a"
+  },
+  "plant-growth-6-8-0": {
+    "file": "audio/plant-growth-6-8-0.mp3",
+    "duration": 8.9957,
+    "textHash": "62edee75e53a192367f1e98c1429b7f2bb21a0cca89380f156bab87e8deb9a1e",
+    "text": "水和光会影响幼苗生长，但不是越多越好。选好有水有光，再观察指定时间后的幼苗。",
+    "audioHash": "4a1f6bf41ed4df3ca86db563417153ebe1f5d2c8aead5bcb5c1f4c2bf880b622"
+  },
+  "plant-growth-6-8-1": {
+    "file": "audio/plant-growth-6-8-1.mp3",
+    "duration": 7.4969,
+    "textHash": "745684d81438c0ef4bb5512bef5f844602b78a0c03c4eefd8a2b8cceb85db037",
+    "text": "把生长时间设为六，选择有水有光，再点观察生长。观察实验结果。",
+    "audioHash": "afab6bd8c608ccefb77808b0f080af8a491fd4ff2ae717a93ac18a2a3cad9fc2"
+  },
+  "plant-growth-6-8-2": {
+    "file": "audio/plant-growth-6-8-2.mp3",
+    "duration": 9.421,
+    "textHash": "f8a490fbbf07a88bf9fb607a841c4dd7ea72d39f864e569bf4a7eebc6d505ce3",
+    "text": "你看到了合适条件下的生长示意。缺水和缺光会带来不同影响，可以分别再做一次比较。",
+    "audioHash": "9fb4d61266baf7bf7968be2c118968e77d0922fe1c36e716b440179126614d80"
+  },
+  "sound-waves-2-3-0": {
+    "file": "audio/sound-waves-2-3-0.mp3",
+    "duration": 7.4969,
+    "textHash": "fdca18e7ee97ff1c5e9b964ecde92f76209cd2c60f0418fd2d02b018d3e393c5",
+    "text": "细细的琴弦可以来回动，这叫振动。我们拨一下琴弦，看看它怎样摇摆。",
+    "audioHash": "f2aa1accf95e6378ad4b80b97f44f58c2493ccfd31b76652bbfffbb062d6574a"
+  },
+  "sound-waves-2-3-1": {
+    "file": "audio/sound-waves-2-3-1.mp3",
+    "duration": 8.546,
+    "textHash": "f5ef958470298e198cb951da2793ca2786f590d48bc1ae2bca4e62bfb5a6f075",
+    "text": "点一下拨动琴弦，盯住中间的细线。线在来回动，旁边的波纹是在帮助我们观察。",
+    "audioHash": "d55632115777ffd3fcaeb85bf2d2db251d7ff8794ac5fd5c4698e4c339416943"
+  },
+  "sound-waves-2-3-2": {
+    "file": "audio/sound-waves-2-3-2.mp3",
+    "duration": 8.1207,
+    "textHash": "5e7bda28c651edc62c97a4e42e4894444ba373df256cf10353f42043520f4fef",
+    "text": "发声的物体会振动。画面把小小的振动放大了，真实的声音不是彩色的线条。",
+    "audioHash": "25c222731952e5ff1f62559b53b9e8537c3fe5a288b519c60380bc1aabf3a944"
+  },
+  "sound-waves-4-5-0": {
+    "file": "audio/sound-waves-4-5-0.mp3",
+    "duration": 8.546,
+    "textHash": "83636593650e9b436b821a0afb9b428df5a3bd8687313c83dc5726d9fb4dbac1",
+    "text": "振动有快慢，也有幅度大小。先保持轻重相同，单独改变快慢，观察琴弦的变化。",
+    "audioHash": "a36f0aed70c161fd1e59a4cc9675a02fef961110d63b1939e8b6f5bb763ea278"
+  },
+  "sound-waves-4-5-1": {
+    "file": "audio/sound-waves-4-5-1.mp3",
+    "duration": 7.9709,
+    "textHash": "4b70c09407e19eda0cb1a3842bd3a7b8222ce355a7e32d220e2eaec5cc86591d",
+    "text": "先把振动快慢设为一并运行，再设为六运行。比较琴弦来回振动的快慢。",
+    "audioHash": "08cb77731a3f347a9110d8a9e9dfcadc9d98e48915e45375970501e11227a9a4"
+  },
+  "sound-waves-4-5-2": {
+    "file": "audio/sound-waves-4-5-2.mp3",
+    "duration": 8.6716,
+    "textHash": "8a6d1d1c4699b0f1ebda38e216e00696058393fd84870c5410f09419240b0de6",
+    "text": "同样的时间里，振动次数越多，频率越高。频率和音调有关，不能把快慢当成响不响。",
+    "audioHash": "4593a36043fbf1a68df0243f7f22ee37fa94c80171763ce949bbb538a1547be0"
+  },
+  "sound-waves-6-8-0": {
+    "file": "audio/sound-waves-6-8-0.mp3",
+    "duration": 9.098,
+    "textHash": "f0e42cda08f23e551c0cafedcc935d2fd52115ac0008e099021507bc42435cfa",
+    "text": "音调主要和振动频率有关，响度还和振幅有关。轻轻振动也可以很快，两个条件要分开。",
+    "audioHash": "807fb3f3d4603fa37f3bc9a27213dad98265e13b3cdc40a1869804d7bd2e3b67"
+  },
+  "sound-waves-6-8-1": {
+    "file": "audio/sound-waves-6-8-1.mp3",
+    "duration": 7.5212,
+    "textHash": "9a3f7d3db092f0da1f11455cbd72a0ee332d961e2f4adbea660a4033efd1c39f",
+    "text": "把振动快慢设为六，选择轻轻振动，再点拨动琴弦。观察实验结果。",
+    "audioHash": "b8c5a3db20a607c741d5b7f314be0aed40d79a2bfed5784d0d66998c16561eeb"
+  },
+  "sound-waves-6-8-2": {
+    "file": "audio/sound-waves-6-8-2.mp3",
+    "duration": 8.7203,
+    "textHash": "c833207f0401da63df16a22b6021f3adbddd1844ae7780eb44e66bd753530fd5",
+    "text": "你选了较快而轻轻的振动。画面用波纹示意声音，频率与振幅分别描述不同的变化。",
+    "audioHash": "b4eb08af0ce7a75227d66391c77cb9921a5aa5603fe2b2dfa1321490d02d3980"
+  },
+  "shadows-2-3-0": {
+    "file": "audio/shadows-2-3-0.mp3",
+    "duration": 7.821,
+    "textHash": "4f33c3ae2dd342085f0ea87b5772abfa79acafa1cb1b7f14da9f96ba7d945769",
+    "text": "小物体挡住光，旁边就出现一个影子。找找亮亮的灯，再找找地上的暗影。",
+    "audioHash": "2eff94a07116f0b23302ee5971b5e70e39eacc4a3e11df56cfa61ba54dfcc2bd"
+  },
+  "shadows-2-3-1": {
+    "file": "audio/shadows-2-3-1.mp3",
+    "duration": 8.3193,
+    "textHash": "5be3e8c29ab823dbef6607028551597553ef07d42738fa13dce62cebbe347f92",
+    "text": "点一下观察影子，看看物体旁边的地面。影子的位置，和灯从哪里照来有关系。",
+    "audioHash": "a9a49394f3ca0b4cd4f225586fd29cc17d804bf864e5e73880d341fe8d098b9f"
+  },
+  "shadows-2-3-2": {
+    "file": "audio/shadows-2-3-2.mp3",
+    "duration": 7.5699,
+    "textHash": "4204cb26bc84b13e0fe145bc547053f7dc93b1ef1838d43a64513c6d552f0444",
+    "text": "影子跟着光的方向改变。物体还在原处，灯的位置变了，影子也可能变了。",
+    "audioHash": "0a3ec906267e8996fb08d6dfccb973b8c8ae194ddc35c8d163b16893430f0308"
+  },
+  "shadows-4-5-0": {
+    "file": "audio/shadows-4-5-0.mp3",
+    "duration": 8.3718,
+    "textHash": "0a5755b2fee6201804597e9a953285cc22b9efdc2eb0dbe987386528042bf780",
+    "text": "光被不透明物体挡住，会形成影子。保持物体不变，把光源移高，再与刚才比较。",
+    "audioHash": "2942379b2b6d661b9033f80113b911ee565084c53d300d995fdbd223126da8b3"
+  },
+  "shadows-4-5-1": {
+    "file": "audio/shadows-4-5-1.mp3",
+    "duration": 7.821,
+    "textHash": "75de74ef50d04df383b78688c4388d492e852deb62fd5808a10f64a592eeb2f3",
+    "text": "先把光源的高度设为二并运行，再设为七运行。比较影子的长度和方向。",
+    "audioHash": "62ad053d2b2450c7f24d38654af355d8428e045e054783e6f25a80fb8dd344f7"
+  },
+  "shadows-4-5-2": {
+    "file": "audio/shadows-4-5-2.mp3",
+    "duration": 8.2706,
+    "textHash": "0ec91987670232bb49e6a3d9c00e0b9b70046cf6bcb34f83cd4f5fbfd8370126",
+    "text": "只移动光源，影子也能改变形状和长度。观察影子时，要把灯的位置一起看进去。",
+    "audioHash": "51a7223f1e22a8707392308a4ad5b13d4314ede31f2c823d7c0bc415e8666680"
+  },
+  "shadows-6-8-0": {
+    "file": "audio/shadows-6-8-0.mp3",
+    "duration": 8.9957,
+    "textHash": "b17405bb0d01e048a413ae064374033fc55b2d084f1b95d024d2f3a936c2b347",
+    "text": "物体、光源和接收影子的地面一起决定投影。用圆柱比较光源高度，找出变化的原因。",
+    "audioHash": "5679bbdb06747dde2f99ffbc25d392743c659a148637c1df0b775bb371647837"
+  },
+  "shadows-6-8-1": {
+    "file": "audio/shadows-6-8-1.mp3",
+    "duration": 7.2215,
+    "textHash": "7f82032b98abb2d0ba94fc141dc682651986a6abbd65df5ad52ba068e95a20a4",
+    "text": "把光源的高度设为七，选择圆柱，再点观察影子。观察实验结果。",
+    "audioHash": "699c42c5ea3b0340a53b9197ef07c2a85afbf9f1ecfbe0590d7512f494dd99b6"
+  },
+  "shadows-6-8-2": {
+    "file": "audio/shadows-6-8-2.mp3",
+    "duration": 8.3475,
+    "textHash": "d5aac5a5c8eb8ac80102aa67ec91b5ef805c471987c0cb323fdcd23fe5d8e71e",
+    "text": "你固定圆柱，改变了灯的高度。影子的变化说明，观察结果与光源的位置密切相关。",
+    "audioHash": "ba14a04830fec6f643dd4fab2d5ae10fdfe18cee8faed0229ed5b392f7b7126b"
+  },
+  "states-of-water-2-3-0": {
+    "file": "audio/states-of-water-2-3-0.mp3",
+    "duration": 7.3714,
+    "textHash": "af08722183b6ef479da8115106bdacb77f7b5a847d14afa45c8ff30aa48faaf3",
+    "text": "硬硬的冰和流动的水，原来都可以是水。我们看看它们怎样换个样子。",
+    "audioHash": "d54fcde4b884c10d635311b34dafc5ddcb491fdb47627dfeebe2e99686c5599e"
+  },
+  "states-of-water-2-3-1": {
+    "file": "audio/states-of-water-2-3-1.mp3",
+    "duration": 8.3962,
+    "textHash": "1ed45f120ca8554fb1e96c5ed81d8a3a826221ffeb526f481d47a4d12bf90003",
+    "text": "点一下观察变化，看看容器里面的水。现在是小冰块，还是能够流动的液态水呢？",
+    "audioHash": "9aa6affc96742bcf3f945379bc00ac3bdcc4adfc757fd0744de41216677a55e1"
+  },
+  "states-of-water-2-3-2": {
+    "file": "audio/states-of-water-2-3-2.mp3",
+    "duration": 7.9465,
+    "textHash": "385af540476dc1f9656e47690e386e2461703b12ac2d464f6dfeb78955b46fcf",
+    "text": "冰变成液态水叫融化。水还能变成看不见的水蒸气，画面的小点只是提示。",
+    "audioHash": "2bdee2acbd1fbaa67959e3dd27536856c4f37bac6f6d722f216a47afc89ee6a6"
+  },
+  "states-of-water-4-5-0": {
+    "file": "audio/states-of-water-4-5-0.mp3",
+    "duration": 8.8458,
+    "textHash": "853ef7d0a31f68b6f48b82a0d0e8ea856608d908316978416d7c83be30c5e2ca",
+    "text": "加热和冷却可以改变水的状态。选择同一种过程，比较不同程度时容器里的变化。",
+    "audioHash": "78a3b1fe2a21cd2b9b7a389b2e38c9611cc1df3eea861ab9ecdc3d535be29143"
+  },
+  "states-of-water-4-5-1": {
+    "file": "audio/states-of-water-4-5-1.mp3",
+    "duration": 7.9952,
+    "textHash": "f94fd3c4b4e12ca484b2c109d9683c8437b186d898c8d76974ee96568f553312",
+    "text": "先把加热程度设为零并运行，再设为六运行。比较冰块与液态水的变化。",
+    "audioHash": "94caf0e7f2f9f92dab763d1eda84af87e874dcbea65b868809b947ba530cb340"
+  },
+  "states-of-water-4-5-2": {
+    "file": "audio/states-of-water-4-5-2.mp3",
+    "duration": 8.6716,
+    "textHash": "01fbbd0b4bec32755cf4f86e3398c945e3c09e3fc554272408a75d4021531103",
+    "text": "加热可以让冰融化，液态水还能变成水蒸气。水蒸气看不见，白白的雾是小水滴。",
+    "audioHash": "f7ab84bef4c5b135e8d553cbde8f54ebd1a0fa717a9c11b929833c32c842ac1d"
+  },
+  "states-of-water-6-8-0": {
+    "file": "audio/states-of-water-6-8-0.mp3",
+    "duration": 8.4448,
+    "textHash": "c11f9d794a93d4b9315f43636075b55648c53a8b4cb2c0e6db322f17174ed651",
+    "text": "水有固态、液态和气态。我们用程度刻度操作模型，这些数字并不是真实的温度。",
+    "audioHash": "4d5c84ad07bd72258e7cb60f056524dcb25a9220d71cc6a4ec5359e75bf83670"
+  },
+  "states-of-water-6-8-1": {
+    "file": "audio/states-of-water-6-8-1.mp3",
+    "duration": 7.0716,
+    "textHash": "0fd976e9a716bc31076f66b212274442826fb34f9f107339c02ca1100c09c3b4",
+    "text": "把加热程度设为六，选择加热，再点观察变化。观察实验结果。",
+    "audioHash": "9a0f21af1aa0f4cfa2d61803805212469e08c9e5e7ae3de5343b8f249b2d9412"
+  },
+  "states-of-water-6-8-2": {
+    "file": "audio/states-of-water-6-8-2.mp3",
+    "duration": 8.7203,
+    "textHash": "94873e166f685e41f90f8c9d0a504cba2c3451961c7b278e20dabc9f6e6e6f4c",
+    "text": "这次沿加热方向观察了水的变化。水没有凭空消失，可能已经变成看不见的水蒸气。",
+    "audioHash": "6ba4018e1b9918d6733a3efd8e11856b13a9bf953b1595bb2c43cbef21d09405"
+  },
+  "electric-circuit-2-3-0": {
+    "file": "audio/electric-circuit-2-3-0.mp3",
+    "duration": 7.6711,
+    "textHash": "df5e4370e971be4fa315653016c776e92790be465b18b6d6306bb79d02af5f77",
+    "text": "小灯泡连着电池和导线。开关像小门，合上以后，小灯才可能亮起来。",
+    "audioHash": "3fbe82523946244a8b89cf741ba81bceaccab621af273557555b2866adc62a20"
+  },
+  "electric-circuit-2-3-1": {
+    "file": "audio/electric-circuit-2-3-1.mp3",
+    "duration": 7.8696,
+    "textHash": "98a4f2eb612115dcaf2ad686aed62c9bb99451bfdf2f795ea1c1cd5c6e12ec69",
+    "text": "点一下接通实验电路，看看开关和灯泡。开关还断开时，灯泡会不会亮呢？",
+    "audioHash": "9c1ef23116b8fae43cf0725d574365f8c7762a4022cace78d1268016d96ca7d0"
+  },
+  "electric-circuit-2-3-2": {
+    "file": "audio/electric-circuit-2-3-2.mp3",
+    "duration": 7.4443,
+    "textHash": "c1f62e71a48ed9dccfcd5a24514ea8a97844ec38a73213ee6457ccff240fb3cb",
+    "text": "电流需要一条接通的路。开关合上，路连起来，模型里的小灯就能发光。",
+    "audioHash": "756d6942442611117c758883ec402f4365c2e05116e206f83a27586e25669f10"
+  },
+  "electric-circuit-4-5-0": {
+    "file": "audio/electric-circuit-4-5-0.mp3",
+    "duration": 8.4448,
+    "textHash": "6ba1903fdd6779ab41f7a9179caca6cfb1742ad28720b9c332aee26cba470eaa",
+    "text": "闭合电路给电流提供通路。先选择闭合，再改变灯泡数量，比较接通后的灯泡。",
+    "audioHash": "282decb6124bd2108702976e38ee616ebf01aaddf5c304dbf0d597795a444ddf"
+  },
+  "electric-circuit-4-5-1": {
+    "file": "audio/electric-circuit-4-5-1.mp3",
+    "duration": 8.1977,
+    "textHash": "4783ec87af15b42ddc419f635e9cfe4a3c20e41ae29dde2d7673dcc4c38cefbe",
+    "text": "先把灯泡数量设为一并运行，再设为二运行。比较能够看见的发光灯泡数量。",
+    "audioHash": "417ad37e0ce8885e4b969a6e45bea3c038e01b6736a0d2c708d4e6a985595685"
+  },
+  "electric-circuit-4-5-2": {
+    "file": "audio/electric-circuit-4-5-2.mp3",
+    "duration": 8.6959,
+    "textHash": "65640b0e6c6509f5609b37f78bd4db004d558faa86356f990b0b9b3d77cd68be",
+    "text": "灯泡数量改变了，接通的基本条件没有变。线路断开时，就不能形成这条完整通路。",
+    "audioHash": "8eea133934213aaa04a1e5954d4a24b028d411e87c4b095e042d6c6ca52d77bd"
+  },
+  "electric-circuit-6-8-0": {
+    "file": "audio/electric-circuit-6-8-0.mp3",
+    "duration": 8.8701,
+    "textHash": "893c9606e46fd2293cda4b0a0fa82c0696daf55aaa9d256ae7cda61f262e0f22",
+    "text": "电池提供能量，导线连接元件。把两只灯泡放进闭合电路，检查从电池出发的通路。",
+    "audioHash": "0654d2a30a36095e53476b090328cf1c1ff959fe668a8e6aa71d56a9f4d08e7c"
+  },
+  "electric-circuit-6-8-1": {
+    "file": "audio/electric-circuit-6-8-1.mp3",
+    "duration": 7.3227,
+    "textHash": "532615da72352631720bd63ae17c84befbb556bfe30ddbef11e3ee46671b86bf",
+    "text": "把灯泡数量设为二，选择闭合，再点接通实验电路。观察实验结果。",
+    "audioHash": "7be349584c05ecc6d61acb29f42e13ac235c0fd213a4043a5eafd18b046efd00"
+  },
+  "electric-circuit-6-8-2": {
+    "file": "audio/electric-circuit-6-8-2.mp3",
+    "duration": 10.1461,
+    "textHash": "98a1b93da0454c9351f0e4d8192f6df6a76b369d6d85065bb97fc25d226601e4",
+    "text": "两只灯泡一起工作，需要合适的连接。这里展示低压电路关系，不把动画亮度当作真实电路测量。",
+    "audioHash": "1003b5736f7bb58496cfa16b471974a509e8bad4b0bb00363ab1d73359c5d395"
+  },
+  "traffic-light-2-3-0": {
+    "file": "audio/traffic-light-2-3-0.mp3",
+    "duration": 8.1451,
+    "textHash": "49e6f964466a8f6cb07a7893deaa10813950d24867b680ef03ba9356ab263f1b",
+    "text": "路口有不同颜色的灯，提醒大家什么时候等待。我们看看亮着的是哪一种颜色。",
+    "audioHash": "5dacc33bfbc36febcaf1f1da3cb47c25ab2975261eefdc7607990d036bce6482"
+  },
+  "traffic-light-2-3-1": {
+    "file": "audio/traffic-light-2-3-1.mp3",
+    "duration": 7.7723,
+    "textHash": "f8d80a5257e7601e958a9d564234995797511eab98e05323aedc9f010b031d37",
+    "text": "点一下运行路口，观察灯和路上的小人。红灯亮的时候，先停下来等一等。",
+    "audioHash": "9abeecf132ab8599d4a80609f8fdc1c98716149f871fccdec48fc813db0e52db"
+  },
+  "traffic-light-2-3-2": {
+    "file": "audio/traffic-light-2-3-2.mp3",
+    "duration": 7.6711,
+    "textHash": "0df0066653737d828c22a9c9e26c5932b76d2945c99bc6dfa47a5afda1e5563d",
+    "text": "大家看懂同一个信号，路口就能更有秩序。绿灯时，也要确认安全再通行。",
+    "audioHash": "39a28ce85e7e1e81e459ff5ce3405aae7afe2c5c1460d85c27a4bcb3340d2128"
+  },
+  "traffic-light-4-5-0": {
+    "file": "audio/traffic-light-4-5-0.mp3",
+    "duration": 8.9227,
+    "textHash": "ff8c1a65f460d0956ef7d7a0960ffb7b6dd59ab8c870b306017c713dd43d10fe",
+    "text": "交通信号和等待时间是不同的条件。保持信号相同，比较时间改变后路口的过程。",
+    "audioHash": "9fcdaf7999f9180f631289ca75bd48460efe6fc215fc8097777094bc80bad3c7"
+  },
+  "traffic-light-4-5-1": {
+    "file": "audio/traffic-light-4-5-1.mp3",
+    "duration": 8.498,
+    "textHash": "c3e4c8076b9e3fc59a9c50fc90563b19cd48f9a7812fb9773d5a41709f165771",
+    "text": "先把行人等待时间设为一并运行，再设为三运行。比较小人等待和移动的过程。",
+    "audioHash": "69c06152b0a1a99525f07c91da6a4a9ce285ef5ecee601ca3b9bbfd645894fc8"
+  },
+  "traffic-light-4-5-2": {
+    "file": "audio/traffic-light-4-5-2.mp3",
+    "duration": 8.1451,
+    "textHash": "c801be4d1c9dfbc376b605214b991129c2cea12672ceabcef1f12404441b1bc5",
+    "text": "等待时间改了，信号的意思没有改。时间到不等于随时能走，还要看交通信号。",
+    "audioHash": "6f40952af975d441cb546c2429b4d7076db6c2567308ffe4e203870c82ccd2b9"
+  },
+  "traffic-light-6-8-0": {
+    "file": "audio/traffic-light-6-8-0.mp3",
+    "duration": 8.8215,
+    "textHash": "8a38808cb1dd9a68fee5cad376e56a0fde93717c2cc412d48e5aa805829b9bae",
+    "text": "交通控制需要明确规则。让等待时间设为三并选择绿灯，观察模型怎样安排通行。",
+    "audioHash": "fad0881249ee8ffbdb102ac1bec4e8b601c28f67674f1cbfc80aebef4584487f"
+  },
+  "traffic-light-6-8-1": {
+    "file": "audio/traffic-light-6-8-1.mp3",
+    "duration": 7.1971,
+    "textHash": "79059d065f522e5924cdb95706ca83e941ef669c7b75a2a066581abaa0b3034b",
+    "text": "把行人等待时间设为三，选择绿灯，再点运行路口。观察实验结果。",
+    "audioHash": "e9e8b501298a8e8c3c48446a1b84a5c054f7b13e6cafeb9de98cb5e23dfe64d4"
+  },
+  "traffic-light-6-8-2": {
+    "file": "audio/traffic-light-6-8-2.mp3",
+    "duration": 8.8945,
+    "textHash": "02994cde73e1ff308533a29c74f6b24b018847f368a206b2f7fc8b65d1fb1c5a",
+    "text": "你同时设置了时间和绿灯条件。这个路口是规则示意，实际过路还要观察周围环境。",
+    "audioHash": "cb8cbb7f9e1b0c2f2d84d787d15030b2eb00036896b09fa13489dbcb694bb83d"
+  },
+  "robot-path-2-3-0": {
+    "file": "audio/robot-path-2-3-0.mp3",
+    "duration": 7.8453,
+    "textHash": "06e602d79bd847be75de83f3162688f44f520d7898a6f0bd61a7ce432843e8ad",
+    "text": "小机器人准备出发了。你告诉它走几步，它就沿着选好的方向一步一步走。",
+    "audioHash": "eddda2c9ee935bb65e69729d5c7fb30cf6d9056176fc5e28eba7a2e6f686011c"
+  },
+  "robot-path-2-3-1": {
+    "file": "audio/robot-path-2-3-1.mp3",
+    "duration": 7.9465,
+    "textHash": "2010097b17317280c475bc570820d088d2b09edca62fc6fb7f45adf14c863f1b",
+    "text": "点一下执行指令，跟着机器人看一看。它从哪里出发，最后停在了哪个位置？",
+    "audioHash": "498bfd64bb17e190d62e9dc565ec5471b7e8bbd781e04fe86dabb425b6cd33e5"
+  },
+  "robot-path-2-3-2": {
+    "file": "audio/robot-path-2-3-2.mp3",
+    "duration": 8.5947,
+    "textHash": "b00dd1b847011b0f00bf847498e509f8bb15c8498709e1b73654c3d8c7c0a2a8",
+    "text": "机器人按照指令走，不会自己猜我们的意思。方向和步数都说清楚，它才好行动。",
+    "audioHash": "b58bf4238885d4c3f851530531dfb305c769c4fda7d9bdc2bfd5e4370c79bbca"
+  },
+  "robot-path-4-5-0": {
+    "file": "audio/robot-path-4-5-0.mp3",
+    "duration": 8.5947,
+    "textHash": "a11cd1a174aad3b6c2a6c941ae80418c7e425522ea5d15664a76ed77bdd9b2e5",
+    "text": "步数决定走多远，方向决定往哪边走。先保持方向不变，比较两种不同的步数。",
+    "audioHash": "033c9feef8eb5dfd1edff803d1c7174238e37e70149d317aaabeda902037525c"
+  },
+  "robot-path-4-5-1": {
+    "file": "audio/robot-path-4-5-1.mp3",
+    "duration": 8.1451,
+    "textHash": "a5c87a98505ecfddd2828fb1d8acf3ecaead709810e6a789d84fdcbc559c540d",
+    "text": "先把前进步数设为一并运行，再设为四运行。比较机器人最后停下的位置。",
+    "audioHash": "51f7f74fba88fd1e2fed20deabfdb23a1e156b9f2dad8bb90386ac3e660b7511"
+  },
+  "robot-path-4-5-2": {
+    "file": "audio/robot-path-4-5-2.mp3",
+    "duration": 8.8701,
+    "textHash": "e586ac1ea54a9196f7a4c0d8c594a8c0a4a000f7bf31a01fcdd98e0caa569bc2",
+    "text": "多走几步，终点就会改变。比较路线时，出发位置和方向保持一样，结果更容易看清。",
+    "audioHash": "08b7503f215bb5a9dbdaa3b70cb7c08e2389399c54d70cc9595647c1bb502808"
+  },
+  "robot-path-6-8-0": {
+    "file": "audio/robot-path-6-8-0.mp3",
+    "duration": 8.6959,
+    "textHash": "bc95707044309b803b0c4974393182451a0dd57b234fbef4176944fac9817d5a",
+    "text": "一条移动指令同时包含方向与步数。试着安排向右四步，先预测终点，再执行验证。",
+    "audioHash": "b5c5aee4af9e4a200446b83b884e163ba0c697e73a7d49f697c66118488cdfbc"
+  },
+  "robot-path-6-8-1": {
+    "file": "audio/robot-path-6-8-1.mp3",
+    "duration": 7.0473,
+    "textHash": "674e0380cfeb3f8b0899e5ced4732bfb7cc6bf86bca521a841462c84ccfa69e9",
+    "text": "把前进步数设为四，选择向右，再点执行指令。观察实验结果。",
+    "audioHash": "a586121f48de8d8fdabab3edb70c8af76da16c0056e7363b2c4bdc46aa69f3e1"
+  },
+  "robot-path-6-8-2": {
+    "file": "audio/robot-path-6-8-2.mp3",
+    "duration": 8.7446,
+    "textHash": "9614f1edef911990482c0de7388e3a65697281deab064bbb27cc986290270ca6",
+    "text": "机器人按向右四步完成了移动。结果和预想不一样时，回头检查指令里的方向与数量。",
+    "audioHash": "7495fde21fc509a6d08506aa972de2e27739612ed6351250ffb5ef80f4464662"
+  },
+  "solar-panel-2-3-0": {
+    "file": "audio/solar-panel-2-3-0.mp3",
+    "duration": 8.0195,
+    "textHash": "23ba1626f820fae3d96adf293754449aa5e364602bbac3b9eb1e1570ce19c02b",
+    "text": "太阳光照在面板上，能帮助小装置工作。找找太阳和接收阳光的那块板。",
+    "audioHash": "349d86e6acbabb5f172c60b36705ce66f71a9c130a476b209754be106e565276"
+  },
+  "solar-panel-2-3-1": {
+    "file": "audio/solar-panel-2-3-1.mp3",
+    "duration": 8.7971,
+    "textHash": "a822d68d4a682ad7af6caff349925b887676642594dbe37b01de6c1dd2033a6e",
+    "text": "点一下启动太阳能装置，看看阳光照向哪里。面板接收到光以后，会出现什么变化？",
+    "audioHash": "689b553576646de4c2ed5273b5e46a022f75d4441c0c42446ed462c99bb85a76"
+  },
+  "solar-panel-2-3-2": {
+    "file": "audio/solar-panel-2-3-2.mp3",
+    "duration": 8.2463,
+    "textHash": "3c56c8cb5da640f53489a4c7f431b654f6564e27d549af97f518414a0430afb9",
+    "text": "太阳能板可以把一部分光变成电。我们用小模型，看见阳光与装置之间的联系。",
+    "audioHash": "61678c7ac5a1c1b4eef9121c3888a8edc438d5e78a481eca34fdb8c5d72b700c"
+  },
+  "solar-panel-4-5-0": {
+    "file": "audio/solar-panel-4-5-0.mp3",
+    "duration": 8.7971,
+    "textHash": "c021d9fa630106c262a17632f3bd38bd40e054576150b8be1a00c38923ac5706",
+    "text": "太阳能板发电受光照影响。先保持面板朝向相同，再比较不同太阳高度下的表现。",
+    "audioHash": "17ca746df3227f9a986f4faba6397d6622985bf920d1d270462bd4c3f7e99b9d"
+  },
+  "solar-panel-4-5-1": {
+    "file": "audio/solar-panel-4-5-1.mp3",
+    "duration": 8.6716,
+    "textHash": "4ec2dabfc3289da9d84b30aade33050aa6f564c0cc2069d796fa02c5816f8a43",
+    "text": "先把太阳的高度设为一并运行，再设为七运行。比较面板受光和装置工作的变化。",
+    "audioHash": "514467dd7d0f669ba44375fa2f9e0518b73f96cf3eb3378779c139cfcae762fc"
+  },
+  "solar-panel-4-5-2": {
+    "file": "audio/solar-panel-4-5-2.mp3",
+    "duration": 8.9713,
+    "textHash": "b4010ba8380a2c8a6b3ab2bab84bcb90d0e69c8206c198e27332e6b56dd8be59",
+    "text": "太阳的位置改变了，面板收到的光也可能改变。模型帮助比较关系，不代表真实发电量。",
+    "audioHash": "4ccf851fa83b71435b3c93459e2918e817650d575d2c4916690d9c728e1add42"
+  },
+  "solar-panel-6-8-0": {
+    "file": "audio/solar-panel-6-8-0.mp3",
+    "duration": 8.8458,
+    "textHash": "c7b1a05cb5e9438fe2b1b8fbf32f443a7e4679225fb874a2b3de913c5b5784a5",
+    "text": "光能可以转成电能。把面板朝向太阳，在指定高度观察，区分光照方向和装置反应。",
+    "audioHash": "8eba4cd80557e1cf843ba56aab9460edc5b6285dc902ed8c699b11964c35b1e5"
+  },
+  "solar-panel-6-8-1": {
+    "file": "audio/solar-panel-6-8-1.mp3",
+    "duration": 7.898,
+    "textHash": "df21765b8adbae2c8148bdce52c626b39b3ef622f689b331bc2d974baa375da3",
+    "text": "把太阳的高度设为七，选择朝向太阳，再点启动太阳能装置。观察实验结果。",
+    "audioHash": "1b52fc8a877f9ddce56bf68a5ea779c7103198e2f7f9f1550571c6d27caff83c"
+  },
+  "solar-panel-6-8-2": {
+    "file": "audio/solar-panel-6-8-2.mp3",
+    "duration": 8.546,
+    "textHash": "d65677e08c7395b77d5bfa462c137e02d692fb8cd75318e97ab1222bd757f160",
+    "text": "你让面板朝向太阳接收光照。真实发电还受到天气、材料和角度等条件影响。",
+    "audioHash": "d12a3e7587e2e470e7ca11c72ce369e460ae9e7e4eec68ab9b341d2409dc2ae1"
+  },
+  "wind-turbine-2-3-0": {
+    "file": "audio/wind-turbine-2-3-0.mp3",
+    "duration": 7.347,
+    "textHash": "6432e91244c5dab3a6b06ce7b14970a310b4cb221930612e19f7edd41cbe6b66",
+    "text": "高高的架子上，有一组会转的叶片。风吹过来，可以推动它们慢慢转动。",
+    "audioHash": "16184cbd9e4eac46e815684a6d637d2071ee88cbf97360f8b1b3ace844197912"
+  },
+  "wind-turbine-2-3-1": {
+    "file": "audio/wind-turbine-2-3-1.mp3",
+    "duration": 7.9465,
+    "textHash": "e3d1848cc0f4d89c0a6638efb178532daf332ffc827c5ff9d14f80cad7225013",
+    "text": "点一下送来一阵风，找找叶片转动的方向。叶片会带动里面的装置一起工作。",
+    "audioHash": "8bd44f570ed8eba78f2b337f7135f3a6c52a48a4bb3057541235b937c15fec7d"
+  },
+  "wind-turbine-2-3-2": {
+    "file": "audio/wind-turbine-2-3-2.mp3",
+    "duration": 8.4691,
+    "textHash": "02612e0b6335437546b8c068d0721e3ba4d0679080620494ce380812c425ffa7",
+    "text": "风能让叶片运动，发电机再把运动变成电。我们跟着动画，看看能量经过的路线。",
+    "audioHash": "f10fd0f20e36731aeafdccf7adf5b86855e5137deaf11927d6f7ffe74d99ac1c"
+  },
+  "wind-turbine-4-5-0": {
+    "file": "audio/wind-turbine-4-5-0.mp3",
+    "duration": 8.5704,
+    "textHash": "2d68733594670dad05292216ff8b58c89e82997acf850afe3f1f9cbec6f40a94",
+    "text": "叶片能否转动，会影响装置工作。先用正常叶片，再比较两种不同的风速等级。",
+    "audioHash": "427b386258e5b1b94312f0bd58aefab2f3ee89e6e4e9135f2a7ebdf53285f59f"
+  },
+  "wind-turbine-4-5-1": {
+    "file": "audio/wind-turbine-4-5-1.mp3",
+    "duration": 7.4726,
+    "textHash": "35990a7ac0b06405e5b6435c6e55a5a65e2f082830d1de350226b83a16abcf9e",
+    "text": "先把风速等级设为一并运行，再设为六运行。比较叶片转动的快慢。",
+    "audioHash": "70e03adcb6fc8f8a6d04574a1997542f3220ac7a99503c1c9731f3d7499bba16"
+  },
+  "wind-turbine-4-5-2": {
+    "file": "audio/wind-turbine-4-5-2.mp3",
+    "duration": 9.4453,
+    "textHash": "8edb7c0bd5c648129b280e0bd0f21f681bfd4a0feede630faa181e88ed6ca6ae",
+    "text": "模型里的风变强，正常叶片转动更明显。真实机器有工作范围，不是风越大就永远越好。",
+    "audioHash": "99aa7ac70bc0344894307571640d83de211f705c49080bf9a7e29e4fc119768b"
+  },
+  "wind-turbine-6-8-0": {
+    "file": "audio/wind-turbine-6-8-0.mp3",
+    "duration": 8.8945,
+    "textHash": "c7c88788870007dd9d71d454b3dc68e07717925742f1dbd776f3d83cc681fee2",
+    "text": "风带动叶片，再带动发电机。选择正常叶片与指定风速，观察从运动到发电的关系。",
+    "audioHash": "70d8315e1d0ac7003c032f968735670aa2ad82ff30ea0bba82a87ce17ed077b1"
+  },
+  "wind-turbine-6-8-1": {
+    "file": "audio/wind-turbine-6-8-1.mp3",
+    "duration": 7.5212,
+    "textHash": "e8edcab231071e5eb700d4d818e56fb22a9e40f4142983065b31119a1a74ef17",
+    "text": "把风速等级设为六，选择正常叶片，再点送来一阵风。观察实验结果。",
+    "audioHash": "2c586b9a06f2bae76f5cc84f41e382edba2a3a1dc6a5cef70722f909f7ca0ada"
+  },
+  "wind-turbine-6-8-2": {
+    "file": "audio/wind-turbine-6-8-2.mp3",
+    "duration": 8.9957,
+    "textHash": "3451c274ae8e3eb5c3f0616ffe78c6a1e960b3420daef1404e313e310b95c396",
+    "text": "你完成了风推动叶片的实验。锁住叶片可以作为对照，看看装置失去转动后怎样变化。",
+    "audioHash": "9f55abf71eced5a112196465abc8262d7ccf71132790095f1a95146f3846844b"
+  },
+  "water-filter-2-3-0": {
+    "file": "audio/water-filter-2-3-0.mp3",
+    "duration": 7.6225,
+    "textHash": "5faa6a3c85e5e1a52161c432449c0b457ec9a5d0889896b9758396215c672875",
+    "text": "水里有一些小杂质。我们让水经过过滤层，看看哪些东西会被留在上面。",
+    "audioHash": "79cd5098b34ffec31f42c1ca1ece10bb1dd1a966fd11a27b2dd90e30351560bc"
+  },
+  "water-filter-2-3-1": {
+    "file": "audio/water-filter-2-3-1.mp3",
+    "duration": 7.8453,
+    "textHash": "3053207731b7fb46d7996532ae745433cef6a89c8d55b145d33295593f5ce76f",
+    "text": "点一下开始过滤，跟着水往下看。水过去了以后，小杂质还会一起过去吗？",
+    "audioHash": "6ac712cf638d8401ebf33e6cd87c814e86742c2636a35acfd940896fa896375a"
+  },
+  "water-filter-2-3-2": {
+    "file": "audio/water-filter-2-3-2.mp3",
+    "duration": 7.7967,
+    "textHash": "bcf47e5877b68ea35c19fb407d6223ee55b2f76534d1b11bef174a4b3512ea40",
+    "text": "过滤层能拦住一些杂质。水看起来更清楚，也不代表它已经可以直接喝了。",
+    "audioHash": "6d567aa25924c6c6873d273b5107408db08be274eb484798c533d54ea43e55a2"
+  },
+  "water-filter-4-5-0": {
+    "file": "audio/water-filter-4-5-0.mp3",
+    "duration": 8.8215,
+    "textHash": "c9038377fe02da38d69a144998b3caaf5c2cda77e3a79366a5d814ad09e3c967",
+    "text": "过滤要看材料和水里的杂质。先保持过滤层相同，再比较不同水量通过时的过程。",
+    "audioHash": "7e94f4caa0b68c5d0172d5089afb448ad509601fc3b6cf24d877ec18c5920c38"
+  },
+  "water-filter-4-5-1": {
+    "file": "audio/water-filter-4-5-1.mp3",
+    "duration": 8.4448,
+    "textHash": "2f1320bbe12c5591461ad1f9b6d133a2da995df85a404d4322a60276edbcbe02",
+    "text": "先把加入的水量设为一并运行，再设为四运行。比较水的流动和杂质停留的位置。",
+    "audioHash": "da6ef50c95ecaa68fafbe4cd9216b36df8e538b99598c6a42decbf76cfe0d81f"
+  },
+  "water-filter-4-5-2": {
+    "file": "audio/water-filter-4-5-2.mp3",
+    "duration": 8.6472,
+    "textHash": "366fa3549cd28e0b0f62a2838e23ac0561de02f20908e26c6f8bb11310e9b2ea",
+    "text": "水量改变，经过过滤层的过程也会改变。过滤只能拦住一部分东西，并非所有污染物。",
+    "audioHash": "256bca96941c1348005b32e3efdf640471b60ac72ef00fc72971e8db733d6989"
+  },
+  "water-filter-6-8-0": {
+    "file": "audio/water-filter-6-8-0.mp3",
+    "duration": 8.623,
+    "textHash": "8f30ac8310d7d6248a841046ae19ed759f64be51aee75335939399330d51a1fd",
+    "text": "细网和沙层能拦截一些悬浮颗粒。选择沙和细网，观察四档水量经过后的路径。",
+    "audioHash": "689832d0fe0c4ad7b87975b0947f21abacf4779a04c1243483b5a60a551dc8c4"
+  },
+  "water-filter-6-8-1": {
+    "file": "audio/water-filter-6-8-1.mp3",
+    "duration": 7.5456,
+    "textHash": "ca848b3d3db1125ddcb2dc3eb87ac5288622daef6cdd71beb7c038363bbe5dc5",
+    "text": "把加入的水量设为四，选择沙和细网，再点开始过滤。观察实验结果。",
+    "audioHash": "242e9984d8b6b8a54302b3ba5902b66b3221974ea9842db40dc8729a7568eeca"
+  },
+  "water-filter-6-8-2": {
+    "file": "audio/water-filter-6-8-2.mp3",
+    "duration": 9.5952,
+    "textHash": "0e92c04392ae1a54775beb1ac12254688d800b0ec2091d76c9ddb638021e1761",
+    "text": "你看见了过滤层拦截杂质。这个模型不展示消毒，不能用清澈程度判断水是否能直接饮用。",
+    "audioHash": "ca18965b3c7e36e4635209dadecb483c2868d966a11faf10c0bd0cf579ec530f"
+  },
+  "telegraph-2-3-0": {
+    "file": "audio/telegraph-2-3-0.mp3",
+    "duration": 8.2463,
+    "textHash": "cc99d1189ab59e9ae2230170b8023deca560b1a6568f2cee3dcd64d46cda499e",
+    "text": "两边的小装置，可以用亮一下的信号打招呼。我们先发送一次，看看另一边的变化。",
+    "audioHash": "d739d78edbb3a1220a5dcd9ed68e3f2fcb8e8d5892525d3aa6f85b7b4507e583"
+  },
+  "telegraph-2-3-1": {
+    "file": "audio/telegraph-2-3-1.mp3",
+    "duration": 7.7967,
+    "textHash": "63f61008546fe62bb1a5737f1011f0d4aedade32d9bb995d687a0ceca322b210",
+    "text": "点一下发送信号，看它从这一端到那一端。信号可以短一点，也可以长一点。",
+    "audioHash": "c94eab3b346442f28acea6437f289d4ca1dbf34303cba99fb76501a8bf52ad8a"
+  },
+  "telegraph-2-3-2": {
+    "file": "audio/telegraph-2-3-2.mp3",
+    "duration": 8.0195,
+    "textHash": "563062458ac6bf25480c4e8401d1ac82f47f24edaa65efab2ea5c7dcd6d9845b",
+    "text": "长和短能够变成约定的记号。两边都知道记号的意思，才读得懂传来的消息。",
+    "audioHash": "d1c7371a02e3d83cefa0711461358c6003e0e824a02a46aefaae3be6cea9dbc4"
+  },
+  "telegraph-4-5-0": {
+    "file": "audio/telegraph-4-5-0.mp3",
+    "duration": 8.9957,
+    "textHash": "041b863649f60ea0ea8484f67c7d50561e4caa4d965485f2368bcb2431bbb9e7",
+    "text": "发送次数和信号长度是两个条件。先固定长短，再比较不同次数带来的信号组合。",
+    "audioHash": "ef813619f4663e9a728c8b4a13b7bd294d3db45591dedee8f22ffa9e9244a953"
+  },
+  "telegraph-4-5-1": {
+    "file": "audio/telegraph-4-5-1.mp3",
+    "duration": 7.7198,
+    "textHash": "a4ff2034034dff250f9a761fc27263403071538610a0bd5ca6bcf4fd965a3e2a",
+    "text": "先把发送次数设为一并运行，再设为三运行。比较接收端亮起的次数。",
+    "audioHash": "fe1c00f32fe2919b5ae691963dc4847f2f94c9ffc24c11dc7c9ed8ded4147126"
+  },
+  "telegraph-4-5-2": {
+    "file": "audio/telegraph-4-5-2.mp3",
+    "duration": 8.7446,
+    "textHash": "64e9ac4ca2980fd52ee1c8f020c50b0b7903b316a4f22e6e1d6f3d4281c1671b",
+    "text": "发送次数改变，接收的信号数量也改变。记录消息时，次数和每次的长短都要看清。",
+    "audioHash": "b0391714e32670f1e94bee845e30439bb6c1676463cf30edaaf7d83eca8da837"
+  },
+  "telegraph-6-8-0": {
+    "file": "audio/telegraph-6-8-0.mp3",
+    "duration": 9.122,
+    "textHash": "173dc628d6b45460aaa1ee1448acf19bd83607819a9f65d10e4c839e8fe3204e",
+    "text": "编码要遵守共同规则。用三个长信号做一次练习，观察接收端能否保持相同的顺序。",
+    "audioHash": "c78f6390f1b0b11871a54e2c1ea537289621f17189b42a0dba8c64ee9aa11e0c"
+  },
+  "telegraph-6-8-1": {
+    "file": "audio/telegraph-6-8-1.mp3",
+    "duration": 7.2701,
+    "textHash": "05ca08dc68a769c96da762d4620e04edf55c09a3bdfe89407d0d4c360e6482a1",
+    "text": "把发送次数设为三，选择长信号，再点发送信号。观察实验结果。",
+    "audioHash": "616d36ad5b551fc9854d78c9331c345dc6cc69277f7f3716d3df72b80b393557"
+  },
+  "telegraph-6-8-2": {
+    "file": "audio/telegraph-6-8-2.mp3",
+    "duration": 8.8945,
+    "textHash": "a8618791ba0f5e9128260da3fb0d9c8f8f25f1cedf555f4cd42eedd2a00ba0f6",
+    "text": "你发送了三个长信号。这是认识编码的练习，不能把任意组合自动当成一个真实词语。",
+    "audioHash": "c64aaead4252bb617211312448f3b429aa2ec9da7ca7d2c1b451dcdd5ead65a9"
+  },
+  "binary-code-2-3-0": {
+    "file": "audio/binary-code-2-3-0.mp3",
+    "duration": 8.2706,
+    "textHash": "74ae877433273fffdf5b931be1fdcdef5d5ce4915d83cccba88b05f82eb472b4",
+    "text": "这里的小灯只有亮和不亮两种样子。不同的小灯一起变化，可以帮我们表示数量。",
+    "audioHash": "1bccc62be3fff2345982e0d3013ff8814c37a3df0a6022c786ceff97d0341cb0"
+  },
+  "binary-code-2-3-1": {
+    "file": "audio/binary-code-2-3-1.mp3",
+    "duration": 8.4448,
+    "textHash": "f6f8f1838882a555c01a030cad1dc519c8fe481ef355aef509167811abf90614",
+    "text": "点一下点亮编码，看看哪几盏灯亮起来。也可能一盏都不亮，这也有特别的意思。",
+    "audioHash": "b6ff5d390b512b193bbc72c0e68fcf7897badf90d3455094e521c882ba3e5973"
+  },
+  "binary-code-2-3-2": {
+    "file": "audio/binary-code-2-3-2.mp3",
+    "duration": 7.5212,
+    "textHash": "fbe865b524b2a6e0953f2863d1541c28b558da7749cd9bb6caf68ac0531bb153",
+    "text": "亮和不亮都能当作记号。三盏小灯的不同组合，就能表示不一样的数。",
+    "audioHash": "96d4be71967c9f665829f737549a61cca305e77fe36eac6b7e6ca7836a4c4d6d"
+  },
+  "binary-code-4-5-0": {
+    "file": "audio/binary-code-4-5-0.mp3",
+    "duration": 7.748,
+    "textHash": "eb978631d961400ab0259ca4dd75b0177b8d6eb4d332109094db18f63ff6c57d",
+    "text": "三个位置各有不同的分量。改变要表示的数，观察哪些位置的灯跟着改变。",
+    "audioHash": "d70e26b5ab307215137f4adbd6a7ca254ec4b1fdc22191bbfe551e25eb8eabae"
+  },
+  "binary-code-4-5-1": {
+    "file": "audio/binary-code-4-5-1.mp3",
+    "duration": 7.9952,
+    "textHash": "27b77d041ea60aa131850028c7f64fbb399ea5772a368ed47c4c0b6714037ee2",
+    "text": "先把要表示的数设为零并运行，再设为五运行。比较三个灯位亮灭的组合。",
+    "audioHash": "10b05f45264a9f67b2dd73c7563fd0caf06d52270630149483ff9e01150a727c"
+  },
+  "binary-code-4-5-2": {
+    "file": "audio/binary-code-4-5-2.mp3",
+    "duration": 8.1694,
+    "textHash": "7622e6d63c5d3f38ae6b42f55fd5ec81ab6f810733d1a7f219e9dbcbb1e55caf",
+    "text": "这里三个灯位依次表示四、二和一。把亮着的位置相加，就能读出灯光表示的数。",
+    "audioHash": "8e787e64c0675728a5161ed6c859adcd13a9edda466038c4ab50530fcef4cedc"
+  },
+  "binary-code-6-8-0": {
+    "file": "audio/binary-code-6-8-0.mp3",
+    "duration": 8.3193,
+    "textHash": "edaca08d077f39506c4d352602fb5ace9dc95725a448ac3a0dec207d3298b1f3",
+    "text": "二进制用零和一表示状态。先看四、二、一三个位置，再试着用灯光表示数字五。",
+    "audioHash": "fc55900c0d4fcd54ccf201a5301d00fbacb52cf38186a9f6e79639cb7a25fe62"
+  },
+  "binary-code-6-8-1": {
+    "file": "audio/binary-code-6-8-1.mp3",
+    "duration": 7.5699,
+    "textHash": "7ed2f53f36b644e76aaec475d5293fcf17f48d2c425cce40528829a3783195d8",
+    "text": "把要表示的数设为五，选择灯光编码，再点点亮编码。观察实验结果。",
+    "audioHash": "a19fc5967e59c4b70c42d652580a64353bee7cf1480c0002a15552156895d6a4"
+  },
+  "binary-code-6-8-2": {
+    "file": "audio/binary-code-6-8-2.mp3",
+    "duration": 8.3962,
+    "textHash": "15d378456850e1e4f8eef9a4178ec3a29d852953f2fc5a3845a89378120836a8",
+    "text": "五可以分成四加一，所以四和一的位置亮起。二的位置不亮，也在清楚地传递信息。",
+    "audioHash": "4d74fa943e768f3390621f89f0d5bf36dad92281414a55de0b7cbbc11c2c92a5"
+  },
+  "sensors-2-3-0": {
+    "file": "audio/sensors-2-3-0.mp3",
+    "duration": 8.4691,
+    "textHash": "4442c38ce25667ee6d24dbfec11000c53394b7c7244347982ed51442f15954d7",
+    "text": "门旁边藏着一个感应器，好像帮门观察的小助手。有人靠近时，门可能自动打开。",
+    "audioHash": "a049cfdc0ef2a01d7b2b01014b778062656c918bb65fec0630e4513772731816"
+  },
+  "sensors-2-3-1": {
+    "file": "audio/sensors-2-3-1.mp3",
+    "duration": 7.8696,
+    "textHash": "823622b7f1509ac4c1f3ec2cd8b77f61466f33a8e10156c09bf3fadc3b14eaee",
+    "text": "点一下走近自动门，看看小人与门的距离。再留意门，是打开了还是保持不动。",
+    "audioHash": "512dd2d0d3e1d41884107d9eeb864e8d5f766f2bdcbb4f7ca2e180f216926c76"
+  },
+  "sensors-2-3-2": {
+    "file": "audio/sensors-2-3-2.mp3",
+    "duration": 8.7728,
+    "textHash": "dc4416b1ef0d904d44330f979d4baa3856862f2e875e39486790dd4c810bed0e",
+    "text": "感应器发现附近的变化，装置再作出反应。门的动作，和感应器收到的消息有关系。",
+    "audioHash": "10591c3ba137140a0be76cd2a7a91925dccab444230e0628e5c56bc57be54d29"
+  },
+  "sensors-4-5-0": {
+    "file": "audio/sensors-4-5-0.mp3",
+    "duration": 8.6959,
+    "textHash": "1fbbd92afc99a60818ac23f1757ada2682570d41c21a1a76a0f160e0d7cc6515",
+    "text": "距离改变，感应器接收到的情况可能不同。保持开启，比较人远一点和近一点时的门。",
+    "audioHash": "6c036be757d1554850a44b332b76c42a5d4e7c52fff92d3e67dfe0aaed3cdf5c"
+  },
+  "sensors-4-5-1": {
+    "file": "audio/sensors-4-5-1.mp3",
+    "duration": 7.5942,
+    "textHash": "37dfc0afb89d95db2f0ddf01192cb4d582967c19ae87dc3a885b336ec6258d62",
+    "text": "先把人与门的距离设为八并运行，再设为二运行。比较门的开合状态。",
+    "audioHash": "193cb372439796fc8d0404b172b665f8a56277d173e7e8a36ae4aa6bc7384ccf"
+  },
+  "sensors-4-5-2": {
+    "file": "audio/sensors-4-5-2.mp3",
+    "duration": 9.2954,
+    "textHash": "381357aa0dd2e9540e0034a2908607d7a4196f1e58bd267cbc03bba248bdfd35",
+    "text": "模型中的人走近，门才作出相应动作。距离是这个实验的线索，真实感应器还有不同原理。",
+    "audioHash": "c97842903c16aadf6f7b0a6d51f9694bf3b37bc0dc320435537c095f525f9137"
+  },
+  "sensors-6-8-0": {
+    "file": "audio/sensors-6-8-0.mp3",
+    "duration": 8.522,
+    "textHash": "8fcff37e822e699ed5983096fc56802f5266060117628fe875b7684320d0b391",
+    "text": "自动装置先检测，再按规则行动。把人与门的距离设为二，并让感应器保持开启。",
+    "audioHash": "3fa35797aa6eb0bb49811d4fb7e6c51c0c0adb73ce61f6619ea486bbfbb4ad0a"
+  },
+  "sensors-6-8-1": {
+    "file": "audio/sensors-6-8-1.mp3",
+    "duration": 7.2701,
+    "textHash": "751c75154c6606049bd7de6c33118e12891a09c4f16c50be03999c36a6f289f7",
+    "text": "把人与门的距离设为二，选择开启，再点走近自动门。观察实验结果。",
+    "audioHash": "c1c647927d77ad2b6e16d3ac1779f3ac277f666d087fe5e996a079a71f75cea2"
+  },
+  "sensors-6-8-2": {
+    "file": "audio/sensors-6-8-2.mp3",
+    "duration": 8.8215,
+    "textHash": "d8c2a34cbdf0c352adffc2e61152e24b705bb6618b7d2226cc0feb1a738319dc",
+    "text": "你在感应器开启时让人靠近。关闭感应器可以再做对照，区分位置变化与检测作用。",
+    "audioHash": "328feb3abfc6d9e4ad25bec699a02cd2d017642e3a80a0107701876690d0514b"
+  },
+  "lever-2-3-0": {
+    "file": "audio/lever-2-3-0.mp3",
+    "duration": 7.898,
+    "textHash": "ce31bacbcc1705c7239b5615fc31f9a12d8b2c25f043d4c3b03065edbda3247a",
+    "text": "跷跷板中间有个支点，可以让板子翘起来。看看支点在哪一边，重物放在哪里。",
+    "audioHash": "f80d735586bdccbdecc9a2bbc17456f87975eaca030050f5d6f9134479ad9646"
+  },
+  "lever-2-3-1": {
+    "file": "audio/lever-2-3-1.mp3",
+    "duration": 7.898,
+    "textHash": "933fa151953e8df300225f5bbfb6d52c27d2bc8916fc6a2d81420d32f50c2268",
+    "text": "点一下试试杠杆，看看哪一头往下走。板子绕着支点转动，两边会一起变化。",
+    "audioHash": "226b8d641440b8e2ced2565abfd2c3a5100e3e626aed76e93f864da5d410d41a"
+  },
+  "lever-2-3-2": {
+    "file": "audio/lever-2-3-2.mp3",
+    "duration": 8.0478,
+    "textHash": "13708b6ff3e9d4425839d70af9a574e2d2a0750c23f7d5802ac2d5337eb4ece0",
+    "text": "支点的位置会影响两边怎样翘。重物离支点近一点或远一点，效果也会不同。",
+    "audioHash": "8ebdeca7a8f8cce79375eec404935c793c32ef2400a08c07a22abc3003a05e1b"
+  },
+  "lever-4-5-0": {
+    "file": "audio/lever-4-5-0.mp3",
+    "duration": 8.1694,
+    "textHash": "a15c0ae4b1e2feff0b23de81538f5526666245f2943d386bd365a132233560d3",
+    "text": "杠杆的转动，与重物和它到支点的距离有关。保持重物不变，比较两个支点位置。",
+    "audioHash": "ec97f5c89b552f94d0d5e9a2892e423d7bdf588349fc8934515db68ac6b6ceb7"
+  },
+  "lever-4-5-1": {
+    "file": "audio/lever-4-5-1.mp3",
+    "duration": 8.0964,
+    "textHash": "e57e1c30329e7d68e107140e3ced73a42d96d7a7382010fd6e786d865076d113",
+    "text": "先把支点位置设为四并运行，再设为六运行。比较板子倾斜的方向和程度。",
+    "audioHash": "4fb917022f5e12a48cea8391fc067b6ffa8d8382b356ff5b3f88577dddd1756c"
+  },
+  "lever-4-5-2": {
+    "file": "audio/lever-4-5-2.mp3",
+    "duration": 8.8458,
+    "textHash": "af854ebc9141b38cba6e3f45afb4c3f33e26c176ab83e2efefcecfbbe26dc290",
+    "text": "支点挪动后，两边到支点的距离变了。比较杠杆时，不能只数重物，还要看它们的位置。",
+    "audioHash": "0dbccb6f0f5b3137069d1e084899b8ec0222433a1f9c808284ad281cb4cb9c84"
+  },
+  "lever-6-8-0": {
+    "file": "audio/lever-6-8-0.mp3",
+    "duration": 8.8701,
+    "textHash": "b440bf93edf0567a787ce70bb7eec9259ebc30e78beb4d2a5a418f648d08344a",
+    "text": "重量与到支点的距离一起影响转动效果。把支点设在第六处，右侧放两块重物来观察。",
+    "audioHash": "79705f49ff1b7c3fbf1c161317730233a3745c1a757367faa18d651b1bcf130e"
+  },
+  "lever-6-8-1": {
+    "file": "audio/lever-6-8-1.mp3",
+    "duration": 6.9461,
+    "textHash": "d14d402e3a5ca65c53c58c05e88ba46ab8c17562494b83864e75bde7ad73e3ea",
+    "text": "把支点位置设为六，选择两块，再点试试杠杆。观察实验结果。",
+    "audioHash": "19d89d7ca0f33c4d0d62541b004765610aa22a7f4a860e28df3f6335e3f5c565"
+  },
+  "lever-6-8-2": {
+    "file": "audio/lever-6-8-2.mp3",
+    "duration": 9.722,
+    "textHash": "00e56313571a5a5bc39f13b8217ca279e92f10964021bf70212f954720e8fc53",
+    "text": "你比较了指定位置下的杠杆表现。离支点更远的一侧，同样的力通常能产生更大的转动效果。",
+    "audioHash": "33e9e16dd1b2fc12f93300668e309d1705d064954e7274166dd322b23a3393d6"
+  },
+  "pulley-2-3-0": {
+    "file": "audio/pulley-2-3-0.mp3",
+    "duration": 7.9709,
+    "textHash": "e369c9523b1bcd9a60195bc222b5b340c80dab0f07c337a2af328700559871ae",
+    "text": "绳子绕过圆圆的滑轮，连着一个小重物。拉动绳子的时候，重物可能会往上走。",
+    "audioHash": "3a9b77014c1f7493ac1198a9ff0ce0c676eeca472d0736fed02dad8b442a435a"
+  },
+  "pulley-2-3-1": {
+    "file": "audio/pulley-2-3-1.mp3",
+    "duration": 7.9223,
+    "textHash": "e3ac711a83fe39cfbe0da0e62078527bcfd24256b7beebf23f484bee771ad53b",
+    "text": "点一下拉动绳子，看看绳子的两端。你拉动这一端，小重物怎样跟着移动呢？",
+    "audioHash": "d8b893bc337cb509f7d4110fe16bf31ba6b9cf3069d95b6bcebb8f51316d4811"
+  },
+  "pulley-2-3-2": {
+    "file": "audio/pulley-2-3-2.mp3",
+    "duration": 7.748,
+    "textHash": "e90339c7af6ff0f286ff8ecc15b9fd8dfab23240527dcceda091be4801d7f6ae",
+    "text": "滑轮可以帮我们传递拉力。注意圆轮和重物的位置，有的轮子也会一起移动。",
+    "audioHash": "ca04b3e26d0042d879d239529fcd8932ad65af2964dc101e3ca18cb997004f64"
+  },
+  "pulley-4-5-0": {
+    "file": "audio/pulley-4-5-0.mp3",
+    "duration": 8.4691,
+    "textHash": "bb42c050af57f285ccdb1d9d9faa9483cc8f2b4e4ff398342f8bf2f8de728fc8",
+    "text": "定滑轮和动滑轮的作用不同。选定一种组合，再比较拉绳距离变化时重物的移动。",
+    "audioHash": "601fb98214c1698718d4541e22b6ce897608fd17989e4523f3a94894a2dd41e1"
+  },
+  "pulley-4-5-1": {
+    "file": "audio/pulley-4-5-1.mp3",
+    "duration": 7.2945,
+    "textHash": "9dd6280a12deee633316875f1e6e790a0c9c19c6bf98d31a0db771279f870719",
+    "text": "先把拉绳距离设为一并运行，再设为六运行。比较重物升起的高度。",
+    "audioHash": "28b6fcc7a19c3217824617e0ccddcd213b3886661ce003ef0249a901ef29a2b6"
+  },
+  "pulley-4-5-2": {
+    "file": "audio/pulley-4-5-2.mp3",
+    "duration": 8.5947,
+    "textHash": "249475ed4e5ee0f77b741f8116484d4c2cbe6752be832436e5a199961bf6150b",
+    "text": "同一种滑轮里，拉绳更长会让重物移动更多。动滑轮的重物移动距离，小于拉绳距离。",
+    "audioHash": "89df953b7154399536008d09df63105c542ffe7ef641d1e2b8a5c3e5282a2c18"
+  },
+  "pulley-6-8-0": {
+    "file": "audio/pulley-6-8-0.mp3",
+    "duration": 9.348,
+    "textHash": "9eb95658947674b43a9634c233e22b87d096aca97538fda9449c9fea8f7ea022",
+    "text": "理想动滑轮能省力，但要拉更多的绳子。选择动滑轮，比较绳子移动和重物上升的距离。",
+    "audioHash": "0e29f741ca13e598b1c23bc30df7c344278b87d75821749ffe7afcfd26aaf3e0"
+  },
+  "pulley-6-8-1": {
+    "file": "audio/pulley-6-8-1.mp3",
+    "duration": 7.2945,
+    "textHash": "cf78e22cf2ebe73737adb17ff2060469fd47154356c2319a9ba6246c48d98c75",
+    "text": "把拉绳距离设为六，选择动滑轮，再点拉动绳子。观察实验结果。",
+    "audioHash": "ad08850da7ded44424b96e218ebe63ed5309cd15464374296ac396b21036ac90"
+  },
+  "pulley-6-8-2": {
+    "file": "audio/pulley-6-8-2.mp3",
+    "duration": 9.4453,
+    "textHash": "8060130080233d9aebe832bcef5e0acfe290604fbbfb39afb4d24ad5bc3a03a8",
+    "text": "这次用动滑轮拉动了六档距离。模型忽略摩擦，省力并不等于做同样事情不用付出能量。",
+    "audioHash": "3984ca96f227957f4dc41fb4f63ffe9ad6beadcd3153a1b74599ee9c2cbeee9b"
+  },
+  "ramp-2-3-0": {
+    "file": "audio/ramp-2-3-0.mp3",
+    "duration": 8.4205,
+    "textHash": "7b2e0cb5051043d859713353ad5b5dfec28d1e0f2ee31895e786e3ade817d814",
+    "text": "箱子想去高一点的平台，旁边搭着一条斜坡。我们看看箱子怎样沿着斜坡上去。",
+    "audioHash": "4c045118728b936766821a261e57457b283649409623df45dfe94309555b37e6"
+  },
+  "ramp-2-3-1": {
+    "file": "audio/ramp-2-3-1.mp3",
+    "duration": 8.1977,
+    "textHash": "b9e50c762d388c1c9ee4f787068c8145ad94d95778957d10d59e98e64e773248",
+    "text": "点一下沿坡运送，跟着箱子走一段路。它一点一点变高，最后到达上面的平台。",
+    "audioHash": "d4d60de34956d1a2360a34acf096ad63852cc8a883d7359f9c9490a651bed60e"
+  },
+  "ramp-2-3-2": {
+    "file": "audio/ramp-2-3-2.mp3",
+    "duration": 7.821,
+    "textHash": "b1965175d7aca2aebcb5a73ce63d700ff55bf2d9d6101a2ee71609c92847bcef",
+    "text": "斜坡把向上的路变长，也可以变得更缓。到同样高的地方，有时能少用一点力。",
+    "audioHash": "9b89925a5240aa9196638529ec88ffcd9c47d6364635f987d7abbdcbf1cafd8a"
+  },
+  "ramp-4-5-0": {
+    "file": "audio/ramp-4-5-0.mp3",
+    "duration": 8.7971,
+    "textHash": "b7797a19e2900793774b0c115a88d59e3a6931237c089aa392fd6d5cc3284713",
+    "text": "平台高度不变，坡道越长通常越缓。保持箱子相同，比较不同长度下的运送路线。",
+    "audioHash": "d5088232012864b9ee28f25ebc7e91b9c4e61eeeae600e96efb8112d9349191c"
+  },
+  "ramp-4-5-1": {
+    "file": "audio/ramp-4-5-1.mp3",
+    "duration": 7.898,
+    "textHash": "36c4b285a3f946b95f84b2d3c825e668284bc406cd39dc9a9c36c368a9fe5241",
+    "text": "先把坡道长度设为二并运行，再设为七运行。比较坡道的陡缓与运送路径。",
+    "audioHash": "ecf109eed8507c975a68f26699a2d3c5aa3764e6b2324f57bed63b966b652125"
+  },
+  "ramp-4-5-2": {
+    "file": "audio/ramp-4-5-2.mp3",
+    "duration": 9.3198,
+    "textHash": "c4baa9156b044b7fef5c318978021a23c17ea179c1f9dde3b924ba46380d1f0e",
+    "text": "长坡道让路程变长，理想情况下可以减小推力。路更远和力更小，是一起发生的变化。",
+    "audioHash": "d7008d744cab7ae11939621a63a14d28e4cd56414a0d605522fca954d3a00e9c"
+  },
+  "ramp-6-8-0": {
+    "file": "audio/ramp-6-8-0.mp3",
+    "duration": 9.746,
+    "textHash": "afe697d0d64a17a45e3c3e0c316f81a3d26149fc6c471a52da705248bd95f8e7",
+    "text": "搬到相同高度时，斜面的长度会影响所需推力。用重箱子和较长的坡道，观察这层关系。",
+    "audioHash": "4c125cfa2a3832958887b2f9a0a07b5a29a75eae539ef790a40f6c0fa8835f29"
+  },
+  "ramp-6-8-1": {
+    "file": "audio/ramp-6-8-1.mp3",
+    "duration": 7.1971,
+    "textHash": "29918ac0295f1ea9329030b95efd8ac5c70ad501dc908f951edb26f5a0bf5dd5",
+    "text": "把坡道长度设为七，选择重箱子，再点沿坡运送。观察实验结果。",
+    "audioHash": "525e5be05ffe2ea16e983526a4152a0fead9cffcfd71f2da11cb48cb3aca991c"
+  },
+  "ramp-6-8-2": {
+    "file": "audio/ramp-6-8-2.mp3",
+    "duration": 9.4979,
+    "textHash": "b67e92d1f2b67361505e12a0fcdc35a947776b6b2f62d9f29a71a9f656234866",
+    "text": "你沿着七档长度的斜坡运送了重箱子。这个模型忽略摩擦，不能把动画当作真实推力测量。",
+    "audioHash": "179483436e2100b858b3b6da4d4dcac64b62dfe2e3a7e46fa2351ec8419dd5a9"
+  },
+  "arch-2-3-0": {
+    "file": "audio/arch-2-3-0.mp3",
+    "duration": 8.0195,
+    "textHash": "376c7a419a69a4973d301bda9c02f6630526629a3d6bf95be097d59bb56fd7ab",
+    "text": "小石块排成弯弯的拱门，下面有临时支架。我们看看拿走支架以后会怎样。",
+    "audioHash": "507a30f8d810e7ae22c910ae6834d77c57a2b85af975a1229c59981cf571b2e6"
+  },
+  "arch-2-3-1": {
+    "file": "audio/arch-2-3-1.mp3",
+    "duration": 8.4448,
+    "textHash": "dadf103a786b363da1ff6a2d4693c1933cda2c5a47b37aad98694b4d503497de",
+    "text": "点一下移走临时支架，留意拱门上面的石块。中间有没有缺口，两边有没有撑住呢？",
+    "audioHash": "ea0aaf18879a03d0869204052f3c5030da695d7c4d46994c98b7827cecddd165"
+  },
+  "arch-2-3-2": {
+    "file": "audio/arch-2-3-2.mp3",
+    "duration": 7.6711,
+    "textHash": "545304b24f593c52db7f2bf1f2aca86924afbf0609e12af6ceeeeb38ce78451c",
+    "text": "拱形能把上面的力传向两边。石块之间的连接和两边的支撑，都很重要。",
+    "audioHash": "dbbab0730a2186c3eebeae56c862921ff4600678d7f01a2170d19e84ca396a4f"
+  },
+  "arch-4-5-0": {
+    "file": "audio/arch-4-5-0.mp3",
+    "duration": 8.9713,
+    "textHash": "aec0e19b1fff7b25d6a29de44216446161fb8ae91acf8fa35d7b803da0a596bf",
+    "text": "拱门靠石块之间的挤压传递力。保持连接方式相同，再比较不同石块数量下的结构。",
+    "audioHash": "0ca337ccd381d53f65c5f1f829070381723173074296877947b44e5a1dc25b16"
+  },
+  "arch-4-5-1": {
+    "file": "audio/arch-4-5-1.mp3",
+    "duration": 8.0721,
+    "textHash": "85b96d59e86edb96c2724bd0fefaa56d3bdf5ed36d8eb1da0caf205d3cea883b",
+    "text": "先把拱石数量设为三并运行，再设为七运行。比较拱门连接和支撑的表现。",
+    "audioHash": "ee1e2f078cbb1221a84dccb75e85291c8408992f43d18d9d6916fd6f1ed788e4"
+  },
+  "arch-4-5-2": {
+    "file": "audio/arch-4-5-2.mp3",
+    "duration": 9.9193,
+    "textHash": "d1ff0c96631b06c486213766627009854b6dfedafb9e3dd91f76c544f80457e3",
+    "text": "改变石块数量，拱门的组合也改变了。稳定与否还依赖连接和支承，不能只凭石块多就判断。",
+    "audioHash": "37bf19776b84f04b74a0341743dbc45f69dcf34f2e06e8b913d3347292c3ee8e"
+  },
+  "arch-6-8-0": {
+    "file": "audio/arch-6-8-0.mp3",
+    "duration": 8.6472,
+    "textHash": "4dbd28a6fd2d062d75b72b5006dd4622fff155d0e765dcb4c0f33d813bb63e7a",
+    "text": "拱顶石连接拱门上方的两侧。试着拼好七块拱石，再检查装上拱顶石后的表现。",
+    "audioHash": "5a6f1404807729e3b9f7040c827281c33dcf82d2b854ee8e798c6c2b144bf399"
+  },
+  "arch-6-8-1": {
+    "file": "audio/arch-6-8-1.mp3",
+    "duration": 7.9465,
+    "textHash": "78b40114b8fd0252963eb921d5e66ebb6aa224e5ecde35c7fd70c6b8333f8524",
+    "text": "把拱石数量设为七，选择装上拱顶石，再点移走临时支架。观察实验结果。",
+    "audioHash": "97fe631f8a6b091cab52ee11536120f9887ef346e0bad07dc258d942996343fd"
+  },
+  "arch-6-8-2": {
+    "file": "audio/arch-6-8-2.mp3",
+    "duration": 9.0444,
+    "textHash": "2150bcbf41219183cfc208f7690ca07c7a9a2fbe3e86396338b8d920031b7528",
+    "text": "拱顶石和两侧支承共同作用，帮助拱形传力。这里是结构示意，不是实际承重测试。",
+    "audioHash": "eb3a87cc4dac670f80d43656d73574a7ae7ec399ac0ad9f7ceebfa19564fc652"
+  },
+  "tower-balance-2-3-0": {
+    "file": "audio/tower-balance-2-3-0.mp3",
+    "duration": 7.6711,
+    "textHash": "23a47db41dc77e49d88ba8c4429e981fb38a0e4571e89e0a27c79247ad579a37",
+    "text": "一块块积木可以叠成高塔。看看塔有多高，再看看它站在多宽的底座上。",
+    "audioHash": "7ba5d01b985ae0d6c287e52f6903430bbdfab5e9887d31fec7f58718999a7ead"
+  },
+  "tower-balance-2-3-1": {
+    "file": "audio/tower-balance-2-3-1.mp3",
+    "duration": 8.1207,
+    "textHash": "0b2ba0d74a708813978ff6579bb29e96cab659834f33792c17e909778d861bd3",
+    "text": "点一下轻轻摇一摇，观察小塔的变化。它是稳稳站着，还是往旁边倾斜了呢？",
+    "audioHash": "6394b5bdeb1be4fd02857e8606ef38ecc41be33120f505a6361228ab66eb703b"
+  },
+  "tower-balance-2-3-2": {
+    "file": "audio/tower-balance-2-3-2.mp3",
+    "duration": 7.7967,
+    "textHash": "6452f6fe4278e2e10ebe20ec2bd12d403b69a29cf37d98b6d2b36f2d7891f588",
+    "text": "底座像高塔站立的脚。底座更宽时，通常能给高塔更多保持平衡的空间。",
+    "audioHash": "990e7d21c1e8cacb8e8a56869701247c1243003783a08ee27f2fbfcc463f3729"
+  },
+  "tower-balance-4-5-0": {
+    "file": "audio/tower-balance-4-5-0.mp3",
+    "duration": 9.0444,
+    "textHash": "fe13366166aca62a9e3389909a6e711f17333f846e224338645b7d552324ca53",
+    "text": "高塔的稳定，与重心和支承范围有关。保持底座相同，比较不同层数受到摇动的表现。",
+    "audioHash": "3a6b81d1bf828ee17c52eb5e0ee4b43017c168753144f22c955469df7fe866e1"
+  },
+  "tower-balance-4-5-1": {
+    "file": "audio/tower-balance-4-5-1.mp3",
+    "duration": 7.9952,
+    "textHash": "5400ccfc6342b5072875e26d4ed8b2897f587488f842f8f9a1584ff3a631c587",
+    "text": "先把积木层数设为一并运行，再设为六运行。比较小塔摇动与倾斜的程度。",
+    "audioHash": "8a5db204c7d9dcdbe133beeda6ffd53b631f854e9f60a87a6e2eea819f4047d4"
+  },
+  "tower-balance-4-5-2": {
+    "file": "audio/tower-balance-4-5-2.mp3",
+    "duration": 8.8701,
+    "textHash": "dfd30c49bc0965452694d6785df253a3d80448e6b47261fe7a22d455f0555d57",
+    "text": "积木层数增加，塔变高了，重心位置也会改变。看稳定性时，要把高度和底座一起考虑。",
+    "audioHash": "1bfa9a2e86cfe772895e7cb186c4e0089264913804d4996da9f5855246f4a848"
+  },
+  "tower-balance-6-8-0": {
+    "file": "audio/tower-balance-6-8-0.mp3",
+    "duration": 9.2954,
+    "textHash": "537e1e87e145d0c9e023c220c73c490a4a19f0279932551f646bb346c2ab859b",
+    "text": "重心的竖直投影留在支承范围内，有助于避免倾倒。给六层积木选择宽地基，观察模型。",
+    "audioHash": "68a029ea701e2922e259b6a9885d4960c91c400f75fb89353f31036d58fd377e"
+  },
+  "tower-balance-6-8-1": {
+    "file": "audio/tower-balance-6-8-1.mp3",
+    "duration": 7.2945,
+    "textHash": "19f2a5fc6e911eebc6bbf15ee629374a48cdca7815cbf0a8b17da67b3f905126",
+    "text": "把积木层数设为六，选择宽地基，再点轻轻摇一摇。观察实验结果。",
+    "audioHash": "9eac9912b807a0a4f126507f2990c20658fddb7d7e772a503fbd798d3374c346"
+  },
+  "tower-balance-6-8-2": {
+    "file": "audio/tower-balance-6-8-2.mp3",
+    "duration": 9.4696,
+    "textHash": "9cda7cdef725e64f4871b905abc870960dfae22cdbfbf7a7c2bea61e8628495a",
+    "text": "你搭好了六层宽底座高塔。宽底座通常更稳，但真实结构还受材料、连接和外力影响。",
+    "audioHash": "5c38108b433c9fb91dae97d3502f5b7040e1df42247c9eff31946edaf1a54461"
+  },
+  "dam-2-3-0": {
+    "file": "audio/dam-2-3-0.mp3",
+    "duration": 7.821,
+    "textHash": "6a330d514fa7a6207d0959f5ea07a0e699594777eb5d5117326f70af37cfd029",
+    "text": "水坝把水挡在一边，闸门像可以开关的小门。我们看看水会从哪里流过去。",
+    "audioHash": "6c313ef43de291bfd38d24ead31a0bcda8ed60ed14e5badcdc50d813e0287685"
+  },
+  "dam-2-3-1": {
+    "file": "audio/dam-2-3-1.mp3",
+    "duration": 8.3718,
+    "textHash": "7fa77364cf5342eb78270e8009f0636788b2b0a7cd2887f04617a057ee80c85e",
+    "text": "点一下观察水流，先看看闸门开着还是关着。再沿着水面，找找水往哪边移动。",
+    "audioHash": "343c44e7a77d8f7927d0d5f003c035c728c04b3fecaf7469a634a7d530e771c8"
+  },
+  "dam-2-3-2": {
+    "file": "audio/dam-2-3-2.mp3",
+    "duration": 7.5456,
+    "textHash": "75b7956bae84388f51a7f06eae0908a24bff0ee3ad30f8f6ddb0f1760d531c82",
+    "text": "水位高低不同，会推动水流。开闸和关闸，可以改变水通过模型的情况。",
+    "audioHash": "8f1d61a4a9bf505ba1af1fb4227f69a8be92e744e2491769f65ccdba2f675276"
+  },
+  "dam-4-5-0": {
+    "file": "audio/dam-4-5-0.mp3",
+    "duration": 8.8945,
+    "textHash": "4d7e70e2995c69a915ecc2142a87ac947806ef0e86497872fe45990b54c0825d",
+    "text": "上游和下游的水位差会影响水流。保持闸门状态相同，比较上游水位改变后的表现。",
+    "audioHash": "ca030d9905160ac45d769a9657bd6870bcd96e118741b942518c6857905cda9e"
+  },
+  "dam-4-5-1": {
+    "file": "audio/dam-4-5-1.mp3",
+    "duration": 7.9709,
+    "textHash": "c95bd31add64bb037a6c8c19940a6075f89bdd9ac51fce51eaf656ba8ce3b1c1",
+    "text": "先把上游水位设为一并运行，再设为六运行。比较水位差和水流的变化。",
+    "audioHash": "1b2ecc47376b903cc79dd5fc01a529684aaed48aec990f39f3e02e16151fab39"
+  },
+  "dam-4-5-2": {
+    "file": "audio/dam-4-5-2.mp3",
+    "duration": 8.7971,
+    "textHash": "836fe03ab7b5e82a19a89b299a10bd274887016b0f3c03df106cb28ea3a69dcd",
+    "text": "上游水位变化，水通过闸门的条件也会变化。观察水流，不能只看门，还要看两边的水。",
+    "audioHash": "48ec0c6dd304f0d2deaea84c091279949ed4b58ea7f621cd0c78897be4bb2436"
+  },
+  "dam-6-8-0": {
+    "file": "audio/dam-6-8-0.mp3",
+    "duration": 8.6959,
+    "textHash": "ddb15a96af8cb9c76d51db23a14b816f8a02c291e61ddb6adcf06296dde67c53",
+    "text": "闸门调节放水，水位差提供流动的条件。把上游水位设为六，再打开闸门观察。",
+    "audioHash": "5b1c113d747e33b5e2c6c703a4fee9ccc03a6a379e6289fabee2165d5aebd2ab"
+  },
+  "dam-6-8-1": {
+    "file": "audio/dam-6-8-1.mp3",
+    "duration": 6.8205,
+    "textHash": "b02e2e1e40f9194a5198556e69f8d438257addffd8e9cde3718d31ea8ac70f7b",
+    "text": "把上游水位设为六，选择打开，再点观察水流。观察实验结果。",
+    "audioHash": "5f7080453a77a478432a34728cc272e12e979ab1ace085f217569b86f80cb788"
+  },
+  "dam-6-8-2": {
+    "file": "audio/dam-6-8-2.mp3",
+    "duration": 9.8949,
+    "textHash": "538eee6e7f53aa0b3181728e227fd6c2922226026589eec849bc6e4eda725e24",
+    "text": "你打开了闸门，让较高处的水向下游流动。模型只展示主要关系，真实水坝还需要精密控制。",
+    "audioHash": "de4171b323e78effabe173741a99a4b535d17897cc3a82420464be298610ac7f"
+  },
+  "crane-2-3-0": {
+    "file": "audio/crane-2-3-0.mp3",
+    "duration": 8.522,
+    "textHash": "529bd4b863e2fdcdb1d096de9ce824ad87bc6d0acbccb0b6f00d2bbc92b1de49",
+    "text": "起重机伸出长长的吊臂，准备吊起一件货物。看看另一侧，有没有帮助平衡的配重。",
+    "audioHash": "70715359f783e6fbc071bfec7f78452f893c41736376ae5152e465647bbc3f0f"
+  },
+  "crane-2-3-1": {
+    "file": "audio/crane-2-3-1.mp3",
+    "duration": 8.0195,
+    "textHash": "91e66f11953b30ed58456b8e6a3aa7f4f95a5f5df6bf3f2b46767e6de51fdd00",
+    "text": "点一下吊起货物，跟着小货物向上看。起重机吊东西时，底座也要保持稳定。",
+    "audioHash": "60bef7038c3a0a69d88c8259ede77dfe6c14a025e23c256a2319e3a2a59c9598"
+  },
+  "crane-2-3-2": {
+    "file": "audio/crane-2-3-2.mp3",
+    "duration": 7.7967,
+    "textHash": "39be2e0cb199e0914975ed8435b6fdbadec19fa6b62a3e82812fa98f11bd8c11",
+    "text": "货物在一边，配重在另一边。合理安排两侧的位置，能够帮助起重机保持平衡。",
+    "audioHash": "be26a8d0ebf2041588bace20dd97e882cad9892a188dbfd2df11344716b251ee"
+  },
+  "crane-4-5-0": {
+    "file": "audio/crane-4-5-0.mp3",
+    "duration": 8.8458,
+    "textHash": "57220d19781e401e781cbc7211d8cef34b75020c77bd8c84f5d2413a995f4f2a",
+    "text": "吊臂越伸向远处，货物的转动作用通常越大。保持配重不变，再比较不同伸出长度。",
+    "audioHash": "2e63cd3483f77511ec1b902f4667dca41e7791f3c12d694bea7ce2ed7ab37899"
+  },
+  "crane-4-5-1": {
+    "file": "audio/crane-4-5-1.mp3",
+    "duration": 8.5947,
+    "textHash": "a35ca9ad3f48c19e3a935e14a31b422f465a57a92fb8a12c4f4cae4c67d5da70",
+    "text": "先把吊臂伸出长度设为一并运行，再设为五运行。比较吊臂位置与机身的平衡。",
+    "audioHash": "203ac7cfa4ca2202629bef0adaa86c3f565895022cc7a37dc206be58df190f37"
+  },
+  "crane-4-5-2": {
+    "file": "audio/crane-4-5-2.mp3",
+    "duration": 8.8458,
+    "textHash": "551fd5197d44effe44e2c098e59e7b8c9de892958817b79e73e425f7a4b312da",
+    "text": "同一件货物移得更远，会改变起重机的受力。观察平衡时，还要看配重和支承在哪里。",
+    "audioHash": "fa81259953ca47b6387e2274f2efe93f8ec981b2beaa81fd2e9192d2f14dffb4"
+  },
+  "crane-6-8-0": {
+    "file": "audio/crane-6-8-0.mp3",
+    "duration": 8.623,
+    "textHash": "934400aab84c3712dc0202f801a573e0b2b3defcc0e879740c5ad5ea505fbbd7",
+    "text": "起重机不能只看吊起多重，还要看货物离支点多远。把吊臂设为五，并选择有配重。",
+    "audioHash": "3991d430dc8db1295bec620e57a84afabf7871216cf216cbe3485ef18ba632e7"
+  },
+  "crane-6-8-1": {
+    "file": "audio/crane-6-8-1.mp3",
+    "duration": 7.42,
+    "textHash": "5489c244ca57b8dc93fa45be79a1dc36331879959b2e0eb856c99678e711e097",
+    "text": "把吊臂伸出长度设为五，选择有配重，再点吊起货物。观察实验结果。",
+    "audioHash": "c9b38cc081fc5c7637d5ddfbad5edfa6d0e7c6bc93b706650c37a3fae3bcd0ed"
+  },
+  "crane-6-8-2": {
+    "file": "audio/crane-6-8-2.mp3",
+    "duration": 8.7728,
+    "textHash": "971e4030f649690f6a80f8f9a13df86db1471524ef8a77ac781fc8ef988ed233",
+    "text": "你在保留配重时伸出了吊臂。动画展示平衡关系，不代表真实起重机的额定载荷。",
+    "audioHash": "f80e2a5103e36757d7b394812c4f037888559121869291e896f29b3665fd3930"
+  },
+  "suspension-bridge-2-3-0": {
+    "file": "audio/suspension-bridge-2-3-0.mp3",
+    "duration": 7.8696,
+    "textHash": "55ae83745900d042915da611404aa9228eea85e7801b88cb88fdd0bd0853257b",
+    "text": "长长的桥面上，有一根根向上的吊索。它们把桥面和上方的主缆连接起来。",
+    "audioHash": "56e30a1641fe1a014ab647ccc3f0fbaec36e8482acf6ce5dd32208b842c49aad"
+  },
+  "suspension-bridge-2-3-1": {
+    "file": "audio/suspension-bridge-2-3-1.mp3",
+    "duration": 8.2706,
+    "textHash": "12d762429e34770ec0073b6fa74e7314903ec5d1f73a57110b3eb4b36b60c6e4",
+    "text": "点一下让车辆通过，找找桥面上方的吊索。车经过的时候，桥面会怎样变化呢？",
+    "audioHash": "4dc024a99a440dd134cbd9563de2abd91d122d2f5a6a28aa5d99e2b6719bab45"
+  },
+  "suspension-bridge-2-3-2": {
+    "file": "audio/suspension-bridge-2-3-2.mp3",
+    "duration": 8.3193,
+    "textHash": "6232da29cfc0ffe1233bdbc71069544f5b94bc071ab6f23f75c45dc1f3a1ae6e",
+    "text": "吊索把桥面吊起来，主缆再连接桥塔和两端。许多部件一起帮助桥梁传递力量。",
+    "audioHash": "0887d244348f546bf2a69b2b13a1a2112de3880bc3ccee57a1d79e31ece4ff9c"
+  },
+  "suspension-bridge-4-5-0": {
+    "file": "audio/suspension-bridge-4-5-0.mp3",
+    "duration": 9.074,
+    "textHash": "e4972d24807c90c5402036b50afc44142761cd709058a0f8c777b552e35db905",
+    "text": "悬索桥的桥面依靠吊索和主缆传递荷载。固定吊索条件，再比较不同跨度下的模型。",
+    "audioHash": "822a15bc31fe44d1a6661f28552e3c3fb3dc66337c885a01ed94f9039aa5dc8f"
+  },
+  "suspension-bridge-4-5-1": {
+    "file": "audio/suspension-bridge-4-5-1.mp3",
+    "duration": 8.0964,
+    "textHash": "ca3ec85d17124cd3261080da532ee35767279547aaa67b39539274a27db5357b",
+    "text": "先把桥面跨度设为二并运行，再设为七运行。比较桥面跨度与变形的表现。",
+    "audioHash": "7304e2e1e6348f5bbc86efb3c771d4beddf8e72780ceed972911e4cba586ae4f"
+  },
+  "suspension-bridge-4-5-2": {
+    "file": "audio/suspension-bridge-4-5-2.mp3",
+    "duration": 8.498,
+    "textHash": "e571aea65b939eb3cd1fb21b34aa7b80ae42df03151fea04cdedb1d168d43707",
+    "text": "桥面跨得更远，结构要求也会改变。完整的连接很重要，模型的变形只是夸张示意。",
+    "audioHash": "d3ad7bb7991bba7c41224c0af060c3c8f0d777d005b96b0df7ebd6dea9956db8"
+  },
+  "suspension-bridge-6-8-0": {
+    "file": "audio/suspension-bridge-6-8-0.mp3",
+    "duration": 9.822,
+    "textHash": "fb8a98f2e41c08a7df6dfd48cc79a2c6a21e38bb12a1d1e33fb5184f48896513",
+    "text": "从桥面沿吊索向上看，能追踪荷载的传递路径。选择完整吊索，让车辆通过七档跨度的桥。",
+    "audioHash": "cfd498e183c464bf138e803f1fabfbd8c7e88fad1d397593ea5c213d5d440507"
+  },
+  "suspension-bridge-6-8-1": {
+    "file": "audio/suspension-bridge-6-8-1.mp3",
+    "duration": 7.5456,
+    "textHash": "33d53582b017e40b812e82c8f2aac416c2564ec97637d58c08efac9e2f571db8",
+    "text": "把桥面跨度设为七，选择完整吊索，再点让车辆通过。观察实验结果。",
+    "audioHash": "098bb20fe6665426e86d6254b18fe9e3d01ed48a0169a0b8612e045db8fa3c4d"
+  },
+  "suspension-bridge-6-8-2": {
+    "file": "audio/suspension-bridge-6-8-2.mp3",
+    "duration": 9.9962,
+    "textHash": "84a7fe7db2061357dd6960c0817c0620d64f025afca2e7b7e265a8f1284a317e",
+    "text": "车辆经过时，吊索、主缆和桥塔共同工作。这是定性示意，不能由动画判断真实桥梁能载多重。",
+    "audioHash": "4bfdfe3a54501c386fbbad754e0e6c25670de9c068c852d57def323afc54881d"
+  },
+  "catapult-2-3-0": {
+    "file": "audio/catapult-2-3-0.mp3",
+    "duration": 8.5704,
+    "textHash": "fc31a509fc8ad87902c88e9e737d33d793ecdcc4350ef51ef1f0ac52798a9a48",
+    "text": "弹性臂可以拉开，再把小软球送出去。先看看小球在哪里，准备追踪它的路线。",
+    "audioHash": "769679f9f3d789c9347893c05a844271544c895a3431cb3917d9bf75e221511f"
+  },
+  "catapult-2-3-1": {
+    "file": "audio/catapult-2-3-1.mp3",
+    "duration": 7.9223,
+    "textHash": "c3d5cb21f3e69f4d31a99e98891657796012e71bd4336721b9f10f1d6c9a9012",
+    "text": "点一下发射软球，看看它怎样升起又落下。这里玩的是画面里的虚拟软球。",
+    "audioHash": "439dec85611dbcb1e6c1589796103ae22ac013ce8be51824de438e477cabcc9f"
+  },
+  "catapult-2-3-2": {
+    "file": "audio/catapult-2-3-2.mp3",
+    "duration": 8.7203,
+    "textHash": "5fd1974bf2191b53b500e736fd6c9721df47ab26734e30c21b1fc6f899d605cb",
+    "text": "小球飞出时会走过一条弯曲的路线。拉开的程度和发射方向，都可能让路线改变。",
+    "audioHash": "a4b2c1f84e9d92227f6f332b73e8468c23f7d43c294ffb06a16e93ebf1ed014e"
+  },
+  "catapult-4-5-0": {
+    "file": "audio/catapult-4-5-0.mp3",
+    "duration": 9.2468,
+    "textHash": "b960c95ad52c1ea11b2d8822f161504861b89a35a01b29a2a9c447d1691af193",
+    "text": "拉开的弹性臂能储存能量。保持发射角度相同，再比较不同拉开程度下的小球轨迹。",
+    "audioHash": "564b364e9dfb226f92dbb113ba1e8adf76eeca4d2bae6030085c16ce8670807b"
+  },
+  "catapult-4-5-1": {
+    "file": "audio/catapult-4-5-1.mp3",
+    "duration": 9.02,
+    "textHash": "91df10cabb2f9e76723ea4e092aaa86c3993797b65222b6fbebe5cbf5056a9e6",
+    "text": "先把拉开弹性臂的程度设为一并运行，再设为六运行。比较软球飞行的路径与远近。",
+    "audioHash": "9774196aada1d7758786aed75b71f1c492cd27369917df1e8bfaf920ec33a375"
+  },
+  "catapult-4-5-2": {
+    "file": "audio/catapult-4-5-2.mp3",
+    "duration": 9.9475,
+    "textHash": "dfe162a8efa1e245c5a6e24493f2b6cb34f5cefe262d456715f567c71ec296ac",
+    "text": "拉开程度变化，释放时推动小球的作用也改变。这个简化模型，不代表真实器材的发射距离。",
+    "audioHash": "d397e9f5421d3159be95e6cc906a57a4b2a63cc875b6c1f8ca3a7583f4bde4cf"
+  },
+  "catapult-6-8-0": {
+    "file": "audio/catapult-6-8-0.mp3",
+    "duration": 8.8701,
+    "textHash": "bc83fc979e953cf781f5ac8bb709928a72c90237c82a83c9314853337cd9d3ff",
+    "text": "发射能量和角度都会影响轨迹。选中间角度，把拉开程度设为六，先预测再观察。",
+    "audioHash": "2f85b0d3a720094f0acbe101857b7f609c84c684cb6d72c482553e310a97ff5d"
+  },
+  "catapult-6-8-1": {
+    "file": "audio/catapult-6-8-1.mp3",
+    "duration": 8.1694,
+    "textHash": "25ff6e3435d0150fe1d952ef6ffa16787ad335c622104083238f7bf38fc188f5",
+    "text": "把拉开弹性臂的程度设为六，选择中间角度，再点发射软球。观察实验结果。",
+    "audioHash": "0871e3d7cade9ed8719dbaaa28b2c0f91c8eea3e2802d19936079b5e525ca29f"
+  },
+  "catapult-6-8-2": {
+    "file": "audio/catapult-6-8-2.mp3",
+    "duration": 9.5222,
+    "textHash": "d5cc8d9c061d1e4ae08ba8b500ff89b4b690d8f5588539ff03d723750d48523c",
+    "text": "你追踪了虚拟软球升起、前进和落下的过程。可以再改一个条件，比较两条轨迹有什么不同。",
+    "audioHash": "5c6e15a3933dbbf7fe1feea9ebdf468ab8d91390dac78849e2523525292ffcb1"
+  },
+  "color-wheel-2-3-0": {
+    "file": "audio/color-wheel-2-3-0.mp3",
+    "duration": 8.1977,
+    "textHash": "768c4fe3cb84d5f9af4473723cbdba7f449cf24942998e796f9006df45f70860",
+    "text": "圆盘上画着不同颜色的小块。圆盘转动起来时，颜色会一个接一个经过眼前。",
+    "audioHash": "706aac4a20bee3ecf3a3d06d3848268aa342e91a31e5e9870a26d4b2425c2434"
+  },
+  "color-wheel-2-3-1": {
+    "file": "audio/color-wheel-2-3-1.mp3",
+    "duration": 9.122,
+    "textHash": "cbb237e876135c77d4d259e2eddf1541f433b7d95221abff2247212cf25a6a20",
+    "text": "点一下转动色轮，看看圆盘现在转得怎样。是容易认出每一块，还是颜色开始混在一起？",
+    "audioHash": "7f914b2125c80a0e8bf53a961aa743499efe5c63ba2edcbefb0caafe6d3fadf3"
+  },
+  "color-wheel-2-3-2": {
+    "file": "audio/color-wheel-2-3-2.mp3",
+    "duration": 8.6959,
+    "textHash": "cf13c0f0c10b40ad3f7ada91bcaaa9a3e5abf7ad8fca30e2878ff5de5d272103",
+    "text": "转动很快时，颜色可能看起来混合了。色块仍在圆盘上，是我们的视觉感受在变化。",
+    "audioHash": "40cc0e20e94a68ac4b82649b033e3e5f4792b469c0664cb55d94c66609b1b55c"
+  },
+  "color-wheel-4-5-0": {
+    "file": "audio/color-wheel-4-5-0.mp3",
+    "duration": 8.9713,
+    "textHash": "59b59cbde458fb4344ccc2d9228d3653bb9bd4671474a70fe557b75c24b0284f",
+    "text": "快速交替的颜色能产生视觉混合。先固定色块组合，再比较慢转与快转时的感觉。",
+    "audioHash": "4c4ced390e925bd3927ce1473ae50aa13a5fca8746489b8d9171360db4986302"
+  },
+  "color-wheel-4-5-1": {
+    "file": "audio/color-wheel-4-5-1.mp3",
+    "duration": 8.4448,
+    "textHash": "ab773bfda00a766b270c50850ac5bb4e4bd818618ec6459d0ca98111d45cf27a",
+    "text": "先把色轮转速设为零并运行，再设为七运行。比较色块边界与整体颜色的感觉。",
+    "audioHash": "501c8e6efb4b3803a0ebb3f64e7da847eb6ed195e431d676bb75538694857fb9"
+  },
+  "color-wheel-4-5-2": {
+    "file": "audio/color-wheel-4-5-2.mp3",
+    "duration": 8.8458,
+    "textHash": "aa5051536942aea0750ba0dbfc3266a285ab46a084c38e7083c9a220d6b02fb7",
+    "text": "转速改变，眼睛分辨每块颜色的机会也改变。屏幕色轮是示意，不等于把颜料搅在一起。",
+    "audioHash": "9e37e484d768a4b7d491528bf20843946afeb8d76d3bbfe569303af5a8623c1c"
+  },
+  "color-wheel-6-8-0": {
+    "file": "audio/color-wheel-6-8-0.mp3",
+    "duration": 8.7728,
+    "textHash": "fe7fe9c59841682a5b1be9d42e2df2da7a4724a2fee3f893f07bf9796e41855d",
+    "text": "视觉混合与颜色出现的时间有关。选择红绿蓝，把色轮转速设为七，观察颜色变化。",
+    "audioHash": "6f6eab4bff9a0cbb5ee8d4c3c9ff4c37e9bbaa4325fa3dbd583d79b4bc2839d6"
+  },
+  "color-wheel-6-8-1": {
+    "file": "audio/color-wheel-6-8-1.mp3",
+    "duration": 7.2701,
+    "textHash": "a55f96de847bdac4c1b6d8078599c392b077c1a2715d7bda6b3dfab1a4adf4dd",
+    "text": "把色轮转速设为七，选择红绿蓝，再点转动色轮。观察实验结果。",
+    "audioHash": "38dafe66491c409ecbcc4ff9845614a1e1a07ef48c55165006c25c2cc13e3052"
+  },
+  "color-wheel-6-8-2": {
+    "file": "audio/color-wheel-6-8-2.mp3",
+    "duration": 9.77,
+    "textHash": "133dbcc37bcf386f65680b0ef3d2ea93ff027073847f66c59f9edbf34faeb4b5",
+    "text": "你观察了较快转动的红绿蓝色轮。显示器和色块比例会影响效果，不必把结果认定为纯白。",
+    "audioHash": "bac5e61d7573713a139605d3e5e8722115fdfa8614344f406ecf2dac2f4280a1"
+  },
+  "symmetry-art-2-3-0": {
+    "file": "audio/symmetry-art-2-3-0.mp3",
+    "duration": 7.5699,
+    "textHash": "de05c8bf251819f8423d0b92cfc04d54c83c349ddd345772054faa7fe01e188f",
+    "text": "花朵的中心周围，排着一片片花瓣。看看它们是不是整整齐齐地围在一起。",
+    "audioHash": "e8c66a9fa44e7c46d0638473fcccc36d4e84b5508d559d00ff58da40314a9014"
+  },
+  "symmetry-art-2-3-1": {
+    "file": "audio/symmetry-art-2-3-1.mp3",
+    "duration": 8.4205,
+    "textHash": "54d84ab77d90b6791f4b1a8e5c1889b9f077f4f1b53799807bdf4d565e503822",
+    "text": "点一下展开花瓣，找找花朵中心。试着从一边看到另一边，发现花瓣的对应关系。",
+    "audioHash": "9e116acbbbb0316f666c78370075dd3506770ea74a386be907729785f647e6aa"
+  },
+  "symmetry-art-2-3-2": {
+    "file": "audio/symmetry-art-2-3-2.mp3",
+    "duration": 8.0721,
+    "textHash": "298cc24baa21c60f9d9a8935377e0651f537bc2a6b7a27e30d8bb880a790c69d",
+    "text": "花瓣可以围着中心重复排列。对应部分安排得整齐，就能创造出有规律的美。",
+    "audioHash": "8949eaefe1bce766cb758fa364a2d04221a1e4d072d92fb91a30d90cccbda9cc"
+  },
+  "symmetry-art-4-5-0": {
+    "file": "audio/symmetry-art-4-5-0.mp3",
+    "duration": 8.3962,
+    "textHash": "de55eb09202b2f407feacddbe089eb2448e685ae43088f0ef9963df8f6d406a1",
+    "text": "同一种排列里，花瓣数量改变，图案的节奏也会变化。比较两朵花，留意它们的间隔。",
+    "audioHash": "4982b4fc2f5d72e65c9866c0bc85d3b7be22628538761db20ac5a3ab9c01ff03"
+  },
+  "symmetry-art-4-5-1": {
+    "file": "audio/symmetry-art-4-5-1.mp3",
+    "duration": 7.9709,
+    "textHash": "3cf30d650797a034c30efe00286669c5ece9acdede83fe8fcbc7d81e932aebdb",
+    "text": "先把花瓣数量设为二并运行，再设为八运行。比较花瓣数量与图案间隔。",
+    "audioHash": "25333081a3f02cb6ae5e47f604a81bc82fbc1c83bf6ac05845db243341c538f8"
+  },
+  "symmetry-art-4-5-2": {
+    "file": "audio/symmetry-art-4-5-2.mp3",
+    "duration": 9.348,
+    "textHash": "26ff688958024f6006f63310809db9ddc86011343ba1e0b9dcff75321c48919d",
+    "text": "更多花瓣围着相同的中心，间隔通常会变小。对称排列给图案带来了清楚的对应关系。",
+    "audioHash": "9f178d7adbbcf44fc51f1152dec2ce2a221c319557aae509133b00a87f4b7297"
+  },
+  "symmetry-art-6-8-0": {
+    "file": "audio/symmetry-art-6-8-0.mp3",
+    "duration": 8.623,
+    "textHash": "87dc7dc7b0281b5f6e181c36bc2b0f38d7c672bafa1d6fff0bd33d96b016fdfd",
+    "text": "对称图案可以用旋转或折叠寻找对应。选择八片花瓣与对称排列，创作一朵新花。",
+    "audioHash": "09b15cfb6724bae41fade5f80d7ce88702df6ce7b419adfd05659c7aa1076531"
+  },
+  "symmetry-art-6-8-1": {
+    "file": "audio/symmetry-art-6-8-1.mp3",
+    "duration": 7.5456,
+    "textHash": "a40dc78181c048f8f9e23180a03c76d1de46b0a7a57018220f447cf2c455f73c",
+    "text": "把花瓣数量设为八，选择对称排列，再点展开花瓣。观察实验结果。",
+    "audioHash": "765101dc4352263fb9ee999740ff7858a7df3fd3d6fa4c3b877ec36109c3e542"
+  },
+  "symmetry-art-6-8-2": {
+    "file": "audio/symmetry-art-6-8-2.mp3",
+    "duration": 9.5222,
+    "textHash": "4b04ac9d0b35cee9bcefb2238a2227dfe33d487a5dfccb29bdcf1ca8e8aa3018",
+    "text": "八片花瓣有规律地围绕中心。沿着花朵找对应位置，你会看到重复与对称共同形成的图案。",
+    "audioHash": "307d79b47e2cb381c2035e812679aa8d4090f6d7b37571b2a2d7564e01570e4f"
+  },
+  "mosaic-2-3-0": {
+    "file": "audio/mosaic-2-3-0.mp3",
+    "duration": 8.4205,
+    "textHash": "f18dec9129f7e8d6514f35ffe364d42450699d726dd62a9f633272cb380a4bd1",
+    "text": "小小的彩色拼片，能够排成一幅大图案。先找一块喜欢的颜色，看看它的邻居。",
+    "audioHash": "a4c8a2de9870a1c07b05555769ed50ff72cf36a616ada7249202f7d1e44a8f43"
+  },
+  "mosaic-2-3-1": {
+    "file": "audio/mosaic-2-3-1.mp3",
+    "duration": 8.6472,
+    "textHash": "3eb9e23d93064f2983701be86cbdb5de21bb5ab63f26f5e3192277e30ed3784d",
+    "text": "点一下铺开图案，看小拼片怎样排在一起。一小块接着一小块，画面慢慢变丰富。",
+    "audioHash": "916aaedacbc2db47bc5f20139b2144710a1473bb00f2dc8bd2e4cf25808563ef"
+  },
+  "mosaic-2-3-2": {
+    "file": "audio/mosaic-2-3-2.mp3",
+    "duration": 7.7967,
+    "textHash": "2e62d582d93ff20e83e1dd8003b62801b2fa73039d273a76da9a3c476136c21f",
+    "text": "很多小色块可以组成大图案。颜色和摆放的位置，都能表达不一样的感觉。",
+    "audioHash": "8a392a2b54b5f9d8652ff1194cabfa99592fdf871c778b8802750c54620c42a9"
+  },
+  "mosaic-4-5-0": {
+    "file": "audio/mosaic-4-5-0.mp3",
+    "duration": 8.7446,
+    "textHash": "876a241104c6372b8efa31dbe552395e3d7c5b293dbf044667bd7446ee1d0917",
+    "text": "拼贴画由小单元组成。保持颜色组合相同，再比较每行放不同数量拼片时的图案。",
+    "audioHash": "7ce379551a01781d1539eb69382566f70715be573f553c0d77b8d269c3c478a8"
+  },
+  "mosaic-4-5-1": {
+    "file": "audio/mosaic-4-5-1.mp3",
+    "duration": 8.6472,
+    "textHash": "e1e44ac6757a0c801b61c4b781b0cb0666f8be6023c752538b441004beb5e8ee",
+    "text": "先把每行拼片数量设为二并运行，再设为六运行。比较每行拼片数与图案的密度。",
+    "audioHash": "cb35997c90a18c7aeedc90d916cf971c9eb506f23ddc19c7c5b26e2ca6caa24b"
+  },
+  "mosaic-4-5-2": {
+    "file": "audio/mosaic-4-5-2.mp3",
+    "duration": 8.623,
+    "textHash": "0912e7856c4a356a0cb92ef1e57a793b07ac777e5a115294f20ef3533e52b30b",
+    "text": "一行里的拼片数量改变，图案的组织也改变。先看小单元，再看它们怎样组成整体。",
+    "audioHash": "6bca860eab417429ef2ce08b1afec2d5fcdcfbbb0d17fcfa0746897ff020606c"
+  },
+  "mosaic-6-8-0": {
+    "file": "audio/mosaic-6-8-0.mp3",
+    "duration": 8.9227,
+    "textHash": "ac13952f31856ca1dffd0c64dbcea66f323be9afc0d9b38c72f17615cfa34628",
+    "text": "设计可以同时考虑色彩与排列。选择暖阳色，每行放六片，观察色块如何组成画面。",
+    "audioHash": "0980002f2fe761085c44a0b195e400553dc1d018fbe71b463bee0e50d2379475"
+  },
+  "mosaic-6-8-1": {
+    "file": "audio/mosaic-6-8-1.mp3",
+    "duration": 7.6711,
+    "textHash": "08fa41da03ff89a10ca2c6fe97a06b1c92a204618e5c528ae01064d9eaee313b",
+    "text": "把每行拼片数量设为六，选择暖阳色，再点铺开图案。观察实验结果。",
+    "audioHash": "5174aa9b2403bac06d4b653091b3b39750391a332b695852cba3a0ec248ca334"
+  },
+  "mosaic-6-8-2": {
+    "file": "audio/mosaic-6-8-2.mp3",
+    "duration": 9.4979,
+    "textHash": "9aff4ced21fc0d0e64f176b84570b1e1abf5338d383cd3bf2cc65f7bd54f0177",
+    "text": "暖阳色的拼片排成了六片一行的图案。你还可以换一种配色，让同样的排列表达不同感觉。",
+    "audioHash": "77db38266456d9dabaae0939198171444d6487bfaffc2e734ea61f9080285547"
+  },
+  "pottery-2-3-0": {
+    "file": "audio/pottery-2-3-0.mp3",
+    "duration": 8.0964,
+    "textHash": "4e99181b18ac4d791f6f0b7d64a3b3e4220e5f12885a2f8b1fe7939e0f8101e7",
+    "text": "陶轮上放着一块小泥坯。它可以一边旋转，一边变成不同样子的瓶子或杯子。",
+    "audioHash": "dbac43ac4028ea4e6a2f4dd23e3a03d23267a7d779aff4d455a80a77b364b76a"
+  },
+  "pottery-2-3-1": {
+    "file": "audio/pottery-2-3-1.mp3",
+    "duration": 7.9223,
+    "textHash": "9876d624609b6c71c0273c351c99bdda7164e3ca241a01c998e6437c5a073967",
+    "text": "点一下转动陶轮，看看泥坯的侧面。上面、下面和中间，哪些地方比较宽呢？",
+    "audioHash": "b4f88b29a028871c710184356f156b561d14c3d96a1362f226b7c173b31abc12"
+  },
+  "pottery-2-3-2": {
+    "file": "audio/pottery-2-3-2.mp3",
+    "duration": 8.295,
+    "textHash": "060469b84b235a66aa2eb9de050e6de69652403bff2341db218bd6343e2c768c",
+    "text": "同一条轮廓绕着中间转，可以形成圆圆的器物。改变高矮，也能创造新的造型。",
+    "audioHash": "74664c1b1497d220b25e315296e38d7db03b7d788da7417af85a380f9adda66e"
+  },
+  "pottery-4-5-0": {
+    "file": "audio/pottery-4-5-0.mp3",
+    "duration": 8.9713,
+    "textHash": "95a4886b0fa18191b1c573750c544718e897fdcdbe4c2317a0ed8b1713a2573e",
+    "text": "陶器的高度和轮廓会影响整体比例。先固定一种轮廓，再比较高一点与矮一点的样子。",
+    "audioHash": "89467949ac3bbee688f906479666af150b9162b67ad2a83bd6a944f6b347891a"
+  },
+  "pottery-4-5-1": {
+    "file": "audio/pottery-4-5-1.mp3",
+    "duration": 7.9223,
+    "textHash": "88da293f6030186b2620caf47b372993054244b39f95fc0911922855f83024e8",
+    "text": "先把陶器的高度设为二并运行，再设为六运行。比较陶器高矮与整体比例。",
+    "audioHash": "25c7781edc7a34dc63f6d61bced63b3a9ec98e4316a93dc19118ada4fa48a266"
+  },
+  "pottery-4-5-2": {
+    "file": "audio/pottery-4-5-2.mp3",
+    "duration": 8.8701,
+    "textHash": "f7fbe1242bc936319fb753ad971b4c16510921a6008cd3f1e6869055689f792c",
+    "text": "轮廓相同，高度改变也会带来不同感受。欣赏陶器时，可以一起看口部、腹部和底部。",
+    "audioHash": "3aeaa14313862a78f2b5603dadb6f67c0cf07c8be0caccaff631ee07453e8c16"
+  },
+  "pottery-6-8-0": {
+    "file": "audio/pottery-6-8-0.mp3",
+    "duration": 8.9713,
+    "textHash": "036cdcb152f2e5f69e9ca099ff0e743a4a1237d14efcb078fef0a9b22d9ceeb4",
+    "text": "旋转造型可以形成轴对称的器物。选择圆肚轮廓，把高度设为六，再观察各处的比例。",
+    "audioHash": "77f3b700db31ea742de4a4ac9aeb881e9c456d50443c15ede236d1ae6268d653"
+  },
+  "pottery-6-8-1": {
+    "file": "audio/pottery-6-8-1.mp3",
+    "duration": 7.2945,
+    "textHash": "6a8537b80df8c29ec8abdb7bcab9d5950edcc7cb2876c45f8a91f326f47fcea7",
+    "text": "把陶器的高度设为六，选择圆肚，再点转动陶轮。观察实验结果。",
+    "audioHash": "3ac6eb01a9b14037c6f8d03ac32fdb3170f9ed3530845041606afb79a0ea5279"
+  },
+  "pottery-6-8-2": {
+    "file": "audio/pottery-6-8-2.mp3",
+    "duration": 9.0444,
+    "textHash": "8a76a30a81bab909ddde5fc887333675b58a18f21b1c8efb8a15d6e900de8a3b",
+    "text": "你创作了一个较高的圆肚器物。轴对称帮助我们看懂它的形状，也留下了改变比例的空间。",
+    "audioHash": "0dd7ae556c276ef18751d7d483b37d3ae3e95901cf64759be00748becf0fa7e2"
+  },
+  "music-rhythm-2-3-0": {
+    "file": "audio/music-rhythm-2-3-0.mp3",
+    "duration": 8.0195,
+    "textHash": "0a7d899a9520ff0d204372a793a67e903af306c4f76f6bfb80db78fd73e9dedd",
+    "text": "小乐队准备表演啦，动作会一下一下地出现。跟着画面，用小手轻轻打拍子。",
+    "audioHash": "dc4701d2d38f1524cacc82a4ac367de390cc7f379fb3780b9a1daf1e630dee0d"
+  },
+  "music-rhythm-2-3-1": {
+    "file": "audio/music-rhythm-2-3-1.mp3",
+    "duration": 8.4448,
+    "textHash": "b4b8e804b43011b0103db7cb921aeda4d34b9e9f830ecaab89a7109eb53e2765",
+    "text": "点一下开始节奏，跟着小乐队看一组节拍。一拍接着一拍，什么时候又回到开头？",
+    "audioHash": "c7fd01296d2cf40dfc7766eac14030f8dd576fbeaa06ee6bc3685bc84cfe388c"
+  },
+  "music-rhythm-2-3-2": {
+    "file": "audio/music-rhythm-2-3-2.mp3",
+    "duration": 8.1977,
+    "textHash": "d9018fa8882722d32bcf8bbf3c46051aad9f26bd03d1395e4ba5ea4b64be3d95",
+    "text": "有的节拍很均匀，有的强弱交替。把动作出现的时间安排好，就会产生节奏。",
+    "audioHash": "d362187df5a59e234ca93049aba5c9c20ad4cfb9c96ba429365013b4ea28918b"
+  },
+  "music-rhythm-4-5-0": {
+    "file": "audio/music-rhythm-4-5-0.mp3",
+    "duration": 8.8945,
+    "textHash": "50a2c3afd78a2059b6ec17d438e4d017071efb6fb06d11d3b2c64e06ea0268c1",
+    "text": "一组里有几个节拍，会影响重复的感觉。保持节奏组合相同，再比较不同的节拍数。",
+    "audioHash": "e4daf9d5dc85c7ab7d037f1f4a3104c9e2e408f439128f72bfc850477957f735"
+  },
+  "music-rhythm-4-5-1": {
+    "file": "audio/music-rhythm-4-5-1.mp3",
+    "duration": 8.7203,
+    "textHash": "eac0969118350702c2c82c7d2029bf104e38ea04312ab2b964b317fa1590ed05",
+    "text": "先把每组节拍数设为二并运行，再设为六运行。比较每组节拍的数量与重复方式。",
+    "audioHash": "1bc83c61707211dfeca539c1a8a05d957794016cd99b2026cc7df6a0a9581cea"
+  },
+  "music-rhythm-4-5-2": {
+    "file": "audio/music-rhythm-4-5-2.mp3",
+    "duration": 8.498,
+    "textHash": "73120b5e32d6acd7dd349dbd4e63e106f2eb2e0955556049e8d66ec399fa258f",
+    "text": "每组拍数改变了，整组重复的长度也改变。先数清一组，再找下一组从哪里开始。",
+    "audioHash": "5c5cc40c186861e8593ac52c1f40497445fc4e470a940f2b08934bc889039f64"
+  },
+  "music-rhythm-6-8-0": {
+    "file": "audio/music-rhythm-6-8-0.mp3",
+    "duration": 8.522,
+    "textHash": "07a94559434c9f291796e7cd8482f4e816e197531a8cd263e39d04eada8ea7ec",
+    "text": "节奏是声音或动作在时间中的安排。选强弱交替，每组六拍，跟着画面完成一组。",
+    "audioHash": "fdf98fe24b6ac719c853509133e27c10c039238f4654157c967422cfdfff5987"
+  },
+  "music-rhythm-6-8-1": {
+    "file": "audio/music-rhythm-6-8-1.mp3",
+    "duration": 7.6468,
+    "textHash": "e3e0b644a58b42b9b929fa0d1166035dbbade8699fb56a395b8b200035983103",
+    "text": "把每组节拍数设为六，选择强弱交替，再点开始节奏。观察实验结果。",
+    "audioHash": "90ec67b5b8a3f64b4fab065f4592ac3e4c469256868fd2386df612007e66b84a"
+  },
+  "music-rhythm-6-8-2": {
+    "file": "audio/music-rhythm-6-8-2.mp3",
+    "duration": 9.746,
+    "textHash": "0ad518d498b07aa372f884b8656cb0c771a6d0fc3171c19ea87544e1568e3ffd",
+    "text": "六拍里有强有弱，形成交替的节奏。这里可以用拍手配合观察，不把动作大小当成音调高低。",
+    "audioHash": "8bf2659a6cfc0f1c25ee6705ca4f69d3850437d3eff77cf497ccc948a9ac11b2"
+  },
+  "perspective-2-3-0": {
+    "file": "audio/perspective-2-3-0.mp3",
+    "duration": 8.3962,
+    "textHash": "a0be65286dca8f651bb5ba05b1b4d1197563c3a851ac193ac00f9bcaacdd9bb5",
+    "text": "同样大的物体，放在近处和远处，看起来可能不一样大。我们一起找找哪一个更远。",
+    "audioHash": "30a098efe443f81413a5c6669eed07784008df60b80d329cfacd5d6c3009783e"
+  },
+  "perspective-2-3-1": {
+    "file": "audio/perspective-2-3-1.mp3",
+    "duration": 8.5704,
+    "textHash": "86aca640b99905b901e37ae6472321ef159abff5464424ca44b4f6ead28772b4",
+    "text": "点一下比较远近，看看物体离观察点多远。记住它原来的样子，再看画面怎样变化。",
+    "audioHash": "1dbb1c2dcbfa917f2d32ff82769fa9ab8f6fc872ffb550eb5bd605c25a475df5"
+  },
+  "perspective-2-3-2": {
+    "file": "audio/perspective-2-3-2.mp3",
+    "duration": 7.821,
+    "textHash": "92a5b9202bf559b95ab84f1b6299980b5f33ce09522abfbcf98f41d19c4d769b",
+    "text": "物体没有真的缩小，只是离我们更远了。画画的时候，也可以用远近表现空间。",
+    "audioHash": "6b1c2431de79c981b1da29dc39cb0c4e4c02abe806ec92bd572b6e1dd473e534"
+  },
+  "perspective-4-5-0": {
+    "file": "audio/perspective-4-5-0.mp3",
+    "duration": 8.6959,
+    "textHash": "895deb195ebbb45f603d93945873aa87905a9ec1b647ef120c9d8c024a0400ed",
+    "text": "透视观察中，同样的物体通常近大远小。固定观察方式，比较两种距离下的画面。",
+    "audioHash": "b2ff9a251a7a49d7442810db957185e9b2086c7efe44bbb248ee1ce46366afa1"
+  },
+  "perspective-4-5-1": {
+    "file": "audio/perspective-4-5-1.mp3",
+    "duration": 8.8458,
+    "textHash": "951ade3e5b7e44f64f257d0f17716dc9fa4e0c94c20e608f1196af2c95ad1f9c",
+    "text": "先把物体与观察点的距离设为一并运行，再设为七运行。比较物体在画面里显得多大。",
+    "audioHash": "6d739805043e5ee26d9987822133962f5b0993b464d277df577d433b0d09076c"
+  },
+  "perspective-4-5-2": {
+    "file": "audio/perspective-4-5-2.mp3",
+    "duration": 8.7728,
+    "textHash": "7c6640571e9f2bcfc25e678b3a932e799378ec0ef228bd0b40b477ee7899f07d",
+    "text": "物体本身的大小没变，改变的是它与观察点的距离。这种变化，帮助画面表现出远近。",
+    "audioHash": "9af8b2f0d75964eff487091eaf369aeb81607ce2ee5a2fcde1dd69f5291fb1ac"
+  },
+  "perspective-6-8-0": {
+    "file": "audio/perspective-6-8-0.mp3",
+    "duration": 9.746,
+    "textHash": "487200cd236df44feff95040167e0ae4b4e9e473c891db7c4c0d55a7bfd6f7bd",
+    "text": "透视和平行投影表现距离的方式不同。选择透视观察，把距离设为七，再比较画面的大小。",
+    "audioHash": "aab41a1e93f9aada833b9aae79ea018fe788e62c5e5f7fe7ac81deeda32a82df"
+  },
+  "perspective-6-8-1": {
+    "file": "audio/perspective-6-8-1.mp3",
+    "duration": 8.3962,
+    "textHash": "bd35f1ff1880e4a309a7f3a5fff7f890c526bb784c638db5f8037b1b03ec8422",
+    "text": "把物体与观察点的距离设为七，选择透视观察，再点比较远近。观察实验结果。",
+    "audioHash": "161b09b4bb98e3dec405555022aad6e7553099767f7a25c67522c6423eb2258f"
+  },
+  "perspective-6-8-2": {
+    "file": "audio/perspective-6-8-2.mp3",
+    "duration": 9.2711,
+    "textHash": "170c28fa946ef29f41c8ec3b2d97e6085ec761e21926c8cfa5c2501f389d49bb",
+    "text": "远处物体在透视画面里显得更小。切换平行对照，可以看见投影规则怎样影响空间表现。",
+    "audioHash": "40c46e4e9d6209df5f3e6ffbcaf440958ce98453f64d31feb646b01504761ad2"
+  },
+  "kinetic-sculpture-2-3-0": {
+    "file": "audio/kinetic-sculpture-2-3-0.mp3",
+    "duration": 8.295,
+    "textHash": "1e890e161daf87d2245865592e6bddede78d8a4b25b7a53ffcde76db887bcf30",
+    "text": "许多小形状挂在空中，好像一件会动的作品。轻轻碰一碰，看看它们怎样摆动。",
+    "audioHash": "0d7129a37a13c96207589c59b8d2212f0d8cba8279b346b9077e346f39f017f1"
+  },
+  "kinetic-sculpture-2-3-1": {
+    "file": "audio/kinetic-sculpture-2-3-1.mp3",
+    "duration": 8.3193,
+    "textHash": "41f04f60f60595c3656d5498cbb5ca8d040087b47e3cfe791a331c29f9779633",
+    "text": "点一下轻轻推动，跟着一个悬挂物看一看。它绕着哪里动，又怎样慢慢改变位置？",
+    "audioHash": "10e3e23f1c52f6e72248d4d5f53914a530a4805f8e67f569b35c4534a0ca3b71"
+  },
+  "kinetic-sculpture-2-3-2": {
+    "file": "audio/kinetic-sculpture-2-3-2.mp3",
+    "duration": 8.5704,
+    "textHash": "b1e5a89c35662ffc5562c1472f07f6851bf94cd1a226d12c0826b720826e4ec4",
+    "text": "雕塑也可以把运动变成作品的一部分。形状在空间里摆动，图案就一直有新变化。",
+    "audioHash": "760c094ca70ad54d439f13aa7230385a39df84ca4c801a3f69699969020ba6d7"
+  },
+  "kinetic-sculpture-4-5-0": {
+    "file": "audio/kinetic-sculpture-4-5-0.mp3",
+    "duration": 8.7971,
+    "textHash": "ab89dfde89c87c0701b0252adf62cbf9e679e133c94dd51680b8fc837bf761f4",
+    "text": "悬挂物的数量和位置会影响作品。先保持平衡方式相同，再比较两种数量的排列。",
+    "audioHash": "549d38d9b5b0357d97e87a4b62e9e6a3addfcc9f4879355e3573bf2314e4dd37"
+  },
+  "kinetic-sculpture-4-5-1": {
+    "file": "audio/kinetic-sculpture-4-5-1.mp3",
+    "duration": 8.1451,
+    "textHash": "6171fc1f49397da97a0c1763fc1a3c172c6f71082e8dca5515cbcd8367c06712",
+    "text": "先把悬挂物数量设为二并运行，再设为六运行。比较悬挂图案与摆动的变化。",
+    "audioHash": "0c01015069e572584bbe12951bbf694ac9b46e1c11f1af2b7071e2635f8e4197"
+  },
+  "kinetic-sculpture-4-5-2": {
+    "file": "audio/kinetic-sculpture-4-5-2.mp3",
+    "duration": 9.9193,
+    "textHash": "663b36fd8159d06642d80682442a1a860bf61531ebd5d673456059d1b043c74a",
+    "text": "小形状增加后，空间里的组合更丰富。数量只是一个条件，重量和悬挂位置也会影响平衡。",
+    "audioHash": "a97853f323a25988697f090cb800368520e8706c465ae6790898dc99dcd0b28b"
+  },
+  "kinetic-sculpture-6-8-0": {
+    "file": "audio/kinetic-sculpture-6-8-0.mp3",
+    "duration": 8.8458,
+    "textHash": "03fc7168a1960be1491c079a3f4d640d4ff226614864bfd3e67dd68b7f8ab5af",
+    "text": "动态雕塑把空间、形状和运动结合起来。让六个悬挂物两边均衡，再轻轻推动它们。",
+    "audioHash": "c6d4e16baab2b13edbaac81d19ecdf4aad2ad152b878e283a950e6c474f5c2ce"
+  },
+  "kinetic-sculpture-6-8-1": {
+    "file": "audio/kinetic-sculpture-6-8-1.mp3",
+    "duration": 7.6955,
+    "textHash": "0220028e16d87b84d3b979489d4ceadc5cf11789b7cbd499beccd998e9c24d1d",
+    "text": "把悬挂物数量设为六，选择两边均衡，再点轻轻推动。观察实验结果。",
+    "audioHash": "586666492f3a5469a461f396e5ec5193c246a146b6042abd8f722f240bd41027"
+  },
+  "kinetic-sculpture-6-8-2": {
+    "file": "audio/kinetic-sculpture-6-8-2.mp3",
+    "duration": 9.122,
+    "textHash": "eed369c8e44a22271df54ea9ef200e8bf7a693274d6ebbcf89c3118bbd6f2aec",
+    "text": "你创作了两边均衡的动态作品。观察每个形状与整体的关系，艺术和力学在这里相遇。",
+    "audioHash": "28531033bafce07303ad2b435db68a77a7863fc50ee2bcd7233c62e30a619e41"
+  },
+  "shadow-theater-2-3-0": {
+    "file": "audio/shadow-theater-2-3-0.mp3",
+    "duration": 7.898,
+    "textHash": "b970b1575b370fa271d8afce518fad1d5f601ebc6b198e7addbde450bb68811f",
+    "text": "幕布前有一盏灯，还有一个小主角。灯打开以后，主角的影子会出现在幕布上。",
+    "audioHash": "92b4f4e807d3e48717b2cdf37d4706d12c0e6c8d3481bdcd5e5d1261ef253fca"
+  },
+  "shadow-theater-2-3-1": {
+    "file": "audio/shadow-theater-2-3-1.mp3",
+    "duration": 7.8696,
+    "textHash": "24e9be0f8908593eceba648eb259d77ce1d9bdcd42a11d8d304119ff33776cf6",
+    "text": "点一下打开舞台灯，找找幕布上的影子。看看耳朵或翅膀，猜猜主角是谁。",
+    "audioHash": "cad070066c4b2ad95216b494130e81ffaa135642de8575308a4c85020afc463b"
+  },
+  "shadow-theater-2-3-2": {
+    "file": "audio/shadow-theater-2-3-2.mp3",
+    "duration": 7.6711,
+    "textHash": "ef4269c72ba4c0479a2d937fdf5f80f698a2c4dd51747d9fda1b02116b11cde4",
+    "text": "我们可以用影子讲故事。灯、主角和幕布的位置不同，影子的样子也会改变。",
+    "audioHash": "18ea0282412ae17264c7a4cc9b1f8882e822670587c118ad74ff593199e6f1f6"
+  },
+  "shadow-theater-4-5-0": {
+    "file": "audio/shadow-theater-4-5-0.mp3",
+    "duration": 9.5222,
+    "textHash": "bd6307a9cb0339ec705f27259c6f889df8e3a030c74b02604037b29cf4c79c94",
+    "text": "主角挡住灯光，就能在幕布上留下影子。保持主角不变，比较它离幕布不同距离的效果。",
+    "audioHash": "d2998971d9fb6587bf2ade661bfb42716d7af81ad2dce7b1b3fd820be0e8e6c3"
+  },
+  "shadow-theater-4-5-1": {
+    "file": "audio/shadow-theater-4-5-1.mp3",
+    "duration": 8.295,
+    "textHash": "d10adebed0ffd1dc8b6098e00ce974f6f7c0b6cd51e26454cdb8a1e095bd7251",
+    "text": "先把物体离幕布的距离设为一并运行，再设为六运行。比较幕布上影子的大小。",
+    "audioHash": "93456189421849164f6e9e62ff0c2aa433539d769c712c776b9a07955d83a657"
+  },
+  "shadow-theater-4-5-2": {
+    "file": "audio/shadow-theater-4-5-2.mp3",
+    "duration": 9.6195,
+    "textHash": "a36871ad1f24646e3b4b992a7944357089c90f0a6aeae5d873e2d605be850bd1",
+    "text": "主角离幕布的距离改变，影子也可能变大或变小。光源固定时，位置就是这次创作的线索。",
+    "audioHash": "5ba91d05dd8e978550fcf230ea87b336dd84c9aaaefc5047f31940aa8c858cd6"
+  },
+  "shadow-theater-6-8-0": {
+    "file": "audio/shadow-theater-6-8-0.mp3",
+    "duration": 9.5465,
+    "textHash": "a68e130aa9635add44983c113fbfb2be28d7dd7cfd1fb3e355f2e7a734855798",
+    "text": "光影剧场利用遮挡和投影表现角色。选择小兔，把离幕布的距离设为六，再打开舞台灯。",
+    "audioHash": "58bbed295336441c78d7fd226d51f9b0f9057029c5462f19f3f9b8f1199c60e5"
+  },
+  "shadow-theater-6-8-1": {
+    "file": "audio/shadow-theater-6-8-1.mp3",
+    "duration": 7.898,
+    "textHash": "ea4a2fc47a9b5a4919eaf2dd6b606c9d9d418b157fc992a3c8ee14353f830e73",
+    "text": "把物体离幕布的距离设为六，选择小兔，再点打开舞台灯。观察实验结果。",
+    "audioHash": "93303305e16c5c3173df05017df2bc2686a704aa0164c8070c96821a54a742e7"
+  },
+  "shadow-theater-6-8-2": {
+    "file": "audio/shadow-theater-6-8-2.mp3",
+    "duration": 9.098,
+    "textHash": "719363d08451ffdb2e987f4382900e94bebf148bd93d83679b19f48797b2c714",
+    "text": "小兔的轮廓投到幕布上，成了故事里的主角。再改一改距离，就能设计不同的舞台效果。",
+    "audioHash": "808f973498dd249afbfef7004803e8db66ef413385be2219da0c1ad8b5397b92"
+  },
+  "pattern-design-2-3-0": {
+    "file": "audio/pattern-design-2-3-0.mp3",
+    "duration": 7.9709,
+    "textHash": "e5dd247bccd17e9fc2e714705ea26d8f57497815737ed06bfc504d08ccddfb78",
+    "text": "这些小图形排成一串，有的颜色会再次出现。找一找，哪一小段正在重复。",
+    "audioHash": "400e74d7b598665147951d9662df094b070c236974150354c9c9844228f07c31"
+  },
+  "pattern-design-2-3-1": {
+    "file": "audio/pattern-design-2-3-1.mp3",
+    "duration": 8.4205,
+    "textHash": "74ee2389bd0c5e660f7b07211689f38b640275688e53a633425d7a444b2f5981",
+    "text": "点一下展开设计，跟着图案从头往后看。刚才见过的颜色，是不是又出现了呢？",
+    "audioHash": "cda782c633f29ad3d065844b8e80565e6f5859dbb75c99a7d05032c467f11ecb"
+  },
+  "pattern-design-2-3-2": {
+    "file": "audio/pattern-design-2-3-2.mp3",
+    "duration": 8.8701,
+    "textHash": "d38e3e779845180bcb446960eac0d158a847f1c397c2040d7f90d2a3fcfa9a4c",
+    "text": "一个小单元反复出现，就能形成规律。看懂开头的一小段，常常能猜到后面的样子。",
+    "audioHash": "894e9026f0289fd4bbd3384d5aed98ae989f649965013c1970d77864d6990b14"
+  },
+  "pattern-design-4-5-0": {
+    "file": "audio/pattern-design-4-5-0.mp3",
+    "duration": 9.4979,
+    "textHash": "d0ec14b20338b2ecf700f13864c34bb05895e6402ea31e36ccfd3260bbe2de82",
+    "text": "交替和三色循环有不同的重复单元。保持一种规律，再比较重复单元数量改变后的长短。",
+    "audioHash": "d2b03336858482b7c156c1ee08143eeb77966145b53af83b5a669f70f94b8fc2"
+  },
+  "pattern-design-4-5-1": {
+    "file": "audio/pattern-design-4-5-1.mp3",
+    "duration": 8.498,
+    "textHash": "57364c65b23f3bcbef4bf6e4ea77ef04e7716b0370dc0c708b28ad22a5f632d8",
+    "text": "先把重复单元数量设为二并运行，再设为八运行。比较重复单元的数量与排列。",
+    "audioHash": "f72a1bcc960d8a7934751fb6ea0970bfcefdaa9e718f0d3b70b086a1e74d9b9c"
+  },
+  "pattern-design-4-5-2": {
+    "file": "audio/pattern-design-4-5-2.mp3",
+    "duration": 8.9713,
+    "textHash": "844bebc10aeeb3b8065db630ac8a9e90d446ce4162c548369af99b4a323dea42",
+    "text": "重复次数增加，图案会继续延伸。真正的规律藏在单元内部，不只是整串图案有多长。",
+    "audioHash": "4aac2dab069052ea0d16fea8c315e3f8feff5c7627f25f8a425f7e761a4e33ef"
+  },
+  "pattern-design-6-8-0": {
+    "file": "audio/pattern-design-6-8-0.mp3",
+    "duration": 9.074,
+    "textHash": "6470f092744f158ba9abf30712c57b864b59f83c25b74622c324caada4b28ef8",
+    "text": "先找到最小的重复单元，再观察它怎样接下去。选择三色循环，展开八个重复单元。",
+    "audioHash": "8bb05142de089476fde37d9d785c7e1f9b197249915faba54e3d77638e7f5df8"
+  },
+  "pattern-design-6-8-1": {
+    "file": "audio/pattern-design-6-8-1.mp3",
+    "duration": 7.9952,
+    "textHash": "45d33018daf3af8e17f14d7ba5e0b912c702698fd2ffede7a675f6fe06bea01e",
+    "text": "把重复单元数量设为八，选择三色循环，再点展开设计。观察实验结果。",
+    "audioHash": "7d6f0b63ff7f3433075b49cb0d969f949c371f963e4f1182a5176ecff9443c08"
+  },
+  "pattern-design-6-8-2": {
+    "file": "audio/pattern-design-6-8-2.mp3",
+    "duration": 9.3198,
+    "textHash": "1518f85956190023bd1ace3038d2fc9c9ee6e7a13f35240b235ef7714d213b42",
+    "text": "八个单元保持着同一套三色顺序。你可以指出每个单元的开头，检查整个设计是否连贯。",
+    "audioHash": "8d5e01c03e640b6eb38b2a07c89a87e3247e121d5f0d33de3061cdd23580849b"
+  },
+  "counting-2-3-0": {
+    "file": "audio/counting-2-3-0.mp3",
+    "duration": 7.6468,
+    "textHash": "30904dbfc2acdb8a1cade31afd3ca092162c61cef7dcf4914bac2e39b520359f",
+    "text": "一颗颗小物体排在这里，我们可以慢慢数。用手指着看，一个物体只数一次。",
+    "audioHash": "5fe46c2b9be5c2b6772381cf85bf3cf04a08a780cce2c889a3ef8c894203f656"
+  },
+  "counting-2-3-1": {
+    "file": "audio/counting-2-3-1.mp3",
+    "duration": 7.7723,
+    "textHash": "03dce9037f0571e38c4a464d83fb1907c8acd1f6b9ce37e7e2aac91a15a121e0",
+    "text": "点一下数一数，跟着出现的小物体看。不要漏掉一个，也不要把同一个重复数。",
+    "audioHash": "a1b86e93f7d70a36a9ae0259e056b5d46a25a3325b85c0cdd87bfb8bab5be2e0"
+  },
+  "counting-2-3-2": {
+    "file": "audio/counting-2-3-2.mp3",
+    "duration": 8.1694,
+    "textHash": "c8036981dced6857467b7d70e39382785b90b1aabdde40ceb5771f409dd736c1",
+    "text": "数到最后的那个数，告诉我们一共有几个。物体换个位置，数量也不会自己改变。",
+    "audioHash": "8cedfce4baf7313ad469743daacdeccee9d2ee529b8b2eadfc8e11237b1dcb78"
+  },
+  "counting-4-5-0": {
+    "file": "audio/counting-4-5-0.mp3",
+    "duration": 8.7728,
+    "textHash": "1d4996a4da7d513baf4a7330e84355be0e9142ac0b9fb9658649b3e6e5c10e11",
+    "text": "数量和排列是不同的事情。先固定一种排列，再比较不同数量的物体，看清多与少。",
+    "audioHash": "01cb5c3741c16edc97458f1ef0afdff13a915de0cfd680114dd22a018884aef1"
+  },
+  "counting-4-5-1": {
+    "file": "audio/counting-4-5-1.mp3",
+    "duration": 7.748,
+    "textHash": "e0ac0d83f70f0253238f73f7f8ba3691bf25788c1bccc96ec1b7555f4e80b145",
+    "text": "先把物体数量设为一并运行，再设为七运行。比较物体的个数与排列位置。",
+    "audioHash": "fe0490f59e3cd665a436654bbfdb0f059b1d76a35255cda6952513aab6f2a80e"
+  },
+  "counting-4-5-2": {
+    "file": "audio/counting-4-5-2.mp3",
+    "duration": 8.4691,
+    "textHash": "2c63503d98f447ea3edcfb1d8803a9842a7a3b5b4a7e83d3f72bbea73dde2d79",
+    "text": "物体增加，数量才会增加。只把同样的物体排成一排或两排，并不会改变总数。",
+    "audioHash": "27d0a4be804655fa38f193a214f2862f037fb5b01293684bfc738dd61e2f7692"
+  },
+  "counting-6-8-0": {
+    "file": "audio/counting-6-8-0.mp3",
+    "duration": 8.5947,
+    "textHash": "e64b90fc368bcb51fc5e01a83682cd500ce88e830d55b5a4acbbb2cb24cd4141",
+    "text": "数数要建立一一对应。让七个物体排成两排，逐个点数，再用总数检查有没有遗漏。",
+    "audioHash": "23413df50d7c93c57585c632c3decdda6dfd5e3801cf49880271aef81c41832d"
+  },
+  "counting-6-8-1": {
+    "file": "audio/counting-6-8-1.mp3",
+    "duration": 6.7193,
+    "textHash": "4084f145b0bb1d41f0ab538b46465dd7c6db7584f72079301a11acb18052c9ed",
+    "text": "把物体数量设为七，选择两排，再点数一数。观察实验结果。",
+    "audioHash": "fc928a94a2d5b4ba7ec9be84d778d784b4cb364eb1e078b1229b4851b7ee258b"
+  },
+  "counting-6-8-2": {
+    "file": "audio/counting-6-8-2.mp3",
+    "duration": 8.8945,
+    "textHash": "8f1c34d8ba456176e097220773fdb6cfc3658f083521dc51ee240113da6f2dbd",
+    "text": "两排里的物体合起来仍然是七个。重新排一排再数一次，验证排列改变而数量不变。",
+    "audioHash": "e6b3ff48646e3a9744e8bc3e765fbbfc025efa63ef1200c5600dc7f13508fcef"
+  },
+  "addition-2-3-0": {
+    "file": "audio/addition-2-3-0.mp3",
+    "duration": 8.0964,
+    "textHash": "c16a20207548d904fe733b7a04027aa8b65c704ae9c6b17a79318fc478504b0e",
+    "text": "这一边有一些小物体，另一边还可以加入一些。放在一起以后，我们再来数一数。",
+    "audioHash": "007654c6934aedee4d8c4ef70f432e0151b52e80a93da797adf8bb9014440d30"
+  },
+  "addition-2-3-1": {
+    "file": "audio/addition-2-3-1.mp3",
+    "duration": 8.1451,
+    "textHash": "dfc76b4ed97882e40ade8fb62b4bdb7a980aa03d3e1e80263b21bf8443b1482c",
+    "text": "点一下合在一起，看看新物体有没有加入。把每一个都数到，找出现在的总数。",
+    "audioHash": "ac371081f02f8f1028ffb0e4c80eb3b3ad46d7a9f28546660fb329505688aa09"
+  },
+  "addition-2-3-2": {
+    "file": "audio/addition-2-3-2.mp3",
+    "duration": 8.1207,
+    "textHash": "cbe82f858ef1bb420492bbead2ad2fa82cfc79511bb8003c1a10b74d73e6ab19",
+    "text": "把两组物体合起来，就可以用加法描述。原来的数量和新加入的数量，要一起数。",
+    "audioHash": "3c437bba1c431b0b5490143d9aa18b140e0b96a1a0670b5539a910a0e31c715c"
+  },
+  "addition-4-5-0": {
+    "file": "audio/addition-4-5-0.mp3",
+    "duration": 8.4205,
+    "textHash": "4fa4b9622b88d2c747c35ff0e1c5c4faaf9118371bb0a9be545ec879a0fc967e",
+    "text": "总数来自原有的一组和加入的一组。保持原有数量不变，再比较两种加入数量。",
+    "audioHash": "54ee03d4dc6fd517377277e6ad70b2306bceaab5edb9a698c44a96ca9d8739cf"
+  },
+  "addition-4-5-1": {
+    "file": "audio/addition-4-5-1.mp3",
+    "duration": 8.222,
+    "textHash": "a03129c4fb01ff5fe763e3bda9afe5a3ed9849d127e749cb3a06a18f8f0df8af",
+    "text": "先把加入的物体数设为零并运行，再设为四运行。比较合并后的物体总数。",
+    "audioHash": "c71378f8a77eb1918eaff28a92b7fc8fad4cafe530b1ea9613a4a6d840944678"
+  },
+  "addition-4-5-2": {
+    "file": "audio/addition-4-5-2.mp3",
+    "duration": 7.9465,
+    "textHash": "30321c13e86e45e1532d65163a2aad6ebeac30bcf9e6b50c4c8c1dd610fdf5fa",
+    "text": "加入得更多，总数就会相应增加。一个都不加入时，原来的数量会保持不变。",
+    "audioHash": "5c5d6145de2fdf008040aa4259c158a3ac1ab56bd91812057da6fbc64542b692"
+  },
+  "addition-6-8-0": {
+    "file": "audio/addition-6-8-0.mp3",
+    "duration": 8.222,
+    "textHash": "07dd87d69eb80c6ab98ef8ce82aaa21aa603f8c80eaeb5e01c2793859bfb7cf5",
+    "text": "加法可以表示两组的合并。选原有三个，再加入四个，先猜总数，再用物体验证。",
+    "audioHash": "2f025fb7e67a8e61d0eb65a22823f08884328edfa3fc9e3a894e067e93270a27"
+  },
+  "addition-6-8-1": {
+    "file": "audio/addition-6-8-1.mp3",
+    "duration": 7.096,
+    "textHash": "7bbb6bb6e553e230b60a54724db7b0889ff326dd0e34a0699c36d33aea7aafe7",
+    "text": "把加入的物体数设为四，选择三个，再点合在一起。观察实验结果。",
+    "audioHash": "6ddfc5fbbe3aaeef31d0a9390a317ccbe7ff5c7a81761dee54a2695f815c4415"
+  },
+  "addition-6-8-2": {
+    "file": "audio/addition-6-8-2.mp3",
+    "duration": 7.4443,
+    "textHash": "4680eb72bd131b8afb603545d26520ecfeca2ae4c1826198b5b07225ff94d0dd",
+    "text": "三个加四个，一共是七个。你既能逐个数，也能从三个接着数到七个。",
+    "audioHash": "7df64b96bd2271a7f08b75d5d9e398eae0f01dd5200aa4b04426873dd10bf358"
+  },
+  "subtraction-2-3-0": {
+    "file": "audio/subtraction-2-3-0.mp3",
+    "duration": 7.748,
+    "textHash": "7284df14cd9554f3e45b7fda0a7a2eb26946252bacbcc598e1866d85d0d61797",
+    "text": "盘子里放着小物体，可以拿走其中一些。拿走以后，看看盘子里还留着什么。",
+    "audioHash": "9d81ee69ac1f4de63927c13a7a94304c1090b464ff496fa324af2bc1f91f9fdc"
+  },
+  "subtraction-2-3-1": {
+    "file": "audio/subtraction-2-3-1.mp3",
+    "duration": 8.3962,
+    "textHash": "db28cc19119c854b7411ef918357305779387e365c80df729b4627a0fdfc8657",
+    "text": "点一下拿走一些，盯住留下的小物体。我们数的是还在盘子里的，不是已经拿走的。",
+    "audioHash": "3749de1311caaed1f77cd4f0543c0103d008202f743f2fbe9d778cf52deef1d5"
+  },
+  "subtraction-2-3-2": {
+    "file": "audio/subtraction-2-3-2.mp3",
+    "duration": 8.0721,
+    "textHash": "fe49c3bc4da4238dac660cc96e099d06b4d0bd296aa75f3e0e1f2e99122d5855",
+    "text": "拿走一部分，剩下的数量就会变化。把留下的一个个数清楚，就知道还有几个。",
+    "audioHash": "f2e909bdc3db4508cf6d143ca80c5dbf369c449ad17a791238fe80377aa0a3d6"
+  },
+  "subtraction-4-5-0": {
+    "file": "audio/subtraction-4-5-0.mp3",
+    "duration": 8.7446,
+    "textHash": "e4e07fe1b161ba3c56e54ac32e229b913f47a1ac69e83aa878935450cd6bf290",
+    "text": "减法能描述拿走后的剩余。保持原有数量相同，再比较拿走不同数量之后的结果。",
+    "audioHash": "5ee7c4ada23a478074e19e35e21cf7f2b1985448d6d5e8590af6c6e250d5df2b"
+  },
+  "subtraction-4-5-1": {
+    "file": "audio/subtraction-4-5-1.mp3",
+    "duration": 7.9709,
+    "textHash": "c87dc83b3f87380ace4fc496a22195941dae71af6450c6f0849324460286112c",
+    "text": "先把拿走的物体数设为零并运行，再设为三运行。比较盘子里剩余的数量。",
+    "audioHash": "9f5b7ba49b80ca88e750a1f77a47669467238a20eb70069e8e617e63de98895a"
+  },
+  "subtraction-4-5-2": {
+    "file": "audio/subtraction-4-5-2.mp3",
+    "duration": 7.7723,
+    "textHash": "2aa588f50ac0636aa392cfb235ec5a8792ad720acaa48629c4baaf95b0c08835",
+    "text": "从同样多的物体里，拿走得越多，剩下的越少。拿走零个时，数量不会减少。",
+    "audioHash": "0c9dd06fae28cc137c76c1a186e0506855945caa1c2b66752b4e83ce7deedcc6"
+  },
+  "subtraction-6-8-0": {
+    "file": "audio/subtraction-6-8-0.mp3",
+    "duration": 8.2463,
+    "textHash": "c08c39ee5f97e7208123dd69f7d2a4029ca6cef2cf2f1127ca7d6ba804498a44",
+    "text": "把八个物体看作原来的一整组。选择拿走三个，先预测还剩几个，再运行检查。",
+    "audioHash": "fd4d51afef036dce15a21b1f7cc499c9e36a609a5391b41485ac0e74ccaf361a"
+  },
+  "subtraction-6-8-1": {
+    "file": "audio/subtraction-6-8-1.mp3",
+    "duration": 7.1202,
+    "textHash": "f203b7b7eadb9b924aee0ce4698378834c554c5497ab5b1b82c0eaf503031638",
+    "text": "把拿走的物体数设为三，选择八个，再点拿走一些。观察实验结果。",
+    "audioHash": "5f114f841ddecf54699e21ed2d26fc77f99cc2580d062d8f96c1dc72f6379acc"
+  },
+  "subtraction-6-8-2": {
+    "file": "audio/subtraction-6-8-2.mp3",
+    "duration": 8.3193,
+    "textHash": "e9f34277eb7409138df6b15a5ea948f54f56b36632ac61de7531eb80f197a20f",
+    "text": "八个拿走三个，剩下五个。把拿走的三和剩下的五合起来，还能检查是否回到八。",
+    "audioHash": "66c6333516ce9290749dcd69930edbe6eef94ba40012b17006008dcaa0086eac"
+  },
+  "number-line-2-3-0": {
+    "file": "audio/number-line-2-3-0.mp3",
+    "duration": 8.295,
+    "textHash": "e0bbbc1628a42cd8cb2aa312d79101b3316e1b78be459fcddb1b178b53390649",
+    "text": "数字排成一条小路，相邻的数字一个接着一个。我们让小伙伴沿着小路往前走。",
+    "audioHash": "9fcae50b929df54d8cc6bd4b2d6f22e8620ecb50c0b4ecf9bc4874cc765579d9"
+  },
+  "number-line-2-3-1": {
+    "file": "audio/number-line-2-3-1.mp3",
+    "duration": 8.295,
+    "textHash": "1e7aa96b17ffe03ac8f478b3faae74b58fe8d99974c907dee04ac0c499eb82ac",
+    "text": "点一下沿数字走，看看小伙伴从哪里出发。每走一步，就来到下一个数字的位置。",
+    "audioHash": "8051a7cbe5461edcd2179bd2da4a63702957c528d13a83c7a56958251e9531c7"
+  },
+  "number-line-2-3-2": {
+    "file": "audio/number-line-2-3-2.mp3",
+    "duration": 7.7967,
+    "textHash": "1701c0b95db03e67aece88ff21d24f7cd81c16d91ecaa95f34cc5bd6dafc2a52",
+    "text": "走过的步数和到达的数字有关。要先看起点，才能知道走完以后到了哪里。",
+    "audioHash": "d9a883b9b5ac680103c4ce47ed80fe62442d0a3c524367481ca7d8fc1a506589"
+  },
+  "number-line-4-5-0": {
+    "file": "audio/number-line-4-5-0.mp3",
+    "duration": 8.7203,
+    "textHash": "7bcbfa26f850d9204a05c84656ad6a2ed12b4242605fb6525ed04c15e37f55f9",
+    "text": "相邻数字之间的间隔相同。保持同一个起点，比较走不同步数以后停在哪个数字。",
+    "audioHash": "feffc41aa59ec48fc81a33d7327a39c0f228a29275aa150ba685c3a2a94b2a7e"
+  },
+  "number-line-4-5-1": {
+    "file": "audio/number-line-4-5-1.mp3",
+    "duration": 7.748,
+    "textHash": "852c3e6c25378c7fb7161b6fd0c5345c2b72238b3189ac82cb035ed1747331c7",
+    "text": "先把前进步数设为零并运行，再设为六运行。比较小伙伴到达的数字。",
+    "audioHash": "7cf05c72266a4720d32ca673574d0d5042f09567a99d43a73770b5c7b93c5602"
+  },
+  "number-line-4-5-2": {
+    "file": "audio/number-line-4-5-2.mp3",
+    "duration": 8.4205,
+    "textHash": "ffc67e0906aa9bad69ffe0a9d34d804113ee45d6bcad0fe89858a03b90456b9e",
+    "text": "从同样的位置出发，多走一步，就到下一个数。步数和终点有关，但不能忘记起点。",
+    "audioHash": "ea2d851ee05fc9fb4e721d12100ebfb85f76804dbfd0a41ebd89ce603c16af67"
+  },
+  "number-line-6-8-0": {
+    "file": "audio/number-line-6-8-0.mp3",
+    "duration": 8.7971,
+    "textHash": "8924b508c4d938b908493ae5d3ab8341cb7603a3eac3223bb7c7d2349ab84203",
+    "text": "数轴上的位置可以帮助理解数量变化。选择从零出发，向前走六步，预测最后的位置。",
+    "audioHash": "7ebfc1ca9e35f18cc109bbe15ecef4ac119aa87690be103768487854389ea4e0"
+  },
+  "number-line-6-8-1": {
+    "file": "audio/number-line-6-8-1.mp3",
+    "duration": 7.4969,
+    "textHash": "34fb9e381d934b6a2dbbd74ff7101a1ec405b1cfa10dd8c918044503e1dfea4f",
+    "text": "把前进步数设为六，选择从零出发，再点沿数字走。观察实验结果。",
+    "audioHash": "43a280538098b0e611e4a4b0b2ae9421c36bea1054784eb26e9c5627b0081886"
+  },
+  "number-line-6-8-2": {
+    "file": "audio/number-line-6-8-2.mp3",
+    "duration": 9.1942,
+    "textHash": "6a13dcf6e94d4a460b97c3fdd619f32e124f3209dbd5c942c206c60f873f01cc",
+    "text": "从零出发走六步，会到达数字六。若换成从二出发，同样走六步就会得到不同的终点。",
+    "audioHash": "6a5446a9a460cb18858a6c5051374e939843bf17335cbcb42d6e24c78784b37e"
+  },
+  "balance-scale-2-3-0": {
+    "file": "audio/balance-scale-2-3-0.mp3",
+    "duration": 7.9952,
+    "textHash": "c29e941040b0e8f9b2af3d931340443d2c7d67e8940bd2fe5fc878e42fab9060",
+    "text": "天平有左边和右边两个盘子。放上相同的小物体，看看哪一边会更低一些。",
+    "audioHash": "9bb0f03344c27eba41aef2b8cd14683c15d3136bf35666f6981136210237c433"
+  },
+  "balance-scale-2-3-1": {
+    "file": "audio/balance-scale-2-3-1.mp3",
+    "duration": 7.9709,
+    "textHash": "c395bf9b0b8c0f4f4d06263381cf597fbffcc3645058787bafe84a4e25accb5c",
+    "text": "点一下比较两边，观察天平的横杆。它是平平的，还是向其中一边倾斜了呢？",
+    "audioHash": "23c8373bbc1d9050694b88bafd38a5233c41e4d4421aec5aedca63cea5aca542"
+  },
+  "balance-scale-2-3-2": {
+    "file": "audio/balance-scale-2-3-2.mp3",
+    "duration": 8.6959,
+    "textHash": "675785d52e6baf43df5f9ea987b61d73a440c3ea47bee35ac630d3bbdf3fd494",
+    "text": "两边放一样重的东西，天平可以保持平衡。这里每个小物体一样重，可以数一数比较。",
+    "audioHash": "b0a95904cb45f996475d224279fbce10e34f6a5847179f9cc37009dc8e54bd37"
+  },
+  "balance-scale-4-5-0": {
+    "file": "audio/balance-scale-4-5-0.mp3",
+    "duration": 8.8215,
+    "textHash": "f6c188c13ed5507b6bd196b72c9b4a9d1d99495512580964a8570c4b8a8d5105",
+    "text": "模型里的小物体质量相同。保持右盘数量不变，再改变左盘数量，观察天平的变化。",
+    "audioHash": "6c3173affcc03243ac0b1b84072ccbf4d345c3406c5d14fdab71586614a5f14b"
+  },
+  "balance-scale-4-5-1": {
+    "file": "audio/balance-scale-4-5-1.mp3",
+    "duration": 7.6955,
+    "textHash": "d190f8aa34e8c7083edcc1a9bf0a41e6cbdac83533ef76b280139736cba5075a",
+    "text": "先把左盘物体数设为一并运行，再设为六运行。比较天平偏向哪一边。",
+    "audioHash": "a4561741edac83602022e324feacefbc4d3378f4bd82c4a8a285dc51cd6fd217"
+  },
+  "balance-scale-4-5-2": {
+    "file": "audio/balance-scale-4-5-2.mp3",
+    "duration": 9.9718,
+    "textHash": "457ca15027770b785d650b3b8d7d78b1c78e0fbf7ed7024673576978b645c143",
+    "text": "两边数量不一样，质量较大的一边通常下降。数量相同且每个一样重，才能用数量判断平衡。",
+    "audioHash": "c8dcd121cfcea809c38cf0fe38d2b2abd0c9eccef1d9f8cdfa2e51dd5668c7a8"
+  },
+  "balance-scale-6-8-0": {
+    "file": "audio/balance-scale-6-8-0.mp3",
+    "duration": 8.6716,
+    "textHash": "cf4e0f0393d718becb5a50336787de3403f9aeb4a312aee71ca16a7c59e0e96f",
+    "text": "等号表示两边的量相等。选择右盘六个，再把左盘也设为六个，观察是否达到平衡。",
+    "audioHash": "59600e586ab3630882d7851662349a231070d61fb03f4d2d7e2eef685ed1ad59"
+  },
+  "balance-scale-6-8-1": {
+    "file": "audio/balance-scale-6-8-1.mp3",
+    "duration": 7.2215,
+    "textHash": "c38980feefcedb3c4f1ef56addedf547ddc1eeaf2c7bebf9a2bac305842eaef3",
+    "text": "把左盘物体数设为六，选择六个，再点比较两边。观察实验结果。",
+    "audioHash": "747622afadc5efb910acd0c33ef8767e455ff895e4c6a55ba3c6e6de919eb96c"
+  },
+  "balance-scale-6-8-2": {
+    "file": "audio/balance-scale-6-8-2.mp3",
+    "duration": 8.5704,
+    "textHash": "ac8d546baef8a2d2b3cd0977106eb84b44a024335c1a5bb3f9e3fc899f079dfd",
+    "text": "左边六个，右边也是六个，每个物体又一样重。天平平衡，帮助我们把相等看得更清楚。",
+    "audioHash": "75e83c0a780d316d6936763df9ecf63809ef1bbfa566830d38c33ad3edbe6b9c"
+  },
+  "fractions-2-3-0": {
+    "file": "audio/fractions-2-3-0.mp3",
+    "duration": 7.8696,
+    "textHash": "7b1221ce0408e8d6775b94c81e58641b9fc3d3e1893545956b15f5cc10f53a18",
+    "text": "一块圆圆的蛋糕，可以分成几份。我们看看每一份，是不是和旁边那份一样大。",
+    "audioHash": "03484c8545d58c7414c973f293066685fbfa64063f3f638b3ba928cd114a9965"
+  },
+  "fractions-2-3-1": {
+    "file": "audio/fractions-2-3-1.mp3",
+    "duration": 8.2706,
+    "textHash": "c495c01d11c410938bb18c63f65508b68e2fb51e016ca4128be70cc4f3b3bed0",
+    "text": "点一下平均切分，沿着切开的地方看一看。每个人拿一样大的一份，才叫平均分。",
+    "audioHash": "e8429d85e09705a11bc64f7dac251e2e9654ad6c5f13865af301294b9ef9922a"
+  },
+  "fractions-2-3-2": {
+    "file": "audio/fractions-2-3-2.mp3",
+    "duration": 8.623,
+    "textHash": "efa7c92b37b3ff1cbd62c338a10d91ffd61562e77b12cacd84529d692000e154",
+    "text": "同一块蛋糕平均分得更多，每一份就会更小。数份数的时候，也要看看每份有多大。",
+    "audioHash": "3d25e489a4ae10b5570e7f3f1b8b626eac4055af526079e3d7b97a421f502e4b"
+  },
+  "fractions-4-5-0": {
+    "file": "audio/fractions-4-5-0.mp3",
+    "duration": 8.8215,
+    "textHash": "6c78ea56b3c3a3a9537ba1a64e7d11121ad833c7c65adf85b8041f70f25d920c",
+    "text": "平均分要求每一份大小相同。保持整块蛋糕不变，比较分成不同份数之后的一份。",
+    "audioHash": "5e9a1cc089f7bba0176ae53629ccf7e30c46573f1616cca1f9c0d7321233b5aa"
+  },
+  "fractions-4-5-1": {
+    "file": "audio/fractions-4-5-1.mp3",
+    "duration": 8.295,
+    "textHash": "49ee1cf7e1f8cbb79b2596ea9799c04d6adcf50ca4b08cbc7bdb83b985072169",
+    "text": "先把平均分成的份数设为二并运行，再设为四运行。比较每一份蛋糕的大小。",
+    "audioHash": "500af2af3b9e8151da68a40565085e7b8f2efa8d5679b74db132adfc959c6929"
+  },
+  "fractions-4-5-2": {
+    "file": "audio/fractions-4-5-2.mp3",
+    "duration": 9.6478,
+    "textHash": "6b1a06f93b1c4bb8b20a0add0f3c671bfa02b45dee739ce1c8a9231a7eedc5f9",
+    "text": "同一个整体平均分成更多份，每份所占的部分变小。分数既要看选几份，也要看总共几份。",
+    "audioHash": "9c43b11e45d0ac7edffc164fdde18a1f5dca1d2488498032643a05d8a0f320ca"
+  },
+  "fractions-6-8-0": {
+    "file": "audio/fractions-6-8-0.mp3",
+    "duration": 8.8458,
+    "textHash": "c1bcea0f8f56539a1ddefb8885c597695ddd1372cc43e3cf216a2d739476897a",
+    "text": "把同一块蛋糕平均分成四份，再选择其中一份。想一想，这一份占整块蛋糕的多少。",
+    "audioHash": "9de1e262e2345d2e8918c9b0ceb62ca78d9e456ce50ae1fa29ddd670a58ec26e"
+  },
+  "fractions-6-8-1": {
+    "file": "audio/fractions-6-8-1.mp3",
+    "duration": 7.5212,
+    "textHash": "07c6a9859d05c4b93c80bad176c531aad9f68d8ef2fdc65344a0f28586972913",
+    "text": "把平均分成的份数设为四，选择一份，再点平均切分。观察实验结果。",
+    "audioHash": "a82193d5aec3931128da67cfc80733be046c54b5909d32565db34e50ff4158a0"
+  },
+  "fractions-6-8-2": {
+    "file": "audio/fractions-6-8-2.mp3",
+    "duration": 8.0478,
+    "textHash": "85592ae4fb37e2b9e34edbb9aa9870751a6436afb8b9c0477f1dc1a35ed46740",
+    "text": "四个一样大的部分里取一份，就是四分之一。这里的一始终是那块完整的蛋糕。",
+    "audioHash": "ecee7a0d9b8f22c866ff0a4a68f98b62223f0345c9eebe8ff8f199b0e49756a9"
+  },
+  "measurement-2-3-0": {
+    "file": "audio/measurement-2-3-0.mp3",
+    "duration": 8.0721,
+    "textHash": "a6e6fdabb589935876c9cc6d7e1506fd0977300efb130e5a88464056b3adb417",
+    "text": "一根积木条旁边，有一排一样大的小格。我们用小格一个接一个，看看它有多长。",
+    "audioHash": "7c473cf35e6ae3602f63d8bf1a109ce9fb0ff9fce9b0df3bda2b06a45a0050dd"
+  },
+  "measurement-2-3-1": {
+    "file": "audio/measurement-2-3-1.mp3",
+    "duration": 8.1451,
+    "textHash": "db97efa414addcd0a4de0429008b5bdf6ddb974619f4d738971d1a80bfaad009",
+    "text": "点一下用尺子量，从积木条的一端开始看。小格紧紧排好，中间不要留空隙。",
+    "audioHash": "ace60a783f0337a29f7e94f4249e2319dfa4a4fc9fc10c0688385fd4b79c7438"
+  },
+  "measurement-2-3-2": {
+    "file": "audio/measurement-2-3-2.mp3",
+    "duration": 8.5704,
+    "textHash": "d8e601a6f23fb06980d7b3966acc3df8408436e635746f5970e92c3775badbc9",
+    "text": "测量要用一样长的单位，一个接一个排。选多大的单位，也会影响最后数出来的个数。",
+    "audioHash": "f5c94db15ed0fac51263dbe34e1392b0c054f589bbb5f91406ecb52b40f530b9"
+  },
+  "measurement-4-5-0": {
+    "file": "audio/measurement-4-5-0.mp3",
+    "duration": 9.7976,
+    "textHash": "8f52f71e6b067c907eb4576032d6c710645db77fbc1b1d30bbdfbc42166acc77",
+    "text": "同样的长度单位，才能直接比较长短。保持小格大小不变，再测量两根不同长度的积木条。",
+    "audioHash": "d4d51391d7db50258072544bf10a9371da6c7076f687b57bc30898a4522ab021"
+  },
+  "measurement-4-5-1": {
+    "file": "audio/measurement-4-5-1.mp3",
+    "duration": 7.6955,
+    "textHash": "454d2b6a94d6d32eb35d40de7cdae89e39e1b68c1f6004deb9e1908ede1da050",
+    "text": "先把积木条长度设为一并运行，再设为八运行。比较量出的单位数量。",
+    "audioHash": "5384a74573b8d5c17699795709c0c41ff739e1a024b4fb8629ad12c64f6d1ad9"
+  },
+  "measurement-4-5-2": {
+    "file": "audio/measurement-4-5-2.mp3",
+    "duration": 8.0964,
+    "textHash": "251aeedfc66ae4882150347ae279212e50663871a0dfa9c0c01ad819b9b570ca",
+    "text": "积木条更长时，需要的同样小格也更多。量的时候对齐一端，避免重叠和漏空。",
+    "audioHash": "6a4fbf4c2b738efeb3acd057508ee1ad6057cf66af4af5c0afde8ca92716a04b"
+  },
+  "measurement-6-8-0": {
+    "file": "audio/measurement-6-8-0.mp3",
+    "duration": 9.17,
+    "textHash": "691c6d6d89c48c1043bb0c4d9270538a779f451b942dbf9da2ba28613884fdf7",
+    "text": "测量把连续的长度转成单位的个数。把积木条长度设为八，选一个小格作为单位来量。",
+    "audioHash": "0a0ad2001cb1ab5ddf6d7a58333b51e71907f8dff5045e0088ab8471a1b56532"
+  },
+  "measurement-6-8-1": {
+    "file": "audio/measurement-6-8-1.mp3",
+    "duration": 7.5699,
+    "textHash": "c7dd0f0c3b0d7c351695261b1c5b75357e9c331bf5e077fd53920c6f92943190",
+    "text": "把积木条长度设为八，选择一个小格，再点用尺子量。观察实验结果。",
+    "audioHash": "f90f09fab158f976c12377f7833913e114ed7420f00e35905c4b148abc699fe6"
+  },
+  "measurement-6-8-2": {
+    "file": "audio/measurement-6-8-2.mp3",
+    "duration": 9.2225,
+    "textHash": "cb862261504a1cbc2a40b34db52b496445f02ef01e5c124090475548b80b8c56",
+    "text": "八格长的积木条，用一个小格测量，会得到八个单位。换单位后，读数和单位要一起说明。",
+    "audioHash": "034950b454c680c37f6e6490a2a546b437d9d32bf4e729e47a64200eb60a04c3"
+  },
+  "area-tiles-2-3-0": {
+    "file": "audio/area-tiles-2-3-0.mp3",
+    "duration": 8.0478,
+    "textHash": "dcd629e9feceacd94b6f887dba85595bbe44c27659e1254cbffe7bddb91eba31",
+    "text": "小方砖可以铺成一片地板。看看它们是不是排得整齐，中间有没有留下空洞。",
+    "audioHash": "8708d9be3fc09fabed7e4027567fa93a93b95f7b3a35b0699b8e7b99e3143984"
+  },
+  "area-tiles-2-3-1": {
+    "file": "audio/area-tiles-2-3-1.mp3",
+    "duration": 8.2463,
+    "textHash": "7f6996d7cc4b971f8bec30eb1d6c9edd0556fe42a0c7c0b8a34b0b86e864f33c",
+    "text": "点一下铺满地板，沿着一排方砖看过去。再看看下一排，小方砖怎样接在一起。",
+    "audioHash": "fd82c37dfc7286370f20d503890637f6fbccacaed20e5c287ea854476b950b39"
+  },
+  "area-tiles-2-3-2": {
+    "file": "audio/area-tiles-2-3-2.mp3",
+    "duration": 7.5942,
+    "textHash": "4950bf9017e64ee9fd75d673b7c11823165d71db9bb3ce4ef1b77417ec8109aa",
+    "text": "相同的小方砖，不重叠也不留空，就能帮助我们比较地板占了多大的地方。",
+    "audioHash": "9e556d393c9f2eb71fb68855b9d0c86501471ed9e7af6c6d51a75d41f1f02fb9"
+  },
+  "area-tiles-4-5-0": {
+    "file": "audio/area-tiles-4-5-0.mp3",
+    "duration": 8.947,
+    "textHash": "34735882c267864743f19dff34c0fe860ea71b6c59fc1bf33e470e5954944eeb",
+    "text": "面积可以用相同的方砖作单位。保持行数不变，再比较每行方砖数量改变后的地板。",
+    "audioHash": "11a63f68ba045a70152ae207ede382c79dd5fc02c3d40082c0e64c66bc6f71e2"
+  },
+  "area-tiles-4-5-1": {
+    "file": "audio/area-tiles-4-5-1.mp3",
+    "duration": 8.2463,
+    "textHash": "c72bc680c822b0a2db6068a1d5e357b0cdc77de4552a582e53b85d9c1a7256e3",
+    "text": "先把每行方砖数设为一并运行，再设为五运行。比较整片地板需要的方砖数。",
+    "audioHash": "d692af4ed5ea7f74fa547df4e5fe901cd08f7eb9bfcb4d1fc583c6bd750e10cb"
+  },
+  "area-tiles-4-5-2": {
+    "file": "audio/area-tiles-4-5-2.mp3",
+    "duration": 8.7446,
+    "textHash": "6ea7dbf0ba973959cae5eacc9cc1484f0ac7eeec15ea860bd509c1cfc7e7e053",
+    "text": "每行的方砖更多，地板覆盖的面积也会增加。比较面积时，要保证小方砖本身一样大。",
+    "audioHash": "a14a9afe39f90fd74e84c2207f8f425344d13ff02bb3cbaf9cdfba31bf7f3076"
+  },
+  "area-tiles-6-8-0": {
+    "file": "audio/area-tiles-6-8-0.mp3",
+    "duration": 8.9227,
+    "textHash": "935ee76d2d1b02e0dddf97cd0d912415cbac34a7d87c5cdadf42144d931a5092",
+    "text": "先看一行有几块，再看一共有几行。让每行五块排成三行，预测需要多少块方砖。",
+    "audioHash": "b91f94f4fd6839754c74a68df534a8c99c4472b91983c9ca44cd621797a68d0f"
+  },
+  "area-tiles-6-8-1": {
+    "file": "audio/area-tiles-6-8-1.mp3",
+    "duration": 7.1202,
+    "textHash": "1e6a961cec50ed74a0db018ad5d4510d10b2960efd7a600997358435d1f1af9b",
+    "text": "把每行方砖数设为五，选择三行，再点铺满地板。观察实验结果。",
+    "audioHash": "c47d0da671b7d6375bec7f79dfc6f719253ae5efe802314cf174eccda4b69a33"
+  },
+  "area-tiles-6-8-2": {
+    "file": "audio/area-tiles-6-8-2.mp3",
+    "duration": 8.4205,
+    "textHash": "164c1c3a8b435c4124cddd758f505e72433c49a20c640aeb82d87b7978734c55",
+    "text": "三行，每行五块，一共有十五块相同的方砖。可以逐个数，也可以按一行一行来合计。",
+    "audioHash": "3bff8e6690c2fdf50337f6140638a14be7fa39eb47db1dc26f5c7199572fb532"
+  },
+  "volume-blocks-2-3-0": {
+    "file": "audio/volume-blocks-2-3-0.mp3",
+    "duration": 8.0478,
+    "textHash": "25be7f39db02ec8815c65fea9193ebfab934b77f4f96f10260bfc70c6ce93dfc",
+    "text": "小积木可以先排成一层，再往上叠一层。我们看看盒子里怎样慢慢装入积木。",
+    "audioHash": "334118c8c33e74d6665a13ccd09dc9cae50d74ded7bcb1d15493cc4ecc87de21"
+  },
+  "volume-blocks-2-3-1": {
+    "file": "audio/volume-blocks-2-3-1.mp3",
+    "duration": 7.9952,
+    "textHash": "770982284de65e4c9c4ced6ef64c6e7435ac5d917949da3f65bd2014d3939d1a",
+    "text": "点一下装入盒子，跟着一层积木数一数。再看看上面，是不是又加了新的一层。",
+    "audioHash": "41a28db558d3e2790351fdfd010f8e4c7ca696d960b748d905ca9a76aca589f7"
+  },
+  "volume-blocks-2-3-2": {
+    "file": "audio/volume-blocks-2-3-2.mp3",
+    "duration": 7.821,
+    "textHash": "47304a0cabf118a0771408f0af0724364c5aa78e44df78ab81797cc734494716",
+    "text": "数盒子里的积木，要把每一层都算进去。上面挡住的积木，也仍然占着空间。",
+    "audioHash": "7e50839f63f9b3e7b8fa812278f30c714a83ccc88190a03e4d6c45857bf1ce2e"
+  },
+  "volume-blocks-4-5-0": {
+    "file": "audio/volume-blocks-4-5-0.mp3",
+    "duration": 9.2468,
+    "textHash": "9425a14b35ba01dda533249a0e36ffafaccfafd0d316206b794efae7bd789427",
+    "text": "相同的积木可以帮助比较所占的空间。保持层数相同，再比较每层放不同数量的结果。",
+    "audioHash": "742914dce068f8a480d166413311e5bd5ceb0eca40ff4b4da3cd78fdcdd5e942"
+  },
+  "volume-blocks-4-5-1": {
+    "file": "audio/volume-blocks-4-5-1.mp3",
+    "duration": 7.9223,
+    "textHash": "3b5330f22cfe579dffd3f5b4519588afbd1b6cadd4eca20e89f7b94be92ff8f5",
+    "text": "先把每层积木数设为一并运行，再设为四运行。比较盒子里积木的总数量。",
+    "audioHash": "cdbe584c2be65346cc22eba92218be1a00f6e61b72c76ed1ceacf4a5b8e17a0b"
+  },
+  "volume-blocks-4-5-2": {
+    "file": "audio/volume-blocks-4-5-2.mp3",
+    "duration": 8.3962,
+    "textHash": "d0107614b2136e8e65ab7e30e6cce5d1c4e93f96a172ba47be84b0bfd9ec548c",
+    "text": "每层增加积木，全部层数合起来就会更多。只数最上面一层，会漏掉下面的积木。",
+    "audioHash": "cc0ab20e319f7c46c97b047477f20e11c182a6dbc7194d5ee8fa87226f6e8bf0"
+  },
+  "volume-blocks-6-8-0": {
+    "file": "audio/volume-blocks-6-8-0.mp3",
+    "duration": 8.7971,
+    "textHash": "9c3646bec6b6c8574cbd06fce2ce3ec1b89b2454918386e5a6ee60c08d605e44",
+    "text": "先数每层，再把各层的数量合起来。设置每层四块，共三层，预测盒子里一共有几块。",
+    "audioHash": "2c4bf51f68a97efda63f6a8aadc1dfaf26e1e9317ebea7c7f7533b9749b8b308"
+  },
+  "volume-blocks-6-8-1": {
+    "file": "audio/volume-blocks-6-8-1.mp3",
+    "duration": 7.1971,
+    "textHash": "7af92f6a06b66691af1d88262ad57da11adb7d04af2a7e20fef92ba0901a6c9e",
+    "text": "把每层积木数设为四，选择三层，再点装入盒子。观察实验结果。",
+    "audioHash": "ab3ac548c42b9112a3758f04055ff2fdaf7bf75302ff5566870ba197e7958999"
+  },
+  "volume-blocks-6-8-2": {
+    "file": "audio/volume-blocks-6-8-2.mp3",
+    "duration": 8.947,
+    "textHash": "b8b119093ffb97372d9bd433fbd67cabe32c15ec30202c7962c778d7539b40d4",
+    "text": "三层，每层四块，一共是十二块。相同的小积木作单位，帮助我们认识物体占据的空间。",
+    "audioHash": "23f11e4a435fa2ad219c05cb8109606ce11f6df07f415382e9e024482d02f798"
   }
 }

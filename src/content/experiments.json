@@ -1,0 +1,807 @@
+[
+  {
+    "id": "moon-phases",
+    "subject": "S",
+    "title": "月亮的脸",
+    "parameterLabel": "月球轨道位置",
+    "min": 0,
+    "max": 8,
+    "initial": 0,
+    "optionLabel": "观察方式",
+    "options": [
+      "从地球看",
+      "从上方看"
+    ],
+    "targetValue": 4,
+    "targetOption": 0,
+    "actionLabel": "观察月相",
+    "fact": "月亮本身不发光。月球绕地球运动时，从地球看见的受光部分会变化。"
+  },
+  {
+    "id": "solar-system",
+    "subject": "S",
+    "title": "太阳系旅行",
+    "parameterLabel": "运行速度",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "观察行星",
+    "options": [
+      "地球",
+      "火星",
+      "木星"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "开始绕日",
+    "fact": "行星绕太阳公转。这里压缩了距离和时间，帮助看清轨道。"
+  },
+  {
+    "id": "magnetism",
+    "subject": "S",
+    "title": "磁铁的朋友",
+    "parameterLabel": "两磁铁距离",
+    "min": 1,
+    "max": 8,
+    "initial": 8,
+    "optionLabel": "相对的磁极",
+    "options": [
+      "同名磁极",
+      "异名磁极"
+    ],
+    "targetValue": 2,
+    "targetOption": 1,
+    "actionLabel": "试试磁力",
+    "fact": "同名磁极相斥，异名磁极相吸。磁铁越靠近，通常作用越明显。"
+  },
+  {
+    "id": "floating",
+    "subject": "S",
+    "title": "沉下去还是浮起来",
+    "parameterLabel": "放入水中的物体数",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "物体材料",
+    "options": [
+      "木块",
+      "钢块",
+      "软木"
+    ],
+    "targetValue": 3,
+    "targetOption": 0,
+    "actionLabel": "放进水里",
+    "fact": "相同大小的物体也可能有不同的沉浮表现，要比较物体平均密度和水的密度。"
+  },
+  {
+    "id": "plant-growth",
+    "subject": "S",
+    "title": "种子的旅行",
+    "parameterLabel": "生长时间",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "种植条件",
+    "options": [
+      "有水有光",
+      "缺水",
+      "缺光"
+    ],
+    "targetValue": 6,
+    "targetOption": 0,
+    "actionLabel": "观察生长",
+    "fact": "植物生长需要适量的水和光。动画加快了时间，不代表真实生长速度。"
+  },
+  {
+    "id": "sound-waves",
+    "subject": "S",
+    "title": "看得见的声音",
+    "parameterLabel": "振动快慢",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "振动幅度",
+    "options": [
+      "轻轻振动",
+      "用力振动"
+    ],
+    "targetValue": 6,
+    "targetOption": 0,
+    "actionLabel": "拨动琴弦",
+    "fact": "振动越快，音调通常越高；振幅越大，声音通常越响。波纹是振动的示意。"
+  },
+  {
+    "id": "shadows",
+    "subject": "S",
+    "title": "影子变变变",
+    "parameterLabel": "光源的高度",
+    "min": 1,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "挡光物体",
+    "options": [
+      "圆柱",
+      "小方块",
+      "小树"
+    ],
+    "targetValue": 7,
+    "targetOption": 0,
+    "actionLabel": "观察影子",
+    "fact": "不透明物体挡住光会形成影子。光源方向和位置改变，影子也会改变。"
+  },
+  {
+    "id": "states-of-water",
+    "subject": "S",
+    "title": "水的三种样子",
+    "parameterLabel": "加热程度",
+    "min": 0,
+    "max": 6,
+    "initial": 0,
+    "optionLabel": "实验过程",
+    "options": [
+      "加热",
+      "冷却"
+    ],
+    "targetValue": 6,
+    "targetOption": 0,
+    "actionLabel": "观察变化",
+    "fact": "水可以是冰、液态水和水蒸气。水蒸气不可见，白雾是细小的水滴。"
+  },
+  {
+    "id": "electric-circuit",
+    "subject": "T",
+    "title": "点亮小灯泡",
+    "parameterLabel": "灯泡数量",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "开关状态",
+    "options": [
+      "断开",
+      "闭合"
+    ],
+    "targetValue": 2,
+    "targetOption": 1,
+    "actionLabel": "接通实验电路",
+    "fact": "简单电路闭合后电流才能通过。这里是安全的低压电路示意。"
+  },
+  {
+    "id": "traffic-light",
+    "subject": "T",
+    "title": "会思考的红绿灯",
+    "parameterLabel": "行人等待时间",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "行人信号",
+    "options": [
+      "红灯",
+      "绿灯",
+      "黄灯"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "运行路口",
+    "fact": "交通灯用约定的信号帮助大家有序通行。红灯停，绿灯确认安全后通行。"
+  },
+  {
+    "id": "robot-path",
+    "subject": "T",
+    "title": "机器人走迷宫",
+    "parameterLabel": "前进步数",
+    "min": 1,
+    "max": 6,
+    "initial": 1,
+    "optionLabel": "前进方向",
+    "options": [
+      "向前",
+      "向右",
+      "向左"
+    ],
+    "targetValue": 4,
+    "targetOption": 1,
+    "actionLabel": "执行指令",
+    "fact": "机器人按照指令的方向和步数移动，清楚的指令才能得到预期结果。"
+  },
+  {
+    "id": "solar-panel",
+    "subject": "T",
+    "title": "阳光变电能",
+    "parameterLabel": "太阳的高度",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "面板方向",
+    "options": [
+      "朝向太阳",
+      "背向太阳"
+    ],
+    "targetValue": 7,
+    "targetOption": 0,
+    "actionLabel": "启动太阳能装置",
+    "fact": "太阳能板把一部分光能转成电能。光照方向和强度会影响发电。"
+  },
+  {
+    "id": "wind-turbine",
+    "subject": "T",
+    "title": "风的发电机",
+    "parameterLabel": "风速等级",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "叶片状态",
+    "options": [
+      "正常叶片",
+      "叶片锁定"
+    ],
+    "targetValue": 6,
+    "targetOption": 0,
+    "actionLabel": "送来一阵风",
+    "fact": "风推动叶片转动，带动发电机。动画只展示能量转换的主要过程。"
+  },
+  {
+    "id": "water-filter",
+    "subject": "T",
+    "title": "净水小工厂",
+    "parameterLabel": "加入的水量",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "过滤层",
+    "options": [
+      "只有网格",
+      "沙和细网",
+      "无过滤层"
+    ],
+    "targetValue": 4,
+    "targetOption": 1,
+    "actionLabel": "开始过滤",
+    "fact": "过滤层能拦住一些悬浮杂质。看起来清澈的水不一定可以直接饮用。"
+  },
+  {
+    "id": "telegraph",
+    "subject": "T",
+    "title": "远方的小消息",
+    "parameterLabel": "发送次数",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "信号长度",
+    "options": [
+      "短信号",
+      "长信号"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "发送信号",
+    "fact": "用约定的长短信号可以传递消息。发送和接收的人需要知道同一套规则。"
+  },
+  {
+    "id": "binary-code",
+    "subject": "T",
+    "title": "零和一的秘密",
+    "parameterLabel": "要表示的数",
+    "min": 0,
+    "max": 7,
+    "initial": 0,
+    "optionLabel": "显示方式",
+    "options": [
+      "灯光编码",
+      "数字编码"
+    ],
+    "targetValue": 5,
+    "targetOption": 0,
+    "actionLabel": "点亮编码",
+    "fact": "三个二进制位可以用零和一表示从零到七。每一位对应不同的数量。"
+  },
+  {
+    "id": "sensors",
+    "subject": "T",
+    "title": "自动门的眼睛",
+    "parameterLabel": "人与门的距离",
+    "min": 1,
+    "max": 8,
+    "initial": 8,
+    "optionLabel": "感应器",
+    "options": [
+      "开启",
+      "关闭"
+    ],
+    "targetValue": 2,
+    "targetOption": 0,
+    "actionLabel": "走近自动门",
+    "fact": "感应器检测附近的变化，再让控制装置作出反应。不同感应器原理不同。"
+  },
+  {
+    "id": "lever",
+    "subject": "E",
+    "title": "跷跷板的秘密",
+    "parameterLabel": "支点位置",
+    "min": 1,
+    "max": 7,
+    "initial": 4,
+    "optionLabel": "右侧重物",
+    "options": [
+      "一块",
+      "两块"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "试试杠杆",
+    "fact": "力臂越长，产生相同转动效果通常需要的力越小。杠杆平衡要比较两边的力矩。"
+  },
+  {
+    "id": "pulley",
+    "subject": "E",
+    "title": "滑轮小帮手",
+    "parameterLabel": "拉绳距离",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "滑轮组合",
+    "options": [
+      "定滑轮",
+      "动滑轮"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "拉动绳子",
+    "fact": "理想定滑轮改变用力方向。理想动滑轮省力，但需要拉更长的绳子。"
+  },
+  {
+    "id": "ramp",
+    "subject": "E",
+    "title": "斜坡搬运工",
+    "parameterLabel": "坡道长度",
+    "min": 2,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "箱子重量",
+    "options": [
+      "轻箱子",
+      "重箱子"
+    ],
+    "targetValue": 7,
+    "targetOption": 1,
+    "actionLabel": "沿坡运送",
+    "fact": "到达同样高度时，更长更缓的理想斜面能减小所需推力，但路程更长。"
+  },
+  {
+    "id": "arch",
+    "subject": "E",
+    "title": "拱门为什么稳",
+    "parameterLabel": "拱石数量",
+    "min": 3,
+    "max": 9,
+    "initial": 3,
+    "optionLabel": "结构连接",
+    "options": [
+      "装上拱顶石",
+      "缺少拱顶石"
+    ],
+    "targetValue": 7,
+    "targetOption": 0,
+    "actionLabel": "移走临时支架",
+    "fact": "拱形把荷载传向两边的支承。这个模型只展示结构关系，不计算实际承重。"
+  },
+  {
+    "id": "tower-balance",
+    "subject": "E",
+    "title": "稳稳的高塔",
+    "parameterLabel": "积木层数",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "地基宽度",
+    "options": [
+      "窄地基",
+      "宽地基"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "轻轻摇一摇",
+    "fact": "重心投影保持在支承范围内，物体才不容易倾倒。宽底座通常更稳定。"
+  },
+  {
+    "id": "dam",
+    "subject": "E",
+    "title": "水坝工程师",
+    "parameterLabel": "上游水位",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "闸门",
+    "options": [
+      "关闭",
+      "打开"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "观察水流",
+    "fact": "水位差会推动水流。水坝的闸门可以调节放水，真实工程远比模型复杂。"
+  },
+  {
+    "id": "crane",
+    "subject": "E",
+    "title": "起重机出动",
+    "parameterLabel": "吊臂伸出长度",
+    "min": 1,
+    "max": 6,
+    "initial": 1,
+    "optionLabel": "配重",
+    "options": [
+      "有配重",
+      "无配重"
+    ],
+    "targetValue": 5,
+    "targetOption": 0,
+    "actionLabel": "吊起货物",
+    "fact": "起重机使用配重和支承保持平衡。吊臂伸得更远时，需要更仔细地考虑稳定性。"
+  },
+  {
+    "id": "suspension-bridge",
+    "subject": "E",
+    "title": "拉索撑起一座桥",
+    "parameterLabel": "桥面跨度",
+    "min": 2,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "吊索",
+    "options": [
+      "完整吊索",
+      "缺少吊索"
+    ],
+    "targetValue": 7,
+    "targetOption": 0,
+    "actionLabel": "让车辆通过",
+    "fact": "悬索桥的桥面通过吊索连接到主缆，再把荷载传到桥塔和锚碇。这里只做定性演示。"
+  },
+  {
+    "id": "catapult",
+    "subject": "E",
+    "title": "弹力投石器",
+    "parameterLabel": "拉开弹性臂的程度",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "发射角度",
+    "options": [
+      "较低角度",
+      "中间角度",
+      "较高角度"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "发射软球",
+    "fact": "弹性装置储存的能量释放后能推动小球。这里是虚拟软球实验，轨迹是简化模型。"
+  },
+  {
+    "id": "color-wheel",
+    "subject": "A",
+    "title": "旋转的色轮",
+    "parameterLabel": "色轮转速",
+    "min": 0,
+    "max": 8,
+    "initial": 0,
+    "optionLabel": "色块组合",
+    "options": [
+      "红绿蓝",
+      "黑白",
+      "暖色"
+    ],
+    "targetValue": 7,
+    "targetOption": 0,
+    "actionLabel": "转动色轮",
+    "fact": "快速交替出现的颜色会在视觉中发生混合。屏幕上的色轮是感知现象的简化演示。"
+  },
+  {
+    "id": "symmetry-art",
+    "subject": "A",
+    "title": "对称花园",
+    "parameterLabel": "花瓣数量",
+    "min": 2,
+    "max": 10,
+    "initial": 2,
+    "optionLabel": "排列方式",
+    "options": [
+      "对称排列",
+      "错位排列"
+    ],
+    "targetValue": 8,
+    "targetOption": 0,
+    "actionLabel": "展开花瓣",
+    "fact": "对称图案的对应部分具有相同关系，改变花瓣数量可以创作不同的节奏。"
+  },
+  {
+    "id": "mosaic",
+    "subject": "A",
+    "title": "马赛克画室",
+    "parameterLabel": "每行拼片数量",
+    "min": 2,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "拼片颜色",
+    "options": [
+      "海洋色",
+      "暖阳色",
+      "森林色"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "铺开图案",
+    "fact": "小色块按照位置和颜色组合，可以形成更大的图案。这就是拼贴创作的一种方法。"
+  },
+  {
+    "id": "pottery",
+    "subject": "A",
+    "title": "小小陶艺师",
+    "parameterLabel": "陶器的高度",
+    "min": 2,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "陶器轮廓",
+    "options": [
+      "直筒",
+      "圆肚",
+      "细颈"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "转动陶轮",
+    "fact": "旋转的泥坯可以形成轴对称器物。改变轮廓和高度，会得到不同的造型。"
+  },
+  {
+    "id": "music-rhythm",
+    "subject": "A",
+    "title": "节奏小乐队",
+    "parameterLabel": "每组节拍数",
+    "min": 2,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "节奏组合",
+    "options": [
+      "均匀节拍",
+      "强弱交替"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "开始节奏",
+    "fact": "节奏由声音或动作出现的时间关系组成。均匀和交替的节拍带来不同的感觉。"
+  },
+  {
+    "id": "perspective",
+    "subject": "A",
+    "title": "远近的魔法",
+    "parameterLabel": "物体与观察点的距离",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "观察方式",
+    "options": [
+      "透视观察",
+      "平行对照"
+    ],
+    "targetValue": 7,
+    "targetOption": 0,
+    "actionLabel": "比较远近",
+    "fact": "大小相同的物体，在透视观察中通常近大远小。平行投影可作为对照。"
+  },
+  {
+    "id": "kinetic-sculpture",
+    "subject": "A",
+    "title": "会动的雕塑",
+    "parameterLabel": "悬挂物数量",
+    "min": 2,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "平衡方式",
+    "options": [
+      "两边均衡",
+      "一边偏重"
+    ],
+    "targetValue": 6,
+    "targetOption": 0,
+    "actionLabel": "轻轻推动",
+    "fact": "动态雕塑把形状、平衡和运动放在一起，让空间里的图案不断变化。"
+  },
+  {
+    "id": "shadow-theater",
+    "subject": "A",
+    "title": "光影小剧场",
+    "parameterLabel": "物体离幕布的距离",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "主角形状",
+    "options": [
+      "小鸟",
+      "小兔",
+      "树叶"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "打开舞台灯",
+    "fact": "物体位于光源和幕布之间会投下影子。改变位置，可以改变影子的大小。"
+  },
+  {
+    "id": "pattern-design",
+    "subject": "A",
+    "title": "图案的节奏",
+    "parameterLabel": "重复单元数量",
+    "min": 2,
+    "max": 10,
+    "initial": 2,
+    "optionLabel": "排列规律",
+    "options": [
+      "交替排列",
+      "三色循环"
+    ],
+    "targetValue": 8,
+    "targetOption": 1,
+    "actionLabel": "展开设计",
+    "fact": "重复、交替和循环可以形成图案规律。先发现一个单元，再看它怎样延续。"
+  },
+  {
+    "id": "counting",
+    "subject": "M",
+    "title": "数数实验室",
+    "parameterLabel": "物体数量",
+    "min": 1,
+    "max": 10,
+    "initial": 1,
+    "optionLabel": "排列方式",
+    "options": [
+      "一排",
+      "两排"
+    ],
+    "targetValue": 7,
+    "targetOption": 1,
+    "actionLabel": "数一数",
+    "fact": "物体只改变排列位置，数量不会改变。数数时每个物体都应只数一次。"
+  },
+  {
+    "id": "addition",
+    "subject": "M",
+    "title": "一起有多少",
+    "parameterLabel": "加入的物体数",
+    "min": 0,
+    "max": 6,
+    "initial": 0,
+    "optionLabel": "原有数量",
+    "options": [
+      "两个",
+      "三个"
+    ],
+    "targetValue": 4,
+    "targetOption": 1,
+    "actionLabel": "合在一起",
+    "fact": "把两组物体合并，可以用加法表示。数清每组，再数合起来的总数。"
+  },
+  {
+    "id": "subtraction",
+    "subject": "M",
+    "title": "还剩下多少",
+    "parameterLabel": "拿走的物体数",
+    "min": 0,
+    "max": 6,
+    "initial": 0,
+    "optionLabel": "原有数量",
+    "options": [
+      "六个",
+      "八个"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "拿走一些",
+    "fact": "从一组物体里拿走一些，可以用减法表示剩下的数量。"
+  },
+  {
+    "id": "number-line",
+    "subject": "M",
+    "title": "数字小路",
+    "parameterLabel": "前进步数",
+    "min": 0,
+    "max": 10,
+    "initial": 0,
+    "optionLabel": "出发点",
+    "options": [
+      "从零出发",
+      "从二出发"
+    ],
+    "targetValue": 6,
+    "targetOption": 0,
+    "actionLabel": "沿数字走",
+    "fact": "数轴上相邻整数相差一。向右移动时数字增大，走过的格数可以帮助计数。"
+  },
+  {
+    "id": "balance-scale",
+    "subject": "M",
+    "title": "天平的等号",
+    "parameterLabel": "左盘物体数",
+    "min": 1,
+    "max": 8,
+    "initial": 1,
+    "optionLabel": "右盘数量",
+    "options": [
+      "四个",
+      "六个"
+    ],
+    "targetValue": 6,
+    "targetOption": 1,
+    "actionLabel": "比较两边",
+    "fact": "同样质量的物体，两边数量相同，理想天平就会平衡。等号表示两边相等。"
+  },
+  {
+    "id": "fractions",
+    "subject": "M",
+    "title": "分一分蛋糕",
+    "parameterLabel": "平均分成的份数",
+    "min": 2,
+    "max": 8,
+    "initial": 2,
+    "optionLabel": "选中的份数",
+    "options": [
+      "一份",
+      "两份"
+    ],
+    "targetValue": 4,
+    "targetOption": 0,
+    "actionLabel": "平均切分",
+    "fact": "分数描述整体与部分的关系。这里各份大小相等，四等份中的一份是四分之一。"
+  },
+  {
+    "id": "measurement",
+    "subject": "M",
+    "title": "谁更长",
+    "parameterLabel": "积木条长度",
+    "min": 1,
+    "max": 10,
+    "initial": 1,
+    "optionLabel": "测量单位",
+    "options": [
+      "一个小格",
+      "两个小格"
+    ],
+    "targetValue": 8,
+    "targetOption": 0,
+    "actionLabel": "用尺子量",
+    "fact": "测量长度要从同一起点开始，并使用相同的长度单位，才能公平比较。"
+  },
+  {
+    "id": "area-tiles",
+    "subject": "M",
+    "title": "地板有多大",
+    "parameterLabel": "每行方砖数",
+    "min": 1,
+    "max": 6,
+    "initial": 1,
+    "optionLabel": "行数",
+    "options": [
+      "两行",
+      "三行"
+    ],
+    "targetValue": 5,
+    "targetOption": 1,
+    "actionLabel": "铺满地板",
+    "fact": "用相同大小的方砖铺满一个平面，可以通过方砖总数比较面积。"
+  },
+  {
+    "id": "volume-blocks",
+    "subject": "M",
+    "title": "装满一个盒子",
+    "parameterLabel": "每层积木数",
+    "min": 1,
+    "max": 6,
+    "initial": 1,
+    "optionLabel": "积木层数",
+    "options": [
+      "一层",
+      "两层",
+      "三层"
+    ],
+    "targetValue": 4,
+    "targetOption": 2,
+    "actionLabel": "装入盒子",
+    "fact": "用相同大小的小方块填满空间，可以通过小方块总数比较体积。"
+  }
+]

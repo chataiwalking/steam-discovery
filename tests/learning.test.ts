@@ -268,3 +268,31 @@ it("requires five items of the same shape, not a mixed group with a matching sor
     false,
   );
 });
+
+import {experiments,subjects} from '../src/content/experiments';
+import {lessons} from '../src/content/lessons';
+import {initialWorld} from '../src/learning';
+describe('the 50-scene STEAM catalog',()=>{
+ it('has ten distinct scenes per subject and preserves three age tracks',()=>{
+  expect(lessons).toHaveLength(50);expect(new Set(lessons.map(l=>l.id)).size).toBe(50);
+  for(const subject of subjects)expect(lessons.filter(l=>l.subject===subject.id)).toHaveLength(10);
+  expect(lessons.every(l=>Object.keys(l.tracks).length===3)).toBe(true);
+ });
+ it.each(experiments)('$id needs a completed observation, a fair comparison, and observed target settings',experiment=>{
+  const w=initialWorld(experiment.id),e=defaultEvidence();
+  expect(w.experimentValue).toBeGreaterThanOrEqual(experiment.min);expect(w.experimentValue).toBeLessThanOrEqual(experiment.max);
+  expect(taskComplete(experiment.id,'2-3',2,w,e)).toBe(false);
+  const first={...e,experimentCompleted:1,experimentResults:[{value:experiment.initial,option:0}],experimentValues:[experiment.initial]};
+  expect(taskComplete(experiment.id,'2-3',2,w,first)).toBe(true);
+  expect(taskComplete(experiment.id,'4-5',2,w,first)).toBe(false);
+  const different=experiment.initial===experiment.max?experiment.min:experiment.max;
+  const confounded={...first,experimentCompleted:2,experimentResults:[...first.experimentResults,{value:different,option:1}]};
+  expect(taskComplete(experiment.id,'4-5',2,w,confounded)).toBe(false);
+  const compared={...confounded,experimentResults:[...first.experimentResults,{value:different,option:0}]};
+  expect(taskComplete(experiment.id,'4-5',2,w,compared)).toBe(true);
+  const setButNotRun={...w,experimentValue:experiment.targetValue,experimentOption:experiment.targetOption};
+  expect(taskComplete(experiment.id,'6-8',2,setButNotRun,e)).toBe(false);
+  const observed={...e,experimentCompleted:1,experimentResults:[{value:experiment.targetValue,option:experiment.targetOption}]};
+  expect(taskComplete(experiment.id,'6-8',2,setButNotRun,observed)).toBe(true);
+ });
+});

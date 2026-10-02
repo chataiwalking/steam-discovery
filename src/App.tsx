@@ -26,6 +26,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { lessons } from "./content/lessons";
+import {subjects,getExperiment} from "./content/experiments";
 import type {
   AgeBand,
   LessonDefinition,
@@ -33,10 +34,12 @@ import type {
   WorldAction,
   WorldState,
   ShapeKind,
+  Subject,
 } from "./types";
 import {
   ageBands,
   defaultWorld,
+  initialWorld,
   defaultEvidence,
   isDay,
   lightHex,
@@ -90,6 +93,8 @@ function App() {
       ? (v as Record<string, boolean>)
       : {};
   });
+  const [subject,setSubject]=useState<Subject|"ALL">("ALL");
+  const [search,setSearch]=useState("");
   const [modal, setModal] = useState<"discoveries" | "guide" | null>(null);
   useEffect(() => {
     const fn = () => {
@@ -121,6 +126,7 @@ function App() {
     },
     [age],
   );
+  const visibleLessons=lessons.filter(l=>(subject==="ALL"||l.subject===subject)&&(!search.trim()||`${l.title}${l.subtitle}${l.description}`.includes(search.trim())));
   const current = lessons.find((x) => x.id === lessonId);
   const count = lessons.filter((l) => completed[`${l.id}:${age}`]).length;
   return (
@@ -182,7 +188,7 @@ function App() {
               <p className="hero-description">
                 转一转地球，搭一座小桥，看看光的颜色。
                 <br />
-                走近真实的物体，亲手发现身边的科学。
+                50 个三维场景，探索科学、技术、工程、艺术与数学。
               </p>
               <div className="hero-actions">
                 <button
@@ -208,7 +214,7 @@ function App() {
                       ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  先逛逛小岛
+                  浏览 50 个场景
                   <ChevronRight size={17} />
                 </a>
               </div>
@@ -298,18 +304,23 @@ function App() {
           <section className="worlds-section" id="worlds">
             <div className="section-heading">
               <div>
-                <span className="small-label">六个小世界 · 无数个为什么</span>
+                <span className="small-label">50 个三维场景 · 五大学习领域</span>
                 <h2>
                   今天，想发现什么？ <Sparkles size={24} />
                 </h2>
               </div>
               <span className="progress-label">
                 <StarIcon size={17} />
-                <b>{count}</b> / 6 个世界已探索
+                <b>{count}</b> / {lessons.length} 个场景已探索
               </span>
             </div>
-            <div className="lesson-grid">
-              {lessons.map((l, index) => (
+            <nav className="subject-tabs" aria-label="STEAM分类">
+              <button aria-pressed={subject==="ALL"} onClick={()=>setSubject("ALL")}>全部 <span>{lessons.length}</span></button>
+              {subjects.map(item=><button key={item.id} aria-pressed={subject===item.id} onClick={()=>setSubject(item.id)}><b>{item.id}</b>{item.name}<span>{lessons.filter(l=>l.subject===item.id).length}</span></button>)}
+            </nav>
+            <div className="catalog-toolbar"><span>{subject==="ALL"?"按 STEAM 领域探索":subjects.find(item=>item.id===subject)?.description}</span><label><span className="sr-only">搜索场景</span><input placeholder="搜索你感兴趣的场景" value={search} onChange={event=>setSearch(event.target.value)}/></label></div>
+            {subjects.filter(group=>subject==="ALL"||group.id===subject).map(group=>{const groupLessons=visibleLessons.filter(l=>l.subject===group.id);if(!groupLessons.length)return null;return <section className="subject-section" key={group.id} aria-label={`${group.name}场景`}><div className="subject-heading"><span className="subject-letter">{group.id}</span><div><h3>{group.name}<small>{group.english}</small></h3><p>{group.description}</p></div><span>{groupLessons.length} 个场景</span></div><div className="lesson-grid">
+              {groupLessons.map((l) => (
                 <button
                   className="lesson-card"
                   key={l.id}
@@ -319,7 +330,7 @@ function App() {
                   <div className="card-art">
                     <span className="card-category">{l.category}</span>
                     <Illustration id={l.id} />
-                    <span className="card-number">0{index + 1}</span>
+                    <span className="card-number">{String(lessons.indexOf(l)+1).padStart(2,"0")}</span>
                     {completed[`${l.id}:${age}`] && (
                       <span className="card-done">
                         <Check size={14} />
@@ -338,7 +349,8 @@ function App() {
                   </div>
                 </button>
               ))}
-            </div>
+            </div></section>})}
+            {!visibleLessons.length&&<div className="catalog-empty">没有找到这个场景，换一个关键词试试。</div>}
           </section>
           <section className="curiosity-note">
             <Star />
@@ -461,13 +473,15 @@ function Lesson({
   onComplete: () => void;
 }) {
   const [step, setStep] = useState(0),
-    [w, setW] = useState(defaultWorld),
+    [w, setW] = useState(()=>initialWorld(lesson.id)),
     [e, setE] = useState(defaultEvidence),
     [paused, setPaused] = useState(false),
     [carBusy,setCarBusy]=useState(false),
+    [experimentBusy,setExperimentBusy]=useState(false),
     [hidden, setHidden] = useState(document.hidden),
     [celebrate, setCelebrate] = useState(false),
     [feedback, setFeedback] = useState("");
+  const experiment=getExperiment(lesson.id);
   const track = lesson.tracks[age],
     narration = useNarration(track.steps[step].clip);
   useEffect(() => {
@@ -542,9 +556,21 @@ function Lesson({
       { sortedKinds: [] },
     );
   }
+  function runExperiment(){
+    if(experimentBusy)return;
+    setExperimentBusy(true);setFeedback("");
+    update({...w,experimentRun:w.experimentRun+1});
+  }
+  function experimentFinished(runId:number){
+    if(!experimentBusy||runId!==w.experimentRun)return;
+    setExperimentBusy(false);
+    setE(previous=>({...previous,experimentCompleted:previous.experimentCompleted+1,experimentResults:[...previous.experimentResults,{value:w.experimentValue,option:w.experimentOption}],experimentValues:[...new Set([...previous.experimentValues,w.experimentValue])],experimentOptions:[...new Set([...previous.experimentOptions,w.experimentOption])]}));
+    setFeedback("观察完成，可以改变一个条件，再试试看。");
+  }
   function onAction(action: WorldAction) {
     if (step === 0) return;
     switch (action.type) {
+      case "experiment-complete":experimentFinished(action.runId);break;
       case "rotate":
         rotate();
         break;
@@ -571,7 +597,8 @@ function Lesson({
   function reset() {
     narration.stop();
     setCarBusy(false);
-    setW(defaultWorld());
+    setExperimentBusy(false);
+    setW(initialWorld(lesson.id));
     setE(defaultEvidence());
     setPaused(false);
     setFeedback("");
@@ -580,11 +607,12 @@ function Lesson({
   function changeStep(next: number) {
     narration.stop();
     setCarBusy(false);
+    setExperimentBusy(false);
     setStep(next);
     setPaused(false);
     setFeedback("");
     if (next > 0) {
-      setW(defaultWorld());
+      setW(initialWorld(lesson.id));
       setE(defaultEvidence());
     }
     setCelebrate(false);
@@ -699,7 +727,7 @@ function Lesson({
             ) : (
               <>
                 <Lightbulb size={16} />
-                {taskHint(lesson.id, age)}
+                {experiment?track.steps[step].instruction:taskHint(lesson.id, age)}
               </>
             )}
           </div>
@@ -797,8 +825,16 @@ function Lesson({
               </div>
             ) : (
               <>
-                <p className="task-instruction">{taskHint(lesson.id, age)}</p>
+                <p className="task-instruction">{experiment?track.steps[step].instruction:taskHint(lesson.id, age)}</p>
                 <div className="lesson-controls">
+                  {experiment&&<div className="extended-controls" data-experiment={experiment.id}>
+                    <label className="experiment-parameter"><span>{experiment.parameterLabel}<output>{w.experimentValue}</output></span><input type="range" aria-label={experiment.parameterLabel} min={experiment.min} max={experiment.max} step="1" value={w.experimentValue} disabled={experimentBusy} onChange={event=>update({...w,experimentValue:Number(event.target.value)})}/></label>
+                    <div className="parameter-steppers"><button aria-label={`减少${experiment.parameterLabel}`} disabled={experimentBusy||w.experimentValue<=experiment.min} onClick={()=>update({...w,experimentValue:w.experimentValue-1})}><Minus size={18}/></button><span>{experiment.min} — {experiment.max}</span><button aria-label={`增加${experiment.parameterLabel}`} disabled={experimentBusy||w.experimentValue>=experiment.max} onClick={()=>update({...w,experimentValue:w.experimentValue+1})}><Plus size={18}/></button></div>
+                    <span className="experiment-option-label">{experiment.optionLabel}</span><div className="experiment-options">{experiment.options.map((option,index)=><button key={option} disabled={experimentBusy||(age==="4-5"&&step===2)} aria-pressed={w.experimentOption===index} onClick={()=>update({...w,experimentOption:index})}>{option}</button>)}</div>
+                    <button className="wide-control experiment-run" disabled={experimentBusy} onClick={runExperiment}><Play size={18}/>{experimentBusy?"观察变化中…":experiment.actionLabel}</button>
+                    {e.experimentCompleted>0&&<small className="control-note">已完成 {e.experimentCompleted} 次观察 · 比较了 {e.experimentValues.length} 种参数</small>}
+                  </div>}
+
                   {lesson.id === "day-night" && (
                     <>
                       <div className="day-status">

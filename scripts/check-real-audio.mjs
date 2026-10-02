@@ -7,7 +7,8 @@ const context=await browser.newContext();
 const page=await context.newPage();
 const checks=[];
 try {
- for(const lesson of lessons){
+ const chosen=process.env.AUDIO_ONLY?lessons.filter(lesson=>process.env.AUDIO_ONLY.split(',').includes(lesson.id)):lessons;
+ for(const lesson of chosen){
   await page.goto(`${base}#/lesson/${lesson.id}?age=4-5`);
   await page.getByRole('button',{name:'听讲解',exact:true}).click();
   await page.getByRole('button',{name:'暂停讲解',exact:true}).waitFor({timeout:30000});
@@ -22,6 +23,6 @@ try {
   checks.push({lesson:lesson.id,clip:lesson.tracks['4-5'].steps[0].clip.id,pausedTime:paused,result:'Real MP3 advanced, paused, resumed and replayed; no Audio mock'});
  }
  await mkdir('artifacts',{recursive:true});
- await writeFile('artifacts/real-audio-browser.json',JSON.stringify({base,browser:await browser.version(),checks,humanListeningVerified:false},null,2));
+ await writeFile(process.env.AUDIO_REPORT||'artifacts/real-audio-browser.json',JSON.stringify({base,browser:await browser.version(),checks,humanListeningVerified:false},null,2));
  console.log(`Real MP3 playback verified for ${checks.length} themes.`);
 } finally {await browser.close();}

@@ -1,6 +1,8 @@
+import {getExperiment} from "./content/experiments";
 import type { AgeBand, LessonId, WorldState } from "./types";
 export const ageBands: AgeBand[] = ["2-3", "4-5", "6-8"];
 export const defaultWorld = (): WorldState => ({
+  experimentValue: 0, experimentOption: 0, experimentRun: 0,
   rotation: 0,
   waterStage: 0,
   waterOrder: [],
@@ -18,6 +20,10 @@ export const defaultWorld = (): WorldState => ({
 });
 export type Evidence = {
   actions: number;
+  experimentCompleted:number;
+  experimentResults:{value:number;option:number}[];
+  experimentValues:number[];
+  experimentOptions:number[];
   day: boolean;
   night: boolean;
   water: number[];
@@ -33,6 +39,7 @@ export type Evidence = {
 };
 export const defaultEvidence = (): Evidence => ({
   actions: 0,
+  experimentCompleted:0,experimentResults:[],experimentValues:[],experimentOptions:[],
   day: false,
   night: false,
   water: [],
@@ -68,6 +75,13 @@ export function taskComplete(
   w: WorldState,
   e: Evidence,
 ): boolean {
+  const experiment=getExperiment(id);
+  if(experiment){
+    if(step===0)return true;
+    if(step===1||age==="2-3")return e.experimentCompleted>=1;
+    if(age==="4-5")return e.experimentResults.some(a=>e.experimentResults.some(b=>a.option===b.option&&a.value!==b.value));
+    return e.experimentResults.some(result=>result.value===experiment.targetValue&&result.option===experiment.targetOption);
+  }
   if (step === 0) return true;
   if (step === 1) return e.actions > 0;
   switch (id) {
@@ -107,8 +121,15 @@ export function taskComplete(
             w.shapes.includes("cube") &&
             w.shapes.every((x) => x !== "cylinder");
   }
+  return false;
 }
 export function taskHint(id: LessonId, age: AgeBand): string {
+  const experiment=getExperiment(id);
+  if(experiment){
+    if(age==="2-3")return `点一下“${experiment.actionLabel}”，观察装置的变化。`;
+    if(age==="4-5")return `先${experiment.actionLabel}，保持选项不变，改变“${experiment.parameterLabel}”后再试一次。`;
+    return `把“${experiment.parameterLabel}”调到${experiment.targetValue}，选择“${experiment.options[experiment.targetOption]}”，再${experiment.actionLabel}。`;
+  }
   const hints: Record<LessonId, Record<AgeBand, string>> = {
     "day-night": {
       "2-3": "让小屋经历一次白天，再经历一次黑夜。",
@@ -143,3 +164,5 @@ export function taskHint(id: LessonId, age: AgeBand): string {
   };
   return hints[id][age];
 }
+
+export function initialWorld(id:LessonId):WorldState{const state=defaultWorld();const experiment=getExperiment(id);if(experiment){state.experimentValue=experiment.initial;state.experimentOption=experiment.targetOption;}return state;}

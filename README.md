@@ -4,11 +4,13 @@
 
 [在线探索](https://chataiwalking.github.io/steam-discovery/) · [GitHub仓库](https://github.com/chataiwalking/steam-discovery)
 
+正式入口：[AI搭子学习馆](https://aidazi.tech/steam/)。当前按用户要求优先同步此站点，GitHub保留源码；本轮不处理GitHub Pages。
+
 当前视觉采用真实地理/云层贴图、摄影棚HDR环境光与PBR材质，实木展台、金属齿轮、木桥和光学装置均由Three.js实时绘制。课程卡预览由真实场景截图生成，见 `node scripts/generate-previews.mjs`。资源许可见 [ASSETS.md](ASSETS.md)。
 
 ## 内容
 
-六个主题，每个提供2–3岁感官探索、4–5岁因果实验、6–8岁发现挑战。共18套流程、54段固定讲解。各流程包括“看一看 → 动手试 → 发现规律”，完成操作后收集发现星。年龄与进度保存在当前浏览器。
+50个主题，按科学S、技术T、工程E、艺术A、数学M分类，每类10个。每个主题提供2–3岁感官探索、4–5岁因果实验、6–8岁发现挑战，共150套流程、450段童声讲解。各流程包括“看一看 → 动手试 → 发现规律”，完成操作后收集发现星。年龄与进度保存在当前浏览器。
 
 技术：React 19、TypeScript、Vite、Three.js、React Three Fiber。课程按需加载，固定相机、受限DPR、页面隐藏暂停；WebGL不可用时保留二维示意与字幕、音频入口。
 
@@ -24,10 +26,10 @@ npm run dev
 打开终端显示的本地网址。网站使用固定音频，普通访客不需要Python、模型、API Key或登录。首次点“听讲解”才播放声音。
 
 ```bash
-npm run check:content  # 课程结构、54段MP3与清单完整性
+npm run check:content  # 课程结构、450段MP3与清单完整性
 npm test              # 科学状态、完成条件
 npx playwright install chromium
-npm run test:e2e       # 18条流程及语音恢复/清理、移动布局
+npm run test:e2e       # 150套分龄流程及语音恢复/清理、移动布局
 npm run build
 npm run preview
 ```
@@ -37,7 +39,9 @@ npm run preview
 ## 课程与场景
 
 - `src/content/lessons.json`：网站与TTS共享的课程、分龄目标、字幕、口播和知识来源。
-- `src/learning.ts`：完成条件、操作证据与基础科学关系。
+- `src/content/experiments.json`：44个扩展实验的参数、选项、目标与科学说明。
+- `src/learning.ts`：完成条件、操作证据与基础科学关系；扩展实验需等待动画完成回报后才能计入观察。
+- 2–3岁完成一次观察，4–5岁在固定选项下比较两次数值，6–8岁观察指定目标配置；已完成的证据与当前控件值分开记录。
 - `src/scenes/`：三维小岛和六个主题，各主题动态导入。
 - `src/hooks/useNarration.ts`：播放、暂停、重听、失败重试、切课取消与音频时钟。
 - `public/audio/manifest.json`：音频路径、真实时长、口播文本与SHA256。
