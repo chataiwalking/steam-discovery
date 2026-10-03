@@ -8,6 +8,8 @@ dist/
 test-results/
 playwright-report/
 artifacts/
+output/
+.playwright-cli/
 __pycache__/
 *.wav
 

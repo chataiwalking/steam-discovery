@@ -15,7 +15,7 @@ export function useSceneClock(props: SceneProps) {
     if (props.demo)
       time.current = props.narrationActive ? props.narrationTime : 0;
     else time.current += Math.min(delta, 0.06);
-  });
+  }, -2);
   return time;
 }
 

@@ -1,8 +1,15 @@
 import { useTexture } from '@react-three/drei';
 import { SRGBColorSpace, Vector2 } from 'three';
 import { PhysicalMaterial } from './materials';
+import { useMemo, useRef } from 'react';
+import { useFrame } from '@react-three/fiber';
+import { type Mesh } from 'three';
+import { Atmosphere } from './MathCoreEffects';
 
-export default function Globe({ angle = 0, small = false }: { angle?: number; small?: boolean }) {
+export default function Globe({ angle = 0, small = false, time }: { angle?: number; small?: boolean; time?: {current:number} }) {
+  const cloudLayer=useRef<Mesh>(null);
+  const normalScale=useMemo(()=>new Vector2(.28,.28),[]);
+  useFrame(()=>{if(cloudLayer.current)cloudLayer.current.rotation.y=(time?.current??0)*.006;});
   const base = import.meta.env.BASE_URL;
   const [day, normal, ocean, clouds] = useTexture([
     `${base}textures/earth-day.jpg`, `${base}textures/earth-normal.jpg`,
@@ -14,15 +21,16 @@ export default function Globe({ angle = 0, small = false }: { angle?: number; sm
   return <group rotation={[0, angle, 0]}>
     <mesh castShadow receiveShadow>
       <sphereGeometry args={[1.4, 80, 64]} />
-      <meshPhysicalMaterial map={day} normalMap={normal} normalScale={new Vector2(.28, .28)}
+      <meshPhysicalMaterial map={day} normalMap={normal} normalScale={normalScale}
         roughness={.9} metalness={0} clearcoat={.8} clearcoatMap={ocean} clearcoatRoughness={.2}
         envMapIntensity={.08} />
     </mesh>
-    <mesh>
+    <mesh ref={cloudLayer}>
       <sphereGeometry args={[1.413, 64, 48]} />
       <meshStandardMaterial map={clouds} transparent opacity={.65} depthWrite={false}
         roughness={1} envMapIntensity={.08} />
     </mesh>
+    <Atmosphere strength={small?.12:.22}/>
     {!small && <group position={[1.23, .77, 0]} rotation={[0, 0, -1.01]}>
       <mesh position={[0, .015, 0]} receiveShadow>
         <cylinderGeometry args={[.22, .23, .035, 40]} />

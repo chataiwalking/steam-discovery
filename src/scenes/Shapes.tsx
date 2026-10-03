@@ -1,6 +1,30 @@
 import { ShapeToy, shapeColors } from "./toyModels";
+import {useLayoutEffect,useRef,type ReactNode} from 'react';
+import {useFrame,useThree} from '@react-three/fiber';
+import {type Group} from 'three';
+import {FocusTarget,damping} from './MathCoreEffects';
 import type { ShapeKind } from "../types";
-import { Cube, Rod, SceneLabel, ToyPlatform, type SceneProps } from "./shared";
+import { Cube, Rod, SceneLabel, ToyPlatform, useSceneClock, type SceneProps } from "./shared";
+
+function MovingShape({position,children,props,radius}:{position:[number,number,number];children:ReactNode;props:SceneProps;radius:number}) {
+  const group=useRef<Group>(null),initial=useRef(position),time=useSceneClock(props);
+  const previousPosition=useRef(position);
+  const invalidate=useThree(state=>state.invalidate);
+  useLayoutEffect(()=>{
+    const changed=position.some((value,index)=>value!==previousPosition.current[index]);
+    previousPosition.current=position;
+    if(changed&&props.paused&&group.current){group.current.position.set(...position);invalidate();}
+  },[position,props.paused,invalidate]);
+  useFrame((_,delta)=>{
+    if(!group.current||props.paused)return;
+    const alpha=damping(delta,10);
+    group.current.position.x+=(position[0]-group.current.position.x)*alpha;
+    group.current.position.y+=(position[1]-group.current.position.y)*alpha;
+    group.current.position.z+=(position[2]-group.current.position.z)*alpha;
+    group.current.rotation.y=props.demo?time.current*.24:0;
+  });
+  return <group ref={group} position={initial.current}><FocusTarget radius={radius} paused={props.paused} enabled={!props.demo}>{children}</FocusTarget></group>;
+}
 
 export default function Shapes(props: SceneProps) {
   const shapes: ShapeKind[] = props.demo
@@ -20,8 +44,10 @@ export default function Shapes(props: SceneProps) {
           .slice(0, i)
           .filter((k) => k === kind).length;
         return (
-          <group
+          <MovingShape
             key={`${kind}-${i}`}
+            props={props}
+            radius={done?.35:props.demo?.72:.5}
             position={
               done
                 ? [
@@ -35,19 +61,12 @@ export default function Shapes(props: SceneProps) {
                     -0.5 - Math.floor(i / 5) * 1.1,
                   ]
             }
-            rotation={[
-              0,
-              props.demo && props.narrationActive
-                ? props.narrationTime * 0.24
-                : 0,
-              0,
-            ]}
           >
             <ShapeToy
               kind={kind}
               size={done ? 0.24 : props.demo ? 0.58 : 0.38}
             />
-          </group>
+          </MovingShape>
         );
       })}
       {kinds.map((kind, i) => (
@@ -56,7 +75,7 @@ export default function Shapes(props: SceneProps) {
           <Cube kind="paint" color="#d2d2c7" position={[0, 0.145, 0]} scale={[1.63, 0.025, 1.43]} />
           {[-0.88, 0.88].map(x => <Cube key={x} kind="wood" color="#8f7958" position={[x, 0.21, 0]} scale={[0.06, 0.26, 1.6]} />)}
           {[-0.77, 0.77].map(z => <Cube key={z} kind="wood" color="#8f7958" position={[0, 0.21, z]} scale={[1.8, 0.26, 0.06]} />)}
-          <Rod kind="metal" color={shapeColors[kind]} position={[-0.68, 0.155, -0.58]} scale={[0.07, 0.01, 0.07]} />
+          <FocusTarget radius={.23} color={shapeColors[kind]} position={[-.68,.155,-.58]} paused={props.paused} enabled={!props.demo}><Rod kind="metal" color={shapeColors[kind]} scale={[0.07,0.01,0.07]}/></FocusTarget>
           <SceneLabel position={[0, 0.12, 0.94]}>
             {["球", "立方体", "圆柱"][i]}
           </SceneLabel>

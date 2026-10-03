@@ -1,10 +1,22 @@
-import { useMemo } from "react";
+import { useLayoutEffect, useMemo, useRef } from "react";
+import { useFrame, useThree } from '@react-three/fiber';
 import { Lamp } from "./toyModels";
-import { Color, Quaternion, SRGBColorSpace, Vector3 } from "three";
+import { Color, DoubleSide, Quaternion, SRGBColorSpace, Vector3, type Mesh, type ShaderMaterial } from "three";
 import { Cube, Rod, SceneLabel, ToyPlatform, type SceneProps } from "./shared";
+import { FocusTarget, damping } from './MathCoreEffects';
 
 const colors = ["#ff2d1b", "#24d24b", "#2862ff"];
-function LightBeam({ index, strength }: { index: number; strength: number }) {
+function LightBeam({ index, strength, paused }: { index: number; strength: number;paused:boolean }) {
+  const mesh=useRef<Mesh>(null),material=useRef<ShaderMaterial>(null);
+  const previousStrength=useRef(strength);
+  const invalidate=useThree(state=>state.invalidate);
+  const uniforms=useMemo(()=>({uColor:{value:new Color(colors[index])},uStrength:{value:strength}}),[index]);
+  useLayoutEffect(()=>{
+    const changed=previousStrength.current!==strength;
+    previousStrength.current=strength;
+    if(changed&&paused&&material.current){material.current.uniforms.uStrength.value=strength;if(mesh.current)mesh.current.visible=strength>.006;invalidate();}
+  },[strength,paused,invalidate]);
+  useFrame((_,delta)=>{if(material.current&&!paused){material.current.uniforms.uStrength.value+=(strength-material.current.uniforms.uStrength.value)*damping(delta,9);if(mesh.current)mesh.current.visible=material.current.uniforms.uStrength.value>.006;}});
   const { center, rotation, length } = useMemo(() => {
     const x = (index - 1) * 1.9;
     const yaw = Math.atan2(x, 2.58);
@@ -17,9 +29,13 @@ function LightBeam({ index, strength }: { index: number; strength: number }) {
     };
   }, [index]);
   return (
-    <mesh position={center} quaternion={rotation}>
+    <mesh ref={mesh} position={center} quaternion={rotation} raycast={()=>null} visible={strength>0}>
       <coneGeometry args={[1.06, length, 40, 1, true]} />
-      <meshBasicMaterial color={colors[index]} transparent opacity={0.022 + strength * 0.055} depthWrite={false} toneMapped={false} />
+      <shaderMaterial ref={material} uniforms={uniforms} transparent depthWrite={false} side={DoubleSide} toneMapped={false}
+        vertexShader={`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`}
+        fragmentShader={`uniform vec3 uColor;uniform float uStrength;varying vec2 vUv;
+          void main(){float edge=smoothstep(0.,.12,vUv.y)*(1.-smoothstep(.85,1.,vUv.y));
+          gl_FragColor=vec4(uColor,uStrength*(.028+.032*vUv.y)*edge);}`}/>
     </mesh>
   );
 }
@@ -56,11 +72,11 @@ export default function Light(props: SceneProps) {
       ))}
       {colors.map((color, i) => (
         <group key={color} position={[(i - 1) * 1.9, 0.13, 1.45]}>
-          <group rotation={[0, Math.atan2((i - 1) * 1.9, 2.58), 0]} onClick={e => { e.stopPropagation(); props.onAction?.({ type: "light", index: i }); }}><Lamp color={color} lit={lights[i] > 0} /></group>
+          <FocusTarget radius={.5} color={color} paused={props.paused} enabled={!props.demo} rotation={[0,Math.atan2((i-1)*1.9,2.58),0]} onActivate={()=>props.onAction?.({type:'light',index:i})}><Lamp color={color} lit={lights[i]>0}/></FocusTarget>
           <SceneLabel position={[0, 0.2, 0.65]} color={["#f4b3ab", "#acd9b4", "#b2caff"][i]}>{names[i]}</SceneLabel>
         </group>
       ))}
-      {colors.map((color, i) => lights[i] > 0 && <LightBeam key={color} index={i} strength={lights[i]} />)}
+      {colors.map((color, i) => <LightBeam key={color} index={i} strength={lights[i]} paused={props.paused}/>)}
       <SceneLabel position={[0, 3.75, -1.1]}>
         {r === 1 && g === 1 && b === 1 ? "红 + 绿 + 蓝 = 白光" : "让彩色的光，在这里相遇"}
       </SceneLabel>

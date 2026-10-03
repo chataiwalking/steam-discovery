@@ -17,6 +17,7 @@ import type { WorldCanvasProps } from "../types";
 import {getExperiment} from "../content/experiments";
 import {getLesson} from "../content/lessons";
 import { SceneHtmlPortalContext } from "./SceneHtml";
+import { ScenePostProcessing } from "./ScenePostProcessing";
 
 const scenes: Record<string, ComponentType<WorldCanvasProps>> = {
   island: lazy(() => import("../scenes/Island")),
@@ -313,6 +314,7 @@ export default function WorldCanvas(props: WorldCanvasProps) {
             <SceneHtmlPortalContext.Provider value={overlayPortal}>
               <CameraFit island={props.lesson === "island"} lesson={props.lesson} />
               <ContextGuard onLost={() => setAvailable(false)} />
+              <ScenePostProcessing paused={sceneProps.paused} />
               <color attach="background" args={[props.lesson === "day-night" ? "#141e29" : "#d0d5d5"]} />
               <Suspense fallback={null}>
                 <Environment files={`${import.meta.env.BASE_URL}textures/studio-small-09.hdr`}

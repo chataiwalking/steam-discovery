@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Group } from "three";
+import { FocusTarget, GearMarker } from './MathCoreEffects';
 import {
   Cube,
   Gear,
@@ -65,14 +66,17 @@ export default function Gears(props: SceneProps) {
         )))}
         <Cube kind="metal" color="#405762" position={[0, 2.12, -0.32]} scale={[6.56, 0.08, 0.36]} />
         <group position={[leftX, 0, 0]} ref={left}>
-          <Gear teeth={12} radius={1} color="#a3afb3" />
+          <FocusTarget ringPlane="front" radius={1.14} paused={props.paused} enabled={!props.demo} onActivate={()=>props.onAction?.({type:'gear'})}><Gear teeth={12} radius={1} color="#a3afb3" /><GearMarker radius={1}/></FocusTarget>
         </group>
         <group position={[rightX, 0, 0]} ref={right}>
+          <FocusTarget ringPlane="front" radius={rightRadius*1.14} paused={props.paused} enabled={!props.demo} onActivate={()=>props.onAction?.({type:'gear'})}>
           <Gear
             teeth={props.state.gearTeeth}
             radius={rightRadius}
             color="#ab946c"
           />
+          <GearMarker radius={rightRadius} color="#c9ecf2"/>
+          </FocusTarget>
         </group>
         {[leftX, rightX].map((x, i) => (
           <Rod

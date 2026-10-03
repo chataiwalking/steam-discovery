@@ -7,6 +7,7 @@ import { Ball, Cube, Rod, type SceneProps } from './shared';
 import { PhysicalMaterial } from './materials';
 import { ToyCar } from './toyModels';
 import { Board, Person, Readout, Stand, Wire, smooth, type ExperimentSceneProps } from './ScienceExperimentsParts';
+import { EffectPath, InspectObject, LightRay, WaveSurface } from './ScienceTechnologyEffects';
 
 function Bulb({ lit = false, intensity = 1 }: { lit?: boolean; intensity?: number }) {
   return <group>
@@ -25,9 +26,8 @@ function Battery({ position = [0,0,0] }: { position?: [number,number,number] }) 
   </group>;
 }
 function Circuit({ value,option,progress }: ExperimentSceneProps){
-  const charge=useRef<Group>(null), lamps=useRef<Group>(null);
+  const lamps=useRef<Group>(null);
   useFrame(()=>{const on=option===1&&progress.current>0;
-    if(charge.current){charge.current.visible=on;charge.current.position.x=-2.25+(progress.current*2%1)*4.5;}
     lamps.current?.traverse(object=>{if(object instanceof Mesh&&object.material instanceof MeshStandardMaterial&&object.material.emissive.getHex()!==0){object.material.emissiveIntensity=on?Math.min(2.2,progress.current*8):0;}});
   });
   return <group><Board width={5.4} depth={3.2} />
@@ -45,7 +45,8 @@ function Circuit({ value,option,progress }: ExperimentSceneProps){
       return <group key={i} position={[x,.28,-.55]}><Bulb lit={option===1} /><Readout text={`${i+1}`} position={[0,1.1,0]} /></group>;
     })}</group>
     <Wire points={[[-1.85,.33,-.7],[0,.33,-.7],[1.85,.33,-.7]]} color="#a05b43" />
-    <group ref={charge} position={[0,.42,-.7]}><Ball color="#f0c771" scale={.055} /></group>
+    <EffectPath progress={progress} points={[[-1.6,.41,1],[-2.4,.41,1],[-2.45,.41,-.7],[-1.8,.41,-.7],[0,.41,-.7],[1.8,.41,-.7],[2.4,.41,-.7],[2.4,.41,1],[.8,.41,1],[-.3,.41,1]]} closed strength={option===1?.8:0} activeAfterStart color="#efd28b" radius={.013} speed={3} />
+    <Readout text="亮点标记电流路径 · 运动不代表电子的实际速度" position={[0,2.75,0]} />
     <Readout text={option===1?'开关闭合：形成回路，小灯泡亮起':'开关断开：回路有缺口，小灯泡不亮'} />
   </group>;
 }
@@ -53,8 +54,8 @@ function TrafficLight({ value,option,progress }: ExperimentSceneProps){
   const car=useRef<Group>(null),pedestrian=useRef<Group>(null),countdown=useRef<Group>(null);
   const signalNames=['红灯','绿灯','黄灯'];
   useFrame(()=>{const p=progress.current;
-    if(car.current) car.current.position.x=option===0?-2.5+5*p:-2.5+1.15*Math.min(1,p*(option===2?2:3));
-    if(pedestrian.current){const wait=value*.12;const walk=option===1?Math.max(0,Math.min(1,(p-wait)/(1-wait))):0;pedestrian.current.position.z=1.45-walk*2.9;}
+    if(car.current) car.current.position.x=option===0?-2.5+5*smooth(p):-2.5+1.15*smooth(Math.min(1,p*(option===2?2:3)));
+    if(pedestrian.current){const wait=value*.12;const walk=option===1?smooth(Math.max(0,Math.min(1,(p-wait)/(1-wait)))):0;pedestrian.current.position.z=1.45-walk*2.9;}
     if(countdown.current)countdown.current.scale.x=Math.max(.01,1-p);
   });
   return <group>
@@ -63,6 +64,8 @@ function TrafficLight({ value,option,progress }: ExperimentSceneProps){
     {[-2.3,-1.55,-.8,0,.8,1.55,2.3].map(x=><Cube key={x} color="#ddd5b4" position={[x,.27,0]} scale={[.35,.01,.035]} />)}
     {[-.82,-.42,-.02,.38,.78].map(z=><Cube key={z} color="#e4e2ce" position={[.75,.275,z]} scale={[.72,.015,.18]} />)}
     <Cube color="#eee7d0" position={[-.91,.28,0]} scale={[.055,.015,2.28]} />
+    <EffectPath progress={progress} points={[[.76,.31,1.4],[.76,.31,-1.4]]} color={option===1?'#88cead':'#cf7768'} strength={option===1?.7:.16} radius={.019} speed={option===1?2:0} />
+    <EffectPath progress={progress} points={[[-2.5,.31,.55],[option===0?2.5:-1.4,.31,.55]]} color={option===0?'#98ceb2':'#d7b57b'} strength={.45} radius={.015} speed={option===0?2:0} />
     <group ref={car} position={[-2.5,.28,.55]}><ToyCar color="#687e87" /></group>
     <group ref={pedestrian} position={[.76,.29,1.45]} scale={.67}><Person color="#a48255" /></group>
     <Stand x={1.7} z={-1.48} height={1.6} />
@@ -85,6 +88,7 @@ function RobotPath({ value,option,progress }: ExperimentSceneProps){
     <Cube kind="stone" color="#aab5b2" position={[1.7,.44,-1.6]} scale={[1.6,.4,.14]} />
     <Cube kind="stone" color="#aab5b2" position={[1.4,.44,-.7]} scale={[.14,.4,1.6]} />
     {Array.from({length:value},(_,i)=>{const d=(i+1)*.42;return <mesh key={i} position={[option===1?d:option===2?-d:0,.258,1.68-(option===0?d:0)]} rotation={[-Math.PI/2,0,0]}><circleGeometry args={[.068,20]} /><meshBasicMaterial color="#c4a35b" /></mesh>;})}
+    <EffectPath progress={progress} points={[[0,.275,1.68],[option===1?value*.42:option===2?-value*.42:0,.275,1.68-(option===0?value*.42:0)]]} color="#e0bf7d" strength={.75} radius={.015} speed={value*.5} />
     <group ref={robot} position={[0,.42,1.68]}>
       <Cube kind="paint" color="#acb6b0" position={[0,.13,0]} scale={[.48,.27,.55]} />
       <Cube kind="metal" color="#718d96" position={[0,.43,-.04]} scale={[.38,.28,.33]} />
@@ -99,7 +103,10 @@ function RobotPath({ value,option,progress }: ExperimentSceneProps){
 }
 function SolarPanel({ value,option,progress }: ExperimentSceneProps){
   const fan=useRef<Group>(null),gauge=useRef<Group>(null);
-  const height=1+value*.24,tilt=Math.atan2(2.25,height-1.13), power=option===0?(.15+value/8*.85):0;
+  const height=1+value*.24,tilt=Math.PI/4;
+  // A fixed panel makes the angle of incidence causal. Solar distances are compressed,
+  // so this is cosine projection only, not an inverse-square lamp-power calculation.
+  const power=option===0?Math.max(0,(Math.cos(tilt)*(height-1.13)+Math.sin(tilt)*2.25)/Math.hypot(2.25,height-1.13)):0;
   useFrame(()=>{if(fan.current)fan.current.rotation.z=progress.current*power*40;if(gauge.current)gauge.current.scale.y=Math.max(.01,power*smooth(progress.current));});
   return <group>
     <Stand x={-.6} height={.9} />
@@ -109,6 +116,8 @@ function SolarPanel({ value,option,progress }: ExperimentSceneProps){
       {Array.from({length:6},(_,x)=>Array.from({length:4},(_,z)=><Cube key={`${x}-${z}`} kind="glass" color="#315b76" position={[-.79+x*.315,.087,-.57+z*.38]} scale={[.287,.025,.34]} />))}
     </group>
     <mesh position={[-.6,height,2.25]}><sphereGeometry args={[.22,32,24]} /><meshStandardMaterial color="#f2d294" emissive="#dcb964" emissiveIntensity={1.2} /></mesh>
+    {[-.5,0,.5].map(x=><LightRay key={x} progress={progress} source={[-.6,height,2.25]} target={[-.6+x,1.13,0]} strength={option===0?.35:.12} />)}
+    <EffectPath progress={progress} points={[[-.4,.93,.5],[.3,.24,.9],[1.9,.24,.7],[1.9,.8,0]]} color="#9bd4a6" strength={power*.8} activeAfterStart speed={power*4} radius={.017} />
     <Stand x={1.9} height={1.2} />
     <group position={[1.9,1.32,0]}>
       <mesh><torusGeometry args={[.55,.025,8,64]} /><PhysicalMaterial kind="metal" color="#78949b" /></mesh>
@@ -119,6 +128,7 @@ function SolarPanel({ value,option,progress }: ExperimentSceneProps){
     <Cube kind="metal" color="#546b75" position={[.9,.62,1.25]} scale={[.34,.85,.14]} />
     <group ref={gauge} position={[.9,.23,1.34]}><Cube color="#9abb82" position={[0,.4,0]} scale={[.17,.8,.01]} /></group>
     <Readout text={option===0?'面板朝向阳光：把部分光能变成电能':'面板背向阳光：这个示意装置不发电'} />
+    <Readout text="固定倾斜面板 · 观察受光方向，数值不是实际功率" position={[0,3.2,0]} />
   </group>;
 }
 function WindTurbine({ value,option,progress }: ExperimentSceneProps){
@@ -126,7 +136,7 @@ function WindTurbine({ value,option,progress }: ExperimentSceneProps){
   const blade=useMemo(()=>{const shape=new Shape();shape.moveTo(-.04,.06);shape.lineTo(.1,.2);shape.lineTo(.15,.43);shape.lineTo(.025,1.05);shape.lineTo(-.03,.95);shape.lineTo(-.07,.24);shape.closePath();return new ExtrudeGeometry(shape,{depth:.028,bevelEnabled:true,bevelThickness:.01,bevelSize:.01,bevelSegments:2,steps:1});},[]);
   useEffect(()=>()=>blade.dispose(),[blade]);
   useFrame(()=>{if(rotor.current)rotor.current.rotation.z=option===0?-progress.current*value*4:0;
-    wind.current?.children.forEach((child,i)=>{child.position.x=-2.8+((progress.current*value*.22+i/4)%1)*1.3;});
+    wind.current?.children.forEach((child,i)=>{child.position.z=2.35-((progress.current*value*.22+i/4)%1)*3.3;});
     if(meter.current)meter.current.scale.y=Math.max(.01,option===0?value/8*smooth(progress.current):0);
   });
   return <group><Rod kind="metal" color="#647983" position={[0,.14,0]} scale={[.67,.18,.67]} />
@@ -137,10 +147,12 @@ function WindTurbine({ value,option,progress }: ExperimentSceneProps){
       <Ball kind="paint" color="#a7b8b7" scale={[.17,.17,.21]} />
     </group>
     {option===1&&<Cube kind="metal" color="#b87854" position={[0,2.06,.41]} rotation={[0,0,.7]} scale={[.48,.065,.035]} />}
-    <group ref={wind} position={[0,1.3,.3]}>{[0,1,2,3].map(i=><group key={i} position={[-2.8+i*.3,(i%2)*.38,0]}><Rod color="#799fad" rotation={[0,0,Math.PI/2]} scale={[.012,.5,.012]} /><mesh rotation={[0,0,-Math.PI/2]} position={[.3,0,0]}><coneGeometry args={[.05,.12,12]} /><meshBasicMaterial color="#799fad" /></mesh></group>)}</group>
+    <group ref={wind} position={[0,1.75,0]}>{[0,1,2,3].map(i=><group key={i} position={[(i%2-.5)*.52,Math.floor(i/2)*.34,2.35]}><Rod color="#799fad" rotation={[Math.PI/2,0,0]} scale={[.012,.5,.012]} /><mesh rotation={[-Math.PI/2,0,0]} position={[0,0,-.3]}><coneGeometry args={[.05,.12,12]} /><meshBasicMaterial color="#799fad" /></mesh></group>)}</group>
     <Cube kind="metal" color="#556e78" position={[1.85,.67,.1]} scale={[.7,1.05,.28]} />
     <group ref={meter} position={[1.85,.21,.27]}><Cube color="#a9bd86" position={[0,.43,0]} scale={[.28,.86,.025]} /></group>
     <Wire color="#536878" points={[[0,.3,0],[.7,.14,0],[1.85,.2,0]]} />
+    {[-.3,.3].map(x=><EffectPath key={x} progress={progress} points={[[x,1.8,2.35],[x,1.8,.6],[x,1.8,-1]]} color="#89bfd0" strength={.25+value/16} speed={value*.45} radius={.014} />)}
+    <EffectPath progress={progress} points={[[0,.3,0],[.7,.18,0],[1.85,.25,0]]} color="#a9d094" strength={option===0?value/8:0} activeAfterStart speed={value*.35} radius={.021} />
     <Readout text={option===0?`风速 ${value}：叶轮转动，带动发电机`:'叶片锁定：有风经过，叶轮仍不转动'} />
   </group>;
 }
@@ -157,7 +169,7 @@ function WaterFilter({ value,option,progress }: ExperimentSceneProps){
     <Stand x={-1.55} height={2.65} /><Cube kind="metal" color="#8eaaaf" position={[-.5,2.5,0]} scale={[2.15,.055,.055]} />
     {[1,2.12].map((y,i)=><mesh key={y} position={[0,y,0]}><cylinderGeometry args={[i===0?.6:.64,i===0?.6:.55,i===0?1.1:1.05,48,1,true]} /><PhysicalMaterial kind="glass" color="#c2dde0" /></mesh>)}
     <group ref={upper} position={[0,1.66,0]}><mesh position={[0,quantity/2,0]}><cylinderGeometry args={[.51,.51,quantity,40]} /><meshPhysicalMaterial color="#8d8b66" transparent opacity={.57} roughness={.23} depthWrite={false} /></mesh></group>
-    <group ref={lower} position={[0,.47,0]}><mesh position={[0,quantity/2,0]}><cylinderGeometry args={[.53,.53,quantity,40]} /><meshPhysicalMaterial color={['#9fa18b','#8db9bf','#8d8b66'][option]} transparent opacity={.54} roughness={.18} depthWrite={false} /></mesh></group>
+    <group ref={lower} position={[0,.47,0]}><mesh position={[0,quantity/2,0]}><cylinderGeometry args={[.53,.53,quantity,40]} /><meshPhysicalMaterial color={['#9fa18b','#8db9bf','#8d8b66'][option]} transparent opacity={.54} roughness={.18} depthWrite={false} /></mesh><WaveSurface progress={progress} position={[0,quantity+.005,0]} size={[1.05,1.05]} strength={quantity*.6} /></group>
     <mesh position={[0,1.51,0]} rotation={[Math.PI/2,0,0]}><torusGeometry args={[.63,.055,10,48]} /><PhysicalMaterial kind="metal" color="#799297" /></mesh>
     {option!==2&&<group position={[0,1.5,0]}>
       {Array.from({length:7},(_,i)=><group key={i}><Cube kind="metal" color="#81968f" position={[-.48+i*.16,0,0]} scale={[.012,.012,1.03]} /><Cube kind="metal" color="#81968f" position={[0,0,-.48+i*.16]} scale={[1.03,.012,.012]} /></group>)}
@@ -165,6 +177,8 @@ function WaterFilter({ value,option,progress }: ExperimentSceneProps){
     </group>}
     <group ref={particles}>{Array.from({length:16},(_,i)=><Ball key={i} kind="stone" color="#6b6749" position={[Math.sin(i*2.4)*.38,2.2,Math.cos(i*2.4)*.38]} scale={i<6?.04:.02} />)}</group>
     <group ref={stream} position={[0,1.07,0]}><Rod kind="water" color="#91b4b7" scale={[.026,.7,.026]} /></group>
+    <EffectPath progress={progress} points={[[.12,2.1,.05],[.12,1.52,.05],[.12,.65,.05]]} color="#a1d2df" strength={quantity*.5} radius={.016} speed={2.8} gate={{frequency:1,duty:.99}} />
+    <Readout text={option===2?'没有过滤层：杂质随水向下':option===1?'粗颗粒与部分细颗粒留在过滤层':'网格拦住粗颗粒，较细颗粒继续通过'} position={[0,3.15,0]} />
     <Readout text="过滤能拦住部分悬浮杂质 · 过滤后的水不能直接饮用" />
   </group>;
 }
@@ -187,6 +201,7 @@ function Telegraph({ value,option,progress }: ExperimentSceneProps){
     <mesh ref={signal} position={[2.13,.77,0]}><sphereGeometry args={[.09,24,18]} /><meshStandardMaterial color="#e2c787" emissive="#e9ae45" emissiveIntensity={0} /></mesh>
     <Wire points={[[-1.12,.46,.6],[-.7,.28,.78],[.55,.28,.78],[1.9,.45,.6]]} />
     <Wire color="#53636d" points={[[-2.2,.46,-.6],[-.8,.29,-.9],[.8,.29,-.9],[2,.45,-.6]]} />
+    <EffectPath progress={progress} points={[[-1.12,.49,.6],[-.7,.32,.78],[.55,.32,.78],[1.9,.49,.6]]} color="#efc984" strength={.85} speed={value} radius={.019} gate={{frequency:value,duty:option===0?.2:.65}} />
     <group ref={marks} position={[0,.32,1.62]}>{Array.from({length:value},(_,i)=><Cube key={i} kind="metal" color="#c5b17c" position={[(i-(value-1)/2)*.58,0,0]} scale={[option===0?.12:.4,.055,.12]} />)}</group>
     <Readout text={`${value} 次${option===0?'短信号':'长信号'} · 发报键与接收器同步动作`} />
   </group>;
@@ -203,7 +218,9 @@ function BinaryCode({ props,value,option,progress }: ExperimentSceneProps){
       <Cube kind="metal" color="#3b5260" position={[0,.45,-.1]} scale={[1.12,1.16,.31]} />
       {option===0?<group position={[0,.47,.15]}><mesh><sphereGeometry args={[.29,32,24]} /><meshPhysicalMaterial color={bit?'#e4d69b':'#596668'} roughness={.18} emissive="#d4b365" emissiveIntensity={bit?1.5:0} toneMapped={false} /></mesh></group>:<group position={[0,.52,.08]}><DigitalBit bit={bit} /></group>}
       <Readout text={`位权 ${[4,2,1][i]}`} position={[0,1.28,0]} />
+      <group position={[0,-.04,.74]}>{Array.from({length:[4,2,1][i]},(_,unit)=><mesh key={unit} position={[(unit-([4,2,1][i]-1)/2)*.2,.07,0]}><boxGeometry args={[.14,.12,.14]} /><meshStandardMaterial color={bit?'#c7d39a':'#58676c'} emissive="#a2c783" emissiveIntensity={bit?.45:0} /></mesh>)}</group>
     </group>)}</group>
+    <Readout text="亮起的位权数量相加 · 灰色表示这一位为 0" position={[0,2.4,0]} />
     <Readout text={`${bits.join('')}₂ = ${bits.map((bit,i)=>`${bit}×${[4,2,1][i]}`).join(' + ')} = ${value}`} position={[0,.35,1.9]} />
   </group>;
 }
@@ -229,6 +246,9 @@ function Sensors({ value,option,progress }: ExperimentSceneProps){
     <mesh ref={led} position={[0,2.63,.34]}><sphereGeometry args={[.044,16,12]} /><meshStandardMaterial color={option===0?'#79b697':'#5c6261'} emissive="#70b893" emissiveIntensity={.2} /></mesh>
     <group ref={person} position={[0,.26,2.65]}><Person color="#b6a67c" /></group>
     <mesh position={[0,.265,.05]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[1.42,1.44,64,1,0,Math.PI]} /><meshBasicMaterial color={option===0?'#6b9d9b':'#a1aaa6'} transparent opacity={.5} /></mesh>
+    {[-.8,0,.8].map(x=><LightRay key={x} progress={progress} source={[0,2.63,.33]} target={[x,.3,1.45]} strength={option===0?.25:0} color="#8dc5c8" />)}
+    <EffectPath progress={progress} points={[[0,2.64,.2],[-.8,2.59,.2],[-1.62,2.5,.12],[-1.62,1.6,.12]]} color="#a5d39d" strength={option===0?.8:0} enabled={p=>2.65+(distance-2.65)*smooth(p)<1.5} activeAfterStart speed={2} radius={.012} />
+    <Readout text="扇形只标记检测范围 · 不代表所有传感器都发出可见光" position={[0,3.1,0]} />
     <Readout text={option===0?'感应器开启：进入近处检测范围，门才会打开':'感应器关闭：走近时门仍然关闭'} position={[0,.34,2.72]} />
   </group>;
 }
@@ -241,5 +261,5 @@ export default function TechnologyExperiments(props:SceneProps){
   const Scene=technologyScenes[props.lesson];
   const value=props.demo?definition.targetValue:props.state.experimentValue;
   const option=props.demo?definition.targetOption:props.state.experimentOption;
-  return <ExperimentFrame props={props}><Scene key={props.lesson} props={props} progress={progress} value={value} option={option} /></ExperimentFrame>;
+  return <ExperimentFrame props={props}><InspectObject key={props.lesson} text={definition.fact} position={[0,3.35,0]} radius={2.85}><Scene props={props} progress={progress} value={value} option={option} /></InspectObject></ExperimentFrame>;
 }

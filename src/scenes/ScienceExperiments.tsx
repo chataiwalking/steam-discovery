@@ -7,6 +7,7 @@ import Globe from './RealEarth';
 import { Ball, Cloud, Cube, Rod, Tree, type SceneProps } from './shared';
 import { PhysicalMaterial } from './materials';
 import { Board, GlassTank, Readout, Stand, smooth, type ExperimentSceneProps } from './ScienceExperimentsParts';
+import { DirectionArrow, EffectPath, InspectObject, LightRay, LongitudinalMedium, MolecularInset, WaveSurface } from './ScienceTechnologyEffects';
 
 function LunarSurface({ phase, view = true }: { phase: number; view?: boolean }) {
   const material = useRef<ShaderMaterial>(null);
@@ -23,7 +24,8 @@ function LunarSurface({ phase, view = true }: { phase: number; view?: boolean })
           float grain=h(floor(p*180.));float maria=.08*sin(p.x*6.+sin(p.z*4.))+.045*cos(p.y*9.+p.z*5.);
           float albedo=.64+maria+grain*.025;
           albedo+=crater(vec3(.3,.4,.8),.17)+crater(vec3(-.4,-.2,.85),.22)+crater(vec3(.57,-.5,.7),.11)+crater(vec3(-.2,.67,.71),.09)+crater(vec3(.1,-.6,.8),.08)+crater(vec3(-.61,.16,.69),.14);
-          gl_FragColor=vec4(vec3(albedo)*(.055+light*.92),1.);}`}
+          float terminator=smoothstep(0.,.035,light);vec3 surface=vec3(albedo*.99,albedo,albedo*1.035);
+          gl_FragColor=vec4(surface*(.045+sqrt(light)*terminator*.92),1.);}`}
     />
   </mesh>;
 }
@@ -48,6 +50,7 @@ function MoonPhases({ props, value, option, progress }: ExperimentSceneProps) {
       <group ref={orbitalMoon} position={[Math.cos(target)*1.62,1.25,Math.sin(target)*1.62]} scale={.35}><LunarSurface phase={target} view={false} /></group>
       <Ball color="#e5bf71" position={[2.65,1.25,0]} scale={.27} />
       {[0,1,2].map(i => <Cube key={i} color="#d7b663" position={[2.15-i*.27,1.25,-.68]} scale={[.15,.018,.018]} />)}
+      {[-.4, 0, .4].map(z => <EffectPath key={z} progress={progress} points={[[2.3,1.25,z],[1.3,1.25,z],[-2.1,1.25,z]]} color="#dcb863" strength={.45} radius={.009} speed={2} />)}
       <Readout text="太阳始终照亮月球的一半 · 不是地球的影子" position={[0,.25,2.05]} />
     </>}
     <Readout text={['新月','渐盈的月牙','上弦月','盈凸月','满月','亏凸月','下弦月','渐亏的月牙','新月'][value]} position={[0,3.03,0]} />
@@ -63,6 +66,7 @@ function SolarSystem({ value, option, progress }: ExperimentSceneProps) {
   return <group>
     <mesh position={[0,.85,0]}><sphereGeometry args={[.42,40,32]} /><meshStandardMaterial color="#ebbb61" emissive="#e5a439" emissiveIntensity={.8} /></mesh>
     {[1.25,1.95,2.73].map((r,i) => <mesh key={r} rotation={[-Math.PI/2,0,0]} position={[0,.82,0]}><ringGeometry args={[r-.009,r+.009,100]} /><meshBasicMaterial color={i===option?'#bd8a40':'#718690'} /></mesh>)}
+    {[1.25,1.95,2.73].map((r,i) => <EffectPath key={r} progress={progress} closed points={Array.from({length:33},(_,n)=>[Math.cos(n/33*Math.PI*2)*r,.84,Math.sin(n/33*Math.PI*2)*r])} color={['#7ec5d7','#d18a69','#d4c096'][i]} strength={i===option?.8:.24} speed={value*[1,.53,.084][i]} radius={.012} />)}
     <group ref={orbit}>
       <group scale={option===0?.22:.17}><Globe small /></group>
       <group><Ball kind="stone" color="#ad6750" scale={option===1?.2:.15} /></group>
@@ -80,13 +84,14 @@ function SolarSystem({ value, option, progress }: ExperimentSceneProps) {
     <Readout text={`观察${['地球','火星','木星'][option]} · 行星大小、轨道和时间均为压缩示意`} />
   </group>;
 }
-function MagnetBar({ reverse = false }: { reverse?: boolean }) {
+function MagnetBar({ reverse = false, progress, strength }: { reverse?: boolean; progress: ExperimentSceneProps['progress']; strength: number }) {
   return <group>
     <Cube kind="metal" color="#939fa4" scale={[1.3,.45,.52]} />
     {[-1,1].map(side => { const north = reverse ? side<0 : side>0; return <group key={side} position={[side*.35,0,0]}>
       <Cube kind="paint" color={north?'#a95043':'#3f7196'} scale={[.6,.47,.54]} />
       <Readout text={north?'N':'S'} position={[0,.36,0]} />
     </group>; })}
+    {[-1,1].flatMap(side=>[.65,1].map(height=><EffectPath key={`${side}-${height}`} progress={progress} points={[[reverse?-.55:.55,.02,0],[reverse?-.76:.76,.13,side*.34],[0,height*.22,side*height],[reverse?.76:-.76,.13,side*.34],[reverse?.55:-.55,.02,0]]} color="#9bc9cf" strength={strength} radius={.013} speed={0} />))}
   </group>;
 }
 function Magnetism({ value, option, progress }: ExperimentSceneProps) {
@@ -98,7 +103,8 @@ function Magnetism({ value, option, progress }: ExperimentSceneProps) {
   });
   return <group><Board width={5.7} depth={1.9} />
     {[-.35,.35].map(z => <Rod key={z} kind="metal" color="#75858a" position={[0,.43,z]} rotation={[0,0,Math.PI/2]} scale={[.026,5.4,.026]} />)}
-    <group ref={bars} position={[0,.75,0]}><group position={[-distance,0,0]}><MagnetBar /></group><group position={[distance,0,0]}><MagnetBar reverse={option===0} /></group></group>
+    <group ref={bars} position={[0,.75,0]}><group position={[-distance,0,0]}><MagnetBar progress={progress} strength={.3+.65/(distance*distance)} /></group><group position={[distance,0,0]}><MagnetBar progress={progress} strength={.3+.65/(distance*distance)} reverse={option===0} /></group></group>
+    <Readout text="浅蓝线：单磁铁周围的磁场示意（非定量）" position={[0,2.35,0]} />
     <Readout text={option===0?'N 对 N：同名磁极相斥':'N 对 S：异名磁极相吸'} position={[0,1.85,0]} />
     <Readout text="轨道上的磁铁可以移动 · 距离越近，作用越明显" />
   </group>;
@@ -112,9 +118,13 @@ function Floating({ value, option, progress }: ExperimentSceneProps) {
   return <group><GlassTank />
     <mesh position={[0,.67,0]}><boxGeometry args={[4.32,.76,2.03]} /><meshPhysicalMaterial color="#598c9e" transparent opacity={.22} roughness={.15} metalness={.1} depthWrite={false} /></mesh>
     <mesh position={[0,1.05,0]} rotation={[-Math.PI/2,0,0]}><planeGeometry args={[4.3,2.01]} /><meshPhysicalMaterial color="#7cabba" transparent opacity={.31} roughness={.09} metalness={.28} clearcoat={1} depthWrite={false} /></mesh>
+    {Array.from({length:value},(_,i)=><WaveSurface key={i} progress={progress} position={[(i-(value-1)/2)*.78,1.058,0]} size={[1.45,1.45]} strength={option===1?1:.6} />)}
     <group ref={blocks}>{Array.from({length:value},(_,i)=><group key={i} position={[(i-(value-1)/2)*.78,2.2,0]}>
       <Cube kind={option===1?'metal':'wood'} color={['#a17b43','#8a939a','#c8af79'][option]} scale={[.46,.4,.46]} />
     </group>)}</group>
+    <DirectionArrow position={[2.65,.58,0]} color="#87c4cd" length={option===1?.43:.65} />
+    <DirectionArrow position={[2.9,1.63,0]} color="#d7a67d" length={.65} up={false} />
+    <Readout text="蓝：浮力 · 橙：重力（受力示意）" position={[0,3,0]} />
     <Readout text={`${['木块：浮在水面','钢块：沉入水底','软木：浮在水面，露出更多'][option]} · 同样大小，不同材料`} />
   </group>;
 }
@@ -135,6 +145,9 @@ function PlantGrowth({ value, option, progress }: ExperimentSceneProps) {
     </group>
     <Stand x={2} height={2.7} />
     <mesh position={[2,2.9,0]}><sphereGeometry args={[.22,24,20]} /><meshStandardMaterial color={option===2?'#54616a':'#f3d197'} emissive={option===2?'#000':'#e6a942'} emissiveIntensity={.55} /></mesh>
+    <EffectPath progress={progress} points={[[1.8,2.8,0],[1.05,2.45,.1],[.35,1.9,0]]} color="#ead08e" strength={option===2?0:.7} speed={value*.4} />
+    <EffectPath progress={progress} points={[[-1.05,1,.15],[-.62,.88,.1],[0,.83,0],[0,1.5,0]]} color="#83c7df" strength={option===1?0:.7} speed={value*.4} />
+    <Readout text="黄：光照 · 蓝：水分 · 生长时间被加快" position={[0,3.15,0]} />
     <Readout text={['水和光充足：幼苗逐渐展开绿叶','缺水：种子很难开始正常生长','缺光：幼苗细长、叶片苍白'][option]} />
   </group>;
 }
@@ -149,15 +162,17 @@ function SoundWaves({ value, option, progress }: ExperimentSceneProps) {
     const positions=wave.geometry.attributes.position;
     for(let i=0;i<81;i++){const u=i/80;positions.setXYZ(i,-2+u*4,.77+(active?Math.sin(u*Math.PI)*Math.sin(p*(value+1)*Math.PI*6)*a*(1-p*.55):0),0);}
     positions.needsUpdate=true;
-    rings.current?.children.forEach((r,i)=>{const cycle=(p*(value+1)*.7+i/5)%1;r.scale.setScalar(.25+cycle*1.9);r.visible=active;r.position.z=-cycle*.5;});
+    rings.current?.children.forEach((r,i)=>{const cycle=(p*2+i/5)%1;r.scale.setScalar(.25+cycle*1.9);r.visible=active;r.position.z=-cycle*.5;});
   });
   return <group><Board width={4.65} depth={1.6} />
     <Cube kind="wood" color="#6f4e32" position={[0,.4,0]} scale={[4.3,.37,1.24]} />
     <mesh position={[0,.593,0]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.28,.32,48]} /><PhysicalMaterial kind="metal" color="#645c49" /></mesh>
     {[-2,2].map(x=><Cube key={x} kind="metal" color="#a6afb0" position={[x,.73,0]} scale={[.12,.2,.9]} />)}
     <primitive object={wave} />
+    <LongitudinalMedium progress={progress} frequency={value+1} amplitude={option===0?.035:.105} />
     <group ref={rings} position={[0,1.9,-.3]}>{Array.from({length:5},(_,i)=><mesh key={i}><torusGeometry args={[.45,.007,6,64]} /><meshBasicMaterial color="#92b6c3" transparent opacity={.35} /></mesh>)}</group>
     <Readout text={`${option===0?'小振幅':'大振幅'} · 振动速度 ${value} · 波纹只作可视化示意`} />
+    <Readout text="空气粒子来回振动 · 波向外传播（放大示意）" position={[0,2.9,0]} />
   </group>;
 }
 function Shadows({ props, value, option, progress }: ExperimentSceneProps) {
@@ -182,6 +197,7 @@ function Shadows({ props, value, option, progress }: ExperimentSceneProps) {
     <group ref={stand} position={[-2.5,height/2,-.6]} scale={[1,height,1]}><Rod kind="metal" color="#99a6a9" scale={[.025,1,.025]} /></group>
     <group ref={lamp} position={[-2.5,height,-.6]}><Ball kind="glass" color="#ead6a0" scale={.17} /><Rod kind="metal" color="#71858b" scale={[.24,.08,.24]} position={[0,.2,0]} /></group>
     <pointLight ref={light} position={[-2.5,height,-.6]} intensity={28} color="#ffe4b1" decay={2} distance={8} castShadow shadow-mapSize={[1024,1024]} shadow-bias={-.002} />
+    {[-.42,.42].map(z=><LightRay key={z} progress={progress} source={[-2.5,height,-.6]} initialSource={props.state.experimentRun>0||props.demo?[-2.5,1.1,-.6]:undefined} target={[-.82,.23,z+.24]} color="#efd797" strength={.3} />)}
     {option===0?<Rod kind="wood" color="#7f7254" position={[-.55,.67,0]} scale={[.28,.9,.28]} />:option===1?<Cube kind="stone" color="#858d8e" position={[-.55,.62,0]} scale={[.7,.8,.7]} />:<Tree position={[-.55,.23,0]} scale={.9} />}
     <Readout text="看地面：光源越低，影子通常越长" />
   </group>;
@@ -203,6 +219,8 @@ function WaterStates({ props, value, option, progress }: ExperimentSceneProps) {
     <group ref={water} position={[0,.8,0]}><mesh position={[0,.35,0]}><cylinderGeometry args={[.65,.65,.7,48]} /><meshPhysicalMaterial color="#78a4b4" transparent opacity={.47} roughness={.1} metalness={.05} clearcoat={.9} depthWrite={false} /></mesh></group>
     <group ref={ice} position={[0,1.12,0]}>{[-1,1].flatMap(x=>[-1,1].map(z=><Cube key={`${x}${z}`} kind="glass" color="#d7e7e6" position={[x*.2,0,z*.2]} rotation={[0,x*z*.12,0]} scale={[.34,.4,.34]} />))}</group>
     <group ref={mist} position={[0,2.5,0]}><Cloud scale={.55} /></group>
+    <MolecularInset progress={progress} target={target} cooling={option===1} running={props.state.experimentRun>0||Boolean(props.demo)} />
+    <EffectPath progress={progress} points={option===0?[[0,.55,.8],[0,1.1,.75],[0,1.72,.7]]:[[0,1.72,.7],[0,1.1,.75],[0,.55,.8]]} color={option===0?'#dc9d6a':'#7bbed6'} strength={Math.abs(target-(option===0?0:6))/6} speed={2.5} radius={.024} />
     <Stand x={1.4} height={2.15} />
     <Cube kind="glass" color="#cad7dd" position={[1.4,1.4,0]} scale={[.15,1.7,.12]} />
     <group ref={gauge} position={[1.4,.8,.08]}><Cube color={option===0?'#c27749':'#548cad'} scale={[.055,1,.025]} /></group>
@@ -218,5 +236,5 @@ export default function ScienceExperiments(props:SceneProps){
   const Scene=scienceScenes[props.lesson];
   const value=props.demo?definition.targetValue:props.state.experimentValue;
   const option=props.demo?definition.targetOption:props.state.experimentOption;
-  return <ExperimentFrame props={props}><Scene key={props.lesson} props={props} progress={progress} value={value} option={option} /></ExperimentFrame>;
+  return <ExperimentFrame props={props}><InspectObject key={props.lesson} text={definition.fact} position={[0,3.35,0]} radius={2.85}><Scene props={props} progress={progress} value={value} option={option} /></InspectObject></ExperimentFrame>;
 }

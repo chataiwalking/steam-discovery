@@ -1,21 +1,31 @@
 import Globe from './RealEarth';
-import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useLayoutEffect, useRef } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import { Group } from 'three';
 import { Rod, SceneLabel, useSceneClock, type SceneProps } from './shared';
+import { Atmosphere, FocusTarget, damping } from './MathCoreEffects';
 
 export default function DayNight(props: SceneProps) {
   const earth = useRef<Group>(null);
   const time = useSceneClock(props);
-  useFrame(() => {
-    if (earth.current) earth.current.rotation.y = props.demo ? time.current * .25 : props.state.rotation;
+  const previousRotation=useRef(props.state.rotation);
+  const invalidate=useThree(state=>state.invalidate);
+  useLayoutEffect(()=>{
+    const changed=previousRotation.current!==props.state.rotation;
+    previousRotation.current=props.state.rotation;
+    // Pause freezes time, while an explicit angle change must still be visible.
+    if(changed&&props.paused&&!props.demo&&earth.current){earth.current.rotation.y=props.state.rotation;invalidate();}
+  },[props.state.rotation,props.paused,props.demo,invalidate]);
+  useFrame((_, delta) => {
+    if (earth.current && !props.paused) {
+      const target=props.demo ? time.current*.25 : props.state.rotation;
+      earth.current.rotation.y=props.demo ? target : earth.current.rotation.y+(target-earth.current.rotation.y)*damping(delta,7);
+    }
   });
   return <group>
     <ambientLight intensity={.025} />
     <directionalLight position={[8, 0, 0]} intensity={3.4} />
-    <group position={[-.5, 1, 0]} ref={earth} onClick={event => {
-      event.stopPropagation(); props.onAction?.({ type: 'rotate' });
-    }}><Globe /></group>
+    <group position={[-.5, 1, 0]} ref={earth}><FocusTarget radius={1.58} paused={props.paused} enabled={!props.demo} onActivate={()=>props.onAction?.({type:'rotate'})}><Globe time={time}/></FocusTarget></group>
     <group position={[3.25, 1.55, .1]}>
       <mesh>
         <sphereGeometry args={[.63, 48, 32]} />
@@ -28,6 +38,7 @@ export default function DayNight(props: SceneProps) {
               gl_FragColor=vec4(c*(.88+grain*.12),1.);}`}
         />
       </mesh>
+      <Atmosphere radius={.68} color="#ffc366" strength={.3}/>
     </group>
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[-.5, -.64, 0]}>
       <ringGeometry args={[1.7, 1.712, 96]} />

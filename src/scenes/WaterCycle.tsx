@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Color, Float32BufferAttribute, Group, PlaneGeometry } from 'three';
+import { Color, DynamicDrawUsage, Float32BufferAttribute, Group, InstancedMesh, Object3D, PlaneGeometry } from 'three';
 import { Cloud, Cube, Rod, Tree, SceneLabel, useSceneClock, type SceneProps } from './shared';
 import { PhysicalMaterial, surfaceTexture } from './materials';
+import { Atmosphere, FocusTarget, WaterRipples, damping } from './MathCoreEffects';
 
 function terrainHeight(x: number, z: number) {
   const lakeDistance = Math.sqrt(((x + .65) / 2.1) ** 2 + ((z - .35) / 1.22) ** 2);
@@ -42,47 +43,50 @@ function Landscape() {
 }
 
 export default function WaterCycle(props: SceneProps) {
-  const drops = useRef<Group>(null);
+  const drops = useRef<InstancedMesh>(null), cloud = useRef<Group>(null);
+  const particle = useMemo(()=>new Object3D(),[]);
   const time = useSceneClock(props);
   const waterMap = useMemo(() => {
     const texture = surfaceTexture('water').clone(); texture.needsUpdate = true; return texture;
   }, []);
   useEffect(() => () => waterMap.dispose(), [waterMap]);
   const stage = props.demo ? props.narrationActive ? Math.min(3, Math.floor(props.narrationTime / 3)) : 0 : props.state.waterStage;
-  useFrame(() => {
+  useFrame((_,delta) => {
     waterMap.offset.set(time.current * .012, time.current * .007);
+    if(cloud.current&&!props.paused)cloud.current.scale.setScalar(cloud.current.scale.x+((stage>=2?1.2:.85)-cloud.current.scale.x)*damping(delta,5));
     if (!drops.current) return;
-    drops.current.children.forEach((child, i) => {
+    const count=stage===1?10:20;
+    drops.current.instanceMatrix.setUsage(DynamicDrawUsage);
+    for(let i=0;i<count;i++) {
       const progress = (time.current * (stage === 1 ? .23 : .75) + i / 20) % 1;
-      child.position.y = stage === 1 ? .3 + progress * 2.5 : 2.9 - progress * 2.75;
-      child.position.x = stage === 1 ? -1.6 + Math.sin(progress * Math.PI) * .25 : -.1 + (i % 5) * .29;
-    });
+      particle.position.set(stage===1?-1.6+Math.sin(progress*Math.PI)*.25:-.1+(i%5)*.29,stage===1?.3+progress*2.5:2.9-progress*2.75,-.15+(i%4)*.23);
+      particle.scale.set(stage===1?1:.45,stage===1?1:2.9,stage===1?1:.45);
+      particle.updateMatrix();drops.current.setMatrixAt(i,particle.matrix);
+    }
+    drops.current.instanceMatrix.needsUpdate=true;
   });
   return <group>
     <Landscape />
-    <group onClick={e => { e.stopPropagation(); props.onAction?.({ type: 'water', stage: 0 }); }}>
+    <FocusTarget paused={props.paused} enabled={!props.demo} radius={2.12} onActivate={()=>props.onAction?.({type:'water',stage:0})}>
       <mesh position={[-.65, .1, .35]} rotation={[-Math.PI / 2, 0, 0]} scale={[2.02, 1.15, 1]} receiveShadow>
         <circleGeometry args={[1, 100]} />
         <meshPhysicalMaterial color="#315c63" roughness={.13} metalness={.16} clearcoat={1}
           clearcoatRoughness={.07} envMapIntensity={1.1} bumpMap={waterMap} bumpScale={.045} />
       </mesh>
-    </group>
-    <group position={[-2.4, 3.3, -.7]} onClick={e => {
-      e.stopPropagation(); props.onAction?.({ type: 'water', stage: 1 });
-    }}>
+    </FocusTarget>
+    <WaterRipples props={props} position={[-.65,.107,.35]} scale={[2.02,1.15,1]} rain={stage===3}/>
+    <FocusTarget paused={props.paused} enabled={!props.demo} radius={.5} position={[-2.4, 3.3, -.7]} onActivate={()=>props.onAction?.({type:'water',stage:1})}>
       <mesh><sphereGeometry args={[.39, 40, 32]} /><meshBasicMaterial color="#ffe2a1" /></mesh>
+      <Atmosphere radius={.43} color="#ffc16c" strength={.3}/>
+    </FocusTarget>
+    <group ref={cloud} position={[.55,3,-.3]} scale={.85}>
+      <FocusTarget paused={props.paused} enabled={!props.demo} radius={.85} onActivate={()=>props.onAction?.({type:'water',stage:stage===2?3:2})}>
+      <Cloud rain={stage === 3} />
+      </FocusTarget>
     </group>
-    <group onClick={e => {
-      e.stopPropagation(); props.onAction?.({ type: 'water', stage: stage === 2 ? 3 : 2 });
-    }}>
-      <Cloud position={[.55, 3, -.3]} scale={stage >= 2 ? 1.2 : .85} rain={stage === 3} />
-    </group>
-    <group ref={drops} visible={stage === 1 || stage === 3}>
-      {Array.from({ length: stage === 1 ? 10 : 20 }, (_, i) => <group key={i} position={[0, 0, -.15 + (i % 4) * .23]}>
-        {stage === 1 ? <mesh><sphereGeometry args={[.024, 8, 6]} /><meshBasicMaterial color="#d8a452" /></mesh>
-          : <mesh rotation={[0, 0, -.05]}><cylinderGeometry args={[.009, .008, .12, 5]} /><meshBasicMaterial color="#9dc9d1" transparent opacity={.7} /></mesh>}
-      </group>)}
-    </group>
+    <instancedMesh ref={drops} key={stage===1?'vapor':'rain'} args={[undefined,undefined,stage===1?10:20]} visible={stage === 1 || stage === 3} raycast={()=>null} frustumCulled={false}>
+      <sphereGeometry args={[.024,8,6]}/><meshBasicMaterial color={stage===1?'#d8a452':'#9dc9d1'} transparent opacity={stage===1?.85:.7}/>
+    </instancedMesh>
     <Tree position={[2.45, .23, .2]} scale={1.05} />
     <Tree position={[2.55, .3, -1.2]} scale={.78} />
     <Tree position={[1.95, .27, 1.2]} scale={.61} />
