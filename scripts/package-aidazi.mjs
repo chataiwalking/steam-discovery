@@ -28,5 +28,6 @@ await walk(stage);files.sort();
 const checksums=[];
 for(const file of files){const digest=createHash('sha256').update(await readFile(file)).digest('hex');checksums.push(`${digest}  ${path.relative(stage,file).split(path.sep).join('/')}`);}
 await writeFile(path.join(destination,'OVERLAY_SHA256SUMS'),checksums.join('\n')+'\n');
-execFileSync('tar',['-czf',path.join(destination,'steam-overlay.tar.gz'),'-C',stage,'steam']);
+// macOS tar otherwise adds AppleDouble ._ metadata entries outside /steam.
+execFileSync('tar',['-czf',path.join(destination,'steam-overlay.tar.gz'),'-C',stage,'steam'],{env:{...process.env,COPYFILE_DISABLE:'1'}});
 console.log(`Prepared AI Dazi /steam overlay: ${files.length} verified files, source ${revision}`);
