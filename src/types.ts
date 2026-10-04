@@ -80,5 +80,6 @@ export interface WorldCanvasProps {
   narrationActive: boolean;
   demo: boolean;
   onSelect?: (id: LessonId) => void;
+  onPreview?: (id: LessonId | null) => void;
   onAction?: (action: WorldAction) => void;
 }

@@ -50,7 +50,10 @@ import {
 } from "./learning";
 import { useNarration } from "./hooks/useNarration";
 import { Illustration, Star } from "./components/Illustrations";
+import BrandMark from "./components/BrandMark";
 const WorldCanvas = lazy(() => import("./components/WorldCanvas"));
+const featuredLessonIds = ["day-night", "water-cycle", "gears", "bridge", "light", "shapes"];
+const featuredLessons = featuredLessonIds.map(id => lessons.find(lesson => lesson.id === id)!);
 const subjectIcons = { B: Leaf, G: Globe2, H: Landmark };
 const shapeNames: Record<ShapeKind, string> = {
   sphere: "小球",
@@ -98,6 +101,7 @@ function App() {
   });
   const [subject,setSubject]=useState<Subject|"ALL">("ALL");
   const [search,setSearch]=useState("");
+  const [previewId,setPreviewId]=useState<LessonId | null>(null);
   const [modal, setModal] = useState<"discoveries" | "guide" | null>(null);
   useEffect(() => {
     const fn = () => {
@@ -130,17 +134,16 @@ function App() {
     [age],
   );
   const visibleLessons=lessons.filter(l=>(subject==="ALL"||l.subject===subject)&&(!search.trim()||`${l.title}${l.subtitle}${l.description}`.includes(search.trim())));
+  const previewLesson = featuredLessons.find(lesson => lesson.id === previewId);
   const current = lessons.find((x) => x.id === lessonId);
   const count = lessons.filter((l) => completed[`${l.id}:${age}`]).length;
   return (
     <>
       <header className="site-header">
         <a className="brand" href="#/" aria-label="小小发现家首页">
-          <span className="brand-symbol">
-            <Sparkles size={25} />
-          </span>
+          <BrandMark className="brand-mark" />
           <span>
-            小小发现家<small>DISCOVERY EXPLORER</small>
+            <b className="brand-name">小小发现家</b><small>让好奇，走得更远</small>
           </span>
         </a>
         <nav aria-label="主导航">
@@ -236,42 +239,28 @@ function App() {
                 </span>
               </div>
             </div>
-            <div className="island-wrap">
-              <div className="island-wash" />
-              <div className="island-label">
-                <span className="tiny-sun">✳</span>SCIENCE IN YOUR HANDS
+            <div className="island-showcase">
+              <div className="island-showcase-heading"><span><Compass size={15} /> 精选动手展台</span><small>6 个实验入口</small></div>
+              <div className="island-wrap">
+                <Suspense fallback={<div className="canvas-loading"><LoaderCircle />展台正在准备…</div>}>
+                  <WorldCanvas lesson="island" state={defaultWorld()} paused={false}
+                    narrationTime={0} narrationActive={false} demo={false}
+                    onSelect={openLesson} onPreview={setPreviewId} />
+                </Suspense>
               </div>
-              <Suspense
-                fallback={
-                  <div className="canvas-loading">
-                    <LoaderCircle />
-                    展台正在准备…
-                  </div>
-                }
-              >
-                <WorldCanvas
-                  lesson="island"
-                  state={defaultWorld()}
-                  paused={false}
-                  narrationTime={0}
-                  narrationActive={false}
-                  demo={false}
-                  onSelect={openLesson}
-                />
-              </Suspense>
-              <span className="island-note">
-                <span>↖</span> 点击展台上的装置，开始探索
-              </span>
-              <span className="floating-spark spark-one">✧</span>
-              <span className="floating-spark spark-two">✦</span>
-              <div className="hero-stamp">
-                <Star />
-                <span>
-                  每个为什么
-                  <br />
-                  <b>都值得被发现</b>
-                </span>
-              </div>
+              <nav className="island-choices" aria-label="精选实验入口">
+                {featuredLessons.map((lesson,index)=><button key={lesson.id}
+                  aria-label={`进入${lesson.title}`} aria-describedby="island-preview-caption"
+                  data-active={previewId===lesson.id || undefined}
+                  onPointerEnter={()=>setPreviewId(lesson.id)} onPointerLeave={()=>setPreviewId(null)}
+                  onFocus={()=>setPreviewId(lesson.id)} onBlur={()=>setPreviewId(null)}
+                  onClick={()=>openLesson(lesson.id)}>
+                  <span>{String(index+1).padStart(2,"0")}</span>{lesson.title}<ArrowRight size={12}/>
+                </button>)}
+              </nav>
+              <p id="island-preview-caption" className="island-preview-caption">
+                {previewLesson?<><b>{previewLesson.title}</b><span>{previewLesson.subtitle}</span></>:<>点击展台装置，或从下方选择一个实验。</>}
+              </p>
             </div>
           </section>
           <section className="learning-path" aria-label="学习年龄">

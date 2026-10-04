@@ -8,29 +8,29 @@ import { PhysicalMaterial } from "./materials";
 import { Ball, Cube, Gear, Rod, useSceneClock, type SceneProps } from "./shared";
 import { GearMarker, HoverAura, LiftOnHover, WaterRipples } from './MathCoreEffects';
 
-function Stop({ position, title, subtitle, id, children, props }: {
-  position: [number, number, number]; title: string; subtitle: string;
+function Stop({ position, title, index, id, children, props }: {
+  position: [number, number, number]; title: string; index: number;
   id: LessonId; children: React.ReactNode; props: SceneProps;
 }) {
   const [hovered, setHovered] = useState(false);
   const invalidate=useThree(state=>state.invalidate);
   return (
     <group position={position}
-      onPointerOver={e => { e.stopPropagation(); setHovered(true); document.body.style.cursor = "pointer"; invalidate(); }}
-      onPointerOut={() => { setHovered(false); document.body.style.cursor = ""; invalidate(); }}
+      onPointerOver={e => { e.stopPropagation(); setHovered(true); props.onPreview?.(id); document.body.style.cursor = "pointer"; invalidate(); }}
+      onPointerOut={() => { setHovered(false); props.onPreview?.(null); document.body.style.cursor = ""; invalidate(); }}
       onClick={e => { e.stopPropagation(); document.body.style.cursor = ""; invalidate(); props.onSelect?.(id); }}>
       <Cube kind="metal" color="#34434b" scale={[2.45, 0.13, 2.3]} position={[0, 0.05, 0]} />
       <Cube kind="stone" color="#d0d1c8" scale={[2.38, 0.07, 2.23]} position={[0, 0.14, 0]} />
       <Cube kind="metal" color={hovered ? "#a0b8b5" : "#71837f"} scale={[0.78, 0.028, 0.14]} position={[0, 0.193, 0.92]} />
       <HoverAura active={hovered} radius={1.24} paused={props.paused}/>
       <LiftOnHover hovered={hovered} paused={props.paused}>{children}</LiftOnHover>
-      <Html center position={[0, 0.25, 1.12]} zIndexRange={[10, 0]} style={{ pointerEvents: "auto" }}>
-        <button type="button" className="island-stop-label" aria-label={`探索${title}`}
+      <Html center position={[0.88, 0.26, 1.04]} zIndexRange={[10, 0]} style={{ pointerEvents: "auto" }}>
+        <button type="button" className="island-pin" aria-label={`探索${title}`} aria-describedby="island-preview-caption"
+          onPointerEnter={() => props.onPreview?.(id)} onPointerLeave={() => props.onPreview?.(null)}
+          onFocus={() => props.onPreview?.(id)} onBlur={() => props.onPreview?.(null)}
           onClick={e => { e.stopPropagation(); props.onSelect?.(id); }}
-          style={{ border: `1px solid ${hovered ? "#7d9eab" : "#aab3b5"}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: 56, minWidth: 108, cursor: "pointer", borderRadius: 5, padding: "7px 12px", background: hovered ? "#fff" : "rgba(244,246,244,.96)", color: "#233942", boxShadow: "0 3px 8px #192d3326", whiteSpace: "nowrap", fontFamily: "inherit", transition: "transform .2s", transform: hovered ? "translateY(-2px)" : "" }}>
-          <span className="island-full-title" style={{ fontSize: 13, fontWeight: 750 }}>{title}</span>
-          <span className="island-short-title">{{ "day-night": "昼夜", "water-cycle": "水滴", gears: "齿轮", bridge: "小桥", light: "彩光", shapes: "形状" }[id]}</span>
-          <span className="island-subtitle" style={{ fontSize: 9, fontWeight: 600, letterSpacing: ".12em", color: "#687b83", marginTop: 4 }}>{subtitle}</span>
+          data-active={hovered || undefined}>
+          <span className="island-pin-number">{index}</span>
         </button>
       </Html>
     </group>
@@ -92,25 +92,25 @@ export default function Island(props: SceneProps) {
       {[-4.3, 4.3].flatMap(x => [-2.9, 2.9].map(z => <Cube key={`${x}-${z}`} kind="metal" color="#24343c" scale={[0.18, 0.93, 0.18]} position={[x, -0.86, z]} />))}
       {[-2.9, 2.9].map(z => <Cube key={z} kind="metal" color="#34424a" scale={[8.65, 0.11, 0.13]} position={[0, -1.08, z]} />)}
       {[-4.3, 4.3].map(x => <Cube key={x} kind="metal" color="#34424a" scale={[0.13, 0.11, 5.85]} position={[x, -1.08, 0]} />)}
-      <Stop props={props} id="day-night" title="昼夜的秘密" subtitle="01 · ASTRONOMY" position={[-3.13, 0.1, -1.72]}>
+      <Stop props={props} id="day-night" title="昼夜的秘密" index={1} position={[-3.13, 0.1, -1.72]}>
         <Rod kind="metal" color="#455358" position={[0, 0.26, 0]} scale={[0.51, 0.14, 0.51]} />
         <Rod kind="metal" color="#8f9fa2" position={[0, 0.53, 0]} scale={[0.055, 0.5, 0.055]} />
         <mesh position={[0, 1.36, 0]} rotation={[0, 0, -0.3]}><torusGeometry args={[0.97, 0.025, 8, 64]} /><PhysicalMaterial kind="metal" color="#7f949b" /></mesh>
         <group ref={earth} position={[0, 1.36, 0]} scale={0.61}><Globe small time={time}/></group>
       </Stop>
-      <Stop props={props} id="water-cycle" title="小水滴旅行" subtitle="02 · EARTH SCIENCE" position={[0, 0.1, -1.72]}><Watershed props={props}/></Stop>
-      <Stop props={props} id="gears" title="齿轮朋友" subtitle="03 · MECHANICS" position={[3.13, 0.1, -1.72]}>
+      <Stop props={props} id="water-cycle" title="小水滴旅行" index={2} position={[0, 0.1, -1.72]}><Watershed props={props}/></Stop>
+      <Stop props={props} id="gears" title="齿轮朋友" index={3} position={[3.13, 0.1, -1.72]}>
         <Cube kind="metal" color="#44535d" position={[0, 1.06, -0.17]} scale={[1.93, 1.64, 0.11]} />
         <Cube kind="metal" color="#a5b1b5" position={[0, 1.06, -0.098]} scale={[1.78, 1.5, 0.035]} />
         {[-0.78, 0.78].flatMap(x => [0.44, 1.69].map(y => <Rod key={`${x}-${y}`} kind="metal" color="#394951" position={[x, y, -0.07]} rotation={[Math.PI / 2, 0, 0]} scale={[0.035, 0.016, 0.035]} />))}
         <group position={[-0.4, 1.1, 0]} ref={gears} scale={0.49}><Gear color="#a0aaaf" /><GearMarker radius={1}/></group>
         <group position={[0.42, 1.1, 0]} ref={smallGear} scale={0.327}><Gear teeth={8} color="#ad8f5c" /><GearMarker radius={1}/></group>
       </Stop>
-      <Stop props={props} id="bridge" title="小小造桥师" subtitle="04 · ENGINEERING" position={[-3.13, 0.1, 1.55]}>
+      <Stop props={props} id="bridge" title="小小造桥师" index={4} position={[-3.13, 0.1, 1.55]}>
         <Cube kind="water" color="#477b85" position={[0, 0.235, 0]} scale={[2.15, 0.07, 1.6]} />
         <group scale={0.34} position={[0, 0.27, 0]}><BridgeModel /><group ref={car} position={[-.6,.846,0]}><ToyCar /></group></group>
       </Stop>
-      <Stop props={props} id="light" title="彩光画室" subtitle="05 · OPTICS" position={[0, 0.1, 1.55]}>
+      <Stop props={props} id="light" title="彩光画室" index={5} position={[0, 0.1, 1.55]}>
         <Cube kind="metal" color="#40505b" position={[0, 1, -0.49]} scale={[1.95, 1.52, 0.07]} />
         <Cube kind="paint" color="#d9dcda" position={[0, 1.03, -0.44]} scale={[1.8, 1.34, 0.025]} />
         {["#e94735", "#55bc73", "#447bd0"].map((color, i) => <group key={color}>
@@ -118,7 +118,7 @@ export default function Island(props: SceneProps) {
           <group position={[(i - 1) * 0.61, 0.21, 0.47]} scale={0.53}><Lamp color={color} /></group>
         </group>)}
       </Stop>
-      <Stop props={props} id="shapes" title="形状与数量" subtitle="06 · MATHEMATICS" position={[3.13, 0.1, 1.55]}>
+      <Stop props={props} id="shapes" title="形状与数量" index={6} position={[3.13, 0.1, 1.55]}>
         <Cube kind="wood" color="#806d51" position={[0, 0.27, 0]} scale={[1.94, 0.15, 1.6]} />
         <group position={[-0.46, 0.72, -0.17]} rotation={[0, 0.17, 0]}><ShapeToy kind="cube" size={0.45} /></group>
         <group position={[0.45, 0.63, 0.38]}><ShapeToy kind="sphere" size={0.3} /></group>
