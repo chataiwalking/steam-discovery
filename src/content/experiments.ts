@@ -12,4 +12,7 @@ export const subjects: {id:Subject;name:string;english:string;description:string
  {id:'E',name:'工程',english:'Engineering',description:'动手搭建，解决真实问题'},
  {id:'A',name:'艺术',english:'Arts',description:'用颜色、形状和节奏表达'},
  {id:'M',name:'数学',english:'Mathematics',description:'从数量、比较到空间思考'},
+ {id:'B',name:'生物',english:'Biology',description:'认识生命、身体与自然中的伙伴'},
+ {id:'G',name:'地理',english:'Geography',description:'观察地球、山川、天气与地图'},
+ {id:'H',name:'历史',english:'History',description:'从生活与工具发现文明的故事'},
 ];

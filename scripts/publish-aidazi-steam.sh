@@ -4,6 +4,7 @@ set -euo pipefail
 work=${1:?upload directory required}
 name=${2:?release name required}
 expected=${3:?expected current release required}
+homepage_patch=${4:-}
 case "$work" in /tmp/aidazi-steam-effects-[0-9TZ]*) ;; *) exit 2;; esac
 case "$name" in aidazi-steam-effects-[0-9TZ]*) ;; *) exit 2;; esac
 case "$expected" in /srv/aidazi/releases/*) ;; *) exit 2;; esac
@@ -28,6 +29,24 @@ rm -rf "$release/steam"
 tar --no-same-owner -xzf "$work/steam-overlay.tar.gz" -C "$release"
 (cd "$release" && sha256sum --check "$work/OVERLAY_SHA256SUMS")
 cmp "$previous/index.html" "$release/index.html"
+if [ -n "$homepage_patch" ]; then
+ test "$homepage_patch" = "$work/homepage-patch.json"
+ python3 - "$release/index.html" "$homepage_patch" <<'PY'
+from pathlib import Path
+import hashlib,json,sys
+page=Path(sys.argv[1]);patch=json.loads(Path(sys.argv[2]).read_text())
+original=page.read_bytes()
+assert hashlib.sha256(original).hexdigest()==patch['expectedSha256'],'Homepage changed before catalog metadata update'
+text=original.decode()
+for item in patch['replacements']:
+ assert text.count(item['old'])==1,'Homepage metadata selector must be unique'
+ text=text.replace(item['old'],item['new'],1)
+data=text.encode()
+assert hashlib.sha256(data).hexdigest()==patch['resultSha256'],'Homepage patch result mismatch'
+page.write_bytes(data)
+PY
+fi
+cp "$release/index.html" "$work/expected-homepage.html"
 test -s "$release/steam/index.html"
 test -s "$release/steam/audio/manifest.json"
 activated=0
@@ -43,14 +62,15 @@ test "$(readlink -f /srv/aidazi/current)" = "$previous"
 ln -s "$release" "/srv/aidazi/.next-$name"
 mv -Tf "/srv/aidazi/.next-$name" /srv/aidazi/current
 activated=1
-for file in steam/index.html steam/release.json steam/audio/manifest.json; do
+for file in index.html steam/index.html steam/release.json steam/audio/manifest.json; do
  url="https://aidazi.tech/$file"
+ if [ "$file" = index.html ]; then url='https://aidazi.tech/'; fi
  if [ "$file" = steam/index.html ]; then url='https://aidazi.tech/steam/'; fi
  readback="$work/readback"
  curl --fail --silent --show-error --max-time 20 --resolve aidazi.tech:443:127.0.0.1 "$url" -o "$readback"
  cmp "$release/$file" "$readback"
 done
-cmp "$previous/index.html" /srv/aidazi/current/index.html
+cmp "$work/expected-homepage.html" /srv/aidazi/current/index.html
 systemctl is-active --quiet aidazi-web
 test "$(readlink -f /srv/aidazi/current)" = "$release"
 trap - ERR

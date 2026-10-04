@@ -7,7 +7,7 @@ export type CoreLessonId =
   | "light"
   | "shapes";
 export type LessonId = string;
-export type Subject = "S" | "T" | "E" | "A" | "M";
+export type Subject = "S" | "T" | "E" | "A" | "M" | "B" | "G" | "H";
 export type ShapeKind = "sphere" | "cube" | "cylinder";
 export interface NarrationClip {
   id: string;

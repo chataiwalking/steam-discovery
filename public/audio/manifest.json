@@ -3148,5 +3148,1895 @@
     "textHash": "b8b119093ffb97372d9bd433fbd67cabe32c15ec30202c7962c778d7539b40d4",
     "text": "三层，每层四块，一共是十二块。相同的小积木作单位，帮助我们认识物体占据的空间。",
     "audioHash": "23f11e4a435fa2ad219c05cb8109606ce11f6df07f415382e9e024482d02f798"
+  },
+  "cell-world-2-3-0": {
+    "file": "audio/cell-world-2-3-0.mp3",
+    "duration": 9.146,
+    "textHash": "baa91ae21ca6d8eca23a5b6458775a49802679c48132807d5cf97419c96686ab",
+    "text": "小小的细胞，就像组成生命的积木。我们用放大的模型，找找外面的薄膜和里面的小结构。",
+    "audioHash": "8cd55cb0e76943cdaf7b2c588891953d1da056eb689c6d929936c686478bed69"
+  },
+  "cell-world-2-3-1": {
+    "file": "audio/cell-world-2-3-1.mp3",
+    "duration": 8.7203,
+    "textHash": "dc9ac1427be36681aa4d705d18533d6ebadce5196704e1de8912fa3febbf8e27",
+    "text": "点一下探索细胞，慢慢看完整个变化。模型会把小结构放大，好让我们看得更清楚。",
+    "audioHash": "a98518db99536cb7afda97f315fe727a099afa3e3f5bebb72b1e9dea9d3eb0b7"
+  },
+  "cell-world-2-3-2": {
+    "file": "audio/cell-world-2-3-2.mp3",
+    "duration": 9.5465,
+    "textHash": "dbc8ee3f52043d952e416021ecbee9dfd73c2f2224d85f505f6f8346b9a1b8d1",
+    "text": "画面里的颜色帮助我们分清不同部分。真实细胞很小，不能把模型的大小当成真正的大小。",
+    "audioHash": "348a96b5d09d15215be28e366c2f0cad38fe1a1b2c3e63fe06f5b6a32d87f9b8"
+  },
+  "cell-world-4-5-0": {
+    "file": "audio/cell-world-4-5-0.mp3",
+    "duration": 8.8215,
+    "textHash": "854c8c3c2ff54a6556cf384b59f1908970f7754706dcc685d29ff1214e27f73e",
+    "text": "同一个细胞，放大后更容易观察细节。保持内部结构不变，再比较两种模型放大倍率。",
+    "audioHash": "18219feafea373a60faba8ad74d679460c9fc1d983108c05997d0213cbe7c197"
+  },
+  "cell-world-4-5-1": {
+    "file": "audio/cell-world-4-5-1.mp3",
+    "duration": 8.9713,
+    "textHash": "bf1363b56bc4fe59d1fd31a5fba716e02e6f32fc3cae2dc5b0279d7982ff06c5",
+    "text": "选择内部结构，先把模型放大倍率设为一并运行，再设为四运行，找找细胞核的位置。",
+    "audioHash": "fe6bd4255eaa02f9aae4210e633525f3b3fc51f3894dae65cf59109189faa60e"
+  },
+  "cell-world-4-5-2": {
+    "file": "audio/cell-world-4-5-2.mp3",
+    "duration": 9.2468,
+    "textHash": "34f3d7df898264561f39ee5b7d4466de8393f00fac5a0e6572426d29bed5be38",
+    "text": "放大倍率改变了观察到的大小，没有让细胞真的长大。细胞里的不同部分承担不同工作。",
+    "audioHash": "f451fbaec63165cc368bb0d7d7901b9c36b669dcd017e08be4d9abe2b02979cc"
+  },
+  "cell-world-6-8-0": {
+    "file": "audio/cell-world-6-8-0.mp3",
+    "duration": 8.9957,
+    "textHash": "a66cab6b401f8459290a6c3b62222e2a8174f635b22d7e6e6eedbd949aff14e1",
+    "text": "这个模型展示有细胞核的动物细胞。细胞核保存遗传信息，细胞内部还藏着其他结构。",
+    "audioHash": "1381ee5a61b6f86e62c0e26a2bf82777696328d822fb3e4e8d9f2d92f07093c2"
+  },
+  "cell-world-6-8-1": {
+    "file": "audio/cell-world-6-8-1.mp3",
+    "duration": 8.8215,
+    "textHash": "2b4c272758e1fad516d7f6dc63c84c0975732f945acce11a5b97212d77225270",
+    "text": "把模型放大倍率设为四，选择内部结构，再点探索细胞，完整观察各部分的相对位置。",
+    "audioHash": "5d4f633c5e5de550bf25934e5eb5fcc354ded1e20dbeb0c4947b38edb5a1ac76"
+  },
+  "cell-world-6-8-2": {
+    "file": "audio/cell-world-6-8-2.mp3",
+    "duration": 9.6195,
+    "textHash": "4efcafbf89146d8fcc83aeb8e8e6555cf99190704724a75e3a4d7e2317a1433d",
+    "text": "你看见的是结构示意，并不是所有细胞都长这样。细菌没有这种细胞核，细胞类型也有不同。",
+    "audioHash": "90f6bd221db53aec25812bc3874f6693f50695a5dfae09d66fa5798b229d9500"
+  },
+  "flower-pollination-2-3-0": {
+    "file": "audio/flower-pollination-2-3-0.mp3",
+    "duration": 8.498,
+    "textHash": "e8444a1eca18307691a871879b4b980b38f55dd8824b55d8e03552b7f185e3e6",
+    "text": "花朵里有小小的花粉。小蜜蜂来访时，花粉可能粘在它身上，跟着它去别的花朵。",
+    "audioHash": "86e6090a78827f242e702d129051d9627554927aed051f93e7f3310111b1df59"
+  },
+  "flower-pollination-2-3-1": {
+    "file": "audio/flower-pollination-2-3-1.mp3",
+    "duration": 8.498,
+    "textHash": "eeaf0c0ed3b827f81fd4d670bafe903e16b30dc43e1aa475ca7543f7217e947a",
+    "text": "点一下观察传粉，跟着小访客走一趟。看看黄色小点从哪里出发，又到了哪里。",
+    "audioHash": "c28088d7144f94543274ee2047a997c2c6dd63ace5d5f2c2245140732e668932"
+  },
+  "flower-pollination-2-3-2": {
+    "file": "audio/flower-pollination-2-3-2.mp3",
+    "duration": 8.5704,
+    "textHash": "e43cac4bc06fff5b768ce29bb03b461a3e82c1da46de50ef3a57d62bdb20bb20",
+    "text": "小访客让两朵花有了联系。黄色小点是放大的花粉，真实花粉没有画面里这么大。",
+    "audioHash": "ddcfaa7869cb87c20f2be55f8361aa691af24892c51376da282bf2938c12bf40"
+  },
+  "flower-pollination-4-5-0": {
+    "file": "audio/flower-pollination-4-5-0.mp3",
+    "duration": 8.623,
+    "textHash": "38d3372958c51655c876c22380b855b027ed1eb545b695bcf710a62b3bd2bb4b",
+    "text": "蜜蜂访花时可能携带花粉。保持小蜜蜂不变，再比较不同演示次数里的转运过程。",
+    "audioHash": "a52374892ce67bc489e9bc4a43ed655096095e30a792e61f226ee6e84f5c352a"
+  },
+  "flower-pollination-4-5-1": {
+    "file": "audio/flower-pollination-4-5-1.mp3",
+    "duration": 8.947,
+    "textHash": "702f18ea473ca55e79902ba47fbad92c56a1e64a0499f05c1de0bc46753b6c8b",
+    "text": "选择小蜜蜂，先把访花演示次数设为一并运行，再设为四运行，比较花粉的转运路径。",
+    "audioHash": "5cafde7be9380912469963bea3cd874d3ea69638e9216decccf45ba2cabb0ee7"
+  },
+  "flower-pollination-4-5-2": {
+    "file": "audio/flower-pollination-4-5-2.mp3",
+    "duration": 9.074,
+    "textHash": "275f1e2ab64ffead13cea58d53a46ff656e3f70a6fb27c636195138338875aae",
+    "text": "这次比较展示了更多次访花。访花不等于每次都传粉成功，更不等于马上长出果实。",
+    "audioHash": "c4c537da8be4b33655dba4a8514e6ecd8033436e36bceee43860e7fd89a52173"
+  },
+  "flower-pollination-6-8-0": {
+    "file": "audio/flower-pollination-6-8-0.mp3",
+    "duration": 9.146,
+    "textHash": "e1fa7d0137e9c7af5f6f193e4b57ad21ffa9a945cc049e03a595bbbcf2958c61",
+    "text": "花药产生花粉，柱头可以接到花粉。动物在同种花之间活动，可能帮助花粉完成转移。",
+    "audioHash": "e1440c1a87a0dfe9f9106c67b8f828186e91da5d968c860ef367ef9f3fa46655"
+  },
+  "flower-pollination-6-8-1": {
+    "file": "audio/flower-pollination-6-8-1.mp3",
+    "duration": 8.6716,
+    "textHash": "33d4e28ba770340a1b75b8b62bd5d9fe2f451bc5b62101f88cd28ae9feb1b22c",
+    "text": "把访花演示次数设为四，选择小蜜蜂，再点观察传粉，留意花药和柱头之间的路径。",
+    "audioHash": "171f6eff6145e7227b7fefac450ab56973f202e8eb59de9187b406069a0b1d16"
+  },
+  "flower-pollination-6-8-2": {
+    "file": "audio/flower-pollination-6-8-2.mp3",
+    "duration": 9.2225,
+    "textHash": "8ec8169f68cbedaa0fbafe41a5c7486e077082eba5ce377ad613933f4ec10fab",
+    "text": "传粉和种子形成是相互联系的不同过程。模型只演示花粉转移，没有预测种子的数量。",
+    "audioHash": "7bb07ad049ea14d38b35b151b436ef1b6eb9e37f2c7bb484101f9f3072d59e99"
+  },
+  "butterfly-life-2-3-0": {
+    "file": "audio/butterfly-life-2-3-0.mp3",
+    "duration": 8.4448,
+    "textHash": "98ae8d21cc7532c27e99e09bd45fcf125519bbba45204423cac01a78db6269cb",
+    "text": "小蝴蝶的故事，从一颗小小的卵开始。卵里出来的是毛毛虫，长大后才会有翅膀。",
+    "audioHash": "309b22d758508a4009810cede636a421147930e80ebaa0b83be183cdee12c53e"
+  },
+  "butterfly-life-2-3-1": {
+    "file": "audio/butterfly-life-2-3-1.mp3",
+    "duration": 8.0964,
+    "textHash": "068340ead1926b4298232fabf0051f6834616d1634f63b39a0e68e6e3fadc0cc",
+    "text": "点一下观察蝴蝶成长，找找圆圆的卵、长长的毛毛虫和展开翅膀的小蝴蝶。",
+    "audioHash": "e8a00c7c500603aaa9aec5152b3c59c92393ab3cda1631ec62ea0bfefa10fa99"
+  },
+  "butterfly-life-2-3-2": {
+    "file": "audio/butterfly-life-2-3-2.mp3",
+    "duration": 8.3475,
+    "textHash": "4c255c487c0957c0f423c01a1f3de2315c2da0c4573d2b0dc0bc660ac718c08e",
+    "text": "毛毛虫会经历蛹的阶段，再变成成虫。画面把很多天的变化，放进了一小段动画。",
+    "audioHash": "13e0c234dac02761a4e7e930f06b4fc1f357f561d6887587d2a7b2fc43121e10"
+  },
+  "butterfly-life-4-5-0": {
+    "file": "audio/butterfly-life-4-5-0.mp3",
+    "duration": 8.522,
+    "textHash": "6c959400d966daea5aea36a72ebde4937697fbcf4a6470c28602448c80f40b3e",
+    "text": "蝴蝶成长时，外形有很大的变化。保持放大这一阶段，比较故事开始和成虫阶段。",
+    "audioHash": "a6e39389ab035dcb7334c8b8a2a143099ff6d313ccc4cf0cd7e4592d175f533a"
+  },
+  "butterfly-life-4-5-1": {
+    "file": "audio/butterfly-life-4-5-1.mp3",
+    "duration": 8.4691,
+    "textHash": "c6e0c04962bea2f4ca2b50d597b70afbbd05dde5faf02506854733ad07580d66",
+    "text": "选择放大这一阶段，先把观察阶段设为一并运行，再设为四运行，比较卵和成虫。",
+    "audioHash": "e34ded7b309f76bd048de943146312f2ac43dd4a0da8a2d41b2168dbf437f505"
+  },
+  "butterfly-life-4-5-2": {
+    "file": "audio/butterfly-life-4-5-2.mp3",
+    "duration": 8.0478,
+    "textHash": "0ce7f53e548ee18ff7559bd77e781025972ed8f30a7b961958c05b2f4df3e95e",
+    "text": "你比较了卵和有翅膀的成虫。它们之间还有幼虫和蛹，不能把这两个阶段漏掉。",
+    "audioHash": "e5ee7867c23290ab9be651be926d9126959e8926eefe80fbc5d150babb18cb25"
+  },
+  "butterfly-life-6-8-0": {
+    "file": "audio/butterfly-life-6-8-0.mp3",
+    "duration": 8.498,
+    "textHash": "d6bd1721583177f427fa58bce06069e96d352734b297e4632d015a876fd0696d",
+    "text": "卵、幼虫、蛹、成虫，是蝴蝶的四个成长阶段。蛹的内部正在进行复杂的身体变化。",
+    "audioHash": "aab5c884058cfbfcec44b96b327d2eee064139440e48f81a317e242fe51c8b91"
+  },
+  "butterfly-life-6-8-1": {
+    "file": "audio/butterfly-life-6-8-1.mp3",
+    "duration": 9.2225,
+    "textHash": "e5721c54cd67f2a91a16c6c097a750276923b429e610ed016519e447291b08a8",
+    "text": "把观察阶段设为四，选择放大这一阶段，再点观察蝴蝶成长，看清成虫的翅膀和身体。",
+    "audioHash": "e9e4eaaa945b9e5470fa295196f6bfb82efb46452713f60a51beeff68ba9d816"
+  },
+  "butterfly-life-6-8-2": {
+    "file": "audio/butterfly-life-6-8-2.mp3",
+    "duration": 9.3723,
+    "textHash": "3457b6c1ea75589be9eb7f6fa8ba55a1c57ab31e4bcc02d061cdc7b8a28755f7",
+    "text": "成虫与幼虫的身体不同，生活方式也不同。模型强调阶段顺序，没有给出真实生长天数。",
+    "audioHash": "4022ff05b0a1681e6296d9e35e5de2587eb9e8dcb45fecd718111c13a5cdd8cc"
+  },
+  "frog-life-2-3-0": {
+    "file": "audio/frog-life-2-3-0.mp3",
+    "duration": 8.0195,
+    "textHash": "275d1f2a2b400bd566d58e64cd22f7dad2617a0be3fccb00314d679eb23ca98a",
+    "text": "水里有圆圆的蛙卵，后来出现小蝌蚪。小蝌蚪摆着尾巴，慢慢长出可以跳的腿。",
+    "audioHash": "8d55c13e7a1c3449853c1b3594223ae489a3aa3861e7651cbc478c7997fd4d7a"
+  },
+  "frog-life-2-3-1": {
+    "file": "audio/frog-life-2-3-1.mp3",
+    "duration": 8.4448,
+    "textHash": "3606aef058b335f271c85ed6addba6ec6207a4bd71e5a9879d1bbf9ae38d9154",
+    "text": "点一下观察青蛙成长，看看哪一个有尾巴，哪一个有腿，跟着模型看完整段变化。",
+    "audioHash": "feea586bdd9cb3441f167a2f8036b6c13ecb436b3c1079965c17377e2dea9dcc"
+  },
+  "frog-life-2-3-2": {
+    "file": "audio/frog-life-2-3-2.mp3",
+    "duration": 8.7203,
+    "textHash": "e688d2d33d63666acf4bc5130d60c06ed3f97623f90ff643e2190c632b50033b",
+    "text": "幼蛙的尾巴会慢慢变短，最后看见成蛙。真实的成长要花时间，动画只是帮助观察。",
+    "audioHash": "4956ef8e5b1b770f44a9637df379601998549349f2265042e79cc5411f24f7f7"
+  },
+  "frog-life-4-5-0": {
+    "file": "audio/frog-life-4-5-0.mp3",
+    "duration": 8.4448,
+    "textHash": "285560841b1169524f5bcbebfec42307d9e6d4ae2bead7320ecd97235ebb5815",
+    "text": "成长阶段不同，青蛙的身体也不同。保持成长顺序，再比较最早和较晚的阶段。",
+    "audioHash": "02b1fb7bbb6d7eacf998a25fb94a22132b48c40db4f78be44e6d1762b89dbb09"
+  },
+  "frog-life-4-5-1": {
+    "file": "audio/frog-life-4-5-1.mp3",
+    "duration": 8.3718,
+    "textHash": "81816a4c94cdc14abaa99d52c7bbb65c615c744e6b89b642aa83843b577aee7d",
+    "text": "选择成长顺序，先把观察阶段设为一并运行，再设为四运行，比较蛙卵和成蛙。",
+    "audioHash": "6ff20836f32f5e31c17f38c58c85b03c68c2e835b3239b89f0f2d430820e314e"
+  },
+  "frog-life-4-5-2": {
+    "file": "audio/frog-life-4-5-2.mp3",
+    "duration": 8.546,
+    "textHash": "8ba4dd652d5f684173bbb7b70f7c58cc825e3aa59beb2cd37ce35c608e60c4cd",
+    "text": "你看到卵和成蛙的外形不同。中间还有蝌蚪和带着短尾巴的幼蛙，顺序不能跳过。",
+    "audioHash": "d41e20e9a88a21a752e53e8b03e24b5e7ab7352cc556ea9ee9d06b230430a677"
+  },
+  "frog-life-6-8-0": {
+    "file": "audio/frog-life-6-8-0.mp3",
+    "duration": 8.623,
+    "textHash": "46718a1aeb977f5f46d8620d620fd0f447e9fcc497f1e921ee7579b173233f33",
+    "text": "许多青蛙幼时在水中生活，成长时先长出后腿，再有前腿，尾巴逐渐被身体吸收。",
+    "audioHash": "9e5dc4d4eacf9392557af1a9e98d442ae831c6ea91d47017013b70dd883a5d5c"
+  },
+  "frog-life-6-8-1": {
+    "file": "audio/frog-life-6-8-1.mp3",
+    "duration": 9.02,
+    "textHash": "7eb92e2b6fd65c1082b2e24b3f98fa5d102b7adf7d6f919eb708a9ddf3d16bd4",
+    "text": "把观察阶段设为四，选择成长顺序，再点观察青蛙成长，看清四个阶段和它们的顺序。",
+    "audioHash": "3ebd198bbc60afd84d9360f1b33c500c716eb909699ad555fc44e872c5c7fd24"
+  },
+  "frog-life-6-8-2": {
+    "file": "audio/frog-life-6-8-2.mp3",
+    "duration": 9.02,
+    "textHash": "9c10869016e803d8efd500e5c0d0671a072ded2615a1f6ca6c3f3f80ae55d925",
+    "text": "这是一种常见生活史的示意。不同青蛙的成长过程会有差别，模型并不代表所有种类。",
+    "audioHash": "540b035b39f7109eea4a54ace95ab910b5b09b1e3f9de252706e262ea7a92574"
+  },
+  "food-chain-2-3-0": {
+    "file": "audio/food-chain-2-3-0.mp3",
+    "duration": 8.5947,
+    "textHash": "e7b474e8e40cd008db6771ad1a0715ff8c2f4969ef2f54211bf967a164533f2d",
+    "text": "小草、小虫和青蛙，各自有自己的生活。看看谁吃谁，跟着发亮的箭头去认识它们。",
+    "audioHash": "a756e9d51a33d100ab10aabb9703397f50f26f664d678f7bb142670b27b2dd74"
+  },
+  "food-chain-2-3-1": {
+    "file": "audio/food-chain-2-3-1.mp3",
+    "duration": 8.546,
+    "textHash": "fdb4970ffd029a1e4b5d75544db51e7f32cf14f7ad1749a0368c5c79a2395e2a",
+    "text": "点一下追踪食物链，看看亮点先来到哪里，再来到哪里，完整观察这一次的小剧场。",
+    "audioHash": "3058377177c9b3dabdad64089db000243ef6b084b5eb6e13a603c2eaf522cd6b"
+  },
+  "food-chain-2-3-2": {
+    "file": "audio/food-chain-2-3-2.mp3",
+    "duration": 8.7728,
+    "textHash": "e0a4c0d6e8377783afcf06a231325d8d5c94c788b76a84d636912c93fa1b6d87",
+    "text": "箭头告诉我们食物和能量的方向。模型里的小动物只作示意，真实世界还有更多联系。",
+    "audioHash": "92c92e1f81eebb68781dccaa3d4154d26ce2887a8df9d4c9486ebe8d6fd38da6"
+  },
+  "food-chain-4-5-0": {
+    "file": "audio/food-chain-4-5-0.mp3",
+    "duration": 8.3475,
+    "textHash": "eb2a8c5118b27c10dba2797f5de630608cc7e4eab2c72071ce7d67b4fb214907",
+    "text": "食物链的环节连在一起。保持草地食物链，再比较只看一个环节和看三个环节。",
+    "audioHash": "28c8383d1f6067e1f586744d41e0b81a9e093357ce9be076aea43c1cf0fb92fc"
+  },
+  "food-chain-4-5-1": {
+    "file": "audio/food-chain-4-5-1.mp3",
+    "duration": 9.2468,
+    "textHash": "68efa3548344ceb7b53dea49e500ea18d87a0af7207b154e5bb86bba14e2c6af",
+    "text": "选择草地食物链，先把观察的生物环节数设为一并运行，再设为三运行，比较连接方向。",
+    "audioHash": "70a041d5574fa141677e13ec53f188c3771d4d3a21c48aced0fac64949e72ce7"
+  },
+  "food-chain-4-5-2": {
+    "file": "audio/food-chain-4-5-2.mp3",
+    "duration": 9.698,
+    "textHash": "b5a0ba38d2bc2164bbe3c73e18a60681f93d4df5fdf6952d31fdbd04a6aa1bcf",
+    "text": "小草被小虫吃，小虫又可能被青蛙吃。箭头从食物指向取食者，表示能量沿这条路传递。",
+    "audioHash": "bbc59f6739fa52f26156e7b9eb800924d56f0a33523903f9f2f85a7687406f66"
+  },
+  "food-chain-6-8-0": {
+    "file": "audio/food-chain-6-8-0.mp3",
+    "duration": 10.346,
+    "textHash": "20cf4758a6edd308433502188fda71844d59d9c2ec7a397e56a7038dd85b4abd",
+    "text": "绿色植物利用阳光制造养分，动物通过取食获得能量。能量经过不同环节，并非全部传给下一位。",
+    "audioHash": "18214a839f9d23a61a66a42ba297f43fc0fd4537a9e1ede3d0b329d230ed13bc"
+  },
+  "food-chain-6-8-1": {
+    "file": "audio/food-chain-6-8-1.mp3",
+    "duration": 9.074,
+    "textHash": "b13c23ed83f9dc00462bbf3db444f6cc21a31d61ebac9fc9319161d4c51f4a74",
+    "text": "把观察的生物环节数设为三，选择草地食物链，再点追踪食物链，看清两个箭头的方向。",
+    "audioHash": "49865455c438b1126ca52bec35887a7371d12e1d41b37fda5431c9181b60204e"
+  },
+  "food-chain-6-8-2": {
+    "file": "audio/food-chain-6-8-2.mp3",
+    "duration": 9.146,
+    "textHash": "7e536131af6a060449815640b1684c88bac0ad3526f459fc5580f2eb959b8896",
+    "text": "一条食物链只挑出少量联系。真实生物往往有多种食物和天敌，所以更像相连的食物网。",
+    "audioHash": "15ab1ec72894fe9510367df57d84b6cef960df96450cccfaddd199edf91e2552"
+  },
+  "animal-habitats-2-3-0": {
+    "file": "audio/animal-habitats-2-3-0.mp3",
+    "duration": 8.1694,
+    "textHash": "5002911ebf6c93309d15315f42f706cb6297e53fc6412a2e373d2889038f63a8",
+    "text": "小动物的家，不只是睡觉的地方。它还要找到食物、水和可以安全活动的空间。",
+    "audioHash": "731418268d38076f8b6b05729bf3f67823b1d21feffaed66a839fc8eae5b615f"
+  },
+  "animal-habitats-2-3-1": {
+    "file": "audio/animal-habitats-2-3-1.mp3",
+    "duration": 8.623,
+    "textHash": "e68a4f028039e347a79a17798e7c29f8d155c7e37e5d405d0145bf9ba5f339f4",
+    "text": "点一下探索动物的家，找找发亮的提示，看看动物周围有什么，再完整观察这次变化。",
+    "audioHash": "dfaa6254717d09e388840a71df944205e5722fa8e135fde268c121c3f241ca2c"
+  },
+  "animal-habitats-2-3-2": {
+    "file": "audio/animal-habitats-2-3-2.mp3",
+    "duration": 9.2711,
+    "textHash": "67ec32872bcb6035b77e93edf7af8f10cc31a5a5bb26eac4fb38a278c4114d69",
+    "text": "青蛙、猫头鹰和兔子的家有不同样子。它们都需要合适的生活条件，我们要保护这些地方。",
+    "audioHash": "54645fb0ed319f006eb46aca731ba765c302dbc707b7a7b49645dbc7c6d89086"
+  },
+  "animal-habitats-4-5-0": {
+    "file": "audio/animal-habitats-4-5-0.mp3",
+    "duration": 8.4448,
+    "textHash": "0185edf2bd5d9b45d4a57f637d8bd3307ecdce200f767420080cc58ac7bbdc5d",
+    "text": "同一种动物需要不同的生活要素。保持森林猫头鹰，再比较少量提示和完整提示。",
+    "audioHash": "22b7cbefc155ee1a75a5869ee7f5a00866a6f4fa5f3273e61fab0a60c2792687"
+  },
+  "animal-habitats-4-5-1": {
+    "file": "audio/animal-habitats-4-5-1.mp3",
+    "duration": 9.77,
+    "textHash": "67690160b779da55f733515ad8a36947167a420945b751887778010305a15fbd",
+    "text": "选择森林猫头鹰，先把显示的栖息地要素数设为一并运行，再设为四运行，找找多出的提示。",
+    "audioHash": "e7e490d5faea12a7a89bf1b5ebc9de16c3be98eb4e32ec0b9544cbd6aebd6251"
+  },
+  "animal-habitats-4-5-2": {
+    "file": "audio/animal-habitats-4-5-2.mp3",
+    "duration": 9.4696,
+    "textHash": "3ffa32fd27c1c0f31327cb7193136fd3afc239552737977f47a1722b8c697ff0",
+    "text": "食物、水、庇护和空间，都与栖息地有关。模型增加的是观察提示，并不是给动物打健康分。",
+    "audioHash": "c8966ab402dda0be9a0e89f6447e6d5a1cbd4cb46a9f4fcb10c50897a086e01d"
+  },
+  "animal-habitats-6-8-0": {
+    "file": "audio/animal-habitats-6-8-0.mp3",
+    "duration": 8.6959,
+    "textHash": "dd446632b318555e63cf38c30296ff56ad6dd2989b3cef5ca289ccb73c410fbe",
+    "text": "栖息地是动物获取所需条件的地方。不同物种对温度、食物和庇护的要求也会不同。",
+    "audioHash": "160dd683809c0cc0ae0368fc0cbd158f0695f08c73024d78547bbab749d33f0c"
+  },
+  "animal-habitats-6-8-1": {
+    "file": "audio/animal-habitats-6-8-1.mp3",
+    "duration": 8.7728,
+    "textHash": "d8ba222efe41b55a35db1481d308f03f975224cfe00831af29d594cf7eabaa23",
+    "text": "把显示的栖息地要素数设为四，选择森林猫头鹰，再点探索动物的家，找齐四类要素。",
+    "audioHash": "732c84f0345311bd873787e73739f96ebf700d2f1a3a963837a00319b502c20d"
+  },
+  "animal-habitats-6-8-2": {
+    "file": "audio/animal-habitats-6-8-2.mp3",
+    "duration": 9.8949,
+    "textHash": "42fe0c7bcc7ba564778b35b725e3ec37bd8187fecce9a91b3b234fdea4963438",
+    "text": "保护栖息地要考虑条件是否合适，不能只数四个图标。这个模型帮助分类，不预测动物存活。",
+    "audioHash": "ce4b48fe8685820c04efeabdba479f80436985f1f3c95ba0d98ca7fad8446dc9"
+  },
+  "breathing-lungs-2-3-0": {
+    "file": "audio/breathing-lungs-2-3-0.mp3",
+    "duration": 9.02,
+    "textHash": "11e1895936efafe9ec2aa235a124096833d3c46c921775587b39fffd1665a0df",
+    "text": "吸一口气，呼一口气，身体里的肺一直在帮忙。我们看看模型里，空气是怎样来来回回的。",
+    "audioHash": "ba6f2cfd7972ab9552bc9caf4e576f8c49be0f4b6d7bca6e2f32df9ab52673d1"
+  },
+  "breathing-lungs-2-3-1": {
+    "file": "audio/breathing-lungs-2-3-1.mp3",
+    "duration": 8.5704,
+    "textHash": "1fa56c67a5d0d6828dd25f0f4984b3407b70199f8b831be11f735dc73f11af22",
+    "text": "点一下观察呼吸，找找两边的肺。留意它们变大一点，再变回去，完整看完这次演示。",
+    "audioHash": "d510be02f4435b3ca65b5d07ce2cd5dec467121648b925f35db0e1bb04f78bb8"
+  },
+  "breathing-lungs-2-3-2": {
+    "file": "audio/breathing-lungs-2-3-2.mp3",
+    "duration": 9.098,
+    "textHash": "d8386bdd9b8b8fcfa944b77f388db8062599eda003edaf85257d2ba53783c010",
+    "text": "空气里的氧气可以进入血液，身体也要排出二氧化碳。彩色小点只是帮助我们看清方向。",
+    "audioHash": "dc9ab89d46913b3a7e5955f38bd111ba1cd213f5d6892ff5c793979e6602b0e7"
+  },
+  "breathing-lungs-4-5-0": {
+    "file": "audio/breathing-lungs-4-5-0.mp3",
+    "duration": 9.17,
+    "textHash": "189e7de88a6b375b8b2df81d58995876446feee8919cb04ea3b549e048af599d",
+    "text": "一呼一吸会重复出现。保持看膈肌与气流，比较一次和四次演示，留意每次的运动方向。",
+    "audioHash": "b3cbfa47b585905302978e9faa5a8090e379f22cc38004e47539fdb2ef443c57"
+  },
+  "breathing-lungs-4-5-1": {
+    "file": "audio/breathing-lungs-4-5-1.mp3",
+    "duration": 9.1942,
+    "textHash": "5bccd856f40501487f3fbb0d1e4c1a1df5c267caf9c0cd4c5eab632148346510",
+    "text": "选择看膈肌与气流，先把演示呼吸次数设为一并运行，再设为四运行，数数模型的变化。",
+    "audioHash": "39185532e06263d077318a343cc06ce0b15449708951af26315a5f5a2958c72b"
+  },
+  "breathing-lungs-4-5-2": {
+    "file": "audio/breathing-lungs-4-5-2.mp3",
+    "duration": 9.4979,
+    "textHash": "30da2c3541cbb7f5164fb3f59c26807592cc08cc3e210931ea9e92ae5ec51493",
+    "text": "次数不同，吸气和呼气的方向仍然相同。这些数字不是你的呼吸频率，也不表示健康好坏。",
+    "audioHash": "031fa6eb2e5e36841027932fac90be537a7ad940620b28188451374fc0e76862"
+  },
+  "breathing-lungs-6-8-0": {
+    "file": "audio/breathing-lungs-6-8-0.mp3",
+    "duration": 9.1942,
+    "textHash": "83e689a1df78f16d09af3c49e85ad7fea5b7c25e61745a5df40a5967e332bf57",
+    "text": "吸气时膈肌收缩向下，胸腔空间增大；放松后胸腔回缩，空气从肺里沿气道排出去。",
+    "audioHash": "726413a8e2001b2dc31d8cd13434788771cb416129d0ed4ee85a3fc7cad3bbb2"
+  },
+  "breathing-lungs-6-8-1": {
+    "file": "audio/breathing-lungs-6-8-1.mp3",
+    "duration": 9.5465,
+    "textHash": "30059239234c617aa64b6f8da83cd193a21806a24f866542f929a75af5566f79",
+    "text": "把演示呼吸次数设为四，选择看膈肌与气流，再点观察呼吸，比较膈肌和肺的同步变化。",
+    "audioHash": "304bda539dc970480a8de0b46fb0709d74a16db3b827ccdae21c06e062604997"
+  },
+  "breathing-lungs-6-8-2": {
+    "file": "audio/breathing-lungs-6-8-2.mp3",
+    "duration": 9.5708,
+    "textHash": "a0adcf6f8d5b91cde8f8c227ea79314bab7e77ae849a8ba51d95642a71d8a717",
+    "text": "肺里的小气囊参与气体交换。这里画的是简化模型，没有测量真实肺容量或个人呼吸状态。",
+    "audioHash": "a86fc4ed0b67a20a32be20fe3e7a4f3f9cc97fcd3bf4fcfe9d4614439520789f"
+  },
+  "heartbeat-flow-2-3-0": {
+    "file": "audio/heartbeat-flow-2-3-0.mp3",
+    "duration": 8.7728,
+    "textHash": "a95d2350b0d4e67e227cc58c41038504dd62cc0714821f8ea7ebbc0aa4bdb129",
+    "text": "心脏像一直工作的小泵，推动血液旅行。我们跟着模型里的小点，看看它们经过哪里。",
+    "audioHash": "3978130abc654f4f5b55806064d3ec94609038380cfb2736b27df899721c94fe"
+  },
+  "heartbeat-flow-2-3-1": {
+    "file": "audio/heartbeat-flow-2-3-1.mp3",
+    "duration": 8.0195,
+    "textHash": "2044709da2c7689d46182f5aca1d308554070d02d92dc995bfc94f5ded4d8169",
+    "text": "点一下追踪泵血，找找会动的心脏和连着它的路线，完整看完这一次的旅行。",
+    "audioHash": "0dfcc0574ec438ee4fbcbdbfcdf115665c8fc8c1bf378373c80b72e4baecdaa7"
+  },
+  "heartbeat-flow-2-3-2": {
+    "file": "audio/heartbeat-flow-2-3-2.mp3",
+    "duration": 8.3718,
+    "textHash": "2a38f63f357e51cd359e0055bafaaf59db1996e74432c8e0d4dccd5230ef31f2",
+    "text": "心脏和肺会一起帮助身体。画面用红蓝色分清路线，真实血液并不是蓝色的。",
+    "audioHash": "19f5c68375a4c45cdf12915465c59d01d991361e8b5ae15d71b0f169b50370da"
+  },
+  "heartbeat-flow-4-5-0": {
+    "file": "audio/heartbeat-flow-4-5-0.mp3",
+    "duration": 9.2711,
+    "textHash": "786cdb4793d52365fce434253eaaf85e3816168061e543f36ec8d80927f01f3d",
+    "text": "心脏一次次推动血液。保持肺部循环，再比较一次和四次演示，跟着同一条路线观察。",
+    "audioHash": "297977ededf939aa6672a5d495b13138f4be3e3155b0f223e8205920e0fa2b29"
+  },
+  "heartbeat-flow-4-5-1": {
+    "file": "audio/heartbeat-flow-4-5-1.mp3",
+    "duration": 8.8215,
+    "textHash": "3875a92cbd484ad3732d9e5108340fb86e753fcbe7f25eb6b6b39758f763e5e6",
+    "text": "选择肺部循环，先把演示泵血次数设为一并运行，再设为四运行，数数模型的收缩。",
+    "audioHash": "cec8fc05d928fe389432379aea84744199828ffe9b193bc9d8ed846e24626d06"
+  },
+  "heartbeat-flow-4-5-2": {
+    "file": "audio/heartbeat-flow-4-5-2.mp3",
+    "duration": 9.77,
+    "textHash": "5f77a40ee62c863a3674da0742516a051d4c4504269251e1e7831e8635ee1529",
+    "text": "演示次数变多，路线仍然经过心脏和肺。这些数字不是人的心率，也不能判断身体是否健康。",
+    "audioHash": "29c42d5187016ccb779a1ac260a6c8a9137410591d316ea1ce29b2b6c475423a"
+  },
+  "heartbeat-flow-6-8-0": {
+    "file": "audio/heartbeat-flow-6-8-0.mp3",
+    "duration": 9.074,
+    "textHash": "871e8147abb31b282ac6bcc35f6b5faeea2367d51cbc99ad3cca19e1d2b0206c",
+    "text": "血液从右心流向肺，在肺里交换气体，再回到左心。左心继续把血液推向身体各处。",
+    "audioHash": "6fb0a02cad83fb552e786ced7f90334b427a81c0b23fa3bfcf340cd81eec1e40"
+  },
+  "heartbeat-flow-6-8-1": {
+    "file": "audio/heartbeat-flow-6-8-1.mp3",
+    "duration": 8.7446,
+    "textHash": "fb89bac0284cdc72d72815d89fe77f1c9659bfb2ec00d95498ace2ba8a5c7bd0",
+    "text": "把演示泵血次数设为四，选择肺部循环，再点追踪泵血，看清右心、肺和左心的连接。",
+    "audioHash": "ee5fb8552e52db5369cb27e8df70083bf1dfe5d06de30a2187096b20c73d1735"
+  },
+  "heartbeat-flow-6-8-2": {
+    "file": "audio/heartbeat-flow-6-8-2.mp3",
+    "duration": 9.3198,
+    "textHash": "5b73ec35aec4addd4db35c06c8910c758303b65910ca6be6a68f8880efb88427",
+    "text": "瓣膜帮助血液朝正确方向流动。模型省略了许多细节，红蓝颜色只表示血液含氧的差别。",
+    "audioHash": "e9aa6e99296208d3500773417794deb1b3b5584b6a2ecd0b453f43c53afd8e2c"
+  },
+  "seed-dispersal-2-3-0": {
+    "file": "audio/seed-dispersal-2-3-0.mp3",
+    "duration": 8.3475,
+    "textHash": "866630e38aeb2232c05b54012d35bf640df68c583763aa9eb93356516afcc08c",
+    "text": "小种子离开大植物，去寻找新的地方。有的带着细细的绒毛，看起来像一把小伞。",
+    "audioHash": "f275929828310481a5923587b9a9d57f4128b816385661c2a6e5178d201ad891"
+  },
+  "seed-dispersal-2-3-1": {
+    "file": "audio/seed-dispersal-2-3-1.mp3",
+    "duration": 8.4448,
+    "textHash": "61a1b490d1c31a7a2a4840ec6e6a2b84c83753fd90d6fe31b40629db7429a85e",
+    "text": "点一下放飞种子，跟着小种子看一趟。留意它在哪里出发，又在哪里慢慢落下来。",
+    "audioHash": "1201dec649f7682c433e7a0adc76313cd31ddfea3b6f38ebc5d531a517055f6d"
+  },
+  "seed-dispersal-2-3-2": {
+    "file": "audio/seed-dispersal-2-3-2.mp3",
+    "duration": 8.623,
+    "textHash": "bcec038988c11ca02e1d0cf05bf3f7edf0d8e332181d12756792c787e9531082",
+    "text": "不同种子有不同的旅行办法。有的借风，有的借水，还有一些会跟着动物去别的地方。",
+    "audioHash": "d86ade4a4bfeb10067c54a30fe28607fa09d5c8ba155ad8093523d79514a5099"
+  },
+  "seed-dispersal-4-5-0": {
+    "file": "audio/seed-dispersal-4-5-0.mp3",
+    "duration": 9.074,
+    "textHash": "34db80ab5f5130e9d6e6a0981fecc2471cf2cfcc54f35a5b531e72dd9af97245",
+    "text": "保持同一种绒毛种子，再改变风力演示等级。比较两次路径，看看模型会有什么变化。",
+    "audioHash": "056cb57f67977a42b78cbb1d1cbb3ab045d6653b537b226ea577c9bc75667dff"
+  },
+  "seed-dispersal-4-5-1": {
+    "file": "audio/seed-dispersal-4-5-1.mp3",
+    "duration": 9.4696,
+    "textHash": "d7d3383213d6678546581a499da24aef91d2308e65e7a5cea5184213d6acd5f9",
+    "text": "选择有绒毛的种子，先把风力演示等级设为一并运行，再设为四运行，比较它的飞行路径。",
+    "audioHash": "89a63483924224ae0d5529b972b5f6397924ac1e45f332f817b2b85fe90441d2"
+  },
+  "seed-dispersal-4-5-2": {
+    "file": "audio/seed-dispersal-4-5-2.mp3",
+    "duration": 9.3723,
+    "textHash": "2ce9c59b3dc117e09a8c3b7d9fdadda737a726c76df6c55db6254445da1ee9a4",
+    "text": "模型里的风更强时，种子会移动得更远。真实落地位置还受高度、气流和种子结构影响。",
+    "audioHash": "39acc4ca895835ab89b6dea5b843d222bcdbe7915ead010980a6d1b093c4b9b6"
+  },
+  "seed-dispersal-6-8-0": {
+    "file": "audio/seed-dispersal-6-8-0.mp3",
+    "duration": 9.674,
+    "textHash": "7a84b3dd41e334f543d7d45c98d99a75919b0df212f445c1b0cad0282746dfdc",
+    "text": "绒毛和翅状结构可以帮助一些种子随风传播。传播让种子离开母株，但不保证一定发芽。",
+    "audioHash": "063e6ad4bc345c973de962d7ce04361faac91800e1b55336de711cfd2ea3110e"
+  },
+  "seed-dispersal-6-8-1": {
+    "file": "audio/seed-dispersal-6-8-1.mp3",
+    "duration": 8.8458,
+    "textHash": "5f71b018ccf2be5157daca2030d78db8705e79815a56bd2b182e57bb383c8072",
+    "text": "把风力演示等级设为四，选择有绒毛的种子，再点放飞种子，观察结构和路径的关系。",
+    "audioHash": "6f6c0b70f4ff2fd799bc083b916d66fffdcdd2ffebf9d0acc9403e1711d359e7"
+  },
+  "seed-dispersal-6-8-2": {
+    "file": "audio/seed-dispersal-6-8-2.mp3",
+    "duration": 9.8463,
+    "textHash": "5dfc5c0992b931fbba6d219a8c8f12ed35755545e8e00873eef58aab109fa13c",
+    "text": "这次只改变风力，保持种子结构相同。模型没有预测真实距离，也没有把远近当成发芽结果。",
+    "audioHash": "6bcb7675356574bf17f57163cc910842547fccba309b07ebec65a3d207e03efd"
+  },
+  "animal-camouflage-2-3-0": {
+    "file": "audio/animal-camouflage-2-3-0.mp3",
+    "duration": 8.295,
+    "textHash": "ffa0d1a68cd50f0f19f82cb82144a36873862a6ef8cb7f70e6a77dfad37f355e",
+    "text": "小动物躲在背景里，颜色相近时更难看见。我们仔细找一找，看看它藏在哪里。",
+    "audioHash": "ff3be4c36bd7d1d9cd09721759a1f026f604f673faf2da484f355783bc724f1a"
+  },
+  "animal-camouflage-2-3-1": {
+    "file": "audio/animal-camouflage-2-3-1.mp3",
+    "duration": 8.4691,
+    "textHash": "4071a5fa13cacbec08ec00f77fb32f4ba31b28e232a0b29de90702f8c024bf61",
+    "text": "点一下寻找伪装线索，先看动物的颜色，再看周围的背景，完整观察这次比较。",
+    "audioHash": "e566f123e52ebcc25ff88112e3f2838b976f96a7eb062183a44ad23d65e82ee5"
+  },
+  "animal-camouflage-2-3-2": {
+    "file": "audio/animal-camouflage-2-3-2.mp3",
+    "duration": 8.5704,
+    "textHash": "21569e9cdc57ab3d761105da38da5009d31891fd1d5fdef04fc2ab5c36822d7b",
+    "text": "保护色能帮助一些动物不容易被发现。动物还是在原来的地方，并没有变成透明。",
+    "audioHash": "7d422d482a65600af0f1d127a2d73deb01b1123a8d61668aa93cd5c481162725"
+  },
+  "animal-camouflage-4-5-0": {
+    "file": "audio/animal-camouflage-4-5-0.mp3",
+    "duration": 8.7203,
+    "textHash": "495243f50576accd4a787bf31e5457c2b23a000d8a806d1f91dc09eeefb9425e",
+    "text": "保持深色动物不变，再让背景从浅变深。比较两次观察，找找哪里更容易看清它。",
+    "audioHash": "6ed10e824cf8966f01f58019e4b16133745827f7eda8687b2ba7662c7735e847"
+  },
+  "animal-camouflage-4-5-1": {
+    "file": "audio/animal-camouflage-4-5-1.mp3",
+    "duration": 8.9227,
+    "textHash": "8507c53e21d953c4b67d10fcda9e10eaf7f7ab5eebb1b308ec086448ea5a8a85",
+    "text": "选择深色动物，先把背景明暗等级设为一并运行，再设为四运行，比较它与背景的差别。",
+    "audioHash": "c143cdb4a6b4be5e3844eb132110c35ca652437ebc9ee5a60f6cea62b2362317"
+  },
+  "animal-camouflage-4-5-2": {
+    "file": "audio/animal-camouflage-4-5-2.mp3",
+    "duration": 9.746,
+    "textHash": "ea2a84ee97803c3c578178503718dbe91139852722235cace3b4b27f183a91e0",
+    "text": "深色动物和深色背景更相近，轮廓可能较难发现。这个比较没有让动物突然改变自己的颜色。",
+    "audioHash": "e997751d94d636ef6de021ec18e501038a95672ce11e5b6c72421de0cc34c8a0"
+  },
+  "animal-camouflage-6-8-0": {
+    "file": "audio/animal-camouflage-6-8-0.mp3",
+    "duration": 10.0974,
+    "textHash": "0b8cdff6a91aaa4918b6274a0280cc9cf457344975e0519e6958ab4b95a92219",
+    "text": "保护色与环境相似时，动物可能更难被发现。除了颜色，花纹、姿态和活动方式也会影响观察。",
+    "audioHash": "b9c273ffe03c0512ca3e6a9174cf92077c9c57f5b77ba76dbcac37c47829f40f"
+  },
+  "animal-camouflage-6-8-1": {
+    "file": "audio/animal-camouflage-6-8-1.mp3",
+    "duration": 9.421,
+    "textHash": "cf24d6013cffa6e9414b2276c19ee129330b887a21f9aad3e7d1a0fa211a4741",
+    "text": "把背景明暗等级设为四，选择深色动物，再点寻找伪装线索，观察轮廓与背景之间的对比。",
+    "audioHash": "afd67f813d703eaf29bec7123682afb4dbc5162de1fa9845a619e2431b7a4d5f"
+  },
+  "animal-camouflage-6-8-2": {
+    "file": "audio/animal-camouflage-6-8-2.mp3",
+    "duration": 9.7976,
+    "textHash": "d5a693e47923662e1824ac9ac810199e241d320acf22e4c2d2ea38638ba98e96",
+    "text": "看起来更相似，不等于一定不会被发现。模型只展示视觉对比，没有计算捕食者的成功概率。",
+    "audioHash": "aebe4116b7be60c46b177b3416977390ecf1b96053f556bbb721ea122caf830e"
+  },
+  "earth-layers-2-3-0": {
+    "file": "audio/earth-layers-2-3-0.mp3",
+    "duration": 7.4969,
+    "textHash": "fad3c7b025ca9e1aa0ec4b962acf1c343813c1a02e4c6f9a86ee43eca794b929",
+    "text": "我们站在薄薄的地壳上。打开地球模型，里面还有地幔、外核和内核。",
+    "audioHash": "527089ab5a40fcdcccf60d60f8bcb89e5285710bce55cf2927e987dbc607d493"
+  },
+  "earth-layers-2-3-1": {
+    "file": "audio/earth-layers-2-3-1.mp3",
+    "duration": 8.9957,
+    "textHash": "81472de21850db4b560d04bad54a80f5ca2ebf98322c9df48489bf987978a86c",
+    "text": "和大人一起选择分层展开，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "299a658c61494201b83dd9391c628bd7d8ddbab76fd892bcbb9e6aed453b7c0f"
+  },
+  "earth-layers-2-3-2": {
+    "file": "audio/earth-layers-2-3-2.mp3",
+    "duration": 7.8696,
+    "textHash": "5ffec637fee89e8b777eebebef5f7658847ba53f6de401ee30d36db8163783b5",
+    "text": "地幔大多是固体，外核是液体，内核是固体。不要把整个地球里面当成岩浆。",
+    "audioHash": "714739dbf4f899c025689e389c0b7de6747e7e5583d8f8a6ca7fdfe1ba437ace"
+  },
+  "earth-layers-4-5-0": {
+    "file": "audio/earth-layers-4-5-0.mp3",
+    "duration": 7.6468,
+    "textHash": "52c31dbf2143b9154f958d737491d814c962c72c53531586aac7619b344e018b",
+    "text": "逐层辨认地壳、地幔、外核和内核，颜色用来帮助识别，并不是实际颜色。",
+    "audioHash": "c4695699d87fc3190cb7e03f427f2c1c925dd85f8ee185fe659f6fb6fae170ee"
+  },
+  "earth-layers-4-5-1": {
+    "file": "audio/earth-layers-4-5-1.mp3",
+    "duration": 8.295,
+    "textHash": "67aadb4da4481441b25496c106530af5cb186e7fc6e940c1e60f88086d5dc5ba",
+    "text": "保持选项为分层展开，先把数值设为0，运行一次完整动画，留意模型的变化。",
+    "audioHash": "fdcb338889058e75bbc39589941c3a43d75037a1acfdff3b666828d1aa5244c9"
+  },
+  "earth-layers-4-5-2": {
+    "file": "audio/earth-layers-4-5-2.mp3",
+    "duration": 9.722,
+    "textHash": "57549318beff1ab56a7294317c2a333e0cca34fa226e974ec47e1116e1680fe0",
+    "text": "选择分层展开，先观察数值0，再观察数值3。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "94c8585641ee6d7fdfef860b1bdfa891e42554d5868372c9925637dfc077990b"
+  },
+  "earth-layers-6-8-0": {
+    "file": "audio/earth-layers-6-8-0.mp3",
+    "duration": 7.4969,
+    "textHash": "fad3c7b025ca9e1aa0ec4b962acf1c343813c1a02e4c6f9a86ee43eca794b929",
+    "text": "我们站在薄薄的地壳上。打开地球模型，里面还有地幔、外核和内核。",
+    "audioHash": "5cdd633773fbeafe6bd2e34c51e80474fecf1307ad83318da572e33727058118"
+  },
+  "earth-layers-6-8-1": {
+    "file": "audio/earth-layers-6-8-1.mp3",
+    "duration": 7.6468,
+    "textHash": "52c31dbf2143b9154f958d737491d814c962c72c53531586aac7619b344e018b",
+    "text": "逐层辨认地壳、地幔、外核和内核，颜色用来帮助识别，并不是实际颜色。",
+    "audioHash": "d909e1f4dd0c3db03165f7558a07b7ca896e129a12d74b6776fd5679cad6fdce"
+  },
+  "earth-layers-6-8-2": {
+    "file": "audio/earth-layers-6-8-2.mp3",
+    "duration": 8.8945,
+    "textHash": "9fe2db54c656cc8d4397147ef93eea8e50b7585678aab6b1cf74e90edd9175e4",
+    "text": "选择分层展开，把剖开角度等级设为3，点击剖开看看，等动画完成后找出变化。",
+    "audioHash": "8f060ff38ce603afab4a4dec5355efdd94181ae2cb7eeb5f5baecc5a0ff433ff"
+  },
+  "landforms-2-3-0": {
+    "file": "audio/landforms-2-3-0.mp3",
+    "duration": 7.9223,
+    "textHash": "4d10752ee0a3b0edab5724a8b65966bd5619623fdc975ec9e8fea26d63071c08",
+    "text": "沙盘里有高高的山，也有低低的山谷。用眼睛沿着坡面找一找高处和低处。",
+    "audioHash": "47a9ef712e92978d2406d6aa4ea3a4408311b9674385a6da2e7f20861c8a2665"
+  },
+  "landforms-2-3-1": {
+    "file": "audio/landforms-2-3-1.mp3",
+    "duration": 9.348,
+    "textHash": "e149bdaf47929fd09ff91a65f3b5bc5cf990e2b809a4f703f3e28bf2c1ce5781",
+    "text": "和大人一起选择山地与山谷，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "468280954862ef47a726ca70dbef2822a4e95d46e5a8ceb4a4e81aac43fb3b8b"
+  },
+  "landforms-2-3-2": {
+    "file": "audio/landforms-2-3-2.mp3",
+    "duration": 8.295,
+    "textHash": "8014609b196928079f557cd4f1567b4a8e946c8e1c7c62e8db0dd72ec81d1cc4",
+    "text": "模型让高低更容易看清。山谷是周围较低的地形，沙盘并不是一座真实的山。",
+    "audioHash": "27316ab41d4390746af379c2b4db462a1c840d0dc878e27153cbb66d35f48422"
+  },
+  "landforms-4-5-0": {
+    "file": "audio/landforms-4-5-0.mp3",
+    "duration": 7.7967,
+    "textHash": "162148839509e8cc9322e2be7a2445298dbe8f04a24e8b091fcf66dc58f625f4",
+    "text": "看看山峰变高以后，低处的山谷仍在哪里。相同沙盘里，先找高，再找低。",
+    "audioHash": "7b2eb42a0f15feabbcce8273d40266dceeeb258cdb00f76433185241546772db"
+  },
+  "landforms-4-5-1": {
+    "file": "audio/landforms-4-5-1.mp3",
+    "duration": 8.6716,
+    "textHash": "6f8f5c3ac57bcaa75404885b12ebee46190227aec24b6e78903fd9fa25b6ea59",
+    "text": "保持选项为山地与山谷，先把数值设为1，运行一次完整动画，留意模型的变化。",
+    "audioHash": "9f9d97b52d3e7f7d0156a9649a60c414cfb5b6d9e71b320fb09202dada0d1440"
+  },
+  "landforms-4-5-2": {
+    "file": "audio/landforms-4-5-2.mp3",
+    "duration": 9.8949,
+    "textHash": "00b10e09b97efc470635b0ee9ef8ecc4b034318eb9320fab0d581329b9de0596",
+    "text": "选择山地与山谷，先观察数值1，再观察数值4。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "4655f69b9607da3dd5d6d9532c441bce68372fbc81fa729cd7254ffb55ca9a04"
+  },
+  "landforms-6-8-0": {
+    "file": "audio/landforms-6-8-0.mp3",
+    "duration": 7.9223,
+    "textHash": "4d10752ee0a3b0edab5724a8b65966bd5619623fdc975ec9e8fea26d63071c08",
+    "text": "沙盘里有高高的山，也有低低的山谷。用眼睛沿着坡面找一找高处和低处。",
+    "audioHash": "cbe454edeb68a7d2f8a8a49293d7c76073214e601fb6decc2e77311c3cdaf1c3"
+  },
+  "landforms-6-8-1": {
+    "file": "audio/landforms-6-8-1.mp3",
+    "duration": 7.7967,
+    "textHash": "162148839509e8cc9322e2be7a2445298dbe8f04a24e8b091fcf66dc58f625f4",
+    "text": "看看山峰变高以后，低处的山谷仍在哪里。相同沙盘里，先找高，再找低。",
+    "audioHash": "3031d9d58cdbd534358221e7d54dc445a8b15e0f80c049b5284109c32e6c633b"
+  },
+  "landforms-6-8-2": {
+    "file": "audio/landforms-6-8-2.mp3",
+    "duration": 9.074,
+    "textHash": "6d876851d85e40c244a8d4fa1bc36c2015a281ecf545483a16a2acdebab3de50",
+    "text": "选择山地与山谷，把山峰高度等级设为4，点击观察地形，等动画完成后找出变化。",
+    "audioHash": "40869031082b07c28b99d90b311d49a383027dba8e2b336bd890d347273cdcd8"
+  },
+  "river-journey-2-3-0": {
+    "file": "audio/river-journey-2-3-0.mp3",
+    "duration": 7.5456,
+    "textHash": "36db9c0af64da111173ee9f39f277c7be3464ac21b560067a8b52f4e0daa3588",
+    "text": "小水滴从高处出发，沿着弯弯的河道往低处走。看看它最后去了哪里。",
+    "audioHash": "2c1c06f37597f1a5dc166ad5253a63c9c55e922571ba5f27fa425cabe248040b"
+  },
+  "river-journey-2-3-1": {
+    "file": "audio/river-journey-2-3-1.mp3",
+    "duration": 8.8458,
+    "textHash": "4fb6663b0e6a87c9c6b8c6913e73a70e33a2fd2f0daed035733c8453feb6d85e",
+    "text": "和大人一起选择支流汇入，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "94c866aca5076b429b5199333e9d5c122cf36d772b174e1bb2ee2502345bc597"
+  },
+  "river-journey-2-3-2": {
+    "file": "audio/river-journey-2-3-2.mp3",
+    "duration": 8.2463,
+    "textHash": "4c0208f7f26a553c2b12b7add1954b3e91d863c21f63caa432c3ad0ea0011b31",
+    "text": "河水受重力影响流向低处。这里的蓝点是追踪标记，并不是实际水滴的尺寸。",
+    "audioHash": "9ff00a1fd75cc3315e018b7d1037332125448e971afe35b3c95197f2f93c9a9a"
+  },
+  "river-journey-4-5-0": {
+    "file": "audio/river-journey-4-5-0.mp3",
+    "duration": 8.947,
+    "textHash": "5c86b171212c09569786c34f516ef7c2a91b8d4758ad5b5732430c4d4a6b6a9f",
+    "text": "跟着蓝色小水滴找上游和下游，看支流怎样汇入主河道。箭头表示水的流动方向。",
+    "audioHash": "2744b9d29d597ed4192761632b561292c5fed4696f57d04ee4c5b46560a1f3ff"
+  },
+  "river-journey-4-5-1": {
+    "file": "audio/river-journey-4-5-1.mp3",
+    "duration": 8.222,
+    "textHash": "2463b3d0274ad9381e84a1c3bba17a4cda0cbe464b66f161cacbc71a2e3a0400",
+    "text": "保持选项为支流汇入，先把数值设为1，运行一次完整动画，留意模型的变化。",
+    "audioHash": "619b5d2b5044dd8be84fa81b48c5cc4429c60f92931ee23011397ba970cfc66e"
+  },
+  "river-journey-4-5-2": {
+    "file": "audio/river-journey-4-5-2.mp3",
+    "duration": 9.6195,
+    "textHash": "d571e9b02aeefff3ff39732f454eeaf03a9e35717f7bc68105fbef1e7dc51ea4",
+    "text": "选择支流汇入，先观察数值1，再观察数值4。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "e314a80347e4eea346f2a2f596cc159b90c9b16e3cac08751acfd697cfa652e7"
+  },
+  "river-journey-6-8-0": {
+    "file": "audio/river-journey-6-8-0.mp3",
+    "duration": 7.5456,
+    "textHash": "36db9c0af64da111173ee9f39f277c7be3464ac21b560067a8b52f4e0daa3588",
+    "text": "小水滴从高处出发，沿着弯弯的河道往低处走。看看它最后去了哪里。",
+    "audioHash": "1942e5d5bbabb287bc9ca6cfcdc89499e00b647a87c75c141a380dd446b4a893"
+  },
+  "river-journey-6-8-1": {
+    "file": "audio/river-journey-6-8-1.mp3",
+    "duration": 8.947,
+    "textHash": "5c86b171212c09569786c34f516ef7c2a91b8d4758ad5b5732430c4d4a6b6a9f",
+    "text": "跟着蓝色小水滴找上游和下游，看支流怎样汇入主河道。箭头表示水的流动方向。",
+    "audioHash": "78dc9aee952f92afcb90a8632ae4fb89339285b3c88388973a002a75949e5d27"
+  },
+  "river-journey-6-8-2": {
+    "file": "audio/river-journey-6-8-2.mp3",
+    "duration": 8.7971,
+    "textHash": "1d8e27dc897679c51fa076e05bf6664885040a939f26980e3a3f44b117faa630",
+    "text": "选择支流汇入，把上游高度等级设为4，点击放水观察，等动画完成后找出变化。",
+    "audioHash": "8bf06673a2a887d89836da02d805509823490e12e95eace2ec85f2e1a65b63e5"
+  },
+  "volcano-2-3-0": {
+    "file": "audio/volcano-2-3-0.mp3",
+    "duration": 7.6955,
+    "textHash": "f639b99e23a8fa6811bf5737c7c50059664ef72a7353c611da49aee05cdecf18",
+    "text": "火山下面有岩浆。岩浆到达地面，名字变成熔岩，模型会带你看这条路。",
+    "audioHash": "3b2d50cbbfea0a513bcd4370767090e0e37d1a34548b54aadd0f620d1281e154"
+  },
+  "volcano-2-3-1": {
+    "file": "audio/volcano-2-3-1.mp3",
+    "duration": 8.8458,
+    "textHash": "af0db61739ab537bc6cacd32b55a5be4fe4d95b130484c28736cf531c9593cf1",
+    "text": "和大人一起选择地下剖面，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "3f49f32606a3ca062b8b502449632af48caee6b4db676dece0c3e844e5b8c0fc"
+  },
+  "volcano-2-3-2": {
+    "file": "audio/volcano-2-3-2.mp3",
+    "duration": 8.546,
+    "textHash": "1fcd5299628ea60969c618023f568a12f3b52bcd6c84d36da7e0544aeadd9898",
+    "text": "火山并非只在板块边界出现，热点也可能形成火山。整个地幔并不是一锅岩浆。",
+    "audioHash": "c62153b78b7c5f3c3112d21b9a754afcbe1c359cffdcd3544ae994861f815740"
+  },
+  "volcano-4-5-0": {
+    "file": "audio/volcano-4-5-0.mp3",
+    "duration": 8.3475,
+    "textHash": "a45d975496f770ce841328fe7e3e2bf8d6eb113b89741d48f2b198e810732d80",
+    "text": "看地下通道里的亮色岩浆，再看地表流出的熔岩。模型并不预测真实火山喷发。",
+    "audioHash": "f7d0bf099ebe1952827f217ce3ae6ac8236b0bb28b8757b18dc66dfaff38ff32"
+  },
+  "volcano-4-5-1": {
+    "file": "audio/volcano-4-5-1.mp3",
+    "duration": 8.1694,
+    "textHash": "a4193eb80b7bb1d632a6c0fb90313961f1a20a627a36f33d27cc76bebc7f0446",
+    "text": "保持选项为地下剖面，先把数值设为1，运行一次完整动画，留意模型的变化。",
+    "audioHash": "7fd059677ae7fb80376c06cea4ef2dc18551736981be29687c04e0ab672dd387"
+  },
+  "volcano-4-5-2": {
+    "file": "audio/volcano-4-5-2.mp3",
+    "duration": 9.5952,
+    "textHash": "d8dcb406f0e57cda10dc3e5c84ca351a78e854f62874c7b11ca5ba9f474588ee",
+    "text": "选择地下剖面，先观察数值1，再观察数值4。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "5aba139315b57abc54302f25b4f26fda337fb52b9f0abae83987fdbac1f2c98c"
+  },
+  "volcano-6-8-0": {
+    "file": "audio/volcano-6-8-0.mp3",
+    "duration": 7.6955,
+    "textHash": "f639b99e23a8fa6811bf5737c7c50059664ef72a7353c611da49aee05cdecf18",
+    "text": "火山下面有岩浆。岩浆到达地面，名字变成熔岩，模型会带你看这条路。",
+    "audioHash": "e767f11c39275a07c4fd9707965b8af814330712c4e55706a6b48c479edee83b"
+  },
+  "volcano-6-8-1": {
+    "file": "audio/volcano-6-8-1.mp3",
+    "duration": 8.3475,
+    "textHash": "a45d975496f770ce841328fe7e3e2bf8d6eb113b89741d48f2b198e810732d80",
+    "text": "看地下通道里的亮色岩浆，再看地表流出的熔岩。模型并不预测真实火山喷发。",
+    "audioHash": "30e2ab75b0df081d325f861161f4ac51fa9be61f61b306bb93bcd229b7c290b0"
+  },
+  "volcano-6-8-2": {
+    "file": "audio/volcano-6-8-2.mp3",
+    "duration": 8.7971,
+    "textHash": "d9a98cdac0fefd531e3885c16142be6039b4e70f2f5622203764f4287eb3d8a4",
+    "text": "选择地下剖面，把气泡压力等级设为4，点击观察喷发，等动画完成后找出变化。",
+    "audioHash": "1dc8398203c0825d7949765512e26261c387c97348113df33d3d6a8fb3b751d5"
+  },
+  "plate-motion-2-3-0": {
+    "file": "audio/plate-motion-2-3-0.mp3",
+    "duration": 7.6955,
+    "textHash": "068c85f641f7efb885adba9b9f3e716f428766dacb427c0507477fc4a480c52b",
+    "text": "大地表面有像拼图一样的板块。它们移动得很慢，模型把动作变快给你看。",
+    "audioHash": "ef924c9c164b7376ecb178417aa26fb27f93f7c1f0bcd0061f883acb4c184a8b"
+  },
+  "plate-motion-2-3-1": {
+    "file": "audio/plate-motion-2-3-1.mp3",
+    "duration": 8.947,
+    "textHash": "b1f914f5c374d6aced1682b2cd3518912aeb2067ff3283bc52148914b055e214",
+    "text": "和大人一起选择相互靠近，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "b2d07ede2d437de008938b07436a4bf35c631f4874bc3fc339b6652d9a6fc744"
+  },
+  "plate-motion-2-3-2": {
+    "file": "audio/plate-motion-2-3-2.mp3",
+    "duration": 8.3193,
+    "textHash": "3f21d035264597c289d6dd15846c2761bd5cdb30e6b8ac76bd5f260ed5355a05",
+    "text": "这是大陆碰撞示意，不能把所有碰撞都当成火山。远离和滑动的变化也不同。",
+    "audioHash": "a4637befc02843b249ef5001aee96b0c813b71baed958b83faeeccd122e12b95"
+  },
+  "plate-motion-4-5-0": {
+    "file": "audio/plate-motion-4-5-0.mp3",
+    "duration": 7.5699,
+    "textHash": "09b6156789019e9d1105c986d23d4b6b42e4109ef62db91d9967cbe45622691e",
+    "text": "两块大陆相互靠近时，挤压能形成高山。先观察两块板块原来的位置。",
+    "audioHash": "016ac9777d894a6a12f2283066ceb2b6c97dac8fc7d874b97b41f0890ece60f0"
+  },
+  "plate-motion-4-5-1": {
+    "file": "audio/plate-motion-4-5-1.mp3",
+    "duration": 8.3193,
+    "textHash": "f7a0697c813a18057fb83173977f0889caed253ad0ab608b03db97c69923aace",
+    "text": "保持选项为相互靠近，先把数值设为0，运行一次完整动画，留意模型的变化。",
+    "audioHash": "04963c6547fe9ba696cc72ccf8468def68f63f5694730ec1674f1c4e9fb7aca0"
+  },
+  "plate-motion-4-5-2": {
+    "file": "audio/plate-motion-4-5-2.mp3",
+    "duration": 9.77,
+    "textHash": "769f4f316efa43fd07f3e9dab582122aba244b7e554e07ccb5e3c30a9460cd7e",
+    "text": "选择相互靠近，先观察数值0，再观察数值3。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "1d784f205fdfab6af676c5958135c6930c957474ad2c34299b4b15b55d7ad136"
+  },
+  "plate-motion-6-8-0": {
+    "file": "audio/plate-motion-6-8-0.mp3",
+    "duration": 7.6955,
+    "textHash": "068c85f641f7efb885adba9b9f3e716f428766dacb427c0507477fc4a480c52b",
+    "text": "大地表面有像拼图一样的板块。它们移动得很慢，模型把动作变快给你看。",
+    "audioHash": "f154bfad2e42c82ab3c8670be6ed5d09a88cef7e520d373b018e3cdfde6d8bc3"
+  },
+  "plate-motion-6-8-1": {
+    "file": "audio/plate-motion-6-8-1.mp3",
+    "duration": 7.5699,
+    "textHash": "09b6156789019e9d1105c986d23d4b6b42e4109ef62db91d9967cbe45622691e",
+    "text": "两块大陆相互靠近时，挤压能形成高山。先观察两块板块原来的位置。",
+    "audioHash": "95d96561de11e37b473e06b96b78153d9b488a76bd82b31333fd32631c9119f8"
+  },
+  "plate-motion-6-8-2": {
+    "file": "audio/plate-motion-6-8-2.mp3",
+    "duration": 8.5704,
+    "textHash": "0277c45042f4d82b3f8fe31c096420232e05e7c6f9c9dc829f14680d7a4c22bf",
+    "text": "选择相互靠近，把移动距离等级设为3，点击移动板块，等动画完成后找出变化。",
+    "audioHash": "ac9244a8c98809ab858b24e72cab083f6d9d32e3e4790dbc5f4d65da34504465"
+  },
+  "weather-map-2-3-0": {
+    "file": "audio/weather-map-2-3-0.mp3",
+    "duration": 8.3962,
+    "textHash": "6df9f7a084287445b5b8acb23b770e4e0b0396acacb06e65910801b47614c14c",
+    "text": "天气地图上有几个观察站。看看小太阳、云和雨滴，模型里的天气有什么不同。",
+    "audioHash": "5f48f239a79aa8e2b48ec4ee1b4707a352e1c0b105f1161207ce3a7e85815971"
+  },
+  "weather-map-2-3-1": {
+    "file": "audio/weather-map-2-3-1.mp3",
+    "duration": 8.7728,
+    "textHash": "5ac2aaba44b0d346af8cecff551dc91fa7322ae83fe00c31fc5f74ad1f13dbc3",
+    "text": "和大人一起选择气温与风，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "1b59a5db23a892e5e27593e99ea7e41ff64e1a714b89e28e1814c032d2f7bd31"
+  },
+  "weather-map-2-3-2": {
+    "file": "audio/weather-map-2-3-2.mp3",
+    "duration": 8.7728,
+    "textHash": "8f2c31dca0c9bdbe12f6e4d92746233153c62932d808fee7ca2046f64920cddd",
+    "text": "这是情景记录，不是你家今天的预报。观察天气需要多种信息，不能只看云的颜色。",
+    "audioHash": "89a4900438290fad59ee3db830ad2e1f09c97daccf7d976483a6e6e01c38725e"
+  },
+  "weather-map-4-5-0": {
+    "file": "audio/weather-map-4-5-0.mp3",
+    "duration": 8.623,
+    "textHash": "ebf2b1cf39801c8c365863677453779b518d0dfafac3c8244409b6b000d6a636",
+    "text": "先选一个观测点，读它的记录。颜色和图标帮助找信息，不代表真实地点的天气。",
+    "audioHash": "c85c958fb3f33e517b9006de9aa535e922b5e4b50aae22dc856e3b37fdb57a57"
+  },
+  "weather-map-4-5-1": {
+    "file": "audio/weather-map-4-5-1.mp3",
+    "duration": 8.222,
+    "textHash": "1dd9bc1ea1eaf289623f5601ddc0ea885b449ac08d2bc62d1d9def8a2df90e0f",
+    "text": "保持选项为气温与风，先把数值设为1，运行一次完整动画，留意模型的变化。",
+    "audioHash": "78c86bca994b8fa32f9c875c9fd1781a5cb6bd83887c2d25c5cd661985d804a3"
+  },
+  "weather-map-4-5-2": {
+    "file": "audio/weather-map-4-5-2.mp3",
+    "duration": 9.6195,
+    "textHash": "659a659fa5d113547759b9a751b22ba572707dfa5c2f2a9db449ab12df79ba1f",
+    "text": "选择气温与风，先观察数值1，再观察数值3。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "2e88bf5e9b0eec27f0b77fcea9fda806ccbff1273f7c9ee4462dc63b847bed3a"
+  },
+  "weather-map-6-8-0": {
+    "file": "audio/weather-map-6-8-0.mp3",
+    "duration": 8.3962,
+    "textHash": "6df9f7a084287445b5b8acb23b770e4e0b0396acacb06e65910801b47614c14c",
+    "text": "天气地图上有几个观察站。看看小太阳、云和雨滴，模型里的天气有什么不同。",
+    "audioHash": "83823f7657abe1d48ffe0bcea9f72d37fb4d50f90c9118c2ee132db130f8938b"
+  },
+  "weather-map-6-8-1": {
+    "file": "audio/weather-map-6-8-1.mp3",
+    "duration": 8.623,
+    "textHash": "ebf2b1cf39801c8c365863677453779b518d0dfafac3c8244409b6b000d6a636",
+    "text": "先选一个观测点，读它的记录。颜色和图标帮助找信息，不代表真实地点的天气。",
+    "audioHash": "859d1ed02e6652fb97126551ab927af314d75e157409400417a2f31699dd2914"
+  },
+  "weather-map-6-8-2": {
+    "file": "audio/weather-map-6-8-2.mp3",
+    "duration": 8.6716,
+    "textHash": "35ec1ce63d6f878541a7cdd63516a79e52a86079f673c6d5afcc75ecb90de007",
+    "text": "选择气温与风，把观测点编号设为3，点击读取天气，等动画完成后找出变化。",
+    "audioHash": "b782cfb0c63022cb6b98a44de18a83e72a5cdb3f6449b881b2381a1adbdd6cff"
+  },
+  "seasons-2-3-0": {
+    "file": "audio/seasons-2-3-0.mp3",
+    "duration": 7.7967,
+    "textHash": "96ad6a0008069305d6665a0792bfdac849cac8abf7204421c35a96dab0ac4b55",
+    "text": "地球歪着身子绕太阳走。地轴一直朝着同一侧，看看哪一半更朝向太阳。",
+    "audioHash": "1e07837755b1403c31744cb4c2837cb865226f9e31ab92255a009aa44ab3b535"
+  },
+  "seasons-2-3-1": {
+    "file": "audio/seasons-2-3-1.mp3",
+    "duration": 8.5704,
+    "textHash": "03c1f749f2ab3a449215061580eed3fe0e8f253a39a9caedb3878adbfdd6d640",
+    "text": "和大人一起选择北半球，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "f366052f5acad0b7c33609d92abc8c4362286ce5d99ae819d7b20ef36dc6aad4"
+  },
+  "seasons-2-3-2": {
+    "file": "audio/seasons-2-3-2.mp3",
+    "duration": 9.5952,
+    "textHash": "fe54eb581617201461a1d76c28287457afd13938b8b926ffbd50c53017ef4560",
+    "text": "四季主要来自地轴倾斜，南北半球季节相反。模型固定轨道距离，帮助比较倾斜的影响。",
+    "audioHash": "310ec1cbdd5cd7953a43947bb1c93f40f7c4671bfc638546732333d58b783ea5"
+  },
+  "seasons-4-5-0": {
+    "file": "audio/seasons-4-5-0.mp3",
+    "duration": 8.3718,
+    "textHash": "b850fe52daf2bb57235704274a106970d7faa661cf3bd30a9fcbfc08a5c17003",
+    "text": "位置零表示北半球冬季，位置二表示北半球夏季。比较的是日照，不是太阳距离。",
+    "audioHash": "23eaa979f39cd8264f57f959f8804d2b768c9db400b4f7e954187372c9fe6d49"
+  },
+  "seasons-4-5-1": {
+    "file": "audio/seasons-4-5-1.mp3",
+    "duration": 7.898,
+    "textHash": "e703d80ef405173a98ddcecc8a96b9e73de901d365e96411acc0da5b9346dc8e",
+    "text": "保持选项为北半球，先把数值设为0，运行一次完整动画，留意模型的变化。",
+    "audioHash": "7567ad2d32ad8240c9bd06d0b9862b050f0c473eb0aeda7ab70bb289708da3ae"
+  },
+  "seasons-4-5-2": {
+    "file": "audio/seasons-4-5-2.mp3",
+    "duration": 9.146,
+    "textHash": "516e7518b901b5d3d1e74c0ee9c5bff8dc84a03649e1e8f4df30b8b6546d679d",
+    "text": "选择北半球，先观察数值0，再观察数值2。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "85cfda37ad8c0d39e2e31ace693baf47084f2d81580db39f06569508a946d09e"
+  },
+  "seasons-6-8-0": {
+    "file": "audio/seasons-6-8-0.mp3",
+    "duration": 7.7967,
+    "textHash": "96ad6a0008069305d6665a0792bfdac849cac8abf7204421c35a96dab0ac4b55",
+    "text": "地球歪着身子绕太阳走。地轴一直朝着同一侧，看看哪一半更朝向太阳。",
+    "audioHash": "6b06e869d1f5b9e55a7f290c1a449b72b7f8576b801555ec7c9f588aaac7a750"
+  },
+  "seasons-6-8-1": {
+    "file": "audio/seasons-6-8-1.mp3",
+    "duration": 8.3718,
+    "textHash": "b850fe52daf2bb57235704274a106970d7faa661cf3bd30a9fcbfc08a5c17003",
+    "text": "位置零表示北半球冬季，位置二表示北半球夏季。比较的是日照，不是太阳距离。",
+    "audioHash": "e2e49a8c2953bbff0a352fae0ed185bebd53a587cd01f520c7cef8e3fb0f6800"
+  },
+  "seasons-6-8-2": {
+    "file": "audio/seasons-6-8-2.mp3",
+    "duration": 8.4205,
+    "textHash": "60974ace8372a5ee53f0774a8fa99178b2af62d3b1857bf004ae87533daf480c",
+    "text": "选择北半球，把公转位置编号设为2，点击观察季节，等动画完成后找出变化。",
+    "audioHash": "e5fa7b3ac625ba6b15e9bb0a1a8d7e56f5c0ba6748c00cbe487474969cb945e4"
+  },
+  "latitude-longitude-2-3-0": {
+    "file": "audio/latitude-longitude-2-3-0.mp3",
+    "duration": 8.1451,
+    "textHash": "602a8fe5bfacd1072c20f6f1f14db1af9eff0db9f424cf9400187fccbb5436b9",
+    "text": "地球上画着帮助找位置的线。横向的一圈是赤道，从这里向北或向南找纬度。",
+    "audioHash": "e1f314769f91f1cc64961bed3581075a1f44d55409282b0fe9dc9f07d47db76f"
+  },
+  "latitude-longitude-2-3-1": {
+    "file": "audio/latitude-longitude-2-3-1.mp3",
+    "duration": 8.2706,
+    "textHash": "60aa2d0e3d018c515f6507b4b2d9fbf51ee329cfd4be8099b8e0338b6665420c",
+    "text": "和大人一起选择东经，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "ba57ce1e0559a2b96c5a32f605d7f0280ba51359b2ac9f458f0a852384a75b62"
+  },
+  "latitude-longitude-2-3-2": {
+    "file": "audio/latitude-longitude-2-3-2.mp3",
+    "duration": 8.4691,
+    "textHash": "99b1c8ce0f19a6b943b41913234870d5b9f1218cba96256f9a1614caf1238aa5",
+    "text": "赤道是纬度零点，零度经线是经度零点。数字相同，也要看清东西或南北方向。",
+    "audioHash": "ce5f7c727423494f1fe7b09ab7e0f1bc177e00f8a5dc27c13552ea9841bc15d6"
+  },
+  "latitude-longitude-4-5-0": {
+    "file": "audio/latitude-longitude-4-5-0.mp3",
+    "duration": 8.6472,
+    "textHash": "ff0007ceb7cb2fb87285574b0129fed1241d813820eb8f6c106b787638c1d9ac",
+    "text": "经度从零度经线向东或向西数。一个档位代表三十度，亮点告诉你模型中的位置。",
+    "audioHash": "025970c9655be537867dcf28b2e69a80ea0766acb94cc549dfc963fa6adc9c0a"
+  },
+  "latitude-longitude-4-5-1": {
+    "file": "audio/latitude-longitude-4-5-1.mp3",
+    "duration": 7.6225,
+    "textHash": "e22d6ba107b93b8dda6e41de2534e26c28ed12cd6c6db3b652b7ebae615319ca",
+    "text": "保持选项为东经，先把数值设为0，运行一次完整动画，留意模型的变化。",
+    "audioHash": "4093085ff8e6e7ff3097c87b1ae58147c57891c5cd1529c30b7e13512a613061"
+  },
+  "latitude-longitude-4-5-2": {
+    "file": "audio/latitude-longitude-4-5-2.mp3",
+    "duration": 8.8945,
+    "textHash": "e51d3d3dbba6c3e3f3d2bc5feb9c4dce4dd76dbcd384266854fafbdfa9bdf5cd",
+    "text": "选择东经，先观察数值0，再观察数值2。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "f2a0464e77eeb2c1421d4101ba97e28da2ba567ab33940905eee771a8f0a51a3"
+  },
+  "latitude-longitude-6-8-0": {
+    "file": "audio/latitude-longitude-6-8-0.mp3",
+    "duration": 8.1451,
+    "textHash": "602a8fe5bfacd1072c20f6f1f14db1af9eff0db9f424cf9400187fccbb5436b9",
+    "text": "地球上画着帮助找位置的线。横向的一圈是赤道，从这里向北或向南找纬度。",
+    "audioHash": "7b01c95f155a8b0b0e6f3ba60274d75190d408511f4e2d5d32a1936394f0620c"
+  },
+  "latitude-longitude-6-8-1": {
+    "file": "audio/latitude-longitude-6-8-1.mp3",
+    "duration": 8.6472,
+    "textHash": "ff0007ceb7cb2fb87285574b0129fed1241d813820eb8f6c106b787638c1d9ac",
+    "text": "经度从零度经线向东或向西数。一个档位代表三十度，亮点告诉你模型中的位置。",
+    "audioHash": "d719e91079a36bbd8456fcca3c258893cfe40425c05369779ea99ae24f7c1ab3"
+  },
+  "latitude-longitude-6-8-2": {
+    "file": "audio/latitude-longitude-6-8-2.mp3",
+    "duration": 7.7723,
+    "textHash": "c187e5f235a89e32d5c593df51a57bf744b7d89f34f9dffb20a223e192dca4fa",
+    "text": "选择东经，把角度档位设为2，点击定位坐标，等动画完成后找出变化。",
+    "audioHash": "6586c8df1402d802e45e29cde176fad96dd8d1541956740d029170536726bc04"
+  },
+  "contour-map-2-3-0": {
+    "file": "audio/contour-map-2-3-0.mp3",
+    "duration": 7.5212,
+    "textHash": "abdb218a788afbc911b3d1263b8470a069e1e5dce7abbea530fbc55ff75f976d",
+    "text": "地图上的一圈圈线像山的腰带。走在同一圈线上，表示的高度是一样的。",
+    "audioHash": "1738cda2f7287b2420672dd91e66fa4c790761f198d308b6028c5e604c874a88"
+  },
+  "contour-map-2-3-1": {
+    "file": "audio/contour-map-2-3-1.mp3",
+    "duration": 9.2468,
+    "textHash": "a6485b6dcba7d38e5528be8e0fc452eb4f4f6918e882c80f11805e1e97ceb0cf",
+    "text": "和大人一起选择俯视等高线，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "cfdbf1ee2349e94c774c1e49f37476ea0f90eb14b657d2f079c77eef353eff53"
+  },
+  "contour-map-2-3-2": {
+    "file": "audio/contour-map-2-3-2.mp3",
+    "duration": 8.295,
+    "textHash": "f22e5c9a5212dec6344374be22352023fd0e5bc1aa028b95e7beed16dfa97a3a",
+    "text": "一条等高线上的高度相同，不是距离山顶相同。山峰和米数都是情景示意。",
+    "audioHash": "690b1553ef405004306915c9171a100e60a38e53420f97513024af18f6fea033"
+  },
+  "contour-map-4-5-0": {
+    "file": "audio/contour-map-4-5-0.mp3",
+    "duration": 8.0721,
+    "textHash": "25cca5cc8e317912c12234602a4218438399bd1899ea00b3e0533ce4e72e79d0",
+    "text": "对照山体和地图，找出同样高度的一圈。这里每隔五十米画一条示意等高线。",
+    "audioHash": "5b9b5f4c152463079779b76d0f3812f92b4016dd3c546dfc8d7fa6e87c743ad6"
+  },
+  "contour-map-4-5-1": {
+    "file": "audio/contour-map-4-5-1.mp3",
+    "duration": 8.5704,
+    "textHash": "d92137c4423e79cb13577c0da3dbc3e723abe62b2390aac1794062333d72a879",
+    "text": "保持选项为俯视等高线，先把数值设为1，运行一次完整动画，留意模型的变化。",
+    "audioHash": "8dab7b3dfc995145ae03cc2301c5bfc14b0044d5cd9549453f15eda479965825"
+  },
+  "contour-map-4-5-2": {
+    "file": "audio/contour-map-4-5-2.mp3",
+    "duration": 9.9193,
+    "textHash": "9df761df6a984e22f3ea8c803fdcbee45d37ecdb6dbf4a1404f5cbf703cd5d4a",
+    "text": "选择俯视等高线，先观察数值1，再观察数值4。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "ee486b0128095f216e8de481a779b901d9a2e83653dfecf961344c7506f6ebd5"
+  },
+  "contour-map-6-8-0": {
+    "file": "audio/contour-map-6-8-0.mp3",
+    "duration": 7.5212,
+    "textHash": "abdb218a788afbc911b3d1263b8470a069e1e5dce7abbea530fbc55ff75f976d",
+    "text": "地图上的一圈圈线像山的腰带。走在同一圈线上，表示的高度是一样的。",
+    "audioHash": "58bfcc36a18598c90ac2dba25f0f06f5ccefb65229f44cb0283e34748698d493"
+  },
+  "contour-map-6-8-1": {
+    "file": "audio/contour-map-6-8-1.mp3",
+    "duration": 8.0721,
+    "textHash": "25cca5cc8e317912c12234602a4218438399bd1899ea00b3e0533ce4e72e79d0",
+    "text": "对照山体和地图，找出同样高度的一圈。这里每隔五十米画一条示意等高线。",
+    "audioHash": "f1579fad08d915613556ac049881c45a44e8305d1adce70525722ba4d6e853d2"
+  },
+  "contour-map-6-8-2": {
+    "file": "audio/contour-map-6-8-2.mp3",
+    "duration": 9.2954,
+    "textHash": "85d89d8403818c5229001d96912784be9d4e147615d9ab04a13508dd8da36890",
+    "text": "选择俯视等高线，把山峰高度等级设为4，点击绘制等高线，等动画完成后找出变化。",
+    "audioHash": "75a1b8e37027ef8b14da1bf2b9d1c233b92fb43a2dfcbc8b0d2114ce77cd2b6c"
+  },
+  "map-directions-2-3-0": {
+    "file": "audio/map-directions-2-3-0.mp3",
+    "duration": 7.898,
+    "textHash": "cea83001938b21b809c389982d4592f6f51d0a75d329552a216cee788496c3f0",
+    "text": "地图上有指北箭头。先找北，再让小旅行者从中间出发，看看走到了哪里。",
+    "audioHash": "b51a7d63c0a89ae00d73b9764788557f4f6697017dcad676aebfd0247f3d36ed"
+  },
+  "map-directions-2-3-1": {
+    "file": "audio/map-directions-2-3-1.mp3",
+    "duration": 8.3475,
+    "textHash": "1b3d62256ff4e2e1e28a12447e1186cae5ce54333fc924293b5134852a693374",
+    "text": "和大人一起选择向东，按一次观察按钮，等模型走完动作，再说说你看见了什么。",
+    "audioHash": "5208f6e7953aeed8f8c04fe8759c105dec216ef411f65988b093b498607261fd"
+  },
+  "map-directions-2-3-2": {
+    "file": "audio/map-directions-2-3-2.mp3",
+    "duration": 9.02,
+    "textHash": "fa40d7f747cdba5d10d4b48360b331c141af11e8c0e3a500c1bd6cf0f04853d5",
+    "text": "地图方向要看指北箭头，不能只看屏幕左右。观察视角变化，不会改变地图里的北方。",
+    "audioHash": "e93ca3a49b060f814a3b725b6ea21a9d48fc4f5281d2ad9371800750d96596fe"
+  },
+  "map-directions-4-5-0": {
+    "file": "audio/map-directions-4-5-0.mp3",
+    "duration": 8.1451,
+    "textHash": "9f8f84116be587e4ed2e9f1eedcb22dde39ab1bcf6629db5330c2273bf3fb2a7",
+    "text": "这张地图上方是北，右边是东。每走一格，旅行者就沿选好的地图方向移动一格。",
+    "audioHash": "33b5ec6ba85dca93452b79092979eab624ec73c9817d6cfff0b53a172535e050"
+  },
+  "map-directions-4-5-1": {
+    "file": "audio/map-directions-4-5-1.mp3",
+    "duration": 7.7967,
+    "textHash": "d9896574c326c3bcbe9ba2667a722124d9706f53fc7bb26b5d98394db9c359c7",
+    "text": "保持选项为向东，先把数值设为1，运行一次完整动画，留意模型的变化。",
+    "audioHash": "8f935402852397284a75981e9f08f0b6b6ca1de4f50263a70aeac5b27effd8e6"
+  },
+  "map-directions-4-5-2": {
+    "file": "audio/map-directions-4-5-2.mp3",
+    "duration": 8.9713,
+    "textHash": "85ac3638b0716eb02c1d82f7b718a946ab9ef0adaadee0efe5afae3e6afbaeb4",
+    "text": "选择向东，先观察数值1，再观察数值3。两次都运行完整动画，只改变这一个数值。",
+    "audioHash": "53a33701b20ab36e08b3b0695ce612f41b97cc4eeff266d8580271d7add57f92"
+  },
+  "map-directions-6-8-0": {
+    "file": "audio/map-directions-6-8-0.mp3",
+    "duration": 7.898,
+    "textHash": "cea83001938b21b809c389982d4592f6f51d0a75d329552a216cee788496c3f0",
+    "text": "地图上有指北箭头。先找北，再让小旅行者从中间出发，看看走到了哪里。",
+    "audioHash": "5ec37414c035f473e0089e63f0fda7272eca069674da63130b319d46d515099c"
+  },
+  "map-directions-6-8-1": {
+    "file": "audio/map-directions-6-8-1.mp3",
+    "duration": 8.1451,
+    "textHash": "9f8f84116be587e4ed2e9f1eedcb22dde39ab1bcf6629db5330c2273bf3fb2a7",
+    "text": "这张地图上方是北，右边是东。每走一格，旅行者就沿选好的地图方向移动一格。",
+    "audioHash": "221f32f11491643e89dc03b8061cfe1424ce1c52cbd7d9f05db5b468aae5c572"
+  },
+  "map-directions-6-8-2": {
+    "file": "audio/map-directions-6-8-2.mp3",
+    "duration": 7.8453,
+    "textHash": "eec9e24125fe07def4dce96f417aa21bc551019a0f8142dd93ebba1f516dbd7a",
+    "text": "选择向东，把行走格数设为3，点击沿地图走，等动画完成后找出变化。",
+    "audioHash": "b946704ff1602502c2cfd8ca20d803018fc26462542fd960831226546030c934"
+  },
+  "archaeology-layers-2-3-0": {
+    "file": "audio/archaeology-layers-2-3-0.mp3",
+    "duration": 8.1451,
+    "textHash": "c098088f9fd274d0dc3982cc248176e74588e382bcbeec81a942c3e1eb0d8f83",
+    "text": "土里面藏着过去的线索。看看不同颜色的土层，每件小物品都有它原来的位置。",
+    "audioHash": "156597e29b9a1b22a45d408b847bc0c60bfef7a75947a8df24a18330fa633b8d"
+  },
+  "archaeology-layers-2-3-1": {
+    "file": "audio/archaeology-layers-2-3-1.mp3",
+    "duration": 7.4726,
+    "textHash": "1e258e42ce07e4cfacd849e2d79552669c1ee9952c3cc154e38988b943196a0d",
+    "text": "选一层，开始观察。土慢慢移开，小物品露出来，我们还要记住它在哪里。",
+    "audioHash": "df194962346614950209f573829518e7ff6c1ba174685dc9f06fb381b871c2d0"
+  },
+  "archaeology-layers-2-3-2": {
+    "file": "audio/archaeology-layers-2-3-2.mp3",
+    "duration": 7.4443,
+    "textHash": "cb93822413928bb5a65133280b6dff5adda3a8b1fc91d00df3fef4c108e821ff",
+    "text": "再看一次，小物品和它的土层要放在一起记。位置也是过去留下的线索。",
+    "audioHash": "b008acefcec91ab1eea585d02c13cc53664569643e5536c5863209a8d61375f2"
+  },
+  "archaeology-layers-4-5-0": {
+    "file": "audio/archaeology-layers-4-5-0.mp3",
+    "duration": 8.1977,
+    "textHash": "b10eb5214ac894fa5c54095510598d153b0da5bac95c0862b4b8d171ebf6278d",
+    "text": "考古人员不只看物品漂亮不漂亮，还会仔细记录它在哪一层、哪个位置被发现。",
+    "audioHash": "c4ea04350b18c131f1fbfda920c547f4c9d7747f80d6a4a492224b4a50df024d"
+  },
+  "archaeology-layers-4-5-1": {
+    "file": "audio/archaeology-layers-4-5-1.mp3",
+    "duration": 8.2463,
+    "textHash": "ce8be77746e7aafef75950ced26274e90cb93bf26ff03d638aa474aea0b67d38",
+    "text": "选择一个层位，观察物品和记录卡。留下位置，才能让发现和周围的线索连起来。",
+    "audioHash": "8438f9fd8c9c03b34dcaa82e352329b5bd60ee86c9667932ce9852c30958a702"
+  },
+  "archaeology-layers-4-5-2": {
+    "file": "audio/archaeology-layers-4-5-2.mp3",
+    "duration": 8.5704,
+    "textHash": "57e39f336e8e832934edcb3cf1836570f2083a06025d3cc4188d1c92cf842ebe",
+    "text": "保持记录方式不变，比较第一层和第三层。看见不同发现，也别丢掉它们的位置。",
+    "audioHash": "55d9686df67e3fc4fc5b4c87e95c60932ca2fa3379bce319297d852f8e4fcbb8"
+  },
+  "archaeology-layers-6-8-0": {
+    "file": "audio/archaeology-layers-6-8-0.mp3",
+    "duration": 8.5947,
+    "textHash": "395e6c7c14a44b0ff8f3a6be5b1b431f656bd093b089b2fcfffeea21b25c83ec",
+    "text": "地层能帮助寻找先后关系，但土曾被挖动时就要小心，不能只凭深浅判断年代。",
+    "audioHash": "6a0fb81237840a4e268e60d191a84116e217563ee7688582afe8c432f2be2c3d"
+  },
+  "archaeology-layers-6-8-1": {
+    "file": "audio/archaeology-layers-6-8-1.mp3",
+    "duration": 8.1694,
+    "textHash": "cd266e938287386b84a678f41a1754105f9312c8f763ed3c4c17ca56a5083bbb",
+    "text": "观察第三层，保留层位记录。检查物品与记录卡是否对应，再完成一次观察。",
+    "audioHash": "a68e03f59fbd284369789c367b685bf3677463aa3b77ce10c6fd4c0570271351"
+  },
+  "archaeology-layers-6-8-2": {
+    "file": "audio/archaeology-layers-6-8-2.mp3",
+    "duration": 8.6716,
+    "textHash": "6660c349c00b4de1412e9397dfeaba614f8be1ff1b1133390b08c134b5e1ce7b",
+    "text": "这只是未扰动地层的简化模型。真实考古要结合位置、材料和更多证据来解释。",
+    "audioHash": "243fff1b47fcd7f2ad1bda848c20515e9b59b1602d1be32521b116997f351632"
+  },
+  "ancient-pottery-2-3-0": {
+    "file": "audio/ancient-pottery-2-3-0.mp3",
+    "duration": 7.5942,
+    "textHash": "b4daec2b32556605e1402704b4ae9c3a6b072082a26f3a592441982b86e9b95c",
+    "text": "软软的泥条可以围成一圈。再往上接一圈，小小的陶器就慢慢有了身体。",
+    "audioHash": "0c2b8325520960053b61144e4850da8cec490c26e54d6b8d322e2ba0b9933c12"
+  },
+  "ancient-pottery-2-3-1": {
+    "file": "audio/ancient-pottery-2-3-1.mp3",
+    "duration": 8.0478,
+    "textHash": "72c30db2383b593f63c54284598191b5a5dee61b0554d5599bdeca69ee912cbe",
+    "text": "开始盘筑，看泥条一层层接起来。选一种表面痕迹，看看陶器上有什么变化。",
+    "audioHash": "235ceef518a66dfdf33d9277a7da72df82aa32afd2ea40dbfc103f5ccbd303ef"
+  },
+  "ancient-pottery-2-3-2": {
+    "file": "audio/ancient-pottery-2-3-2.mp3",
+    "duration": 7.8453,
+    "textHash": "c2f8134121aaaca2a39c87fb175eb74faebad9b1ea40a3ba944381fc7d7404dd",
+    "text": "再观察一次，数数泥条的圈。过去的手艺也会在陶器表面留下小小的痕迹。",
+    "audioHash": "64428721d364b5367223e96422ac2d06c39d807c02950859ece2433c3ebff3e7"
+  },
+  "ancient-pottery-4-5-0": {
+    "file": "audio/ancient-pottery-4-5-0.mp3",
+    "duration": 8.5704,
+    "textHash": "0ff00482828f8384b5a45a11517359fb6058f8855b777b1814cdfd8f35483ee2",
+    "text": "古代陶器有不同形状和纹饰。盘筑的泥条、绳子压出的纹路，都能留下工艺线索。",
+    "audioHash": "5292076ddd1ac418c2abf38bf4ed4519d20044ee0a2febc2e6ba64323561c7be"
+  },
+  "ancient-pottery-4-5-1": {
+    "file": "audio/ancient-pottery-4-5-1.mp3",
+    "duration": 8.522,
+    "textHash": "1c8bca4453d32f99888ef83ebe67d8d955bbf0ef1441d48a37b1bd5a91b9892f",
+    "text": "选择泥条层数，让器壁慢慢长出来。看清表面痕迹，再检查它和样片是否相同。",
+    "audioHash": "ce73bc8c13cbff7799dd52307c1227825d7e4422177afa74b0bdbf7cd25a920d"
+  },
+  "ancient-pottery-4-5-2": {
+    "file": "audio/ancient-pottery-4-5-2.mp3",
+    "duration": 7.9223,
+    "textHash": "c4a4e0e4165c9eab84ca06b67d5552eef0018310585071f926d5313cbf12c74e",
+    "text": "固定盘筑纹，比较两层和五层。只改变泥条层数，看看器壁高度怎样变化。",
+    "audioHash": "7497cec341f0bbf66a26658c99b299770e72b22a172ba6230fe65ee3c9c58b89"
+  },
+  "ancient-pottery-6-8-0": {
+    "file": "audio/ancient-pottery-6-8-0.mp3",
+    "duration": 8.1977,
+    "textHash": "cf78d16a5acae4c525c2969ac0e0b8885654b77385d08a23a86667a281f4bee0",
+    "text": "陶器能提供制作方法的线索，但不能只看一条纹路，就猜定年代或使用它的人。",
+    "audioHash": "3947f7c9c93aaef3026de33032db8ae68ad770068a36ffc290a770250953a052"
+  },
+  "ancient-pottery-6-8-1": {
+    "file": "audio/ancient-pottery-6-8-1.mp3",
+    "duration": 8.5947,
+    "textHash": "d316beaabb074a492e3e9f12aa2bcdb7e3832b49601f12745fd5e34b1806d725",
+    "text": "选择五层泥条和绳纹装饰，运行盘筑过程。检查器壁与表面痕迹，再记下结果。",
+    "audioHash": "21796f96c6f77e979ceff545f4d3aa4d62ea540395530873e9648c21d6bbac0d"
+  },
+  "ancient-pottery-6-8-2": {
+    "file": "audio/ancient-pottery-6-8-2.mp3",
+    "duration": 8.6472,
+    "textHash": "f149267cbabce51464d8d9e42649e22b6e79fefaee7cb39d930d08d5090cd25f",
+    "text": "泥条盘筑和绳纹只是部分工艺。真实器物还要结合发现位置、材料和修复记录。",
+    "audioHash": "a0317adc83c3f3875e9dc0fd8fb0ee6dcd011b0cb02a323c85e07f96163b805e"
+  },
+  "early-farming-2-3-0": {
+    "file": "audio/early-farming-2-3-0.mp3",
+    "duration": 8.623,
+    "textHash": "a7d6ea3f9ac5709753eb1911a21156c8e1d727749c331bf0473fa15a25917e61",
+    "text": "小种子要先放进土里，才能慢慢长成庄稼。过去的人也要花很多时间照料田地。",
+    "audioHash": "7b02394cabbceac0fda32cc3ad439b4ead0918c5a90ac3f7449acd7f19bc7454"
+  },
+  "early-farming-2-3-1": {
+    "file": "audio/early-farming-2-3-1.mp3",
+    "duration": 8.2706,
+    "textHash": "8e47e98f3f1e32d35b9b1f428f14685707ad72ca6c4f47b20d18592e4ab9414e",
+    "text": "选择一道农事工序，开始观察。看看种子、庄稼和篮子，它们会发生什么变化。",
+    "audioHash": "958605dd41ae968ed02be7464fda9cf41f12b50708767ca4c1df5ed79d5ed4c4"
+  },
+  "early-farming-2-3-2": {
+    "file": "audio/early-farming-2-3-2.mp3",
+    "duration": 7.5212,
+    "textHash": "c53e474c8316b1691989f8f60d81247c33088deedba21840813a8590c1e5d93d",
+    "text": "再看一次，从播种到储藏有好多事情要做。画面把很长的等待变得很短。",
+    "audioHash": "7d2693a0717fbc81d98f5d88cb2f124501c36e2008a69100c4c3fdae3629437c"
+  },
+  "early-farming-4-5-0": {
+    "file": "audio/early-farming-4-5-0.mp3",
+    "duration": 8.6716,
+    "textHash": "fcc362a4110b9509f4a6c8f9fcd5041672a07994af7d0663da1c25208e1094f0",
+    "text": "早期农人用工具照料田地，也要收获和保存粮食。不同地方种的作物不一定相同。",
+    "audioHash": "055b0f90d1a1521b8e272e6fa58afd984d416c3c7b05f56a050dc9b2a41e7007"
+  },
+  "early-farming-4-5-1": {
+    "file": "audio/early-farming-4-5-1.mp3",
+    "duration": 8.0721,
+    "textHash": "bddca36b2317a11c0f31127c0a0a063b9eec0c0e1715767bde699d42f4d4ab75",
+    "text": "选择工序，看看粮食现在在田里、篮子里还是罐子里。记住每种工具的用途。",
+    "audioHash": "cbd099959557ec82e8cdda25f1e9d8d8edb7cf51ca8f2291067ca31fa258a3a6"
+  },
+  "early-farming-4-5-2": {
+    "file": "audio/early-farming-4-5-2.mp3",
+    "duration": 7.898,
+    "textHash": "a1f256dab9a1c5d6a0232683b4fd947891d902bf48750eb889f80c256b5b4032",
+    "text": "固定小麦田，比较第一道和第四道工序。粮食的位置变了，过程也不能颠倒。",
+    "audioHash": "aa5ae3eae0c298d26e7dae95d3cc8291ce1ad92c5b2c39396b741f3671654e73"
+  },
+  "early-farming-6-8-0": {
+    "file": "audio/early-farming-6-8-0.mp3",
+    "duration": 8.6716,
+    "textHash": "971b1f9fa08e9a36cbbd93eba2dfe5b80c0fc6701ac9936a5995307887c4f677",
+    "text": "农耕不是一夜之间发生的变化。种植、采集和其他生活方式，曾在许多地方并存。",
+    "audioHash": "2827b8ff4b8d215dbdea132450b8d01f7954e577e02e12e552b134602a19130c"
+  },
+  "early-farming-6-8-1": {
+    "file": "audio/early-farming-6-8-1.mp3",
+    "duration": 8.7203,
+    "textHash": "de7aae640522575db565bb13097e9236e82052acacd6e381e6c91dda9c1cc1f0",
+    "text": "选择第四道工序和大麦田，运行观察。追踪收获怎样进入储藏罐，完成一次记录。",
+    "audioHash": "6192887a662a681ca5976853976760bf96d1e62fc06dc573b1bf17480f07cb75"
+  },
+  "early-farming-6-8-2": {
+    "file": "audio/early-farming-6-8-2.mp3",
+    "duration": 8.5947,
+    "textHash": "b1f34f1eb4cfd88399ac26d5e353ed18a1e8f66b6b2fde8b68857dad5cb1aedf",
+    "text": "这是一组农事过程示意，不是统一的历史时间表。真实作物生长需要合适的条件。",
+    "audioHash": "946f6f18d7929ecae2ff98448929e3a762c151c195482476583fa27f0dcede73"
+  },
+  "writing-history-2-3-0": {
+    "file": "audio/writing-history-2-3-0.mp3",
+    "duration": 8.3475,
+    "textHash": "c3d6b40d16ab97f4eb9ab7bfa68d42b7355ee031d15537225b073432a82c15c9",
+    "text": "过去没有今天的本子，也能把事情记下来。有人在泥板压印，有人在纸草上写字。",
+    "audioHash": "d454ede664e08f98cf81696fb395d42b1197cebd738665768565157c2f2e3600"
+  },
+  "writing-history-2-3-1": {
+    "file": "audio/writing-history-2-3-1.mp3",
+    "duration": 8.222,
+    "textHash": "116a69473520faeaed2c2a4f48fd65ac848defdfe321d8e2123cd3751ab3e41a",
+    "text": "选一种材料，开始留下记号。看看小工具走过以后，表面出现了什么样的痕迹。",
+    "audioHash": "78af1645d9a226392b6e532120c9eaa2e111811b8629985371c167b20b729cf5"
+  },
+  "writing-history-2-3-2": {
+    "file": "audio/writing-history-2-3-2.mp3",
+    "duration": 7.4969,
+    "textHash": "c8b4a3431f229780d070eb71c3cbf12b2b9f7c25d3fd93d7c8a302220de41569",
+    "text": "再试一次，泥板有压出来的凹痕，纸草有墨迹。它们都能帮助人们留下记录。",
+    "audioHash": "54132f432519bfb497a3ec21d4b62e382da8e493f59a244a32edd622441f8862"
+  },
+  "writing-history-4-5-0": {
+    "file": "audio/writing-history-4-5-0.mp3",
+    "duration": 8.5704,
+    "textHash": "282c09ef63aec1395ad7890c3ccbc60f26dd00a350b7b7e785de61ea0780174e",
+    "text": "材料不同，书写方法也会不同。泥板能压出痕迹，纸草上则可以留下墨写的记号。",
+    "audioHash": "9092f6addefc17b434d81a1cbd399bd73b0e418b7fdd05bd33df18c4fab9b47c"
+  },
+  "writing-history-4-5-1": {
+    "file": "audio/writing-history-4-5-1.mp3",
+    "duration": 8.6959,
+    "textHash": "41e17f01ce99a858556d6bab35909f83582b10f3c48fcbb9d9b108565a1bb0a7",
+    "text": "先观察一种材料怎样留下符号。数数已经出现的记号，看看工具与材料如何配合。",
+    "audioHash": "2c859d24e8ba24dd5935fe6379958ed900fab6495c415b9cc108e58b7a5029a6"
+  },
+  "writing-history-4-5-2": {
+    "file": "audio/writing-history-4-5-2.mp3",
+    "duration": 8.1451,
+    "textHash": "0cb1c8da5a3bb5497081604a648c23a12f3607c94e0025196fb2a982aea4f6df",
+    "text": "固定泥板压印，比较两个和五个符号。数量变了，但留下记号的方法保持相同。",
+    "audioHash": "78b549ae5f047b910ada0e61cc89f686f049514df1bc3a209f6beac208b7fc73"
+  },
+  "writing-history-6-8-0": {
+    "file": "audio/writing-history-6-8-0.mp3",
+    "duration": 8.5947,
+    "textHash": "6fc3cf4f9973fc51ec9f56ae9bc1d1b7b6c00ee96e70e52b97f9c0e92ecf6ab6",
+    "text": "泥板和纸草来自不同地区的书写传统。不要把它们排成所有人都会走过的一条路。",
+    "audioHash": "cb5ffa003b02d4f5d63a550a9a583d4584e0fb5e8d59719284955a0e71f35593"
+  },
+  "writing-history-6-8-1": {
+    "file": "audio/writing-history-6-8-1.mp3",
+    "duration": 8.5947,
+    "textHash": "a87b9103fcba351a450feda9cac5f8dff19f8c0725990c237e85e1e956871cb3",
+    "text": "选择五个符号和纸草书写，观察墨迹逐个出现。这里的图形只是示意，不是译文。",
+    "audioHash": "d8c9faa623bbeab6fecc35a812159b60ee6aed9e612c086988fb23849a0e0084"
+  },
+  "writing-history-6-8-2": {
+    "file": "audio/writing-history-6-8-2.mp3",
+    "duration": 8.1451,
+    "textHash": "a5bfba243197f6956687ff51439b97f9fe5acbf0d8de53f6106f292396d467e0",
+    "text": "记录不仅要有记号，还要能解释记号的意义。真正的古文字需要专门的研究证据。",
+    "audioHash": "5cb2825587ceefde03ae5e70e38629fef36f6c7d07ce246578b242915ed3488d"
+  },
+  "paper-making-2-3-0": {
+    "file": "audio/paper-making-2-3-0.mp3",
+    "duration": 8.0195,
+    "textHash": "465eaf6f3206b5706c16d0a4c87c9d57a8bee3b5a7ac0484783df305a6294107",
+    "text": "纸里面有许多细细的纤维。它们先在水里散开，再慢慢连成一张可以写字的纸。",
+    "audioHash": "c3be428ac4b1ad7f14e6e2d09f1dcc0a1594426031ceb846dabf477943535525"
+  },
+  "paper-making-2-3-1": {
+    "file": "audio/paper-making-2-3-1.mp3",
+    "duration": 7.7198,
+    "textHash": "dfa50c91f92565fa932e0fad65a2c2f11b27e1c03c8b682c51ca2140c72cd06c",
+    "text": "选择一道工序，开始观察。看看纤维怎样留在帘子上，水又慢慢去了哪里。",
+    "audioHash": "711d354bf0732125a1450bba5c76b886c2b83a676a30c3db705bd42cccd66435"
+  },
+  "paper-making-2-3-2": {
+    "file": "audio/paper-making-2-3-2.mp3",
+    "duration": 8.546,
+    "textHash": "0e8b85b15ec7096914a4ac459d1de079b50708c0b4d581a36ba9f17a86b116b4",
+    "text": "再观察一次，一张纸要经过好多工序。真正的手工造纸，比这个画面花的时间长。",
+    "audioHash": "c0fa7db66cadd075fe2fca364328e4a519ef5f29db7533d5e3731ac40877ca45"
+  },
+  "paper-making-4-5-0": {
+    "file": "audio/paper-making-4-5-0.mp3",
+    "duration": 8.0195,
+    "textHash": "0021a6e47e49682eb93c7801fa09914a52dc3500ad33d799290c98f52123e906",
+    "text": "植物原料经过处理，才得到造纸的纤维。抄纸、压水和干燥，都是过程的一部分。",
+    "audioHash": "5c0a65057b3a1856052c5e7046cfa29a9be0547894d3ac5a5d854a345fb76281"
+  },
+  "paper-making-4-5-1": {
+    "file": "audio/paper-making-4-5-1.mp3",
+    "duration": 8.546,
+    "textHash": "f0bfdf6fe65107ca599099f66cf6a33a3384abe89640bf782fa01145069bbc87",
+    "text": "选择工序和纤维状态，看清纤维是分散还是聚在一起，再检查纸面上的变化。",
+    "audioHash": "eb3041114e2d0a91fbbd2b0703c5077eb662709a48f71ee11507da97a416400c"
+  },
+  "paper-making-4-5-2": {
+    "file": "audio/paper-making-4-5-2.mp3",
+    "duration": 8.5704,
+    "textHash": "3fc3a989f47175736aa21126c4578c2096cc99ac8c7cfacc58c2c4aca491a274",
+    "text": "固定纤维分散，比较第一道和第四道工序。原料的位置和形态变了，过程要连起来。",
+    "audioHash": "2c33dab77f6b620e2809c373fef6a1deb5613dff4aca6c9122a5d5ab43398e44"
+  },
+  "paper-making-6-8-0": {
+    "file": "audio/paper-making-6-8-0.mp3",
+    "duration": 9.0444,
+    "textHash": "71e043fb51b43ca2f2cecd9f370b406c37919ee654f2ac44d860b733f8fa4922",
+    "text": "传统造纸有许多细致步骤，不只是把植物泡水。这里用四个阶段帮助观察纤维成纸。",
+    "audioHash": "9c00fab41fbb08a1f0e7cb7a5dc0f1a1b89aca84f356bc5f9cff48971d45489b"
+  },
+  "paper-making-6-8-1": {
+    "file": "audio/paper-making-6-8-1.mp3",
+    "duration": 8.5704,
+    "textHash": "98ebf50c225b74bacffd9edb14ee21050db50b02db94535a0e4b175ff5ee542b",
+    "text": "选择第四道工序和纤维分散，完成一次观察。检查纸面是否形成连续的纤维层。",
+    "audioHash": "d531c518b10a885ca835aeb3ce0f78e59c2b06fd4e5b353d723d4082ae793b47"
+  },
+  "paper-making-6-8-2": {
+    "file": "audio/paper-making-6-8-2.mp3",
+    "duration": 7.9952,
+    "textHash": "e6f4771299badfcb0db621caed8bd265b28d0fed5d5fa806024c2e073b871705",
+    "text": "这不是造纸配方，也不计算纸的强度。不同原料与工艺，需要手艺人长期实践。",
+    "audioHash": "0559ee27868b50f1676f1ef722f345d3b465e07b715e3b60e0a7649f920b3bfe"
+  },
+  "woodblock-printing-2-3-0": {
+    "file": "audio/woodblock-printing-2-3-0.mp3",
+    "duration": 8.0195,
+    "textHash": "92639848cf03965f5915fd578c1b3ac63af983ed7505bb79be3bccde83ac921d",
+    "text": "木板上有凸起来的图案。给图案涂上墨，盖上纸，就能把它的样子留到纸上。",
+    "audioHash": "6a50ddf0c7a666c49a1598d8c2fc352d0254976334cbc250772cfaacd34d9582"
+  },
+  "woodblock-printing-2-3-1": {
+    "file": "audio/woodblock-printing-2-3-1.mp3",
+    "duration": 8.0478,
+    "textHash": "301ebe507a4f644e4eb62130f803651386e7c41f3af61b705d413e8c477caa30",
+    "text": "开始印刷，看墨刷走过版面，再看纸怎样贴上去。数数印出了几张小图画。",
+    "audioHash": "84a0b706596cd28e3ef68c55b43da9ecfb62a1cefcf8c3790d0e00aa6e48c68b"
+  },
+  "woodblock-printing-2-3-2": {
+    "file": "audio/woodblock-printing-2-3-2.mp3",
+    "duration": 8.222,
+    "textHash": "46a870b8ed114c5519ca4b13d272b77d94a3f793127555531cfc0d5eaa971106",
+    "text": "再试一次，同一块版还能继续印。看看几张纸上的图案，有哪些地方是相同的。",
+    "audioHash": "267a0100f849501b1eeb04c47b8917d8877ed86011aada9a720f50726e0fccc6"
+  },
+  "woodblock-printing-4-5-0": {
+    "file": "audio/woodblock-printing-4-5-0.mp3",
+    "duration": 8.222,
+    "textHash": "3a14861a3b8a1f2878860e1b2f0b4a9472064cfa5150b11a4c7b551e9ffbf0b5",
+    "text": "雕版把一幅图案留在整块版上。施墨、贴纸和转印要配合，才能把图案印出来。",
+    "audioHash": "99e45995063e2e1067f5dcbd8a7eb47209cecafacf6bcee64cf2eb6a531ac60a"
+  },
+  "woodblock-printing-4-5-1": {
+    "file": "audio/woodblock-printing-4-5-1.mp3",
+    "duration": 8.2706,
+    "textHash": "6857b96b8c24324129851d265a58fddc8758085b227b411b55ca8680866b71ea",
+    "text": "选一个图案，观察版面和纸面怎样对应。模型已经做好雕版，我们只观察转印。",
+    "audioHash": "390f308669968d96802df8e891c1320a4d7046b3a2398faa6b5c0acf72f6f1ae"
+  },
+  "woodblock-printing-4-5-2": {
+    "file": "audio/woodblock-printing-4-5-2.mp3",
+    "duration": 7.821,
+    "textHash": "ffade89c1ca986a0c79a0d76e0a59e9b40973f4d1df40ea75bb8dccbbdc8194e",
+    "text": "固定花叶版，比较印一张和三张。纸的数量变了，同一块版上的图案没有改变。",
+    "audioHash": "a0127ccbc3d0260dcc013d3c4bb302bf227769a8e6129d9780bfe057890a68ca"
+  },
+  "woodblock-printing-6-8-0": {
+    "file": "audio/woodblock-printing-6-8-0.mp3",
+    "duration": 8.4448,
+    "textHash": "de9d8803ae6c23a6536ca97831cbeedba68caaa1a146934d9cb022e2bd054266",
+    "text": "雕版的图文与整块版连接在一起。它可以重复印刷，但修改图文要处理这块版面。",
+    "audioHash": "283d39e78723320936ba2d264acf9d50e1fc0935d9a9037366b698ecaf123ba8"
+  },
+  "woodblock-printing-6-8-1": {
+    "file": "audio/woodblock-printing-6-8-1.mp3",
+    "duration": 8.1694,
+    "textHash": "8466b20a6e643c274cc006b9c0d6d23a8dfec496a7b9f39182af6338fac73688",
+    "text": "选择三张纸和波纹版，观察施墨与转印。检查三张图案，完成一次观察记录。",
+    "audioHash": "a01c884640bc6c6bafb0dc05b62078f85303b2c0f9db6ad53655ccc72ab6449e"
+  },
+  "woodblock-printing-6-8-2": {
+    "file": "audio/woodblock-printing-6-8-2.mp3",
+    "duration": 8.7446,
+    "textHash": "9544e778613201531635e9161a7b5c2304354434f8482dad4580c693477e2e28",
+    "text": "印刷不仅是机械动作，也包含设计和手艺。这里的图案是原创示意，不是文物复制。",
+    "audioHash": "a09ddd113a8ad30c27d19076c6851eafb2f4e2177a178bd12c5a6eb053b04079"
+  },
+  "movable-type-2-3-0": {
+    "file": "audio/movable-type-2-3-0.mp3",
+    "duration": 8.0721,
+    "textHash": "bd80a75ffa6f573f58d228c55656f3b9c28d2c7055108a76e7b9d85a2ece8cbe",
+    "text": "这里的每个字都有自己的小木块。把字块排在一起，就能在纸上印出一排记号。",
+    "audioHash": "eb039adf8fbb0e0e98b20c0f763f115d5dd23ec553058d7d6f81ce3c01ba0166"
+  },
+  "movable-type-2-3-1": {
+    "file": "audio/movable-type-2-3-1.mp3",
+    "duration": 8.295,
+    "textHash": "7cb720371a160b92c7fe6d8096814162c3202d9fc666e9a54c719969f9e5a8a8",
+    "text": "开始排字，看小木块走进框里。选另一种排列，看看纸上的次序会怎样改变。",
+    "audioHash": "290e2aa2b7d11326dcb5566796a5689fb1bde5636725e7a02ab6f7b2112d8708"
+  },
+  "movable-type-2-3-2": {
+    "file": "audio/movable-type-2-3-2.mp3",
+    "duration": 7.5942,
+    "textHash": "3ffdbd2008ff970bd26eb51dfa42480e7c33977a09fca18527f0f346595b39c8",
+    "text": "再试一次，小木块可以重新排队。换了位置，纸上的记号也会跟着换位置。",
+    "audioHash": "2ec30f26cb24df2ddd60b1c1fb7f92616adc84e833db4947b0ec510b024af076"
+  },
+  "movable-type-4-5-0": {
+    "file": "audio/movable-type-4-5-0.mp3",
+    "duration": 7.9223,
+    "textHash": "ce2f729063ef307cdcb482a61f6be31c4e05c3aeb91aa23e512eb1c8bbca7eb0",
+    "text": "活字能拆开又组合。字块的数量和排列位置，都会影响这一张纸上的版面。",
+    "audioHash": "55544487755f249ddb2536274f317f0d1d67535ed550bfcfddc5e77bf97a9372"
+  },
+  "movable-type-4-5-1": {
+    "file": "audio/movable-type-4-5-1.mp3",
+    "duration": 7.9952,
+    "textHash": "c81192817c888a9e11d258ed1091d924de58fa982f25c945462d85a74005acd0",
+    "text": "选择字块数和排列，观察字块从字盘走进版框，再看看印出来的顺序。",
+    "audioHash": "68fe75e9f69f02e2057b94673eafc3a4e3a8cadf3b9bb92c601a4fbe3e1ab402"
+  },
+  "movable-type-4-5-2": {
+    "file": "audio/movable-type-4-5-2.mp3",
+    "duration": 7.9952,
+    "textHash": "32a74ab5f087c15ce7fba5b1f5e511d761732332abbdec026bcdd2a487bed8c7",
+    "text": "固定顺序排版，比较两个和五个字块。多出来的是版面内容，不是文明的等级。",
+    "audioHash": "62098cad421d29031c5743d120704b08c9079c972b4246d5c880a5376a3e5019"
+  },
+  "movable-type-6-8-0": {
+    "file": "audio/movable-type-6-8-0.mp3",
+    "duration": 8.3962,
+    "textHash": "d1737ec23307c5e7cf026cb98e999fffdd49b60bab6d2a40e08070ef1e6b0511",
+    "text": "独立字块可以重复使用，也能换位排出别的内容。真实活字印刷需要细致校对。",
+    "audioHash": "f5b2befef6b851226dacefec06cea86ad812b3eb46157d8d6fc7e8d364d3b887"
+  },
+  "movable-type-6-8-1": {
+    "file": "audio/movable-type-6-8-1.mp3",
+    "duration": 8.3193,
+    "textHash": "aa2298d9a0682186ccdb5b6f550f9ea38933714ed382faee50163669ad711986",
+    "text": "选择五个字块和换位排版，观察版框与纸面是否对应，再完成一次印刷观察。",
+    "audioHash": "1c51a83eee5bc66c0e9e007dc8444628966fedf51b7af6f3bcab15f0432af97f"
+  },
+  "movable-type-6-8-2": {
+    "file": "audio/movable-type-6-8-2.mp3",
+    "duration": 8.498,
+    "textHash": "94e4b32bfa47396893cb500429636bae6c50a7811f71c37354d6d7ef700c66ad",
+    "text": "这里用现代汉字解释原理，不表示古代原文。木活字手艺至今仍需要人们传承。",
+    "audioHash": "4c9bc1b67b4ffbb3d37b6f9a27e422f6ce721acfb5f6db2dde962fb85a4d2168"
+  },
+  "silk-road-2-3-0": {
+    "file": "audio/silk-road-2-3-0.mp3",
+    "duration": 7.8453,
+    "textHash": "c28d969b20b9fa1196a7e18ff1b369960ed2d76482e99fcbe0558961bce5a61a",
+    "text": "路上有小小的商队，海上也有船。人们带着货物相遇，也会分享会做的事情。",
+    "audioHash": "28fc58eb03bff076150ae21d76b0d614e4229d55f70bced697e37896cd022657"
+  },
+  "silk-road-2-3-1": {
+    "file": "audio/silk-road-2-3-1.mp3",
+    "duration": 8.0478,
+    "textHash": "6b6f88c1f1a86a614a5c4a8971aeaea9789d98c39cd68328ec01c570832a69a3",
+    "text": "选一种路线，开始旅行。看看哪些交流点被连起来，又有哪些小货物换了地方。",
+    "audioHash": "d9d1f89f6e9cc0cb8ec3452f9b9b77dd80e0ac9a2da708342241e7c2d3861216"
+  },
+  "silk-road-2-3-2": {
+    "file": "audio/silk-road-2-3-2.mp3",
+    "duration": 8.1694,
+    "textHash": "02c151493f4814de988f80aa1275ea005acb52a2aeb758354757a25d0ca3369c",
+    "text": "再观察一次，丝路不是只有一条路。不同地方的人，能通过许多路线互相联系。",
+    "audioHash": "004432dc9b98b3163e27ddde897f5181fd2d43a243cf9f702d51472d4ece4f21"
+  },
+  "silk-road-4-5-0": {
+    "file": "audio/silk-road-4-5-0.mp3",
+    "duration": 8.1977,
+    "textHash": "7fbfdb75fedd8ddc32c5174688137ccb7d5e0aa1ec8b6e38edcbad8f70ce2dcf",
+    "text": "丝路是一张交流网络，有陆路也有海路。货物、手艺和想法，都能随着交流传播。",
+    "audioHash": "20c06940fbd14d216be79c5c2aa057014bd847d6f9358f55d4608508d48eaa64"
+  },
+  "silk-road-4-5-1": {
+    "file": "audio/silk-road-4-5-1.mp3",
+    "duration": 8.6959,
+    "textHash": "ddbb594784a0607b28edc36584eb0889d175cb6ff25b1be409e9402113570214",
+    "text": "选择交流点数量和路线，看看商队或船停在哪里。留意到站后出现的不同货物。",
+    "audioHash": "c5255fb520b40f178b77bc1acc04f8c0def9a2646a2d2494bd6133fba39861b1"
+  },
+  "silk-road-4-5-2": {
+    "file": "audio/silk-road-4-5-2.mp3",
+    "duration": 8.0964,
+    "textHash": "b7616fbe45fe13aa7565e8790cd9c85037a0637a30f1a88f0f6d0a73381ab585",
+    "text": "固定陆路商队，比较两个和五个交流点。多了联系点，不代表旅人都走过全程。",
+    "audioHash": "eb09a009193b198744e9031b596df46d2fc2267a35b1b9af2ec4f7ccfd74e1a5"
+  },
+  "silk-road-6-8-0": {
+    "file": "audio/silk-road-6-8-0.mp3",
+    "duration": 8.3962,
+    "textHash": "2593feffd20a28eab60e36c14f4df137404e9f9e63b55fc76589a1e075528729",
+    "text": "商旅常走丝路的一部分，货物还会继续转手。交流也包括知识、语言和制作技艺。",
+    "audioHash": "9abb2d886be517371a1058e3bf470622aa36deb77d07976268d28aa5cd9bed1c"
+  },
+  "silk-road-6-8-1": {
+    "file": "audio/silk-road-6-8-1.mp3",
+    "duration": 8.7971,
+    "textHash": "de7d303733fb1b6a8d79b9b905476ca9fbba835bce904c07d9d2732f37c70954",
+    "text": "选择五个交流点和海路商船，追踪停靠与交换。路线是示意图，不是完整古地图。",
+    "audioHash": "c7f90df757d45bbc98e1d5f48f85b1b1b2cf7063e7f86270fb57e985e2d97e25"
+  },
+  "silk-road-6-8-2": {
+    "file": "audio/silk-road-6-8-2.mp3",
+    "duration": 8.4691,
+    "textHash": "07765a22c88817b68e6d5a826f43589c07d47c729b1c1b30ba93474ddf1bfc23",
+    "text": "不同路线连接不同环境和人群。不要把所有时代的丝路，想成同一条固定道路。",
+    "audioHash": "c3b550d7aa45f147b7aaee877479d847e8439baedab1c02606c150c7d9b9dc8f"
+  },
+  "ancient-navigation-2-3-0": {
+    "file": "audio/ancient-navigation-2-3-0.mp3",
+    "duration": 8.1451,
+    "textHash": "a5b13c890b863ff4d51a855d43141408fd7b6ca633044312d379279560afb114",
+    "text": "大海上没有路牌。过去的人会看看天空，也会看看罗盘，帮助小船辨认方向。",
+    "audioHash": "78606726a3d88ca6d8dbfe975839cc85c56c4aabdb56f8d267765d056aa3d2ee"
+  },
+  "ancient-navigation-2-3-1": {
+    "file": "audio/ancient-navigation-2-3-1.mp3",
+    "duration": 8.1694,
+    "textHash": "0690baacf52458084528289da71d8886c35ed1b07a252b598d49d9c6a92b9efa",
+    "text": "选一种天气，开始观察。晴夜能看见星星，多云时看看罗盘的指针朝向哪里。",
+    "audioHash": "e5d0601df855fa9a03443125547cf1477218b8243203b9ec2712e579f6cd8745"
+  },
+  "ancient-navigation-2-3-2": {
+    "file": "audio/ancient-navigation-2-3-2.mp3",
+    "duration": 8.7971,
+    "textHash": "682b8350b42ecc0e0ec79724a38b8bfeffb14b4e42ea951b7c3e3f3bd495da11",
+    "text": "再观察一次，小船转弯，罗盘还会给出方向线索。真正航海需要更多知识和工具。",
+    "audioHash": "89bd13f217d2a04c33a5c252495e1f5e9fb70b9126923062fc539be84accfa64"
+  },
+  "ancient-navigation-4-5-0": {
+    "file": "audio/ancient-navigation-4-5-0.mp3",
+    "duration": 8.3193,
+    "textHash": "57667ba9115ee327734aca2e3dc4e4ea2da04ae65a75567843bed6c58e5f28c0",
+    "text": "晴夜的星空和多云时的罗盘，提供不同线索。海上的方向不能只靠随便猜测。",
+    "audioHash": "b757df907c37df6a85b9471a110fe036f4101b292b5287fa01544faa1c570dfb"
+  },
+  "ancient-navigation-4-5-1": {
+    "file": "audio/ancient-navigation-4-5-1.mp3",
+    "duration": 8.7971,
+    "textHash": "b3bf3a7349dc7bb91db2b0ef413f743b30657dad2cbb20cfc5610e3839d1b8ae",
+    "text": "选择航段和观察条件，看看小船怎样沿示意路线前进，留意天空和指针的变化。",
+    "audioHash": "01b3ad252915f8db74a4d6203f83cb02ab929ce0659cdc7ad48cef55e279bdcd"
+  },
+  "ancient-navigation-4-5-2": {
+    "file": "audio/ancient-navigation-4-5-2.mp3",
+    "duration": 8.4448,
+    "textHash": "46f0ffcb41402cfc01d13346317b70a92305543d200dbb2e95c2a8f35db528c3",
+    "text": "固定晴夜看星，比较一段和四段。航程变长，判断方向的线索仍需要仔细观察。",
+    "audioHash": "89666cb5af06568d348ee5fd748a422d0e7b1fffafffd9e4037552285162d09a"
+  },
+  "ancient-navigation-6-8-0": {
+    "file": "audio/ancient-navigation-6-8-0.mp3",
+    "duration": 8.3962,
+    "textHash": "0a20a890bf207327d4c07dd4da2570b44b9d62a71fc642068e1b009711198f62",
+    "text": "罗盘寻找的是磁北，星空提供另一种方向线索。它们不能直接当成同一个北方。",
+    "audioHash": "13312bf0f2cf7819a2492c1b407166b2e6202c808a4a5b5d264fa57b80703143"
+  },
+  "ancient-navigation-6-8-1": {
+    "file": "audio/ancient-navigation-6-8-1.mp3",
+    "duration": 8.9957,
+    "textHash": "853ed366b4f5ed2d963e0a1745a60b22ee4ede5258f3e375f1fdc6e57173116d",
+    "text": "选择四段和多云看罗盘，观察指针与船头的关系。船转向时，方向标记仍要可靠。",
+    "audioHash": "55bd25efe9f0d8d65c8d8eb13038ea05251efa67facf9f010c64a98352b1be1b"
+  },
+  "ancient-navigation-6-8-2": {
+    "file": "audio/ancient-navigation-6-8-2.mp3",
+    "duration": 8.3475,
+    "textHash": "2a605560462e7630efa610b39ddb74a2e198314da95a8cfb489996f0125ad50c",
+    "text": "这是北半球的航海示意，不能拿来真实导航。过去的航海也依靠风、海流和经验。",
+    "audioHash": "cea4e8f4bc01cb2deb4c3cf51e1ae904fc4ee5428d0a045865cc81b5de0143a4"
+  },
+  "railway-history-2-3-0": {
+    "file": "audio/railway-history-2-3-0.mp3",
+    "duration": 8.2463,
+    "textHash": "b8469f9ead3da143c9b2493f6d77f0a97a85d0c32100fece04a826a7f5a601b2",
+    "text": "过去的火车有不同的样子。有的用蒸汽推动车轮，有的从电力得到前进的动力。",
+    "audioHash": "80070b49020ffb0c68a260522c23fe1c4245b525b059cd2bb370c76bc8476d88"
+  },
+  "railway-history-2-3-1": {
+    "file": "audio/railway-history-2-3-1.mp3",
+    "duration": 7.9709,
+    "textHash": "30a25ba5eb8240cae76725628adf542bd8a2135777bbbdec6cf9922c9ec4ad0f",
+    "text": "选一种列车，让它慢慢出发。看看车轮怎样转，车头后面跟着几节小车厢。",
+    "audioHash": "799644f3866d030e31f3b7c68c2fac584cc2e8a1c6ed0381069b29f9fbc4869c"
+  },
+  "railway-history-2-3-2": {
+    "file": "audio/railway-history-2-3-2.mp3",
+    "duration": 8.0721,
+    "textHash": "74a1bd00bb145327d9a4f91aacae48eed263ae691208ec7b11451bf8db7a75b7",
+    "text": "再看一次，换一种动力，车头上的部件也会不同。车厢更多，不等于速度更快。",
+    "audioHash": "a27717aaf0fd5d9c43ecde288a95a533292036542cbef562e8041d285eb83d9f"
+  },
+  "railway-history-4-5-0": {
+    "file": "audio/railway-history-4-5-0.mp3",
+    "duration": 7.6955,
+    "textHash": "355d58e472003748e21c454fe24420d95db37e730cfee8abccea65d9cb1bc32e",
+    "text": "铁路改变了许多地方的旅行和运输。不同动力的列车，车头结构也不一样。",
+    "audioHash": "e797eba4b32cdff656e573213b610282d2c0000991b9cde448aa93f33e581c9f"
+  },
+  "railway-history-4-5-1": {
+    "file": "audio/railway-history-4-5-1.mp3",
+    "duration": 8.7971,
+    "textHash": "ae430832f337cecd30fabfbb9efe8539a5283e3f2f1bc189cb2c7d1a770db163",
+    "text": "选择车厢数和动力，观察连杆或供电部件。两种列车都沿轨道前进，不比较快慢。",
+    "audioHash": "475ba93bffd9579b37abd169b6e69e69ebe073aaa1922567f7d5102fc66a4958"
+  },
+  "railway-history-4-5-2": {
+    "file": "audio/railway-history-4-5-2.mp3",
+    "duration": 8.4691,
+    "textHash": "04cf31dba7ab7db78e1f8391e795186b3bd5404871b01c49e4328fd40f06f978",
+    "text": "固定蒸汽机车，比较一节和三节车厢。列车变长，但不能只凭长度判断它的年代。",
+    "audioHash": "7186b76fdca30857fef76cb2ad5aa4b0b37ed72ebe1f53ff1708358fc6d6a0f1"
+  },
+  "railway-history-6-8-0": {
+    "file": "audio/railway-history-6-8-0.mp3",
+    "duration": 8.8215,
+    "textHash": "5c1672935b0e88efc025d82605d12cbe99cf46af9728649894329346719af3cb",
+    "text": "蒸汽、柴油和电力曾在不同铁路上并存。历史变化不是全世界同时更换一种火车。",
+    "audioHash": "a7a556310b8ef617abb07c096dbe56a225690591f4449d6e59fac61c78353040"
+  },
+  "railway-history-6-8-1": {
+    "file": "audio/railway-history-6-8-1.mp3",
+    "duration": 8.7971,
+    "textHash": "d2ed34a7ee38c435a37ccceefde4436f6502df77f860654a02f3ab47b0cf6cda",
+    "text": "选择三节车厢和电力列车，追踪供电线与车轮。完成一次观察，再说说部件区别。",
+    "audioHash": "a321b6b51e7ecc7d3938d7d6579891c72a815ce362247467784f837e7c4029c6"
+  },
+  "railway-history-6-8-2": {
+    "file": "audio/railway-history-6-8-2.mp3",
+    "duration": 8.5947,
+    "textHash": "a98cc7ffd8e3a963b40db3a7857b5d532c138203e60893aaa189161d7ed0fcd8",
+    "text": "模型保持相同演示速度，不代表真实性能。研究铁路历史，还要看车辆和使用记录。",
+    "audioHash": "6346746fe3d29abcc29621d2c69e2ca648adab3378f3ebe8bd1a58eb63633adb"
   }
 }

@@ -272,9 +272,9 @@ it("requires five items of the same shape, not a mixed group with a matching sor
 import {experiments,subjects} from '../src/content/experiments';
 import {lessons} from '../src/content/lessons';
 import {initialWorld} from '../src/learning';
-describe('the 50-scene STEAM catalog',()=>{
+describe('the 80-scene interdisciplinary catalog',()=>{
  it('has ten distinct scenes per subject and preserves three age tracks',()=>{
-  expect(lessons).toHaveLength(50);expect(new Set(lessons.map(l=>l.id)).size).toBe(50);
+  expect(lessons).toHaveLength(80);expect(new Set(lessons.map(l=>l.id)).size).toBe(80);
   for(const subject of subjects)expect(lessons.filter(l=>l.subject===subject.id)).toHaveLength(10);
   expect(lessons.every(l=>Object.keys(l.tracks).length===3)).toBe(true);
  });

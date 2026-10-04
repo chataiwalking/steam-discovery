@@ -803,5 +803,552 @@
     "targetOption": 2,
     "actionLabel": "装入盒子",
     "fact": "用相同大小的小方块填满空间，可以通过小方块总数比较体积。"
+  },
+  {
+    "id": "cell-world",
+    "title": "细胞小世界",
+    "parameterLabel": "模型放大倍率",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "观察方式",
+    "options": [
+      "整体外形",
+      "内部结构"
+    ],
+    "targetOption": 1,
+    "actionLabel": "探索细胞",
+    "fact": "细胞是生命的基本单位。这里展示一个有细胞核的动物细胞模型，放大倍率改变的是观察大小，颜色和结构比例为示意。",
+    "subject": "B"
+  },
+  {
+    "id": "flower-pollination",
+    "title": "花粉的旅行",
+    "parameterLabel": "访花演示次数",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "访花动物",
+    "options": [
+      "小蜜蜂",
+      "小蝴蝶"
+    ],
+    "targetOption": 0,
+    "actionLabel": "观察传粉",
+    "fact": "传粉是花粉从花药转移到柱头的过程。动物访花时可能带走和带来花粉；本模型不把访花次数直接当作结果实数量。",
+    "subject": "B"
+  },
+  {
+    "id": "butterfly-life",
+    "title": "蝴蝶的成长",
+    "parameterLabel": "观察阶段",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "观察方式",
+    "options": [
+      "依次观察",
+      "放大这一阶段"
+    ],
+    "targetOption": 1,
+    "actionLabel": "观察蝴蝶成长",
+    "fact": "蝴蝶经历卵、幼虫、蛹和成虫四个阶段，属于完全变态。蛹不是卵，也不是蝴蝶睡着了；动画压缩了真实生长时间。",
+    "subject": "B"
+  },
+  {
+    "id": "frog-life",
+    "title": "青蛙的成长",
+    "parameterLabel": "观察阶段",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "观察方式",
+    "options": [
+      "水池侧面",
+      "成长顺序"
+    ],
+    "targetOption": 1,
+    "actionLabel": "观察青蛙成长",
+    "fact": "许多青蛙经历蛙卵、蝌蚪、幼蛙和成蛙阶段。蝌蚪逐渐长腿，尾巴被吸收；不同种类的生活史会有差异。",
+    "subject": "B"
+  },
+  {
+    "id": "food-chain",
+    "title": "食物链小剧场",
+    "parameterLabel": "观察的生物环节数",
+    "min": 1,
+    "max": 3,
+    "initial": 1,
+    "targetValue": 3,
+    "optionLabel": "食物链",
+    "options": [
+      "草地食物链",
+      "池塘食物链"
+    ],
+    "targetOption": 0,
+    "actionLabel": "追踪食物链",
+    "fact": "食物链表示取食关系与能量传递，箭头从被吃的生物指向吃它的生物。真实生态系统通常是相连的食物网，本模型只展示两条简化链。",
+    "subject": "B"
+  },
+  {
+    "id": "animal-habitats",
+    "title": "动物的家",
+    "parameterLabel": "显示的栖息地要素数",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "观察动物",
+    "options": [
+      "池塘青蛙",
+      "森林猫头鹰",
+      "草地兔子"
+    ],
+    "targetOption": 1,
+    "actionLabel": "探索动物的家",
+    "fact": "适合动物的栖息地需要食物、水、庇护与空间，具体条件因物种而异。这里依次标出要素，不根据要素个数预测动物能否存活。",
+    "subject": "B"
+  },
+  {
+    "id": "breathing-lungs",
+    "title": "一呼一吸",
+    "parameterLabel": "演示呼吸次数",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "观察重点",
+    "options": [
+      "看肺的变化",
+      "看膈肌与气流"
+    ],
+    "targetOption": 1,
+    "actionLabel": "观察呼吸",
+    "fact": "吸气时膈肌收缩向下，胸腔空间增大，空气进入肺；呼气时膈肌放松，空气排出。次数和颜色只是模型演示，不代表个人的呼吸数据。",
+    "subject": "B"
+  },
+  {
+    "id": "heartbeat-flow",
+    "title": "心脏小泵站",
+    "parameterLabel": "演示泵血次数",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "追踪路线",
+    "options": [
+      "身体循环",
+      "肺部循环"
+    ],
+    "targetOption": 1,
+    "actionLabel": "追踪泵血",
+    "fact": "心脏推动血液经过肺和身体，瓣膜帮助血液朝正确方向流动。红蓝色标记含氧差别，血液本身都是红色；演示次数不代表个人心率。",
+    "subject": "B"
+  },
+  {
+    "id": "seed-dispersal",
+    "title": "种子去旅行",
+    "parameterLabel": "风力演示等级",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "种子结构",
+    "options": [
+      "有绒毛的种子",
+      "带翅的种子",
+      "较重的种子"
+    ],
+    "targetOption": 0,
+    "actionLabel": "放飞种子",
+    "fact": "一些种子借助风、水或动物传播。绒毛和翅状结构可以帮助某些种子随风移动；本模型只比较风中路径，不预测真实落地距离或发芽率。",
+    "subject": "B"
+  },
+  {
+    "id": "animal-camouflage",
+    "title": "躲猫猫的动物",
+    "parameterLabel": "背景明暗等级",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "targetValue": 4,
+    "optionLabel": "动物外形",
+    "options": [
+      "浅色动物",
+      "深色动物"
+    ],
+    "targetOption": 1,
+    "actionLabel": "寻找伪装线索",
+    "fact": "保护色可以让动物与环境更相似，较难被发现。此处比较固定动物外形与背景，不演示动物瞬间改变颜色，也不预测捕食成功率。",
+    "subject": "B"
+  },
+  {
+    "id": "earth-layers",
+    "subject": "G",
+    "title": "地球的里面",
+    "parameterLabel": "剖开角度等级",
+    "min": 0,
+    "max": 4,
+    "initial": 0,
+    "optionLabel": "模型方式",
+    "options": [
+      "整体模型",
+      "分层展开"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "剖开看看",
+    "fact": "地壳很薄，地幔主要是固态岩石；外核为液态，内核为固态。分层厚度不按真实比例绘制。"
+  },
+  {
+    "id": "landforms",
+    "subject": "G",
+    "title": "山川小沙盘",
+    "parameterLabel": "山峰高度等级",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "地形组合",
+    "options": [
+      "山地与山谷",
+      "平原与丘陵"
+    ],
+    "targetValue": 4,
+    "targetOption": 0,
+    "actionLabel": "观察地形",
+    "fact": "山峰、山谷、平原和丘陵描述地表形状。沙盘的高度与比例是示意，不代表真实地点。"
+  },
+  {
+    "id": "river-journey",
+    "subject": "G",
+    "title": "河流去旅行",
+    "parameterLabel": "上游高度等级",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "河道方式",
+    "options": [
+      "主河流",
+      "支流汇入"
+    ],
+    "targetValue": 4,
+    "targetOption": 1,
+    "actionLabel": "放水观察",
+    "fact": "重力使河水从高处流向低处，支流可汇入主河流。不是所有河流最终都能到达海洋。"
+  },
+  {
+    "id": "volcano",
+    "subject": "G",
+    "title": "火山的秘密",
+    "parameterLabel": "气泡压力等级",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "观察位置",
+    "options": [
+      "地下剖面",
+      "地表熔岩"
+    ],
+    "targetValue": 4,
+    "targetOption": 0,
+    "actionLabel": "观察喷发",
+    "fact": "地下的熔融岩石叫岩浆，流到地表后叫熔岩；部分板块边界和热点可形成火山。压力等级仅作示意。"
+  },
+  {
+    "id": "plate-motion",
+    "subject": "G",
+    "title": "移动的大地",
+    "parameterLabel": "移动距离等级",
+    "min": 0,
+    "max": 4,
+    "initial": 0,
+    "optionLabel": "板块动作",
+    "options": [
+      "相互远离",
+      "相互靠近",
+      "沿边滑动"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "移动板块",
+    "fact": "岩石圈包括地壳和上部地幔，被分成板块。板块可远离、靠近或沿边滑动；模型加快了运动。"
+  },
+  {
+    "id": "weather-map",
+    "subject": "G",
+    "title": "天气观察站",
+    "parameterLabel": "观测点编号",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "记录内容",
+    "options": [
+      "云与降雨",
+      "气温与风"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "读取天气",
+    "fact": "天气描述某地某时的云、降水、温度和风等情况。本场景使用虚构观测记录，不是实时天气预报。"
+  },
+  {
+    "id": "seasons",
+    "subject": "G",
+    "title": "四季的脚步",
+    "parameterLabel": "公转位置编号",
+    "min": 0,
+    "max": 3,
+    "initial": 0,
+    "optionLabel": "观察半球",
+    "options": [
+      "北半球",
+      "南半球"
+    ],
+    "targetValue": 2,
+    "targetOption": 0,
+    "actionLabel": "观察季节",
+    "fact": "地轴倾斜使公转时两半球的日照角度与时长改变，形成季节。四季不是由太阳距离远近造成。"
+  },
+  {
+    "id": "latitude-longitude",
+    "subject": "G",
+    "title": "地球上的坐标",
+    "parameterLabel": "角度档位",
+    "min": 0,
+    "max": 3,
+    "initial": 0,
+    "optionLabel": "坐标方向",
+    "options": [
+      "北纬",
+      "南纬",
+      "东经",
+      "西经"
+    ],
+    "targetValue": 2,
+    "targetOption": 2,
+    "actionLabel": "定位坐标",
+    "fact": "纬度从赤道零度向南北测量；经度从零度经线向东西测量。球面坐标作示意，不用于实际导航。"
+  },
+  {
+    "id": "contour-map",
+    "subject": "G",
+    "title": "等高线小地图",
+    "parameterLabel": "山峰高度等级",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "显示方式",
+    "options": [
+      "三维山体",
+      "俯视等高线"
+    ],
+    "targetValue": 4,
+    "targetOption": 1,
+    "actionLabel": "绘制等高线",
+    "fact": "同一条等高线连接相同海拔的点，线密处通常坡更陡。本图是理想山体示意，不是实际测量。"
+  },
+  {
+    "id": "map-directions",
+    "subject": "G",
+    "title": "地图寻路",
+    "parameterLabel": "行走格数",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "行走方向",
+    "options": [
+      "向北",
+      "向东",
+      "向南",
+      "向西"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "沿地图走",
+    "fact": "先看指北箭头再判断方向。此地图上方为北、右方为东；观察视角变化不会改变地图的方向。"
+  },
+  {
+    "id": "archaeology-layers",
+    "subject": "H",
+    "title": "考古地层",
+    "parameterLabel": "观察层位",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "记录方式",
+    "options": [
+      "保留层位记录",
+      "只看物品外形"
+    ],
+    "targetValue": 3,
+    "targetOption": 0,
+    "actionLabel": "观察这一层",
+    "fact": "考古会记录物品的发现位置。未受扰动的地层通常下层较早，但坑穴和翻动会改变关系；这里是简化探方。"
+  },
+  {
+    "id": "ancient-pottery",
+    "subject": "H",
+    "title": "陶器的故事",
+    "parameterLabel": "泥条层数",
+    "min": 1,
+    "max": 6,
+    "initial": 2,
+    "optionLabel": "表面痕迹",
+    "options": [
+      "盘筑纹",
+      "绳纹装饰"
+    ],
+    "targetValue": 5,
+    "targetOption": 1,
+    "actionLabel": "盘起陶器",
+    "fact": "许多古代陶器用手工塑形，泥条盘筑和绳纹能留下工艺线索。造型与纹饰不等于文明的高低，模型不展示烧制。"
+  },
+  {
+    "id": "early-farming",
+    "subject": "H",
+    "title": "早期农耕",
+    "parameterLabel": "农事工序",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "作物示例",
+    "options": [
+      "小麦田",
+      "大麦田"
+    ],
+    "targetValue": 4,
+    "targetOption": 1,
+    "actionLabel": "观察农事",
+    "fact": "早期农耕包含播种、照料、收获和储藏，不同地区的作物和生活方式各有特点。这里压缩了生长时间，不表现农耕取代所有生活方式。"
+  },
+  {
+    "id": "writing-history",
+    "subject": "H",
+    "title": "书写材料的旅行",
+    "parameterLabel": "留下的符号数",
+    "min": 1,
+    "max": 6,
+    "initial": 2,
+    "optionLabel": "书写材料",
+    "options": [
+      "泥板压印",
+      "纸草书写"
+    ],
+    "targetValue": 5,
+    "targetOption": 1,
+    "actionLabel": "留下记号",
+    "fact": "古代人使用过泥板、纸草等多种书写材料，压印和墨写留下不同痕迹。它们并非处处按同一顺序替换；符号是示意，不是古文翻译。"
+  },
+  {
+    "id": "paper-making",
+    "subject": "H",
+    "title": "一张纸的诞生",
+    "parameterLabel": "造纸工序",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "纤维状态",
+    "options": [
+      "纤维分散",
+      "纤维聚团"
+    ],
+    "targetValue": 4,
+    "targetOption": 0,
+    "actionLabel": "观察造纸",
+    "fact": "传统造纸把植物原料处理成纤维，再经过成形与干燥等工序。真实工艺有许多步骤，画面只示意四个阶段，不把纸草片等同于纤维纸。"
+  },
+  {
+    "id": "woodblock-printing",
+    "subject": "H",
+    "title": "雕版印刷",
+    "parameterLabel": "印刷张数",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "雕版图案",
+    "options": [
+      "花叶版",
+      "波纹版"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "印出图案",
+    "fact": "雕版印刷在刻好的版面上施墨，再把图文转印到纸上。同一块版可以重复使用；模型只展示虚拟施墨和转印，不提供雕刻操作。"
+  },
+  {
+    "id": "movable-type",
+    "subject": "H",
+    "title": "活字小工坊",
+    "parameterLabel": "排版字块数",
+    "min": 2,
+    "max": 6,
+    "initial": 2,
+    "optionLabel": "字块排列",
+    "options": [
+      "顺序排版",
+      "换位排版"
+    ],
+    "targetValue": 5,
+    "targetOption": 1,
+    "actionLabel": "排字并印刷",
+    "fact": "活字把字符做成独立字块，排成版面后印刷，拆版后还能重新组合使用。这里用现代汉字示意原理，不复刻古代字形或年代。"
+  },
+  {
+    "id": "silk-road",
+    "subject": "H",
+    "title": "丝路商旅",
+    "parameterLabel": "经过的交流点数",
+    "min": 2,
+    "max": 6,
+    "initial": 2,
+    "optionLabel": "路线示例",
+    "options": [
+      "陆路商队",
+      "海路商船"
+    ],
+    "targetValue": 5,
+    "targetOption": 1,
+    "actionLabel": "走过交流网络",
+    "fact": "丝绸之路包含多条陆路和海路，交流的不只丝绸，还有货物、技艺和想法。商旅常走其中一段；示意路线不对应完整历史地图或统一年代。"
+  },
+  {
+    "id": "ancient-navigation",
+    "subject": "H",
+    "title": "古代航海",
+    "parameterLabel": "计划航段数",
+    "min": 1,
+    "max": 5,
+    "initial": 1,
+    "optionLabel": "观察条件",
+    "options": [
+      "晴夜看星",
+      "多云看罗盘"
+    ],
+    "targetValue": 4,
+    "targetOption": 1,
+    "actionLabel": "寻找航行方向",
+    "fact": "航海者曾结合天体、罗盘和经验判断方向与位置。罗盘指向磁北，不等同于真北；模型用北半球示意，不是实际导航工具。"
+  },
+  {
+    "id": "railway-history",
+    "subject": "H",
+    "title": "铁路的变迁",
+    "parameterLabel": "列车车厢数",
+    "min": 1,
+    "max": 4,
+    "initial": 1,
+    "optionLabel": "动力示例",
+    "options": [
+      "蒸汽机车",
+      "电力列车"
+    ],
+    "targetValue": 3,
+    "targetOption": 1,
+    "actionLabel": "观察列车出发",
+    "fact": "铁路历史包含蒸汽、柴油和电力等多种动力，它们并非在各地按同一时间表替换。这里对比蒸汽和电力结构，动画速度不表示真实性能。"
   }
 ]

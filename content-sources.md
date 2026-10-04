@@ -1,11 +1,11 @@
-# 50 个儿童 STEAM 主题：内容与知识来源
+# 80 个儿童跨学科主题：内容与知识来源
 
 核对日期：2026-10-01。课程正文是为 2–8 岁儿童编写的原创简体中文，不逐句翻译或复制来源。`src/content/lessons.json` 是网页、字幕和本地配音的共同正文来源。
 
 ## 课程结构
 
-- STEAM 五个领域各 10 个主题，共 50 个主题；每个主题有 2–3、4–5、6–8 岁三个年龄档，每档依次包含“看一看、动手试、发现规律”，共 150 套流程、450 段口播。
-- 原有 6 个主题的 54 段口播、文本和标识保留不变，只补充领域归属；新增 44 个主题贡献 396 段口播。
+- 科学、技术、工程、艺术、数学、生物、地理、历史八个领域各 10 个主题，共 80 个主题；每个主题有 2–3、4–5、6–8 岁三个年龄档，每档依次包含“看一看、动手试、发现规律”，共 240 套流程、720 段口播。
+- 原有 6 个主题的 54 段口播、文本和标识保留不变，只补充领域归属；此前新增 44 个主题贡献 396 段口播，本轮生物、地理、历史各 10 课追加 270 段，合计 720 段。
 - 新增主题的交互配置以 `src/content/experiments.json` 为准。低龄完成一次观察；中龄先选择目标选项、保持选项不变，用两个不同参数完整运行并比较；高龄按明确的目标值与选项运行。每次动画完成后才记录观察证据。
 - 参数没有标注真实物理单位时，数字表示模型里的位置或程度。位置四、风速六等不代表真实角度、温度、长度或风速单位。所有模型都经过教学简化。
 
@@ -154,3 +154,43 @@
 - `node scripts/check-content.mjs` 检查 50 个唯一主题、各领域 10 个、150 套流程、450 条字幕口播，以及文件 SHA256、正文 SHA256、MP3 帧与时长。`--content-only` 只用于配音制作期间，不替代完整验收。
 - `.venv-tts/bin/python scripts/synthesize_narration.py --verify` 对全部 MP3 进行解码、格式、时长、音量与削波检查；详细报告写入 `artifacts/audio-verification.json`。
 - 技术检查不能代替人工校听，也不证明每一句的发音、自然度、适龄性已经得到真人确认。技术结果和听感证据必须分别记录。
+
+
+## 生物、地理、历史新增30课
+
+本节资料核对日期：2026-10-04。
+
+新增课程正文为原创儿童讲解，依据以下科学机构、博物馆和教育机构资料编写。历史场景区分工艺、材料与过程，不使用统一年代旋钮解释不同文明；地理场景保留坐标、四季与地层的正确关系。
+
+| 类别 | 主题 | 知识来源 |
+| --- | --- | --- |
+| 生物 | 细胞小世界 | [NHGRI · Cell](https://www.genome.gov/genetics-glossary/Cell) |
+| 生物 | 花粉的旅行 | [NPS · Pollinators](https://www.nps.gov/grsm/learn/nature/pollinators.htm) |
+| 生物 | 蝴蝶的成长 | [NPS · Butterfly Ecology](https://home.nps.gov/romo/learn/nature/butterfly-ecology.htm) |
+| 生物 | 青蛙的成长 | [NPS · Fun With Frogs](https://www.nps.gov/teachers/classrooms/fun-with-frogs.htm) |
+| 生物 | 食物链小剧场 | [NPS · Food Chains](https://www.nps.gov/teachers/classrooms/food-chain.htm) |
+| 生物 | 动物的家 | [NPS · Food, Water, Shelter, Space](https://www.nps.gov/teachers/classrooms/food-water-shelter-space.htm) |
+| 生物 | 一呼一吸 | [NHLBI · How Your Body Controls Breathing](https://www.nhlbi.nih.gov/health/lungs/body-controls-breathing) |
+| 生物 | 心脏小泵站 | [NHLBI · How Blood Flows through the Heart](https://www.nhlbi.nih.gov/health/heart/blood-flow) |
+| 生物 | 种子去旅行 | [NPS · Plant Adaptations](https://www.nps.gov/teachers/classrooms/plant-adaptations.htm) |
+| 生物 | 躲猫猫的动物 | [NPS · Animal Camouflage](https://home.nps.gov/romo/animal_camouflage.htm) |
+| 地理探索 | 地球的里面 | [USGS · The Interior of the Earth](https://pubs.usgs.gov/gip/interior/) |
+| 地理探索 | 山川小沙盘 | [USGS · Topographic maps: Tools for planning](https://pubs.usgs.gov/publication/70039402) |
+| 地理探索 | 河流去旅行 | [USGS · Rivers, Streams, and Creeks](https://www.usgs.gov/water-science-school/science/rivers-streams-and-creeks) |
+| 地理探索 | 火山的秘密 | [USGS · Volcanoes of the United States](https://pubs.usgs.gov/gip/volcus/ustext.html) |
+| 地理探索 | 移动的大地 | [USGS · Understanding plate motions](https://pubs.usgs.gov/gip/dynamic/understanding.html) |
+| 地理探索 | 天气观察站 | [NOAA · Weather systems and patterns](https://www.noaa.gov/education/resource-collections/weather-atmosphere/weather-systems-patterns) |
+| 地理探索 | 四季的脚步 | [NASA Space Place · What Causes the Seasons?](https://spaceplace.nasa.gov/seasons/en/) |
+| 地理探索 | 地球上的坐标 | [NOAA · What is latitude?](https://oceanservice.noaa.gov/facts/latitude.html) |
+| 地理探索 | 等高线小地图 | [USGS · What is a topographic map?](https://www.usgs.gov/faqs/what-a-topographic-map?qt-news_science_products=0) |
+| 地理探索 | 地图寻路 | [USGS · Finding your way with map and compass](https://pubs.usgs.gov/publication/fs07999) |
+| 历史 | 考古地层 | [English Heritage · 考古学习资料](https://www.english-heritage.org.uk/contentassets/f583b72ab49f4cb18f82b9709cd9064a/archaeology-learning-pack-final.pdf) |
+| 历史 | 陶器的故事 | [The Met · 绳纹时期陶器的工艺与修复](https://www.metmuseum.org/art/collection/search/53154) |
+| 历史 | 早期农耕 | [British Museum · 史前英国的农耕工具](https://www.britishmuseum.org/sites/default/files/2019-09/visit-resource_prehistoric-britain-KS2.pdf) |
+| 历史 | 书写材料的旅行 | [British Museum · 在泥板上书写楔形文字](https://www.britishmuseum.org/blog/how-write-cuneiform) |
+| 历史 | 一张纸的诞生 | [UNESCO · 宣纸传统制作技艺](https://ich.unesco.org/en/RL/traditional-handicrafts-of-making-xuan-paper-00201) |
+| 历史 | 雕版印刷 | [Smithsonian · 中国年画的雕版工序](https://asia.si.edu/education/educator-resources/teaching-china-with-the-smithsonian/videos/new-years-prints/) |
+| 历史 | 活字小工坊 | [UNESCO · 中国木活字印刷技艺](https://ich.unesco.org/en/RL/wooden-movable-type-printing-of-china-00322) |
+| 历史 | 丝路商旅 | [UNESCO · 丝绸之路的陆海交流网络](https://www.unesco.org/en/silk-roads/about-silk-roads) |
+| 历史 | 古代航海 | [Royal Museums Greenwich · 航海天体观测工具](https://www.rmg.co.uk/stories/space-astronomy/what-mariners-astrolabe) |
+| 历史 | 铁路的变迁 | [Science Museum Group · 机车与车辆藏品](https://collection.sciencemuseumgroup.org.uk/search/categories/locomotives-and-rolling-stock) |

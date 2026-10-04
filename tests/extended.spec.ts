@@ -2,7 +2,7 @@ import {test,expect,type Page} from '@playwright/test';
 import type {ExperimentDefinition} from '../src/content/experiments';
 import {readFileSync} from 'node:fs';
 const experiments:ExperimentDefinition[]=JSON.parse(readFileSync(new URL('../src/content/experiments.json',import.meta.url),'utf8'));
-const subjects=[{id:'S',name:'科学'},{id:'T',name:'技术'},{id:'E',name:'工程'},{id:'A',name:'艺术'},{id:'M',name:'数学'}];
+const subjects=[{id:'S',name:'科学'},{id:'T',name:'技术'},{id:'E',name:'工程'},{id:'A',name:'艺术'},{id:'M',name:'数学'},{id:'B',name:'生物'},{id:'G',name:'地理'},{id:'H',name:'历史'}];
 import type {AgeBand} from '../src/types';
 const ages:AgeBand[]=['2-3','4-5','6-8'];
 async function value(page:Page,experiment:ExperimentDefinition,next:number){
@@ -39,10 +39,10 @@ for(const experiment of experiments)test(`${experiment.id} has a real scene and 
  expect(errors).toEqual([]);
 });
 
-test('STEAM classification and search show real filtered results',async({page})=>{
- await page.goto('/');await expect(page.locator('.lesson-card')).toHaveCount(50);
- for(const subject of subjects){await page.getByRole('navigation',{name:'STEAM分类'}).getByRole('button',{name:new RegExp(subject.name)}).click();await expect(page.locator('.lesson-card')).toHaveCount(10);await expect(page.getByRole('region',{name:`${subject.name}场景`})).toBeVisible();}
- await page.getByRole('navigation',{name:'STEAM分类'}).getByRole('button',{name:/全部/}).click();
+test('Interdisciplinary classification and search show real filtered results',async({page})=>{
+ await page.goto('/');await expect(page.locator('.lesson-card')).toHaveCount(80);
+ for(const subject of subjects){await page.getByRole('navigation',{name:'探索分类'}).getByRole('button',{name:new RegExp(subject.name)}).click();await expect(page.locator('.lesson-card')).toHaveCount(10);await expect(page.getByRole('region',{name:`${subject.name}场景`})).toBeVisible();}
+ await page.getByRole('navigation',{name:'探索分类'}).getByRole('button',{name:/全部/}).click();
  await page.getByRole('textbox',{name:'搜索场景',exact:true}).fill('月亮');await expect(page.locator('.lesson-card')).toHaveCount(1);await expect(page.locator('.lesson-card')).toContainText('月亮的脸');
  await page.getByRole('textbox',{name:'搜索场景',exact:true}).fill('不存在的场景');await expect(page.locator('.lesson-card')).toHaveCount(0);await expect(page.locator('.catalog-empty')).toBeVisible();
  await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);

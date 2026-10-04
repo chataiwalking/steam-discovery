@@ -83,6 +83,7 @@ export function SceneLabel({
       style={{ pointerEvents: "none", whiteSpace: "nowrap" }}
     >
       <span
+        className="scene-label"
         style={{
           display: "inline-block",
           padding: "7px 12px",

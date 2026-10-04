@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useCursor } from '@react-three/drei';
-import { BufferGeometry, CatmullRomCurve3, Color, DoubleSide, Float32BufferAttribute, Group, Mesh, ShaderMaterial, TubeGeometry, Vector3 } from 'three';
+import { BufferGeometry, CatmullRomCurve3, Color, DoubleSide, Float32BufferAttribute, Mesh, ShaderMaterial, TubeGeometry, Vector3 } from 'three';
 import { SceneLabel } from './shared';
 
 type Point = [number, number, number];
@@ -55,13 +55,12 @@ export function InspectObject({ children, text, position = [0, 1.3, 0], radius =
 }) {
   const [hovered, setHovered] = useState(false), [selected, setSelected] = useState(false);
   useCursor(hovered);
-  const ring = useRef<Mesh>(null), hint = useRef<Group>(null);
+  const ring = useRef<Mesh>(null);
   useFrame((_, delta) => {
-    if (!ring.current || !hint.current) return;
+    if (!ring.current) return;
     const target = hovered || selected ? 1 : 0;
     const next = ring.current.scale.x + (target - ring.current.scale.x) * (1 - Math.exp(-12 * Math.min(delta, .06)));
     ring.current.scale.setScalar(next);
-    hint.current.visible = selected;
   });
   return <group onPointerOver={event => { event.stopPropagation(); setHovered(true); }} onPointerOut={() => setHovered(false)}
     onClick={event => { event.stopPropagation(); setSelected(value => !value); }}>
@@ -69,7 +68,7 @@ export function InspectObject({ children, text, position = [0, 1.3, 0], radius =
     <mesh ref={ring} position={[position[0], .29, position[2]]} rotation={[-Math.PI / 2, 0, 0]} scale={0} raycast={() => null}>
       <ringGeometry args={[radius, radius + .028, 48]} /><meshBasicMaterial color={selected ? '#f4d58e' : '#a9dce4'} transparent opacity={.8} toneMapped={false} side={DoubleSide} depthWrite={false} />
     </mesh>
-    <group ref={hint} visible={selected}><SceneLabel position={position}>{text}</SceneLabel></group>
+    {selected && <SceneLabel position={position}>{text}</SceneLabel>}
   </group>;
 }
 

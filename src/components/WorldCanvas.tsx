@@ -34,6 +34,9 @@ const categoryScenes:Record<string,ComponentType<WorldCanvasProps>>={
  E:lazy(()=>import("../scenes/EngineeringExperiments")),
  A:lazy(()=>import("../scenes/ArtExperiments")),
  M:lazy(()=>import("../scenes/MathExperiments")),
+ B:lazy(()=>import("../scenes/BiologyExperiments")),
+ H:lazy(()=>import("../scenes/HistoryExperiments")),
+ G:lazy(()=>import("../scenes/GeographyExperiments")),
 };
 const names:Record<string,string> = {
   island: "发现小岛",
@@ -289,6 +292,7 @@ export default function WorldCanvas(props: WorldCanvasProps) {
       <div
         ref={setOverlayTarget}
         data-scene-overlays=""
+        data-subject={getLesson(props.lesson)?.subject ?? "island"}
         style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1 }}
       />
       {overlayPortal && (

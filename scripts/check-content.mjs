@@ -12,7 +12,7 @@ const coreSubjects = { "day-night": "S", "water-cycle": "S", gears: "T", bridge:
 const experiments = readJson("src/content/experiments.json");
 const ids = [...Object.keys(coreSubjects), ...experiments.map(experiment => experiment.id)];
 const expectedSubjects = { ...coreSubjects, ...Object.fromEntries(experiments.map(experiment => [experiment.id, experiment.subject])) };
-const subjectCounts = { S: 0, T: 0, E: 0, A: 0, M: 0 };
+const subjectCounts = { S: 0, T: 0, E: 0, A: 0, M: 0, B: 0, G: 0, H: 0 };
 const titles = ["看一看", "动手试", "发现规律"];
 const clips = new Map();
 const lessons = readJson("src/content/lessons.json");
@@ -26,16 +26,16 @@ const hasText = (value, label) => {
 };
 
 assert.ok(Array.isArray(lessons), "Lessons must be an array");
-assert.equal(experiments.length, 44, "Exactly 44 additional experiment configurations are required");
-assert.equal(new Set(ids).size, 50, "Experiment configurations and core lessons must have 50 unique IDs");
+assert.equal(experiments.length, 74, "Exactly 74 additional experiment configurations are required");
+assert.equal(new Set(ids).size, 80, "Experiment configurations and core lessons must have 80 unique IDs");
 assert.deepEqual(
   lessons.map(({ id }) => id).sort(),
   [...ids].sort(),
-  "Exactly 50 unique topics matching the fixed experiment configurations are required",
+  "Exactly 80 unique topics matching the fixed experiment configurations are required",
 );
 let trackCount = 0;
 for (const lesson of lessons) {
-  assert.equal(lesson.subject, expectedSubjects[lesson.id], `${lesson.id} has the wrong STEAM subject`);
+  assert.equal(lesson.subject, expectedSubjects[lesson.id], `${lesson.id} has the wrong catalog subject`);
   subjectCounts[lesson.subject] += 1;
   for (const field of [
     "title",
@@ -117,13 +117,13 @@ for (const lesson of lessons) {
     assert.ok(lesson.tracks["6-8"].goal.includes(experiment.options[experiment.targetOption]), `${lesson.id} advanced goal must name the target option`);
   }
 }
-assert.deepEqual(subjectCounts, { S: 10, T: 10, E: 10, A: 10, M: 10 }, "Each STEAM subject must contain ten lessons");
+assert.deepEqual(subjectCounts, { S: 10, T: 10, E: 10, A: 10, M: 10, B: 10, G: 10, H: 10 }, "Each subject must contain ten lessons");
 assert.equal(
   trackCount,
-  150,
-  "Exactly 150 age-specific learning tracks are required",
+  240,
+  "Exactly 240 age-specific learning tracks are required",
 );
-assert.equal(clips.size, 450, "Exactly 450 narration clips are required");
+assert.equal(clips.size, 720, "Exactly 720 narration clips are required");
 
 // Inspect MPEG Layer III frames instead of trusting a filename or metadata alone.
 // Kokoro output is converted to MPEG-1/2/2.5 MP3 by ffmpeg; no native tools are
@@ -195,7 +195,7 @@ if (!process.argv.includes("--content-only")) {
   assert.deepEqual(
     Object.keys(manifest).sort(),
     [...clips.keys()].sort(),
-    "Manifest must match the 450 course clips exactly",
+    "Manifest must match the 720 course clips exactly",
   );
   for (const [id, clip] of clips) {
     const entry = manifest[id];
@@ -230,10 +230,10 @@ if (!process.argv.includes("--content-only")) {
     );
   }
   console.log(
-    "Content verified: 50 topics (10 per STEAM subject), 150 learning tracks, 450 matching MP3 files, text and audio hashes, and measured durations.",
+    "Content verified: 80 topics (10 per subject), 240 learning tracks, 720 matching MP3 files, text and audio hashes, and measured durations.",
   );
 } else {
   console.log(
-    "Content verified: 50 topics (10 per STEAM subject), 150 learning tracks, 450 complete narration clips. Audio verification skipped explicitly.",
+    "Content verified: 80 topics (10 per subject), 240 learning tracks, 720 complete narration clips. Audio verification skipped explicitly.",
   );
 }

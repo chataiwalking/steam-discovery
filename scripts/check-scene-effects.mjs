@@ -6,6 +6,8 @@ const output = process.env.SCENE_AUDIT_OUTPUT || 'output/playwright/scene-effect
 const lessons = JSON.parse(await readFile('src/content/lessons.json', 'utf8'));
 const experiments = JSON.parse(await readFile('src/content/experiments.json', 'utf8'));
 const only = process.env.SCENE_AUDIT_ONLY?.split(',');
+const mobileOnly = !!process.env.SCENE_AUDIT_MOBILE_ONLY;
+const mobileIds = process.env.SCENE_AUDIT_MOBILE_IDS?.split(',') || ['water-cycle','magnetism','electric-circuit','pulley','mosaic','fractions'];
 const samples = new Set(['day-night','water-cycle','magnetism','electric-circuit','solar-panel','pulley','color-wheel','mosaic','fractions']);
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 await mkdir(output, {recursive:true});
@@ -19,6 +21,7 @@ page.on('console', message => {if(message.type()==='error') errors.push(message.
 const report = {base,checkedAt:new Date().toISOString(),desktop:[],mobile:[],failures:[]};
 try {
  for (const lesson of lessons) {
+  if (mobileOnly) continue;
   if (only && !only.includes(lesson.id)) continue;
   errors = [];
   const experiment = experiments.find(e => e.id === lesson.id);
@@ -46,10 +49,17 @@ try {
    await page.waitForTimeout(200);
    await page.getByRole('button',{name:'暂停动画',exact:true}).click();
    await page.waitForTimeout(120);
-   const firstImage = await canvas.screenshot();
+   await canvas.scrollIntoViewIfNeeded();
+   const bounds = await canvas.boundingBox();
+   if (!bounds) throw new Error('Canvas has no capture bounds');
+   // Rounded container edges can differ by one subpixel in Chrome capture.
+   // Compare every pixel of the actual scene interior, excluding only 2px.
+   const clip = { x: Math.ceil(bounds.x + 2), y: Math.ceil(bounds.y + 2), width: Math.floor(bounds.width - 4), height: Math.floor(bounds.height - 4) };
+   const capture = () => page.screenshot({ clip });
+   const firstImage = await capture();
    const first = hash(firstImage);
    await page.waitForTimeout(300);
-   const secondImage = await canvas.screenshot();
+   const secondImage = await capture();
    const second = hash(secondImage);
    const effects = await canvas.getAttribute('data-scene-effects');
    const glError = await canvas.evaluate(element => {
@@ -65,7 +75,7 @@ try {
    if (errors.length) throw new Error(errors.join('\n'));
    if(lesson.id==='day-night') {
     await page.getByRole('button',{name:'转动地球',exact:true}).click();
-    if(hash(await canvas.screenshot())===second)throw new Error('Paused earth did not redraw a changed angle');
+    if(hash(await capture())===second)throw new Error('Paused earth did not redraw a changed angle');
    }
    await page.getByRole('button',{name:'继续动画',exact:true}).click();
    if (experiment) await page.getByRole('button',{name:experiment.actionLabel,exact:true}).waitFor({state:'visible',timeout:30000});
@@ -82,12 +92,14 @@ try {
   } catch(error) {report.failures.push({id:lesson.id,message:error.message,errors:[...errors]});console.error(`FAIL ${lesson.id}: ${error.message}`);}
  }
  await page.setViewportSize({width:390,height:844});
- for (const id of ['water-cycle','magnetism','electric-circuit','pulley','mosaic','fractions']) {
+ for (const id of mobileIds) {
   if(only&&!only.includes(id))continue;
   errors=[];
   await page.goto(`${base}#/lesson/${id}?age=4-5`);
-  await page.locator('.scene-loading-overlay').waitFor({state:'hidden',timeout:60000});
   const canvas=page.locator('.experiment-canvas canvas');
+  await canvas.waitFor({state:'visible',timeout:60000});
+  await page.locator('.scene-loading-overlay').waitFor({state:'hidden',timeout:60000});
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   const effects=await canvas.getAttribute('data-scene-effects');
   const fits=await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
   await page.locator('.experiment-canvas').screenshot({path:`${output}/${id}-mobile.png`});

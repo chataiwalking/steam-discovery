@@ -8,6 +8,8 @@ import {
   Headphones,
   Home,
   Leaf,
+  Globe2,
+  Landmark,
   Lightbulb,
   Pause,
   Play,
@@ -49,6 +51,7 @@ import {
 import { useNarration } from "./hooks/useNarration";
 import { Illustration, Star } from "./components/Illustrations";
 const WorldCanvas = lazy(() => import("./components/WorldCanvas"));
+const subjectIcons = { B: Leaf, G: Globe2, H: Landmark };
 const shapeNames: Record<ShapeKind, string> = {
   sphere: "小球",
   cube: "方块",
@@ -137,7 +140,7 @@ function App() {
             <Sparkles size={25} />
           </span>
           <span>
-            小小发现家<small>STEAM EXPLORER</small>
+            小小发现家<small>DISCOVERY EXPLORER</small>
           </span>
         </a>
         <nav aria-label="主导航">
@@ -188,7 +191,7 @@ function App() {
               <p className="hero-description">
                 转一转地球，搭一座小桥，看看光的颜色。
                 <br />
-                50 个三维场景，探索科学、技术、工程、艺术与数学。
+                {lessons.length} 个三维场景，探索 STEAM、生物、地理与历史。
               </p>
               <div className="hero-actions">
                 <button
@@ -214,7 +217,7 @@ function App() {
                       ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  浏览 50 个场景
+                  浏览 {lessons.length} 个场景
                   <ChevronRight size={17} />
                 </a>
               </div>
@@ -304,7 +307,7 @@ function App() {
           <section className="worlds-section" id="worlds">
             <div className="section-heading">
               <div>
-                <span className="small-label">50 个三维场景 · 五大学习领域</span>
+                <span className="small-label">{lessons.length} 个三维场景 · 八大学习领域</span>
                 <h2>
                   今天，想发现什么？ <Sparkles size={24} />
                 </h2>
@@ -314,11 +317,11 @@ function App() {
                 <b>{count}</b> / {lessons.length} 个场景已探索
               </span>
             </div>
-            <nav className="subject-tabs" aria-label="STEAM分类">
+            <nav className="subject-tabs" aria-label="探索分类">
               <button aria-pressed={subject==="ALL"} onClick={()=>setSubject("ALL")}>全部 <span>{lessons.length}</span></button>
-              {subjects.map(item=><button key={item.id} aria-pressed={subject===item.id} onClick={()=>setSubject(item.id)}><b>{item.id}</b>{item.name}<span>{lessons.filter(l=>l.subject===item.id).length}</span></button>)}
+              {subjects.map(item=>{const Icon=subjectIcons[item.id as keyof typeof subjectIcons];return <button key={item.id} aria-pressed={subject===item.id} onClick={()=>setSubject(item.id)}>{Icon?<Icon size={20} aria-hidden/>:<b>{item.id}</b>}{item.name}<span>{lessons.filter(l=>l.subject===item.id).length}</span></button>})}
             </nav>
-            <div className="catalog-toolbar"><span>{subject==="ALL"?"按 STEAM 领域探索":subjects.find(item=>item.id===subject)?.description}</span><label><span className="sr-only">搜索场景</span><input placeholder="搜索你感兴趣的场景" value={search} onChange={event=>setSearch(event.target.value)}/></label></div>
+            <div className="catalog-toolbar"><span>{subject==="ALL"?"八大学习领域，从身边到更远的世界":subjects.find(item=>item.id===subject)?.description}</span><label><span className="sr-only">搜索场景</span><input placeholder="搜索你感兴趣的场景" value={search} onChange={event=>setSearch(event.target.value)}/></label></div>
             {subjects.filter(group=>subject==="ALL"||group.id===subject).map(group=>{const groupLessons=visibleLessons.filter(l=>l.subject===group.id);if(!groupLessons.length)return null;return <section className="subject-section" key={group.id} aria-label={`${group.name}场景`}><div className="subject-heading"><span className="subject-letter">{group.id}</span><div><h3>{group.name}<small>{group.english}</small></h3><p>{group.description}</p></div><span>{groupLessons.length} 个场景</span></div><div className="lesson-grid">
               {groupLessons.map((l) => (
                 <button

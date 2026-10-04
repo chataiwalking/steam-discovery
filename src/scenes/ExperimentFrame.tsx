@@ -4,7 +4,7 @@ import { Color, MathUtils, type ShaderMaterial } from "three";
 import { getExperiment } from "../content/experiments";
 import { SceneLabel, ToyPlatform, useSceneClock, type SceneProps } from "./shared";
 
-const subjectColors = { S: "#63c7de", T: "#79d5ad", E: "#ffbc74", A: "#ed9cb9", M: "#b7afff" };
+const subjectColors = { S: "#63c7de", T: "#79d5ad", E: "#ffbc74", A: "#ed9cb9", M: "#b7afff", B: "#73BB8C", G: "#68AACB", H: "#D1A071" };
 const vertexShader = `
   varying vec2 vUv;
   void main() {
