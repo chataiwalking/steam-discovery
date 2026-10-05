@@ -19,7 +19,8 @@ for(const experiment of experiments)test(`${experiment.id} has a real scene and 
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
  for(const age of ages){
   await page.goto(`/#/lesson/${experiment.id}?age=${age}`);
-  await expect(page.locator('[data-scene-overlays]').getByText(experiment.title,{exact:true})).toBeVisible({timeout:60000});
+  await expect(page.locator(`[data-scene-ready="${experiment.id}"] canvas`)).toBeVisible({timeout:60000});
+  await expect(page.getByRole('heading',{name:experiment.title,exact:true})).toBeVisible();
   await page.getByRole('button',{name:'我来试试看',exact:true}).click();
   await expect(page.getByRole('button',{name:'去发现小规律',exact:true})).toBeDisabled();
   await run(page,experiment);

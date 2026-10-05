@@ -2,7 +2,7 @@ import { useLayoutEffect, useMemo, useRef, type ReactNode } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Color, MathUtils, type ShaderMaterial } from "three";
 import { getExperiment } from "../content/experiments";
-import { SceneLabel, ToyPlatform, useSceneClock, type SceneProps } from "./shared";
+import { ToyPlatform, useSceneClock, type SceneProps } from "./shared";
 
 const subjectColors = { S: "#63c7de", T: "#79d5ad", E: "#ffbc74", A: "#ed9cb9", M: "#b7afff", B: "#73BB8C", G: "#68AACB", H: "#D1A071" };
 const vertexShader = `
@@ -35,6 +35,7 @@ const fragmentShader = `
 
 export function ExperimentFrame({ props, children }: { props: SceneProps; children: ReactNode }) {
   const experiment = getExperiment(props.lesson)!;
+  const specimen = props.lesson === "cell-world";
   const material = useRef<ShaderMaterial>(null);
   const hovering = useRef(false);
   const flash = useRef(0);
@@ -55,15 +56,14 @@ export function ExperimentFrame({ props, children }: { props: SceneProps; childr
     material.current.uniforms.phase.value = clock.current * 0.65;
   });
   return <group>
-    <ToyPlatform radius={3.8} color="#9da8ad" />
+    {!specimen && <><ToyPlatform radius={3.8} color="#9da8ad" />
     <mesh position={[0, -0.038, 0]} rotation={[-Math.PI / 2, 0, 0]} raycast={() => {}}>
       <planeGeometry args={[8, 8]} />
       <shaderMaterial ref={material} uniforms={uniforms} vertexShader={vertexShader} fragmentShader={fragmentShader} transparent depthWrite={false} />
-    </mesh>
+    </mesh></>}
     <group onPointerOver={() => { hovering.current = true; invalidate(); }} onPointerOut={() => { hovering.current = false; invalidate(); }} onPointerDown={() => { flash.current = 1; invalidate(); }}>
       {children}
     </group>
-    <SceneLabel position={[0, 3.7, 0]}>{experiment.title}</SceneLabel>
   </group>;
 }
 

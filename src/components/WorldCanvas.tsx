@@ -4,20 +4,22 @@ import {
   Suspense,
   lazy,
   useEffect,
-  useLayoutEffect,
   useMemo,
   useState,
   type ReactNode,
   type ComponentType,
 } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { ACESFilmicToneMapping, OrthographicCamera, PCFSoftShadowMap, SRGBColorSpace } from "three";
+import { ACESFilmicToneMapping, PCFSoftShadowMap, SRGBColorSpace } from "three";
 import { Environment } from "@react-three/drei";
 import type { WorldCanvasProps } from "../types";
 import {getExperiment} from "../content/experiments";
 import {getLesson} from "../content/lessons";
 import { SceneHtmlPortalContext } from "./SceneHtml";
 import { ScenePostProcessing } from "./ScenePostProcessing";
+import { SceneCamera, type SceneView } from "./SceneCamera";
+import { SceneToolbar } from "./SceneToolbar";
+import { SceneAnnotationsProvider, AnnotationDock } from "./SceneAnnotations";
 
 const scenes: Record<string, ComponentType<WorldCanvasProps>> = {
   island: lazy(() => import("../scenes/Island")),
@@ -47,32 +49,6 @@ const names:Record<string,string> = {
   light: "彩光画室",
   shapes: "形状与数量",
 };
-
-function CameraFit({
-  island,
-  lesson,
-}: {
-  island: boolean;
-  lesson: WorldCanvasProps["lesson"];
-}) {
-  const { camera, size, invalidate } = useThree();
-  useLayoutEffect(() => {
-    if (!(camera instanceof OrthographicCamera)) return;
-    camera.zoom = Math.min(
-      size.width / (island ? 12.4 : 8.5),
-      size.height / (island ? 9.4 : 6.6),
-    );
-    if (island) camera.position.set(7.5, 9.5, 12);
-    else if (lesson === "balance-scale" || lesson === "lever") camera.position.set(0, 6.5, 11);
-    else if (lesson === "gears" || lesson === "light")
-      camera.position.set(1, 5, 13);
-    else camera.position.set(5, 6.5, 10);
-    camera.lookAt(0, island ? 0.25 : 1.35, 0);
-    camera.updateProjectionMatrix();
-    invalidate();
-  }, [camera, size.width, size.height, island, lesson, invalidate]);
-  return null;
-}
 
 function Illustration({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
  if(getExperiment(lesson))return <img src={`${import.meta.env.BASE_URL}previews/${lesson}.png`} alt={`${getLesson(lesson)?.title}的三维示意图`} style={{width:"min(100%,360px)",borderRadius:8}}/>;
@@ -191,6 +167,7 @@ function Illustration({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
 function Fallback({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
   return (
     <div
+      className="scene-fallback"
       role="status"
       style={{
         width: "100%",
@@ -206,12 +183,11 @@ function Fallback({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
       }}
     >
       <Illustration lesson={lesson} />
-      <strong style={{ color: "#566348", fontSize: 18 }}>
+      <strong style={{ fontSize: 18 }}>
         {names[lesson]??getLesson(lesson)?.title}
       </strong>
       <p
         style={{
-          color: "#827d6b",
           fontSize: 13,
           maxWidth: 320,
           lineHeight: 1.8,
@@ -224,12 +200,15 @@ function Fallback({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
 }
 
 class CanvasBoundary extends Component<
-  { children: ReactNode; lesson: WorldCanvasProps["lesson"] },
+  { children: ReactNode; lesson: WorldCanvasProps["lesson"]; onError: () => void },
   { failed: boolean }
 > {
   state = { failed: false };
   static getDerivedStateFromError() {
     return { failed: true };
+  }
+  componentDidCatch() {
+    this.props.onError();
   }
   render() {
     return this.state.failed ? (
@@ -259,6 +238,12 @@ function SceneReady({onReady}:{onReady:()=>void}) {
 }
 
 export default function WorldCanvas(props: WorldCanvasProps) {
+  const island = props.lesson === "island";
+  const [view, setView] = useState<SceneView>("perspective");
+  const [zoom, setZoom] = useState(1);
+  const [showLabels, setShowLabels] = useState(false);
+  const [dark, setDark] = useState(props.lesson === "day-night" || props.lesson === "cell-world");
+  const [resetToken, setResetToken] = useState(0);
   const [readyLesson,setReadyLesson]=useState<string|null>(null);
   const sceneReady=useCallback(()=>setReadyLesson(props.lesson),[props.lesson]);
   const [overlayTarget, setOverlayTarget] = useState<HTMLDivElement | null>(null);
@@ -285,9 +270,18 @@ export default function WorldCanvas(props: WorldCanvasProps) {
     }
   });
   const Scene = scenes[props.lesson] ?? categoryScenes[getExperiment(props.lesson)?.subject??"S"];
-  if (!available) return <Fallback lesson={props.lesson} />;
+  useEffect(() => {
+    if (!available) props.onUnavailable?.();
+  }, [available, props.onUnavailable]);
   return (
-    <div style={{ position: "relative", width: "100%", height: "100%" }}>
+    <SceneAnnotationsProvider showLabels={showLabels} key={props.lesson}>
+    <div className={`world-canvas${island ? " world-canvas-island" : ""}`} data-scene-ready={readyLesson === props.lesson ? props.lesson : undefined}>
+      {!island && available && <SceneToolbar view={view} onView={setView} zoom={zoom} onZoom={setZoom}
+        showLabels={showLabels} onLabels={() => setShowLabels(value => !value)} dark={dark} onDark={() => setDark(value => !value)}
+        onReset={() => { setView("perspective"); setZoom(1); setResetToken(value => value + 1); }} />}
+      <div className="scene-viewport" data-view={view} data-theme={dark ? "dark" : "light"}>
+      {!available ? <Fallback lesson={props.lesson}/> : <>
+
       {readyLesson!==props.lesson&&<div className="scene-loading-overlay" role="status"><span className="scene-loading-ring"/>正在布置科学展台…</div>}
       <div
         ref={setOverlayTarget}
@@ -296,7 +290,7 @@ export default function WorldCanvas(props: WorldCanvasProps) {
         style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1 }}
       />
       {overlayPortal && (
-        <CanvasBoundary lesson={props.lesson} key={props.lesson}>
+        <CanvasBoundary lesson={props.lesson} key={props.lesson} onError={() => setAvailable(false)}>
           <Canvas
             orthographic
             camera={{ position: [6, 8, 12], zoom: 50, near: 0.1, far: 100 }}
@@ -311,15 +305,15 @@ export default function WorldCanvas(props: WorldCanvasProps) {
               antialias: true,
               powerPreference: "high-performance",
             }}
-            style={{ width: "100%", height: "100%", touchAction: "pan-y" }}
+            style={{ width: "100%", height: "100%", touchAction: view === "orbit" ? "none" : "pan-y" }}
             fallback={<Fallback lesson={props.lesson} />}
             aria-label={`${names[props.lesson]??getLesson(props.lesson)?.title}三维互动场景`}
           >
             <SceneHtmlPortalContext.Provider value={overlayPortal}>
-              <CameraFit island={props.lesson === "island"} lesson={props.lesson} />
+              <SceneCamera lesson={props.lesson} view={view} zoom={zoom} resetToken={resetToken} />
               <ContextGuard onLost={() => setAvailable(false)} />
               <ScenePostProcessing paused={sceneProps.paused} />
-              <color attach="background" args={[props.lesson === "day-night" ? "#141e29" : "#d0d5d5"]} />
+              <color attach="background" args={[dark ? "#101e27" : island ? "#d0d5d5" : "#e4e9e7"]} />
               <Suspense fallback={null}>
                 <Environment files={`${import.meta.env.BASE_URL}textures/studio-small-09.hdr`}
                   environmentIntensity={props.lesson === "day-night" ? 0 : 0.65} />
@@ -347,7 +341,7 @@ export default function WorldCanvas(props: WorldCanvasProps) {
                 <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]}
                   position={[0, props.lesson === "island" ? -1.87 : -0.46, 0]}>
                   <planeGeometry args={[200, 200]} />
-                  <meshStandardMaterial color="#c4cbcb" roughness={0.94} />
+                  <meshStandardMaterial color={dark ? "#192c35" : island ? "#c4cbcb" : "#d8e0dc"} roughness={0.94} />
                 </mesh>
               )}
               <Suspense fallback={null}>
@@ -358,6 +352,13 @@ export default function WorldCanvas(props: WorldCanvasProps) {
           </Canvas>
         </CanvasBoundary>
       )}
+      </>}
+      </div>
+      {!island && available && <>
+        <p className="scene-gesture-hint">{view === "orbit" ? "拖动模型转动视角 · 用上方 ＋ / − 调整大小" : "点选模型探索 · 换个视角，看看藏起来的细节"}</p>
+        {available && <AnnotationDock/>}
+      </>}
     </div>
+    </SceneAnnotationsProvider>
   );
 }

@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useFrame, type ThreeElements } from "@react-three/fiber";
 import { SceneHtml as Html } from "../components/SceneHtml";
 import { DoubleSide, ExtrudeGeometry, Path, Shape, type Group } from "three";
 import { PhysicalMaterial, cloudTexture, type MaterialKind } from "./materials";
 import type { WorldCanvasProps } from "../types";
+import { useSceneAnnotation, worldVisible } from '../components/SceneAnnotations';
 
 export type SceneProps = WorldCanvasProps;
 type MeshProps = ThreeElements["mesh"] & { color?: string; roughness?: number; kind?: MaterialKind };
@@ -14,7 +15,7 @@ export function useSceneClock(props: SceneProps) {
     if (props.paused) return;
     if (props.demo)
       time.current = props.narrationActive ? props.narrationTime : 0;
-    else time.current += Math.min(delta, 0.06);
+    else time.current += Math.min(delta, 0.06) * (props.playbackRate ?? 1);
   }, -2);
   return time;
 }
@@ -76,13 +77,23 @@ export function SceneLabel({
   position: [number, number, number];
   color?: string;
 }) {
+  const anchor=useRef<Group>(null),label=useRef<HTMLSpanElement>(null);
+  const mountLabel=useCallback((node:HTMLSpanElement|null)=>{
+    label.current=node;
+    if(node)node.style.display=worldVisible(anchor.current)?'inline-block':'none';
+  },[]);
+  const {showLabel}=useSceneAnnotation(children,anchor,{color,onVisibility:visible=>{
+    if(label.current){const display=visible?'inline-block':'none';if(label.current.style.display!==display)label.current.style.display=display;}
+  }});
   return (
+    <group ref={anchor} position={position}>
+    {showLabel&&
     <Html
-      position={position}
       center
       style={{ pointerEvents: "none", whiteSpace: "nowrap" }}
     >
       <span
+        ref={mountLabel}
         className="scene-label"
         style={{
           display: "inline-block",
@@ -99,6 +110,8 @@ export function SceneLabel({
         {children}
       </span>
     </Html>
+    }
+    </group>
   );
 }
 export function Cloud({

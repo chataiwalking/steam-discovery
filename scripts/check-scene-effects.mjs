@@ -83,7 +83,7 @@ try {
    if (samples.has(lesson.id)) await page.locator('.experiment-canvas').screenshot({path:`${output}/${lesson.id}-desktop.png`});
    if(process.env.SCENE_REFRESH_PREVIEWS) {
     const style=await page.addStyleTag({content:'[data-scene-overlays],.experiment-badges{visibility:hidden!important}'});
-    await page.locator('.experiment-canvas').screenshot({path:`public/previews/${lesson.id}.png`});
+    await page.locator('.scene-viewport').screenshot({path:`public/previews/${lesson.id}.png`});
     await style.evaluate(element=>element.remove());
    }
    const item={id:lesson.id,title:lesson.title,effects,pauseStable:true,webglError:glError,errors:[...errors]};

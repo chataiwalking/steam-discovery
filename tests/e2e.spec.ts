@@ -112,11 +112,10 @@ const sceneLabels: Record<LessonId, string> = {
 };
 
 async function expectSceneReady(page: Page, id: LessonId) {
-  // A Canvas can exist while the lazy R3F scene is still empty. These labels
-  // mount inside the actual scene, so a blank canvas cannot pass this check.
-  await expect(
-    page.locator(".experiment-canvas").getByText(sceneLabels[id], { exact: true }),
-  ).toBeVisible({ timeout: 60_000 });
+  // Readiness is emitted inside the resolved scene, and its notes register from
+  // actual scene components even when the canvas labels are intentionally hidden.
+  await expect(page.locator(`[data-scene-ready="${id}"] canvas`)).toBeVisible({timeout:60000});
+  await expect(page.locator('.annotation-dock-list')).toContainText(sceneLabels[id]);
 }
 
 async function trialAction(page: Page, id: LessonId) {
@@ -187,7 +186,7 @@ async function solve(page: Page, id: LessonId, age: Age) {
       break;
     case "bridge":
       await button(page, "让小车过桥").click();
-      await expect(page.getByRole("status")).toContainText("先给小桥放上桥面");
+      await expect(page.locator(".experiment-feedback")).toContainText("先给小桥放上桥面");
       await expect(button(page, "收下这颗发现星")).toBeDisabled();
       await button(page, "桥面").click();
       await button(page, "让小车过桥").click();
@@ -240,7 +239,7 @@ async function solve(page: Page, id: LessonId, age: Age) {
   }
 }
 
-test("all six scenes mount their actual 3D scene labels", async ({ page }) => {
+test("all six scenes mount actual models and their external observation notes", async ({ page }) => {
   for (const lesson of coreLessons) {
     await page.goto(`/#/lesson/${lesson.id}?age=4-5`);
     await expectSceneReady(page, lesson.id);

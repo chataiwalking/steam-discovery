@@ -87,3 +87,7 @@ python3 scripts/synthesize_narration.py --verify
 ```
 
 脚本复用已校验的本地模型目录；首次下载受网络影响时，可用 `--model-dir` 指向含 `config.json`、`kokoro-v1_1-zh.pth`、`zf_001.pt` 的本地目录，权重仍须通过官方 SHA256 校验。
+
+## 观察实验室
+
+80 个场景支持视角切换、缩放、按需标注和慢速观察；生物、地理另有 20 个模型与过程重构。设计、范围和验收方式见 [观察实验室说明](docs/observation-lab.md)。

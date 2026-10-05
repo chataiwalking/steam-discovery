@@ -79,6 +79,9 @@ export interface WorldCanvasProps {
   narrationTime: number;
   narrationActive: boolean;
   demo: boolean;
+  /** Manual experiments can be slowed down; narrated demos stay audio-synchronised. */
+  playbackRate?: number;
+  onUnavailable?: () => void;
   onSelect?: (id: LessonId) => void;
   onPreview?: (id: LessonId | null) => void;
   onAction?: (action: WorldAction) => void;

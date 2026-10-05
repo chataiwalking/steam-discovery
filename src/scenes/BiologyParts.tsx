@@ -1,7 +1,115 @@
-import { useEffect, useMemo, useRef, type RefObject } from 'react';
+import { useEffect, useMemo, useRef, type ReactNode, type RefObject } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { BufferGeometry, Float32BufferAttribute, Group } from 'three';
+import { AdditiveBlending, BackSide, BufferGeometry, Color, DoubleSide, Float32BufferAttribute, Group, type ShaderMaterial } from 'three';
 import { Ball, Cube, Rod } from './shared';
+import { Wire } from './ScienceExperimentsParts';
+import { InspectObject } from './ScienceTechnologyEffects';
+
+export type CellPartId = 'membrane' | 'nucleus' | 'mitochondria' | 'endoplasmic' | 'golgi';
+export const cellPartNames: Record<CellPartId,string> = {
+  membrane:'细胞膜 · 包围并分隔细胞', nucleus:'细胞核与核仁', mitochondria:'线粒体 · 内膜有褶皱',
+  endoplasmic:'粗面内质网 · 表面有核糖体', golgi:'高尔基体 · 层叠的膜囊',
+};
+function CellSurface({ color, selected = false, inner = false }: {color:string;selected?:boolean;inner?:boolean}) {
+  return <meshStandardMaterial color={color} roughness={.53} metalness={.03} side={inner?BackSide:DoubleSide}
+    emissive={color} emissiveIntensity={selected?.3:.025} customProgramCacheKey={()=>'bio-cell-grain-v1'}
+    onBeforeCompile={shader=>{
+      shader.vertexShader='varying vec3 bioSurface;\n'+shader.vertexShader;
+      shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nbioSurface=position;');
+      shader.fragmentShader='varying vec3 bioSurface;\n'+shader.fragmentShader;
+      shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\nfloat grain=fract(sin(dot(floor(bioSurface*155.),vec3(127.1,311.7,74.7)))*43758.5453);diffuseColor.rgb*=.94+grain*.12;');
+    }}/>
+}
+function CellPick({id,selected,onSelect,children}: {id:CellPartId;selected:CellPartId;onSelect:(id:CellPartId)=>void;children:ReactNode}) {
+  return <InspectObject key={selected} text={cellPartNames[id]} position={[0,-1.45,1.6]} radius={.7}>
+    <group onClick={event=>{event.stopPropagation();onSelect(id);}}>{children}</group>
+  </InspectObject>;
+}
+/** Original shell geometry removes a cap around +Z; no transparent sphere hides the specimen. */
+function OpenCellShell({ selected, closed = false }: { selected:boolean;closed?:boolean }) {
+  const cut=closed?0:.94;
+  return <group>
+    <mesh rotation={[Math.PI/2,0,0]}><sphereGeometry args={[1.55,64,42,0,Math.PI*2,cut,Math.PI-cut]}/><CellSurface color="#8ab4bf" selected={selected}/></mesh>
+    {!closed&&<>
+      <mesh rotation={[Math.PI/2,0,0]}><sphereGeometry args={[1.485,64,42,0,Math.PI*2,cut,Math.PI-cut]}/><CellSurface color="#254a50" inner/></mesh>
+      <mesh position={[0,0,Math.cos(cut)*1.55]}><torusGeometry args={[Math.sin(cut)*1.55,.039,8,80]}/><CellSurface color="#b4d1c5" selected={selected}/></mesh>
+      <mesh position={[0,0,Math.cos(cut)*1.485]}><torusGeometry args={[Math.sin(cut)*1.485,.019,6,80]}/><CellSurface color="#4d8d91"/></mesh>
+    </>}
+  </group>;
+}
+function MembraneSheet({offset=0,color,selected=false,width=.15}: {offset?:number;color:string;selected?:boolean;width?:number}) {
+  const geometry=useMemo(()=>{
+    const g=new BufferGeometry(),positions:number[]=[],indices:number[]=[];
+    for(let i=0;i<=36;i++){
+      const u=i/36,angle=(-.86+u*1.72)*Math.PI;
+      const x=Math.sin(angle)*(.63+offset*.07),y=Math.cos(angle)*.26+offset;
+      const z=.06+Math.sin(u*Math.PI*3)*.025;
+      positions.push(x,y,z-width/2,x,y,z+width/2);
+      if(i<36){const n=i*2;indices.push(n,n+1,n+2,n+1,n+3,n+2);}
+    }
+    g.setAttribute('position',new Float32BufferAttribute(positions,3));g.setIndex(indices);g.computeVertexNormals();return g;
+  },[offset,width]);
+  useEffect(()=>()=>geometry.dispose(),[geometry]);
+  return <mesh geometry={geometry}><CellSurface color={color} selected={selected}/></mesh>;
+}
+function CellParticles({progress,ribosomes=false}: {progress:RefObject<number>;ribosomes?:boolean}) {
+  const material=useRef<ShaderMaterial>(null);
+  const geometry=useMemo(()=>{
+    const points:number[]=[];
+    for(let i=0;i<(ribosomes?72:160);i++){
+      if(ribosomes){const u=(i%18)/17,a=(-.86+u*1.72)*Math.PI,row=Math.floor(i/18);points.push(Math.sin(a)*(.63+row*.012),Math.cos(a)*.26+row*.095,.17+(i%3)*.025);}
+      else {const a=i*2.39996,b=Math.acos(1-2*((i*.6180339)%1)),r=.65+(i%13)/13*.65;const x=Math.sin(b)*Math.cos(a)*r,y=Math.sin(b)*Math.sin(a)*r,z=Math.cos(b)*r;
+        if((x+.43)**2+(y-.26)**2+(z-.18)**2>.42&&z<.85)points.push(x,y,z);}
+    }
+    const g=new BufferGeometry();g.setAttribute('position',new Float32BufferAttribute(points,3));return g;
+  },[ribosomes]);
+  const uniforms=useMemo(()=>({phase:{value:0},tint:{value:new Color(ribosomes?'#dbdca7':'#799a92')},size:{value:ribosomes?3.2:2.25}}),[ribosomes]);
+  useEffect(()=>()=>geometry.dispose(),[geometry]);
+  useFrame(()=>{if(material.current)material.current.uniforms.phase.value=progress.current;});
+  return <points geometry={geometry} raycast={()=>null}><shaderMaterial ref={material} uniforms={uniforms} transparent depthWrite={false} blending={AdditiveBlending} toneMapped={false}
+    vertexShader="uniform float size;uniform float phase;void main(){vec3 p=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);gl_PointSize=size;}"
+    fragmentShader="uniform vec3 tint;void main(){float r=length(gl_PointCoord-.5);float a=1.-smoothstep(.12,.49,r);gl_FragColor=vec4(tint,a*.6);}"/></points>;
+}
+function Mitochondrion({selected}: {selected:boolean}) {
+  return <group>
+    <mesh rotation={[Math.PI/2,0,0]} scale={[.52,.22,.23]}><sphereGeometry args={[1,36,24,0,Math.PI*2,.92,Math.PI-.92]}/><CellSurface color="#cf8758" selected={selected}/></mesh>
+    <mesh position={[0,0,.139]} scale={[.416,.175,1]}><torusGeometry args={[1,.042,6,48]}/><CellSurface color="#e7b177" selected={selected}/></mesh>
+    <group scale={[.41,.17,.16]} position={[0,0,.09]}>
+      <mesh scale={[1,1,.3]}><sphereGeometry args={[1,28,16]}/><CellSurface color="#9c6047"/></mesh>
+      <Wire points={Array.from({length:15},(_,i)=>[-.83+i*.119,(i%2===0?-.65:.65)*(1-Math.abs(i-7)*.035),.3])} radius={.08} color="#ecc09a"/>
+    </group>
+  </group>;
+}
+export function AnimalCellCutaway({inside,selected,onSelect,progress}: {
+  inside:boolean;selected:CellPartId;onSelect:(id:CellPartId)=>void;progress:RefObject<number>;
+}) {
+  return <group>
+    <CellPick id="membrane" selected={selected} onSelect={onSelect}><OpenCellShell closed={!inside} selected={selected==='membrane'}/></CellPick>
+    {inside&&<>
+      <CellParticles progress={progress}/>
+      <CellPick id="nucleus" selected={selected} onSelect={onSelect}><group position={[-.43,.26,.18]}>
+        <mesh rotation={[Math.PI/2,0,0]}><sphereGeometry args={[.53,48,28,0,Math.PI*2,.9,Math.PI-.9]}/><CellSurface color="#8b79b1" selected={selected==='nucleus'}/></mesh>
+        <mesh position={[0,0,.33]}><torusGeometry args={[.414,.025,8,48]}/><CellSurface color="#b9a4d4" selected={selected==='nucleus'}/></mesh>
+        <Ball color="#4b406c" scale={[.41,.4,.3]}/><Ball color="#c29fc7" position={[.07,-.05,.25]} scale={.155}/>
+        {[-1,1].map(side=><Wire key={side} points={[[side*.27,-.14,.28],[side*.14,.1,.31],[side*.25,.24,.28]]} color="#a691bb" radius={.018}/>)}
+      </group></CellPick>
+      <CellPick id="mitochondria" selected={selected} onSelect={onSelect}>
+        <group position={[.58,-.51,.37]} rotation={[0,0,-.18]}><Mitochondrion selected={selected==='mitochondria'}/></group>
+        <group position={[-.73,-.63,.06]} rotation={[0,0,.38]} scale={.62}><Mitochondrion selected={selected==='mitochondria'}/></group>
+      </CellPick>
+      <CellPick id="endoplasmic" selected={selected} onSelect={onSelect}><group position={[-.27,-.33,.22]} scale={.88}>
+        {[0,.095,.19,.285].map(offset=><MembraneSheet key={offset} offset={offset} color="#5cacc0" selected={selected==='endoplasmic'} width={.32}/>)}
+        <CellParticles progress={progress} ribosomes/>
+        <Wire points={[[.42,.12,.05],[.68,.19,.04],[.81,-.03,.04],[.71,-.22,.04],[.45,-.14,.04]]} radius={.03} color="#63b5be"/>
+      </group></CellPick>
+      <CellPick id="golgi" selected={selected} onSelect={onSelect}><group position={[.61,.49,.27]} scale={.52} rotation={[0,0,.25]}>
+        {[0,.11,.22,.33,.44].map(offset=><MembraneSheet key={offset} offset={offset} color="#91b761" selected={selected==='golgi'} width={.35}/>)}
+        {[0,1,2].map(i=><Ball key={i} color="#bcce79" position={[.64+i*.12,.35+i*.12,.04]} scale={.09}/>)}
+      </group></CellPick>
+      {[[-.95,.54,.02],[.69,.11,.61],[.29,-.96,.17]].map((p,i)=><Ball key={i} color="#c5ad6c" position={p as [number,number,number]} scale={.075+i*.015}/>)}
+    </>}
+  </group>;
+}
 
 export function Leaf({ color = '#659c5e' }: { color?: string }) {
   return <group><Ball kind="ground" color={color} scale={[.6,.035,.28]} /><Cube color="#abc37b" scale={[1.03,.012,.012]} position={[0,.037,0]} /></group>;
@@ -71,12 +179,21 @@ export function FishModel() {
 
 /** Seeded particles are one draw call; every position is a function of frozen progress. */
 export function PollenParticles({ progress, visits }: { progress: RefObject<number>; visits: number }) {
-  const count=20;
+  const count=25;
   const geometry=useMemo(()=>{const g=new BufferGeometry();g.setAttribute('position',new Float32BufferAttribute(new Float32Array(count*3),3));return g;},[]);
   useEffect(()=>()=>geometry.dispose(),[geometry]);
   useFrame(()=>{const cycle=progress.current*visits;const a=geometry.getAttribute('position');
-    for(let i=0;i<count;i++){const local=Math.max(0,Math.min(.5,cycle-Math.floor(i/5)));const t=.5-.5*Math.cos(local*Math.PI*2);a.setXYZ(i,-1.52+3.04*t,1.71+Math.sin(t*Math.PI)*.48+(i%5)*.035,(i%4-1.5)*.06);}
+    for(let i=0;i<count;i++){const local=Math.max(0,Math.min(.5,cycle-Math.floor(i/5)));const t=.5-.5*Math.cos(local*Math.PI*2);a.setXYZ(i,-1.52+3.04*t,1.75+.11*t+Math.sin(t*Math.PI)*.52+(i%5-2)*.018,(i%4-1.5)*.04);}
     a.needsUpdate=true;
   });
   return <points geometry={geometry} raycast={()=>null}><pointsMaterial size={.047} color="#e5ce70" toneMapped={false} depthWrite={false} /></points>;
+}
+
+export function AirCycleParticles({progress,cycles}: {progress:RefObject<number>;cycles:number}) {
+  const geometry=useMemo(()=>{const g=new BufferGeometry();g.setAttribute('position',new Float32BufferAttribute(new Float32Array(18*3),3));return g;},[]);
+  useEffect(()=>()=>geometry.dispose(),[geometry]);
+  useFrame(()=>{const phase=progress.current*cycles%1,inhale=phase<.5,local=(phase%.5)*2;const a=geometry.getAttribute('position');
+    for(let i=0;i<18;i++){const t=(local+i/18)%1,u=inhale?t:1-t,side=i%2?1:-1;a.setXYZ(i,side*Math.max(0,u-.42)*1.12,2.78-u*1.34,.16+(i%3)*.025);}a.needsUpdate=true;
+  });
+  return <points geometry={geometry} raycast={()=>null}><pointsMaterial color="#c6e3dc" size={.035} toneMapped={false} depthWrite={false}/></points>;
 }

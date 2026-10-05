@@ -2241,3 +2241,49 @@ body{background:radial-gradient(ellipse at 74% 10%,#263a44 0,transparent 38%),#0
 @media(min-width:1500px){.island-showcase .island-wrap{height:445px}}
 @media(max-width:1200px){.island-showcase{padding-left:9px}.island-showcase .island-wrap{height:370px}}
 @media(max-width:640px){.brand{gap:8px}.brand-mark{width:36px;height:36px}.brand-name{font-size:20px}.brand small{font-size:8px;letter-spacing:1.1px;margin-top:3px}.island-showcase{padding:24px 0 0;width:100%}.island-showcase .island-wrap{height:335px;width:100%}.island-showcase-heading{font-size:11px;margin-bottom:10px}.island-choices{gap:6px;margin-top:10px}.island-choices button{min-height:44px;padding:6px 7px;font-size:10px;gap:5px}.island-choices button>svg{display:none}.island-preview-caption{min-height:40px;font-size:10px;gap:8px}}
+
+/* Observation lab: controls and reading sit outside the model's field of view. */
+.lesson-workspace{grid-template-columns:minmax(0,1fr) 330px;gap:22px}
+.experiment-badges{position:relative;inset:auto;padding:12px 16px;background:#162933;border-bottom:1px solid #344a55;pointer-events:auto;gap:10px}
+.experiment-badges>span{padding:0;border:0;background:none;color:#c0d3d9;font-size:11px;letter-spacing:1px;white-space:nowrap}
+.experiment-playback-tools{display:flex;align-items:center;gap:7px}
+.experiment-playback-tools button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:36px;min-width:36px;padding:0 10px;border:1px solid #48606d;border-radius:5px;font-size:11px;color:#c4d7de;background:#213844}
+.experiment-playback-tools button[aria-pressed=true]{background:#b8d8d9;color:#122831;border-color:#b8d8d9}
+.experiment-playback-tools button:disabled{opacity:.45;cursor:default}
+.experiment-canvas{height:auto;width:100%}
+.world-canvas{width:100%;min-width:0}
+.scene-viewport{position:relative;width:100%;height:470px;isolation:isolate;overflow:hidden}
+.scene-viewport[data-theme=dark]{background:#101e27}.scene-viewport[data-theme=light]{background:#e4e9e7}
+.world-canvas-island,.world-canvas-island .scene-viewport{height:100%}
+.scene-toolbar{display:flex;align-items:center;gap:12px;min-height:58px;padding:8px 16px;background:#10232d;border-bottom:1px solid #344a55;color:#b2c9d1;font-size:11px}
+.scene-view-select{display:flex;align-items:center;gap:5px}
+.scene-view-select select{border:0;background:#10232d;color:#c7dce2;font:inherit;min-height:36px;max-width:110px;cursor:pointer;padding:0 2px}
+.scene-toolbar button{display:flex;align-items:center;justify-content:center;gap:5px;min-height:36px;min-width:32px;background:transparent;color:#9eb9c5;border:1px solid transparent;border-radius:4px;padding:0 5px;font-size:11px}
+.scene-toolbar button:hover:not(:disabled){background:#28434e;color:#e2eded}
+.scene-toolbar button[aria-pressed=true]{color:#e0c095;background:#283d42;border-color:#69837f}
+.scene-toolbar button:disabled{opacity:.28;cursor:default}
+.scene-zoom{display:flex;align-items:center;border:1px solid #344c59;border-radius:5px}
+.scene-zoom output{font-variant-numeric:tabular-nums;font-size:10px;min-width:35px;text-align:center;color:#b7cbd2}
+.scene-display-tools{margin-left:auto;display:flex;gap:3px}
+.scene-gesture-hint{margin:0;padding:10px 16px;color:#87a3af;font-size:10px;letter-spacing:.3px;border-top:1px solid #314953;background:#122630;line-height:1.5}
+.lesson-workspace-focus{grid-template-columns:minmax(0,1fr)}
+.lesson-workspace-focus .scene-viewport{height:min(68vh,720px);min-height:400px}
+.lesson-workspace-focus .lesson-sidebar{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.lesson-workspace-focus .controls-card{margin-top:0}
+.scene-caption{background:#11262f;border-top:1px solid #344c55;padding:13px 18px}
+@media(min-width:1450px){.scene-viewport{height:540px}}
+@media(max-width:1050px){.lesson-workspace{grid-template-columns:minmax(0,1fr) 300px;gap:16px}.scene-toolbar{gap:5px;padding:8px 10px}.scene-display-tools button span{display:none}.scene-viewport{height:435px}.experiment-badges{padding:10px}.experiment-playback-tools{gap:4px}.experiment-playback-tools button{padding:0 7px}}
+@media(max-width:800px){.lesson-workspace{grid-template-columns:1fr}.lesson-sidebar{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.controls-card{margin-top:0}.scene-display-tools button span{display:inline}.scene-viewport{height:440px}}
+@media(max-width:640px){.lesson-sidebar,.lesson-workspace-focus .lesson-sidebar{display:flex;flex-direction:column;gap:14px}.lesson-sidebar>section{width:100%}.scene-viewport{height:350px}.scene-toolbar{flex-wrap:wrap;justify-content:space-between;padding:6px 10px;gap:3px}.scene-toolbar button{min-height:40px;min-width:30px}.scene-view-select select{min-height:40px;font-size:11px;max-width:95px}.scene-display-tools{margin-left:0}.scene-display-tools button span{display:none}.experiment-badges>span{font-size:10px;letter-spacing:0}.experiment-playback-tools button{font-size:10px;padding:0 7px}.experiment-playback-tools button svg{width:14px}.scene-gesture-hint{padding:9px 12px;font-size:10px}.lesson-workspace-focus .scene-viewport{height:65vh;min-height:350px}}
+.annotation-dock{background:#142a34;border-top:1px solid #344c55;padding:13px 18px;color:#bbd0d7;font-size:11px;line-height:1.8}
+.annotation-dock-summary{display:flex;gap:16px;align-items:baseline}
+.annotation-dock-heading{font-size:10px;font-weight:500;white-space:nowrap;color:#dfc395;letter-spacing:1px}
+.annotation-dock-excerpts{min-width:0;display:flex;flex-direction:column;gap:3px}
+.annotation-dock-excerpt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.annotation-dock-details{margin-top:7px;color:#8eafbd}
+.annotation-dock-details summary{cursor:pointer;font-size:10px;min-height:28px;padding-top:4px}
+.annotation-dock-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;padding:10px 0 0 16px;margin:0;color:#b8cdd5}
+.annotation-dock-list li{overflow-wrap:anywhere}
+@media(max-width:640px){.annotation-dock{padding:11px 12px}.annotation-dock-summary{gap:10px}.annotation-dock-list{grid-template-columns:1fr}}
+.scene-fallback{color:#aec5cd}.scene-viewport[data-theme=light] .scene-fallback{color:#4d6971}
+fieldset.lesson-controls{border:0;padding:0;margin:0;min-width:0}fieldset.lesson-controls:disabled{opacity:.55}
