@@ -313,7 +313,7 @@ export default function WorldCanvas(props: WorldCanvasProps) {
               <SceneCamera lesson={props.lesson} view={view} zoom={zoom} resetToken={resetToken} />
               <ContextGuard onLost={() => setAvailable(false)} />
               <ScenePostProcessing paused={sceneProps.paused} />
-              <color attach="background" args={[dark ? "#101e27" : island ? "#d0d5d5" : "#e4e9e7"]} />
+              <color attach="background" args={[dark ? "#101e27" : "#e2f8ff"]} />
               <Suspense fallback={null}>
                 <Environment files={`${import.meta.env.BASE_URL}textures/studio-small-09.hdr`}
                   environmentIntensity={props.lesson === "day-night" ? 0 : 0.65} />

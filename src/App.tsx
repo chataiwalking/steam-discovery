@@ -52,7 +52,6 @@ import {
 } from "./learning";
 import { useNarration } from "./hooks/useNarration";
 import { Illustration, Star } from "./components/Illustrations";
-import BrandMark from "./components/BrandMark";
 const WorldCanvas = lazy(() => import("./components/WorldCanvas"));
 const featuredLessonIds = ["day-night", "water-cycle", "gears", "bridge", "light", "shapes"];
 const featuredLessons = featuredLessonIds.map(id => lessons.find(lesson => lesson.id === id)!);
@@ -142,10 +141,10 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <a className="brand" href="#/" aria-label="小小发现家首页">
-          <BrandMark className="brand-mark" />
+        <a className="brand" href="#/" aria-label="科学通识首页">
+          <span className="aidazi-face" aria-hidden="true"><i /><i /></span>
           <span>
-            <b className="brand-name">小小发现家</b><small>让好奇，走得更远</small>
+            <b className="brand-name aidazi-brand-word">科学通识<span aria-hidden="true">✦</span></b><small>AI搭子 · 一起动手，试试看</small>
           </span>
         </a>
         <nav aria-label="主导航">
@@ -158,10 +157,13 @@ function App() {
             我的发现{count > 0 && <i>{count}</i>}
           </button>
         </nav>
-        <button className="parent-button" onClick={() => setModal("guide")}>
+        <div className="science-header-actions">
+          <a className="host-home-link" href={import.meta.env.DEV ? "http://127.0.0.1:5190/" : "/"} aria-label="返回AI搭子首页"><ArrowLeft size={15} /><span>AI搭子</span></a>
+        <button className="parent-button" onClick={() => setModal("guide")} aria-label="家长指南">
           <Settings2 size={17} />
           <span>家长指南</span>
         </button>
+        </div>
       </header>
       {current ? (
         <Lesson
