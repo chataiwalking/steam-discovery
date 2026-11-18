@@ -1,3 +1,4 @@
+import LessonBase from './LessonBase';
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Group } from "three";
@@ -7,7 +8,6 @@ import {
   Gear,
   Rod,
   SceneLabel,
-  ToyPlatform,
   useSceneClock,
   type SceneProps,
 } from "./shared";
@@ -36,7 +36,7 @@ export default function Gears(props: SceneProps) {
   });
   return (
     <group>
-      <ToyPlatform color="#b1bab9" radius={3.7} />
+      <LessonBase subject="T" radius={3.7}/>
       {[-2.65, 2.65].map(x => (
         <group key={x}>
           <Cube kind="metal" color="#334953" position={[x, 1.65, -0.7]} scale={[0.13, 3.25, 0.16]} />
@@ -65,10 +65,10 @@ export default function Gears(props: SceneProps) {
           <Rod key={`${x}-${y}`} kind="metal" color="#475b65" position={[x, y, -0.23]} rotation={[Math.PI / 2, 0, 0]} scale={[0.065, 0.04, 0.065]} />
         )))}
         <Cube kind="metal" color="#405762" position={[0, 2.12, -0.32]} scale={[6.56, 0.08, 0.36]} />
-        <group position={[leftX, 0, 0]} ref={left}>
+        <group name="study:path" position={[leftX, 0, 0]} ref={left}>
           <FocusTarget ringPlane="front" radius={1.14} paused={props.paused} enabled={!props.demo} onActivate={()=>props.onAction?.({type:'gear'})}><Gear teeth={12} radius={1} color="#a3afb3" /><GearMarker radius={1}/></FocusTarget>
         </group>
-        <group position={[rightX, 0, 0]} ref={right}>
+        <group name="study:path" position={[rightX, 0, 0]} ref={right}>
           <FocusTarget ringPlane="front" radius={rightRadius*1.14} paused={props.paused} enabled={!props.demo} onActivate={()=>props.onAction?.({type:'gear'})}>
           <Gear
             teeth={props.state.gearTeeth}

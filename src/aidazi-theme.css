@@ -280,3 +280,48 @@ footer { color: #8395a1; border-color: #e3edf2; background: #fff; }
 @media (prefers-reduced-motion: reduce) {
   *, *:before, *:after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Step changes and the observation light follow actual lesson state. */
+@media (prefers-reduced-motion: no-preference) {
+  .lesson-stepper button span { transition: background .22s ease, color .22s ease; }
+  .lesson-stepper button.current span { animation: step-arrival .32s ease-out; }
+  .scene-caption, .task-instruction, .narration-heading h2, .task-success, .experiment-feedback {
+    animation: observation-in .26s ease-out both;
+  }
+  .experiment-badges[data-observing="true"] .live-dot { animation: observe-pulse 1.4s ease-in-out infinite; }
+}
+@keyframes step-arrival { 50% { transform: scale(1.12); } }
+@keyframes observation-in { from { opacity: .3; transform: translateY(5px); } }
+@keyframes observe-pulse { 50% { box-shadow: 0 0 0 6px #26c6d929; } }
+
+/* A single live canvas stays beside the experiment controls on portrait phones. */
+.experiment-playback-tools .pin-observation { display: none; }
+
+@media (max-width: 640px) and (min-height: 500px) {
+  .experiment-playback-tools .pin-observation {
+    display: inline-flex;
+    color: #a82b59;
+    background: #fff0f6;
+    border-color: #f5bad0;
+  }
+  .lesson-workspace[data-pin-observation="true"] {
+    display: block;
+    --pinned-scene-height: clamp(148px, 26svh, 232px);
+    --observation-clearance: calc(var(--pinned-scene-height) + 72px + env(safe-area-inset-top));
+  }
+  [data-pin-observation="true"] .experiment {
+    position: sticky;
+    top: env(safe-area-inset-top);
+    z-index: 6;
+    background: #fff;
+    box-shadow: 0 5px 16px #1b58682b;
+  }
+  [data-pin-observation="true"] .scene-viewport { height: var(--pinned-scene-height); }
+  [data-pin-observation="true"] .lesson-sidebar { margin-top: 14px; }
+  [data-pin-observation="true"] .lesson-sidebar :is(.task-instruction, button, input, select, summary) {
+    scroll-margin-top: var(--observation-clearance);
+  }
+  [data-pin-observation="true"] :is(.scene-toolbar, .annotation-dock, .scene-caption, .science-note, .scene-gesture-hint, .focus-control) {
+    display: none;
+  }
+}

@@ -20,7 +20,7 @@ function EarthLayers({value,option,motion,props}:GeoProps) {
     if(removed.current){removed.current.position.set(.9*p,1.6-.30*p,1.7*p);removed.current.rotation.y=.22*p;removed.current.scale.setScalar(1-p*.36);}
   });
   return <group>
-    <group ref={layers} position={[0,1.6,0]}>{layerRadii.map((radius,i)=><group key={i}>
+    <group name="study:profile" ref={layers} position={[0,1.6,0]}>{layerRadii.map((radius,i)=><group key={i}>
       <FocusTarget radius={radius*1.05} paused={props.paused} enabled={!props.demo} color={layerColors[i]}>
         <mesh castShadow><sphereGeometry args={[radius,64,40,gapStart+cut,Math.PI*2-cut]}/><meshStandardMaterial color={layerColors[i]} roughness={.67}/></mesh>
         {cut>0&&[gapStart,gapStart+cut].map(angle=><LayerCap key={angle} radius={radius} inner={layerRadii[i+1]??0} angle={angle} color={layerColors[i]} order={i}/>)}
@@ -40,7 +40,7 @@ function Landforms({value,option,motion,props}:GeoProps) {
   const height=useMemo(()=>(x:number,z:number)=>.17+(option===0?value*.32*(Math.exp(-((x+.95)**2/1.05+(z+.35)**2/.8))+.72*Math.exp(-((x-1.15)**2/.85+(z-.25)**2/.7))):value*.12*(Math.exp(-((x+.8)**2/2.5+(z+.2)**2/2.2))+.45*Math.exp(-((x-1.3)**2/2+(z-.9)**2/1.5)))),[value,option]);
   const points=useMemo(()=>Array.from({length:32},(_,i)=>{const t=i/31,x=-.95+t*1.12,z=-.35+t*.48;return [x,height(x,z)+.045,z] as Point;}),[height]);
   const section=useMemo(()=>Array.from({length:56},(_,i)=>{const x=-2.65+i*5.3/55;return [x,height(x,.25)+.017,.255] as Point}),[height]);
-  return <group><Sandbox/><GeoTerrain height={height} frontCut={.25}/>
+  return <group><Sandbox/><GeoTerrain observation height={height} frontCut={.25}/>
     <GeoPath points={section} color="#d4bd92" width={.014} motion={motion} reveal={{index:0,count:1}}/>
     <GeoPath points={points} color="#e9d199" motion={motion} flow/><GeoMovingMarker points={points} motion={motion} size={.08}/>
     <GeoPin props={props} position={[-.95,height(-.95,-.35),-.35]}/><GeoPin props={props} position={points[31]} color="#7fcede"/>
@@ -56,7 +56,7 @@ function RiverJourney({value,option,motion,props}:GeoProps) {
   const branch=useMemo(()=>Array.from({length:24},(_,i)=>{const t=i/23,x=-1.85+(junctionX+1.85)*t,z=-1.65+(junctionZ+1.65)*t;return [x,height(x,z)+.055,z] as Point}),[height,junctionX,junctionZ]);
   const joined=useMemo(()=>[...branch,...points.slice(18)],[branch,points]);
   const flow=useMemo(()=>(i:number,p:number,out:Vector3)=>{const t=(p*1.6+i/18)%1;out.set(-2.2+t*4.4,.235+(1-t)*value*.27,Math.sin(t*Math.PI*2)*.58)},[value]);
-  return <group><Sandbox/><GeoTerrain height={height} frontCut={1.05}/>
+  return <group><Sandbox/><GeoTerrain observation height={height} frontCut={1.05}/>
     <GeoPath points={points} color="#4996b7" width={.09} motion={motion} flow/>
     {option===1&&<><GeoPath points={branch} color="#67bfd2" width={.052} motion={motion} flow/><GeoMovingMarker points={joined} motion={motion} color="#94dee5" size={.062}/></>}
     <GeoParticles count={18} motion={motion} point={flow} color="#bfe5e5" size={.027}/>
@@ -72,7 +72,7 @@ function Volcano({value,option,motion,props}:GeoProps) {
   const path=useMemo(()=>option===0?[[0,.43,0],[0,.95,0],[0,1.42,0],[0,1.93,0]] as Point[]:[[0,1.95,0],[.2,1.77,.35],[.45,1.2,.8],[.78,.55,1.23],[.93,.2,1.65]] as Point[],[option]);
   const bubbles=useMemo(()=>(i:number,p:number,out:Vector3)=>{const t=(p*1.8+i/16)%1;if(option===0)out.set(Math.sin(i*2.4)*.06,.42+t*1.5,Math.cos(i*2.4)*.06);else{const angle=i*2.4,r=t*.7;out.set(Math.cos(angle)*r,1.9+Math.sin(t*Math.PI)*value*.17-t*.35,Math.sin(angle)*r);}},[value,option]);
   return <group><Sandbox/><Cube kind="stone" color="#b49b80" position={[0,.1,0]} scale={[5,.16,3.9]}/>
-    <mesh position={[0,1.02,0]} castShadow receiveShadow><cylinderGeometry args={[.28,1.64,1.68,48,1,false,option===0?.72:0,option===0?5.05:Math.PI*2]}/><meshStandardMaterial color="#8b8274" roughness={.96} side={DoubleSide}/></mesh>
+    <mesh name="study:profile" position={[0,1.02,0]} castShadow receiveShadow><cylinderGeometry args={[.28,1.64,1.68,48,1,false,option===0?.72:0,option===0?5.05:Math.PI*2]}/><meshStandardMaterial color="#8b8274" roughness={.96} side={DoubleSide}/></mesh>
     <mesh position={[0,1.87,0]} rotation={[-Math.PI/2,0,0]}><torusGeometry args={[.29,.055,8,40]}/><meshStandardMaterial color="#5e625a" roughness={.9}/></mesh>
     {option===0&&<><GeoVolcanoSection angle={.72}/><GeoVolcanoSection angle={5.77}/></>}
     {option===0&&<group><FocusTarget radius={.55} paused={props.paused} enabled={!props.demo} position={[0,.45,0]} color="#f2b565"><Ball kind="paint" color="#d97643" scale={[.39,.3,.39]}/><Atmosphere radius={.41} color="#ffb763" strength={.25}/></FocusTarget><Rod color="#e99253" position={[0,1.13,0]} scale={[.085,1.34,.085]}/></group>}
@@ -99,8 +99,8 @@ function PlateMotion({value,option,motion,props}:GeoProps) {
     if(newCrust.current){newCrust.current.visible=option===0&&value>0&&p>0;newCrust.current.scale.x=.25+distance*2;}
   });
   return <group><Sandbox width={6.7} depth={3.8}/>
-    <group ref={left} position={[-1.3,.57,0]}><FocusTarget radius={1.05} paused={props.paused} enabled={!props.demo}><GroundSlab position={[0,0,0]} color="#95b0a1"/></FocusTarget></group>
-    <group ref={right} position={[1.3,.57,0]}><FocusTarget radius={1.05} paused={props.paused} enabled={!props.demo}><GroundSlab position={[0,0,0]} color="#b7b593"/></FocusTarget></group>
+    <group name="study:path" ref={left} position={[-1.3,.57,0]}><FocusTarget radius={1.05} paused={props.paused} enabled={!props.demo}><GroundSlab position={[0,0,0]} color="#95b0a1"/></FocusTarget></group>
+    <group name="study:path" ref={right} position={[1.3,.57,0]}><FocusTarget radius={1.05} paused={props.paused} enabled={!props.demo}><GroundSlab position={[0,0,0]} color="#b7b593"/></FocusTarget></group>
     {option===1&&<GeoFold motion={motion} strength={value*.27}/>}
     <group ref={newCrust} position={[0,.76,0]} visible={false}><Cube color="#cda57c" scale={[1,.09,2.5]}/></group>
     {option===0&&value>0&&<GeoParticles count={12} motion={motion} point={upwelling} color="#e6ad75" size={.022}/>}
@@ -125,7 +125,7 @@ function WeatherMap({value,option,motion,props}:GeoProps) {
     {option===0&&!record.cloud&&<group position={[place[0],1.38,place[2]]}><Ball color="#efd192" scale={.28}/><Atmosphere radius={.30} color="#f3ce87" strength={.20}/></group>}
     {option===0&&record.rain&&<GeoParticles motion={motion} point={rain} stretch={2.9} size={.022}/>}
     {option===1&&<><GeoArrow from={pointer[0]} to={pointer[1]}/><GeoMovingMarker points={pointer} motion={motion} color="#e4eeee" size={.065}/><GeoParticles count={20} motion={motion} point={wind} stretchVector={record.dx?[3,.5,.5]:[.5,.5,3]} size={.021}/>
-      <group position={[place[0]-.40,0,place[2]]}><Rod kind="metal" color="#80959a" position={[0,1.00,0]} scale={[.065,1.18,.065]}/><Rod color="#d89679" position={[0,.47+temperatureHeight/2,.075]} scale={[.025,temperatureHeight,.025]}/><Ball color="#d89679" position={[0,.47,.075]} scale={.061}/><mesh ref={reading} position={[0,.47,0]} rotation={[-Math.PI/2,0,0]} raycast={()=>null}><torusGeometry args={[.077,.012,5,20]}/><meshBasicMaterial color="#f0ddaa"/></mesh></group>
+      <group position={[place[0]-.40,0,place[2]]}><Rod kind="metal" color="#80959a" position={[0,1.00,0]} scale={[.065,1.18,.065]}/><Rod color="#d89679" position={[0,.47+temperatureHeight/2,.075]} scale={[.025,temperatureHeight,.025]}/><Ball color="#d89679" position={[0,.47,.075]} scale={.061}/><mesh name="study:level" ref={reading} position={[0,.47,0]} rotation={[-Math.PI/2,0,0]} raycast={()=>null}><torusGeometry args={[.077,.012,5,20]}/><meshBasicMaterial color="#f0ddaa"/></mesh></group>
     </>}
     <SceneLabel position={[0,2.8,0]}>选定 {value} 号站 · {option===0?(record.rain?'有降雨':record.cloud?'多云':'晴朗'):`${record.temperature}°C · 空气${record.air}移动`}</SceneLabel>
     <SceneLabel position={[0,.1,2.6]}>虚构情景记录 · 非实时天气或预报</SceneLabel>
@@ -153,7 +153,7 @@ function Seasons({value,option,motion,props}:GeoProps) {
     {[0,1,2,3].map(i=><group key={i} position={[Math.cos(i*Math.PI/2)*2.20,.22,Math.sin(i*Math.PI/2)*2.20]}><Rod kind="metal" color="#94a9af" scale={[.065,.04,.065]}/><SceneLabel position={[0,-.07,.20]}>{i}</SceneLabel></group>)}
     <group position={[0,1.48,0]}><Ball color="#eacd8b" scale={.37}/><Atmosphere radius={.40} color="#ffe0a4" strength={.22}/></group>
     <GeoParticles count={18} motion={motion} point={rays} color="#f2ddb0" size={.021}/>
-    <group ref={orbiting} position={[Math.cos(theta-Math.PI/2)*2.20,1.48,Math.sin(theta-Math.PI/2)*2.20]}>
+    <group name="study:path" ref={orbiting} position={[Math.cos(theta-Math.PI/2)*2.20,1.48,Math.sin(theta-Math.PI/2)*2.20]}>
       <group rotation={[0,0,-23.44*Math.PI/180]}>
         <Beam from={[0,-1.08,0]} to={[0,1.08,0]} color="#cfdfe2" width={.023}/>
         <group ref={earth}><FocusTarget radius={.86} paused={props.paused} enabled={!props.demo}><SeasonGlobe hemisphere={option}/><GeoPath points={parallel} closed width={.014} color="#f1d38e"/></FocusTarget></group>
@@ -174,7 +174,7 @@ function LatitudeLongitude({value,option,motion,props}:GeoProps) {
   const path=useMemo(()=>Array.from({length:24},(_,i)=>spherePoint(latitude*i/23,longitude*i/23,1.5)),[latitude,longitude]);
   // At the zero point use a short stationary curve rather than duplicate knots.
   const safePath=useMemo(()=>degrees===0?[spherePoint(0,0,1.5),spherePoint(0,.01,1.5)]:path,[degrees,path]);
-  return <group><group position={[0,1.62,0]} rotation={[0,-longitude*Math.PI/180,0]}>
+  return <group><group name="study:profile" position={[0,1.62,0]} rotation={[0,-longitude*Math.PI/180,0]}>
     <Globe small angle={-Math.PI/2}/>{parallels.map((points,i)=><GeoPath key={`lat-${i}`} points={points} closed width={i===2?.014:.006} color={i===2?'#e5c581':'#a4bec8'}/>)}
     {meridians.map((points,i)=><GeoPath key={`lon-${i}`} points={points} width={i===2?.013:.006} color={i===2?'#ebb595':'#a4bec8'}/>)}
     {Math.abs(latitude)<90&&<GeoPath points={selected} closed={option<2} width={.022} color="#f5d788"/>}
@@ -203,7 +203,7 @@ function ContourMap({value,option,motion,props}:GeoProps) {
   const peak=value*100,height=useMemo(()=>(x:number,z:number)=>.12+peak*.0035*Math.exp(-(x*x+z*z)/1.56),[peak]);
   const contours=useMemo(()=>Array.from({length:Math.floor(peak/50)-1},(_,i)=>{const meters=(i+1)*50,radius=Math.sqrt(-Math.log(meters/peak)*1.56);return {meters,points:Array.from({length:64},(_,j)=>{const a=j*Math.PI/32;return [Math.cos(a)*radius,option===0?.125+meters*.0035:.141,Math.sin(a)*radius] as Point;})};}),[peak,option]);
   return <group><Sandbox/><GeoTerrain height={height} flat={option===1}/>
-    {option===0?<><GeoContourSweep motion={motion} levels={contours.length}/><group position={[-2.10,.20,1.52]}><Cube kind="metal" color="#526b73" scale={[1.24,.07,1.0]}/><group position={[0,.039,0]}><ContourProjection peak={peak} motion={motion} inset/></group><SceneLabel position={[0,.04,.65]}>俯视投影</SceneLabel></group></>:<group position={[0,.134,0]}><ContourProjection peak={peak} motion={motion}/></group>}
+    {option===0?<><GeoContourSweep motion={motion} levels={contours.length}/><group name="study:register" position={[-2.10,.20,1.52]}><Cube kind="metal" color="#526b73" scale={[1.24,.07,1.0]}/><group position={[0,.039,0]}><ContourProjection peak={peak} motion={motion} inset/></group><SceneLabel position={[0,.04,.65]}>俯视投影</SceneLabel></group></>:<group name="study:register" position={[0,.134,0]}><ContourProjection peak={peak} motion={motion}/></group>}
     {contours.map(({meters,points},i)=><GeoPath key={meters} points={points} closed width={meters%100===0?.015:.011} color={meters%100===0?'#dec890':'#a8c4b7'} motion={motion} reveal={{index:i,count:contours.length}}/>)}
     <GeoPin props={props} position={[0,option===0?height(0,0):.145,0]}/>
     <SceneLabel position={[0,2.82,0]}>山顶 {peak} m · 50 m 等高距（示意）</SceneLabel>
@@ -219,7 +219,7 @@ function GeoStepCells({vector,count,motion}:{vector:Point;count:number;motion:Ge
 const mapVectors:Point[]=[[0,0,-1],[1,0,0],[0,0,1],[-1,0,0]];
 function MapDirections({value,option,motion,props}:GeoProps) {
   const vector=mapVectors[option],points=useMemo(()=>Array.from({length:value+1},(_,i)=>[vector[0]*i*.5,.34,vector[2]*i*.5] as Point),[value,vector]);
-  return <group><Sandbox/><Cube kind="paint" color="#b2c7ad" position={[0,.15,0]} scale={[5.25,.025,4.05]}/>
+  return <group><Sandbox/><Cube name="study:register" kind="paint" color="#b2c7ad" position={[0,.15,0]} scale={[5.25,.025,4.05]}/>
     {Array.from({length:9},(_,i)=>{const x=(i-4)*.5;return <group key={i}><Beam from={[x,.18,-2]} to={[x,.18,2]} color="#dde5d6" width={.008}/><Beam from={[-2,.18,x]} to={[2,.18,x]} color="#dde5d6" width={.008}/></group>;})}
     <Compass size={2.05} y={.195}/><GeoStepCells vector={vector} count={value} motion={motion}/>
     <GeoPath points={points} color="#e9b570" width={.032} motion={motion} flow/><GeoMovingMarker points={points} motion={motion} color="#75b6c9" size={.12}/>

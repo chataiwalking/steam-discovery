@@ -1,11 +1,47 @@
+import LessonBase from './LessonBase';
 import { useLayoutEffect, useMemo, useRef } from "react";
 import { useFrame, useThree } from '@react-three/fiber';
 import { Lamp } from "./toyModels";
-import { Color, DoubleSide, Quaternion, SRGBColorSpace, Vector3, type Mesh, type ShaderMaterial } from "three";
-import { Cube, Rod, SceneLabel, ToyPlatform, type SceneProps } from "./shared";
+import { Color, DoubleSide, Quaternion, Vector2, Vector3, type Mesh, type ShaderMaterial } from "three";
+import { Cube, Rod, SceneLabel, type SceneProps } from "./shared";
 import { FocusTarget, damping } from './MathCoreEffects';
 
 const colors = ["#ff2d1b", "#24d24b", "#2862ff"];
+// The beam ends and the projected spots use the same screen-space coordinates.
+const spotCenters = [new Vector2(-.54, -.20), new Vector2(.54, -.20), new Vector2(0, .53)];
+const screenY = 1.86;
+const screenZ = -1.02;
+const spotRadius = .97;
+
+function MixingScreen({ channels }: { channels: number[] }) {
+  const uniforms = useMemo(() => ({
+    centers: { value: spotCenters },
+    power: { value: new Vector3() },
+    radius: { value: spotRadius },
+  }), []);
+  const invalidate = useThree(state => state.invalidate);
+  const [red, green, blue] = channels;
+  useLayoutEffect(() => {
+    uniforms.power.value.set(red, green, blue);
+    invalidate();
+  }, [red, green, blue, uniforms, invalidate]);
+  return (
+    <mesh position={[0, screenY, screenZ]}>
+      <planeGeometry args={[4.04, 2.9]} />
+      <shaderMaterial uniforms={uniforms} toneMapped={false}
+        vertexShader={`varying vec2 screenPoint;
+          void main() { screenPoint = position.xy; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }`}
+        fragmentShader={`uniform vec2 centers[3]; uniform vec3 power; uniform float radius;
+          varying vec2 screenPoint;
+          float spot(vec2 center) { return 1. - smoothstep(radius * .81, radius, distance(screenPoint, center)); }
+          void main() {
+            vec3 light = vec3(spot(centers[0]), spot(centers[1]), spot(centers[2])) * power;
+            gl_FragColor = vec4(vec3(.022, .031, .039) + light, 1.);
+          }`} />
+    </mesh>
+  );
+}
+
 function LightBeam({ index, strength, paused }: { index: number; strength: number;paused:boolean }) {
   const mesh=useRef<Mesh>(null),material=useRef<ShaderMaterial>(null);
   const previousStrength=useRef(strength);
@@ -21,7 +57,8 @@ function LightBeam({ index, strength, paused }: { index: number; strength: numbe
     const x = (index - 1) * 1.9;
     const yaw = Math.atan2(x, 2.58);
     const from = new Vector3(x - Math.sin(yaw) * 0.313, 1.164, 1.45 - Math.cos(yaw) * 0.313);
-    const to = new Vector3(0, 1.86, -1.01);
+    const spot = spotCenters[index];
+    const to = new Vector3(spot.x, screenY + spot.y, screenZ + .01);
     return {
       center: from.clone().add(to).multiplyScalar(0.5),
       rotation: new Quaternion().setFromUnitVectors(new Vector3(0, 1, 0), from.clone().sub(to).normalize()),
@@ -30,12 +67,12 @@ function LightBeam({ index, strength, paused }: { index: number; strength: numbe
   }, [index]);
   return (
     <mesh ref={mesh} position={center} quaternion={rotation} raycast={()=>null} visible={strength>0}>
-      <coneGeometry args={[1.06, length, 40, 1, true]} />
+      <coneGeometry args={[spotRadius, length, 40, 1, true]} />
       <shaderMaterial ref={material} uniforms={uniforms} transparent depthWrite={false} side={DoubleSide} toneMapped={false}
         vertexShader={`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`}
         fragmentShader={`uniform vec3 uColor;uniform float uStrength;varying vec2 vUv;
           void main(){float edge=smoothstep(0.,.12,vUv.y)*(1.-smoothstep(.85,1.,vUv.y));
-          gl_FragColor=vec4(uColor,uStrength*(.028+.032*vUv.y)*edge);}`}/>
+          gl_FragColor=vec4(uColor,uStrength*(.056+.052*vUv.y)*edge);}`}/>
     </mesh>
   );
 }
@@ -44,25 +81,16 @@ export default function Light(props: SceneProps) {
     ? [1, props.narrationActive && props.narrationTime >= 3 ? 1 : 0, props.narrationActive && props.narrationTime >= 6 ? 1 : 0]
     : props.state.lights;
   const [r, g, b] = lights.map(n => Math.max(0, Math.min(1, n)));
-  const mixed = new Color().setRGB(r, g, b, SRGBColorSpace);
-  const active = r + g + b > 0;
   const names = ["红光", "绿光", "蓝光"];
   return (
     <group>
-      <ToyPlatform color="#798992" radius={3.6} />
+      <LessonBase subject="A" radius={3.6}/>
       <Cube kind="metal" color="#263b48" position={[0, 0.03, 0.3]} scale={[6.3, 0.15, 4.25]} />
       {Array.from({ length: 7 }, (_, i) => (
         <Cube key={i} kind="metal" color="#71818a" position={[0, 0.115, -1.4 + i * 0.56]} scale={[6, 0.009, 0.011]} />
       ))}
       <Cube kind="metal" color="#566872" position={[0, 1.8, -1.25]} scale={[4.4, 3.25, 0.12]} />
-      <mesh position={[0, 1.83, -1.17]}>
-        <planeGeometry args={[4.04, 2.9]} />
-        <meshStandardMaterial color="#c5c9c7" roughness={0.95} />
-      </mesh>
-      <mesh position={[0, 1.86, -1.02]}>
-        <circleGeometry args={[1.06, 64]} />
-        <meshBasicMaterial color={active ? mixed : "#151c22"} toneMapped={false} />
-      </mesh>
+      <MixingScreen channels={lights} />
       {[-1.75, 1.75].map(x => (
         <group key={x}>
           <Rod kind="metal" color="#85959e" position={[x, 0.48, -1.31]} scale={[0.065, 0.8, 0.065]} />
@@ -71,7 +99,7 @@ export default function Light(props: SceneProps) {
         </group>
       ))}
       {colors.map((color, i) => (
-        <group key={color} position={[(i - 1) * 1.9, 0.13, 1.45]}>
+        <group name="study:profile" key={color} position={[(i - 1) * 1.9, 0.13, 1.45]}>
           <FocusTarget radius={.5} color={color} paused={props.paused} enabled={!props.demo} rotation={[0,Math.atan2((i-1)*1.9,2.58),0]} onActivate={()=>props.onAction?.({type:'light',index:i})}><Lamp color={color} lit={lights[i]>0}/></FocusTarget>
           <SceneLabel position={[0, 0.2, 0.65]} color={["#f4b3ab", "#acd9b4", "#b2caff"][i]}>{names[i]}</SceneLabel>
         </group>

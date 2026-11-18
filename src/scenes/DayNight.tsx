@@ -5,6 +5,18 @@ import { Group } from 'three';
 import { Rod, SceneLabel, useSceneClock, type SceneProps } from './shared';
 import { Atmosphere, FocusTarget, damping } from './MathCoreEffects';
 
+// Short, parallel arrows show the direction of incoming sunlight at the globe.
+function Sunlight() {
+  return <group position={[0, 1, 0]}>
+    {[-.48, 0, .48].map(height => (
+      <group key={height} position={[1.88, height, 0]} rotation={[0, 0, Math.PI / 2]}>
+        <mesh><cylinderGeometry args={[.014, .014, 1.26, 8]} /><meshBasicMaterial color="#ffc873" /></mesh>
+        <mesh position={[0, .69, 0]}><coneGeometry args={[.061, .16, 12]} /><meshBasicMaterial color="#ffdd8d" /></mesh>
+      </group>
+    ))}
+  </group>;
+}
+
 export default function DayNight(props: SceneProps) {
   const earth = useRef<Group>(null);
   const time = useSceneClock(props);
@@ -26,7 +38,8 @@ export default function DayNight(props: SceneProps) {
     <ambientLight intensity={.025} />
     <directionalLight position={[8, 0, 0]} intensity={3.4} />
     <group position={[-.5, 1, 0]} ref={earth}><FocusTarget radius={1.58} paused={props.paused} enabled={!props.demo} onActivate={()=>props.onAction?.({type:'rotate'})}><Globe time={time}/></FocusTarget></group>
-    <group position={[3.25, 1.55, .1]}>
+    <Sunlight />
+    <group position={[3.25, 1, 0]}>
       <mesh>
         <sphereGeometry args={[.63, 48, 32]} />
         <shaderMaterial toneMapped={false}

@@ -1,3 +1,6 @@
+import StudyObservation from '../scenes/StudyObservation';
+import { ObservationSurface } from "./ObservationSurface";
+import { previewURL } from "../content/preview";
 import {
   Component,
   useCallback,
@@ -51,7 +54,7 @@ const names:Record<string,string> = {
 };
 
 function Illustration({ lesson }: { lesson: WorldCanvasProps["lesson"] }) {
- if(getExperiment(lesson))return <img src={`${import.meta.env.BASE_URL}previews/${lesson}.png`} alt={`${getLesson(lesson)?.title}的三维示意图`} style={{width:"min(100%,360px)",borderRadius:8}}/>;
+ if(getExperiment(lesson))return <img src={previewURL(lesson)} alt={`${getLesson(lesson)?.title}的三维示意图`} style={{width:"min(100%,360px)",borderRadius:8}}/>;
   return (
     <svg
       viewBox="0 0 360 220"
@@ -338,14 +341,10 @@ export default function WorldCanvas(props: WorldCanvasProps) {
                 </>
               )}
               {props.lesson !== "day-night" && (
-                <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]}
-                  position={[0, props.lesson === "island" ? -1.87 : -0.46, 0]}>
-                  <planeGeometry args={[200, 200]} />
-                  <meshStandardMaterial color={dark ? "#192c35" : island ? "#c4cbcb" : "#d8e0dc"} roughness={0.94} />
-                </mesh>
+                <ObservationSurface island={island} dark={dark} />
               )}
               <Suspense fallback={null}>
-                <Scene {...sceneProps} />
+                {island ? <Scene {...sceneProps}/> : <StudyObservation props={sceneProps}><Scene {...sceneProps}/></StudyObservation>}
                 <SceneReady onReady={sceneReady}/>
               </Suspense>
             </SceneHtmlPortalContext.Provider>

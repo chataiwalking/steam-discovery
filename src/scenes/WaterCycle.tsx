@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Color, DynamicDrawUsage, Float32BufferAttribute, Group, InstancedMesh, Object3D, PlaneGeometry } from 'three';
+import { Color, Float32BufferAttribute, Group, InstancedMesh, Object3D, PlaneGeometry } from 'three';
 import { Cloud, Cube, Rod, Tree, SceneLabel, useSceneClock, type SceneProps } from './shared';
 import { PhysicalMaterial, surfaceTexture } from './materials';
-import { Atmosphere, FocusTarget, WaterRipples, damping } from './MathCoreEffects';
+import { Atmosphere, FocusTarget, damping } from './MathCoreEffects';
 
 function terrainHeight(x: number, z: number) {
   const lakeDistance = Math.sqrt(((x + .65) / 2.1) ** 2 + ((z - .35) / 1.22) ** 2);
@@ -42,8 +42,16 @@ function Landscape() {
   </group>;
 }
 
+// Uncorrelated travel phases keep the falling rain spread under the cloud.
+const tracks = Array.from({ length: 42 }, (_, i) => ({
+  angle: i * 2.39996,
+  phase: ((i + 11) * (i + 37) % 101) / 101,
+  radius: .2 + .6 * ((i * 23) % 41) / 41,
+}));
+
 export default function WaterCycle(props: SceneProps) {
   const drops = useRef<InstancedMesh>(null), cloud = useRef<Group>(null);
+  const splashes = useRef<InstancedMesh>(null);
   const particle = useMemo(()=>new Object3D(),[]);
   const time = useSceneClock(props);
   const waterMap = useMemo(() => {
@@ -53,17 +61,44 @@ export default function WaterCycle(props: SceneProps) {
   const stage = props.demo ? props.narrationActive ? Math.min(3, Math.floor(props.narrationTime / 3)) : 0 : props.state.waterStage;
   useFrame((_,delta) => {
     waterMap.offset.set(time.current * .012, time.current * .007);
-    if(cloud.current&&!props.paused)cloud.current.scale.setScalar(cloud.current.scale.x+((stage>=2?1.2:.85)-cloud.current.scale.x)*damping(delta,5));
-    if (!drops.current) return;
-    const count=stage===1?10:20;
-    drops.current.instanceMatrix.setUsage(DynamicDrawUsage);
-    for(let i=0;i<count;i++) {
-      const progress = (time.current * (stage === 1 ? .23 : .75) + i / 20) % 1;
-      particle.position.set(stage===1?-1.6+Math.sin(progress*Math.PI)*.25:-.1+(i%5)*.29,stage===1?.3+progress*2.5:2.9-progress*2.75,-.15+(i%4)*.23);
-      particle.scale.set(stage===1?1:.45,stage===1?1:2.9,stage===1?1:.45);
-      particle.updateMatrix();drops.current.setMatrixAt(i,particle.matrix);
+    const cloudSize = stage >= 2 ? 1.18 : .72;
+    if (cloud.current) {
+      const blend = props.paused ? 1 : damping(delta, 5);
+      cloud.current.scale.setScalar(cloud.current.scale.x + (cloudSize - cloud.current.scale.x) * blend);
     }
-    drops.current.instanceMatrix.needsUpdate=true;
+    if (!drops.current || stage === 0) return;
+    for (let i = 0; i < drops.current.count; i++) {
+      const { angle: lane, phase, radius } = tracks[i];
+      const progress = (time.current * (stage === 3 ? .79 : .31) + phase) % 1;
+      const sway = Math.sin(lane + progress * 4);
+      const fade = .25 + .75 * Math.sin(Math.PI * progress);
+      if (stage === 1) {
+        // Invisible vapour is represented by small tracers drifting from lake to cloud.
+        particle.position.set(-1.35 + 1.9 * progress + .34 * sway, .15 + 2.7 * progress, .4 + .3 * Math.cos(lane) - .65 * progress);
+        particle.scale.setScalar(.72 * fade);
+      } else if (stage === 2) {
+        const radius = 1.4 - .98 * progress;
+        particle.position.set(.55 + radius * Math.cos(lane), 2.35 + .53 * progress + .22 * sway, -.3 + radius * .46 * Math.sin(lane));
+        particle.scale.setScalar((.38 + progress) * fade);
+      } else {
+        particle.position.set(.20 + radius * Math.cos(lane) - progress * .22, 2.72 - 2.6 * progress, -.13 + radius * .67 * Math.sin(lane));
+        particle.scale.set(.34 * fade, 2.55 * fade, .34 * fade);
+      }
+      particle.rotation.set(0, 0, 0);
+      particle.updateMatrix();
+      drops.current.setMatrixAt(i, particle.matrix);
+      if (stage === 3 && splashes.current) {
+        // The previous drop just landed here when this track wraps back to the cloud.
+        const r = progress < .36 ? .22 * progress / .36 : 0;
+        particle.position.set(-.02 + radius * Math.cos(lane), .112, -.13 + radius * .67 * Math.sin(lane));
+        particle.rotation.x = -Math.PI / 2;
+        particle.scale.setScalar(r);
+        particle.updateMatrix();
+        splashes.current.setMatrixAt(i, particle.matrix);
+      }
+    }
+    drops.current.instanceMatrix.needsUpdate = true;
+    if (stage === 3 && splashes.current) splashes.current.instanceMatrix.needsUpdate = true;
   });
   return <group>
     <Landscape />
@@ -74,18 +109,21 @@ export default function WaterCycle(props: SceneProps) {
           clearcoatRoughness={.07} envMapIntensity={1.1} bumpMap={waterMap} bumpScale={.045} />
       </mesh>
     </FocusTarget>
-    <WaterRipples props={props} position={[-.65,.107,.35]} scale={[2.02,1.15,1]} rain={stage===3}/>
+    <instancedMesh ref={splashes} args={[undefined, undefined, tracks.length]} visible={stage === 3} raycast={() => null} frustumCulled={false}>
+      <ringGeometry args={[.89, 1, 20]} />
+      <meshBasicMaterial color="#b4e7e9" transparent opacity={.64} depthWrite={false} />
+    </instancedMesh>
     <FocusTarget paused={props.paused} enabled={!props.demo} radius={.5} position={[-2.4, 3.3, -.7]} onActivate={()=>props.onAction?.({type:'water',stage:1})}>
       <mesh><sphereGeometry args={[.39, 40, 32]} /><meshBasicMaterial color="#ffe2a1" /></mesh>
       <Atmosphere radius={.43} color="#ffc16c" strength={.3}/>
     </FocusTarget>
-    <group ref={cloud} position={[.55,3,-.3]} scale={.85}>
+    <group name="study:profile" ref={cloud} position={[.55,3,-.3]} scale={.85}>
       <FocusTarget paused={props.paused} enabled={!props.demo} radius={.85} onActivate={()=>props.onAction?.({type:'water',stage:stage===2?3:2})}>
       <Cloud rain={stage === 3} />
       </FocusTarget>
     </group>
-    <instancedMesh ref={drops} key={stage===1?'vapor':'rain'} args={[undefined,undefined,stage===1?10:20]} visible={stage === 1 || stage === 3} raycast={()=>null} frustumCulled={false}>
-      <sphereGeometry args={[.024,8,6]}/><meshBasicMaterial color={stage===1?'#d8a452':'#9dc9d1'} transparent opacity={stage===1?.85:.7}/>
+    <instancedMesh ref={drops} args={[undefined,undefined,tracks.length]} visible={stage > 0} raycast={()=>null} frustumCulled={false}>
+      <sphereGeometry args={[.044,8,6]}/><meshBasicMaterial color={stage===1?'#ffcc74':stage===2?'#edfaff':'#47aacd'} transparent opacity={.86}/>
     </instancedMesh>
     <Tree position={[2.45, .23, .2]} scale={1.05} />
     <Tree position={[2.55, .3, -1.2]} scale={.78} />

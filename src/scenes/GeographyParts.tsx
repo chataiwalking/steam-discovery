@@ -20,7 +20,7 @@ export function Sandbox({width=5.5,depth=4.4}:{width?:number;depth?:number}) {
 }
 
 /** A solid terrain, with sharp section walls sampled from the same height field. */
-export function GeoTerrain({height,width=5.3,depth=4.1,flat=false,frontCut}:{height:(x:number,z:number)=>number;width?:number;depth?:number;flat?:boolean;frontCut?:number}) {
+export function GeoTerrain({observation=false,height,width=5.3,depth=4.1,flat=false,frontCut}:{observation?:boolean;height:(x:number,z:number)=>number;width?:number;depth?:number;flat?:boolean;frontCut?:number}) {
   const geometry=useMemo(()=>{
     const back=-depth/2,front=frontCut??depth/2;
     const top=new PlaneGeometry(width,front-back,64,48);top.rotateX(-Math.PI/2);top.translate(0,0,(front+back)/2);
@@ -46,7 +46,7 @@ export function GeoTerrain({height,width=5.3,depth=4.1,flat=false,frontCut}:{hei
     top.dispose();const geo=new BufferGeometry();geo.setAttribute('position',new Float32BufferAttribute(vertices,3));geo.setAttribute('color',new Float32BufferAttribute(colors,3));geo.setIndex(indices);geo.computeVertexNormals();return geo;
   },[height,width,depth,flat,frontCut]);
   useEffect(()=>()=>geometry.dispose(),[geometry]);
-  return <mesh geometry={geometry} castShadow receiveShadow><meshStandardMaterial vertexColors roughness={.94} side={DoubleSide}/></mesh>;
+  return <mesh name={observation ? "study:profile" : undefined} geometry={geometry} castShadow receiveShadow><meshStandardMaterial vertexColors roughness={.94} side={DoubleSide}/></mesh>;
 }
 
 /** Direction marks travel only with the completed-observation timeline. */

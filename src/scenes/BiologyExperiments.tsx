@@ -15,7 +15,7 @@ function CellWorld({ value, option, progress }: ExperimentSceneProps) {
   const selected=option===0?'membrane':selection;
   useFrame(()=>{if(cell.current)cell.current.scale.setScalar((.6+value*.095)*(.91+.09*smooth(progress.current)));});
   return <group>
-    <group ref={cell} position={[0,1.8,0]} rotation={[-.42,.43,0]}>
+    <group name="study:profile" ref={cell} position={[0,1.8,0]} rotation={[-.42,.43,0]}>
       <AnimalCellCutaway inside={option===1} selected={selected} onSelect={setSelection} progress={progress}/>
     </group>
     <Readout text={cellPartNames[selected]} position={[0,.32,2.02]}/>
@@ -25,7 +25,7 @@ function FlowerPollination({ value, option, progress }: ExperimentSceneProps) {
   const visitor=useRef<Group>(null),receiver=useRef<Mesh>(null);
   useFrame(()=>{const p=progress.current,t=p*value%1,q=.5-.5*Math.cos(t*Math.PI*2);if(visitor.current){visitor.current.position.set(-1.52+3.04*q,1.86+Math.sin(q*Math.PI)*.52,.02);visitor.current.rotation.y=t<.5?0:Math.PI;}if(receiver.current){receiver.current.visible=p*value>=.5;receiver.current.scale.setScalar(.95+Math.max(0,Math.sin(q*Math.PI))*.12);}});
   return <group><Board width={5.2} depth={2.7}/>{[-1,1].map(side=><group key={side} position={[side*1.52,.24,0]}><BioFlower color={side<0?'#d99baa':'#dab18b'}/></group>)}
-    <group ref={visitor} position={[-1.52,1.86,0]} scale={option===0?1:.73}><WingedVisitor butterfly={option===1} progress={progress} beats={value}/></group>
+    <group name="study:path" ref={visitor} position={[-1.52,1.86,0]} scale={option===0?1:.73}><WingedVisitor butterfly={option===1} progress={progress} beats={value}/></group>
     <mesh ref={receiver} position={[1.52,1.87,0]} rotation={[-Math.PI/2,0,0]} visible={false}><ringGeometry args={[.09,.115,32]}/><meshBasicMaterial color="#e4ce82" toneMapped={false}/></mesh>
     <PollenParticles progress={progress} visits={value}/>
     <EffectPath progress={progress} points={[[-1.52,1.71,.14],[0,2.25,.14],[1.52,1.71,.14]]} color="#e1c473" speed={value} strength={.25}/>
@@ -37,8 +37,8 @@ function ButterflyLife({ props, value, option, progress }: ExperimentSceneProps)
   const marker=useRef<Group>(null),models=useRef<Group>(null);
   useFrame(()=>{const stage=props.state.experimentRun>0||props.demo?1+(value-1)*progress.current:value;if(marker.current){marker.current.position.x=(stage-2.5)*(option===0?1.45:1.15);marker.current.position.z=option===0?.42:1.35;}if(models.current)models.current.scale.setScalar((option===0?1:2)*(.86+.14*smooth(progress.current)));});
   return <group><Board width={5.9} depth={3.2}/>
-    {option===0?<group ref={models}>{[1,2,3,4].map(stage=><group key={stage} position={[(stage-2.5)*1.45,.74,0]}><ButterflyStage stage={stage} progress={progress}/><Readout text={['卵','幼虫','蛹','成虫'][stage-1]} position={[0,1.08,0]}/></group>)}</group>:<>
-      <group position={[0,1.15,0]} scale={2} ref={models}><ButterflyStage stage={value} progress={progress}/></group>
+    {option===0?<group name="study:units" ref={models}>{[1,2,3,4].map(stage=><group key={stage} position={[(stage-2.5)*1.45,.74,0]}><ButterflyStage stage={stage} progress={progress}/><Readout text={['卵','幼虫','蛹','成虫'][stage-1]} position={[0,1.08,0]}/></group>)}</group>:<>
+      <group name="study:profile" position={[0,1.15,0]} scale={2} ref={models}><ButterflyStage stage={value} progress={progress}/></group>
       {[1,2,3,4].map(stage=><group key={stage} position={[(stage-2.5)*1.15,.31,1.35]} scale={.5}><ButterflyStage stage={stage}/><Readout text={['卵','幼虫','蛹','成虫'][stage-1]} position={[0,.84,0]}/></group>)}
     </>}
     <group ref={marker} position={[(value-2.5)*(option===0?1.45:1.15),.265,option===0?.42:1.35]}><mesh rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.34,.39,40]}/><meshBasicMaterial color="#dfc486" toneMapped={false}/></mesh></group>
@@ -50,7 +50,7 @@ function FrogLife({ props, value, option, progress }: ExperimentSceneProps) {
   useFrame(()=>{const p=progress.current;if(frog.current){frog.current.position.y=.56+(value>=3?Math.abs(Math.sin(p*Math.PI*2))*.16:0);frog.current.position.z=value===2?Math.sin(p*Math.PI*3)*.23:0;}if(marker.current){const stage=props.state.experimentRun>0||props.demo?1+(value-1)*p:value;marker.current.position.x=option===1?(stage-2.5)*1.4:0;marker.current.scale.setScalar(option===1?1:1.6);}});
   return <group><Board width={5.8} depth={3.2}/>
     <mesh position={[0,.39,0]}><boxGeometry args={[5.1,.27,2.3]}/><meshPhysicalMaterial color="#649ca4" transparent opacity={.28} depthWrite={false} roughness={.15}/></mesh>
-    {option===0?<group ref={frog} position={[0,.56,0]} scale={2}><FrogModel stage={value}/></group>:<group>{[1,2,3,4].map(stage=><group key={stage} position={[(stage-2.5)*1.4,.56,0]}><FrogModel stage={stage}/><Readout text={['蛙卵','蝌蚪','幼蛙','成蛙'][stage-1]} position={[0,.85,0]}/></group>)}</group>}
+    {option===0?<group name="study:profile" ref={frog} position={[0,.56,0]} scale={2}><FrogModel stage={value}/></group>:<group>{[1,2,3,4].map(stage=><group name="study:profile" key={stage} position={[(stage-2.5)*1.4,.56,0]}><FrogModel stage={stage}/><Readout text={['蛙卵','蝌蚪','幼蛙','成蛙'][stage-1]} position={[0,.85,0]}/></group>)}</group>}
     <group ref={marker} position={[option===1?(value-2.5)*1.4:0,.56,.46]}><mesh rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.32,.37,40]}/><meshBasicMaterial color="#c7d7a1" toneMapped={false}/></mesh></group>
     <Readout text={`第 ${value} 阶段 · 幼蛙还带尾巴，成蛙不再有尾巴`} position={[0,.35,2.05]}/>
   </group>;
@@ -68,7 +68,7 @@ function FoodChain({ value, option, progress }: ExperimentSceneProps) {
       <Readout text={names[i]} position={[0,.85,0]}/></group>)}
     <group ref={stations}>{[0,1,2].map(i=><mesh key={i} position={[-1.85+i*1.85,.255,0]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.53,.565,40]}/><meshBasicMaterial color="#8fbd98" toneMapped={false}/></mesh>)}</group>
     {[0,1].map(i=><group key={i} visible={i+1<value}><EffectPath progress={progress} points={[[-1.45+i*1.85,.62,.7],[-.5+i*1.85,.62,.7]]} speed={2} radius={.023-i*.006} color="#d0c17d" strength={.6} enabled={p=>p*(value-1)>i}/><mesh position={[-.55+i*1.85,.62,.7]} rotation={[0,0,-Math.PI/2]}><coneGeometry args={[.1,.22,12]}/><meshBasicMaterial color="#d8c582" toneMapped={false}/></mesh></group>)}
-    <group ref={light} position={[-1.85,.7,.85]}><Ball color="#e6c881" scale={.07}/></group>
+    <group name="study:path" ref={light} position={[-1.85,.7,.85]}><Ball color="#e6c881" scale={.07}/></group>
     <Readout text="箭头：食物 → 取食者 · 能量不是全部传给下一环节" position={[0,.35,2.18]}/>
   </group>;
 }
@@ -77,7 +77,7 @@ function AnimalHabitats({ props, value, option, progress }: ExperimentSceneProps
   useFrame(()=>{resources.current?.children.forEach((card,i)=>{const reveal=props.state.experimentRun>0||props.demo?Math.min(1,Math.max(0,progress.current*value-i)):1;card.visible=i<value&&reveal>0;card.scale.setScalar(.65+.35*smooth(reveal));});});
   return <group><Board width={5.8} depth={3.6}/>
     {option===0?<><mesh position={[0,.3,0]} rotation={[-Math.PI/2,0,0]}><circleGeometry args={[1.25,48]}/><meshPhysicalMaterial color="#659fa8" roughness={.18}/></mesh><group position={[0,.37,0]} scale={1.6}><FrogModel/></group></>:option===1?<><Tree position={[-1.35,.24,-.5]} scale={1.2}/><Rod kind="wood" color="#8b7754" position={[0,.63,0]} rotation={[0,0,Math.PI/2]} scale={[.09,1.8,.09]}/><group position={[0,.73,0]} scale={1.35}><OwlModel/></group></>:<><group position={[0,.35,0]} scale={1.5}><RabbitModel/></group><group position={[-1.3,.3,-.4]}><Leaf/></group></>}
-    <group ref={resources}>{['食物','水','庇护','空间'].map((name,i)=><group key={name} position={[(i-1.5)*1.22,.48,1.55]}>
+    <group name="study:units" ref={resources}>{['食物','水','庇护','空间'].map((name,i)=><group key={name} position={[(i-1.5)*1.22,.48,1.55]}>
       <Cube color={['#a6bd7c','#8ebdc9','#c0a989','#abc2a4'][i]} scale={[1.04,.08,.65]}/>
       <group position={[0,.16,0]} scale={.55}>{i===0?option===2?<Leaf/>:<Grasshopper/>:i===1?<mesh rotation={[-Math.PI/2,0,0]}><circleGeometry args={[.33,24]}/><meshBasicMaterial color="#c5e0da"/></mesh>:i===2?<mesh><sphereGeometry args={[.32,20,12,0,Math.PI*2,0,Math.PI/2]}/><meshStandardMaterial color="#8e8066"/></mesh>:<mesh rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.3,.35,24]}/><meshBasicMaterial color="#547866"/></mesh>}</group>
       <Readout text={name} position={[0,.46,0]}/></group>)}</group>
@@ -91,7 +91,7 @@ function BreathingLungs({ value, option, progress }: ExperimentSceneProps) {
   return <group><Board width={4.3} depth={2.6}/>
     <mesh position={[0,1.63,-.12]}><sphereGeometry args={[1,32,24]}/><meshPhysicalMaterial color="#c2d4c8" transparent opacity={.14} depthWrite={false}/></mesh>
     <Rod color="#b9c7c0" position={[0,2.53,0]} scale={[.095,.98,.095]}/>
-    <group ref={lungs} position={[0,1.44,0]}>{[-1,1].map(side=><group key={side} position={[side*.57,0,0]}><Ball color={option===0?'#dcadab':'#c8a8a5'} scale={side<0?[.48,.77,.29]:[.43,.7,.28]}/><Wire points={[[side*-.57,.76,.05],[side*-.22,.38,.07],[0,.2,.08],[side*.16,-.05,.08]]} color="#b9ccc5" radius={.046}/></group>)}</group>
+    <group name="study:profile" ref={lungs} position={[0,1.44,0]}>{[-1,1].map(side=><group key={side} position={[side*.57,0,0]}><Ball color={option===0?'#dcadab':'#c8a8a5'} scale={side<0?[.48,.77,.29]:[.43,.7,.28]}/><Wire points={[[side*-.57,.76,.05],[side*-.22,.38,.07],[0,.2,.08],[side*.16,-.05,.08]]} color="#b9ccc5" radius={.046}/></group>)}</group>
     <AirCycleParticles progress={progress} cycles={value}/>
     <group ref={diaphragm} position={[0,.57,0]}><mesh scale={[1.25,.34,.35]}><sphereGeometry args={[1,32,16,0,Math.PI*2,0,Math.PI/2]}/><meshStandardMaterial color={option===1?'#bfa464':'#a9b0a0'} roughness={.7}/></mesh></group>
     {[-1,1].map(side=><group key={side}><EffectPath progress={progress} points={[[0,2.85,.14],[0,2.1,.14],[side*.6,1.65,.3]]} speed={value} strength={showFlow} color="#88c4d5" enabled={p=>p>0&&p<1&&p*value%1<.5}/><EffectPath progress={progress} points={[[side*.6,1.65,.3],[0,2.1,.14],[0,2.85,.14]]} speed={value} strength={showFlow} color="#c6b47b" enabled={p=>p>0&&p<1&&p*value%1>=.5}/></group>)}
@@ -103,7 +103,7 @@ function HeartbeatFlow({ value, option, progress }: ExperimentSceneProps) {
   const heart=useRef<Group>(null),valves=useRef<Group>(null);
   useFrame(()=>{const pulse=Math.sin(progress.current*value*Math.PI*2);if(heart.current){const contraction=Math.pow(Math.max(0,pulse),3);heart.current.scale.setScalar(1-.09*contraction);}valves.current?.children.forEach((leaflet,i)=>{leaflet.rotation.z=(i%2?1:-1)*(pulse>0?0:.52);});});
   return <group><Board width={5.4} depth={3}/>
-    <group ref={heart} position={[0,1.35,0]}>{[-1,1].map(side=><group key={side}><Ball color={side<0?'#9caec2':'#c99992'} position={[side*.37,.39,0]} scale={[.35,.31,.25]}/><Ball color={side<0?'#8ea4bd':'#c18583'} position={[side*.35,-.15,0]} rotation={[0,0,-side*.16]} scale={[.4,.52,.29]}/>
+    <group name="study:profile" ref={heart} position={[0,1.35,0]}>{[-1,1].map(side=><group key={side}><Ball color={side<0?'#9caec2':'#c99992'} position={[side*.37,.39,0]} scale={[.35,.31,.25]}/><Ball color={side<0?'#8ea4bd':'#c18583'} position={[side*.35,-.15,0]} rotation={[0,0,-side*.16]} scale={[.4,.52,.29]}/>
       <Readout text={side<0?'右心':'左心'} position={[side*.15,.83,0]}/></group>)}
       <group ref={valves}>{[-1,1].flatMap(side=>[-1,1].map(leaf=><group key={`${side}-${leaf}`} position={[side*.36+leaf*.19,.17,.32]}><Cube color="#e6d6a2" position={[-leaf*.095,0,0]} scale={[.19,.04,.055]}/></group>))}</group>
     </group>
@@ -129,7 +129,7 @@ function SeedDispersal({ value, option, progress }: ExperimentSceneProps) {
   const landingY=option===2?.39:.35;
   useFrame(()=>{const p=progress.current;if(seed.current){seed.current.position.set(-2.2+distance*smooth(p),2.25-(2.25-landingY)*smooth(p),Math.sin(p*Math.PI)*.12);seed.current.rotation.y=option===1?p*Math.PI*8:0;seed.current.rotation.z=option===0?Math.sin(p*Math.PI*3)*.12:0;}if(landing.current)landing.current.visible=p>.95;});
   return <group><Board width={5.7} depth={3}/><Rod color="#708b57" position={[-2.2,1.23,0]} scale={[.025,1.8,.025]}/><Ball color="#cbd4b1" position={[-2.2,2.25,0]} scale={.19}/>
-    <group ref={seed} position={[-2.2,2.25,0]}><SeedModel option={option}/></group>
+    <group name="study:path" ref={seed} position={[-2.2,2.25,0]}><SeedModel option={option}/></group>
     <EffectPath progress={progress} points={[[-2.2,2.25,.05],[-2.2+distance*.5,1.32,.13],[-2.2+distance,landingY,.05]]} color="#b9d4a0" strength={.28} radius={.013} speed={value*.4}/>
     <mesh ref={landing} position={[-2.2+distance,.25,0]} rotation={[-Math.PI/2,0,0]} visible={false}><ringGeometry args={[.18,.215,32]}/><meshBasicMaterial color="#b7d79d" toneMapped={false}/></mesh>
     {[.9,1.3].map(y=><EffectPath key={y} progress={progress} points={[[-2.8,y,.6],[2.2,y,.6]]} color="#8cbeca" strength={.18+value*.08} radius={.012} speed={value*.5}/>) }
@@ -145,7 +145,7 @@ function AnimalCamouflage({ props, value, option, progress }: ExperimentScenePro
   return <group><Board width={5.3} depth={2.7}/>
     <mesh position={[0,1.62,-.55]}><planeGeometry args={[4.9,2.65]}/><shaderMaterial ref={material} uniforms={uniforms} vertexShader="varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}" fragmentShader="uniform vec3 tint;varying vec2 vUv;void main(){float bark=sin(vUv.x*75.+sin(vUv.y*16.)*2.)*.05+sin(vUv.y*24.)*.025;gl_FragColor=vec4(tint*(.96+bark),1.);}"/></mesh>
     <FocusTarget paused={props.paused} radius={.66} color="#b9d395" position={[.65,.65,-.14]} ringPlane="front" ringPosition={[0,.5,.35]} onActivate={()=>setLocated(v=>!v)}><OwlModel color={option===0?'#b9b694':'#59604a'}/></FocusTarget>
-    <mesh ref={reveal} position={[.65,1.22,.24]} visible={false}><ringGeometry args={[.56,.585,48]}/><meshBasicMaterial color="#ded39a" transparent opacity={.8} toneMapped={false}/></mesh>
+    <mesh name="study:profile" ref={reveal} position={[.65,1.22,.24]} visible={false}><ringGeometry args={[.56,.585,48]}/><meshBasicMaterial color="#ded39a" transparent opacity={.8} toneMapped={false}/></mesh>
     <Readout text="动物颜色固定 · 点击动物查看定位圈" position={[0,.3,1.85]}/>
   </group>;
 }

@@ -1,8 +1,9 @@
+import LessonBase from './LessonBase';
 import { useLayoutEffect, useMemo, useRef, type ReactNode } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Color, MathUtils, type ShaderMaterial } from "three";
 import { getExperiment } from "../content/experiments";
-import { ToyPlatform, useSceneClock, type SceneProps } from "./shared";
+import { useSceneClock, type SceneProps } from "./shared";
 
 const subjectColors = { S: "#63c7de", T: "#79d5ad", E: "#ffbc74", A: "#ed9cb9", M: "#b7afff", B: "#73BB8C", G: "#68AACB", H: "#D1A071" };
 const vertexShader = `
@@ -56,7 +57,7 @@ export function ExperimentFrame({ props, children }: { props: SceneProps; childr
     material.current.uniforms.phase.value = clock.current * 0.65;
   });
   return <group>
-    {!specimen && <><ToyPlatform radius={3.8} color="#9da8ad" />
+    {!specimen && <><LessonBase subject={experiment.subject} radius={3.8}/>
     <mesh position={[0, -0.038, 0]} rotation={[-Math.PI / 2, 0, 0]} raycast={() => {}}>
       <planeGeometry args={[8, 8]} />
       <shaderMaterial ref={material} uniforms={uniforms} vertexShader={vertexShader} fragmentShader={fragmentShader} transparent depthWrite={false} />

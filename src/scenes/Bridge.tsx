@@ -1,3 +1,4 @@
+import LessonBase from './LessonBase';
 import { BridgeModel, ToyCar } from "./toyModels";
 import { useLayoutEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
@@ -7,7 +8,6 @@ import {
   Ball,
   Cube,
   SceneLabel,
-  ToyPlatform,
   useSceneClock,
   type SceneProps,
 } from "./shared";
@@ -57,7 +57,7 @@ export default function Bridge(props: SceneProps) {
   });
   return (
     <group>
-      <ToyPlatform radius={3.8} color="#b8bfba" />
+      <LessonBase subject="E" radius={3.8}/>
       <Cube kind="stone" color="#77878a" position={[0, 0.02, 0]} scale={[7.05, 0.08, 4.25]} />
       <Cube kind="water" color="#507c87" position={[0, 0.09, 0]} scale={[6.96, 0.1, 4.16]} />
       <WaterRipples props={props} position={[0,.149,0]} scale={[3.48,2.08,1]}/>
@@ -72,7 +72,7 @@ export default function Bridge(props: SceneProps) {
       <group ref={bridge}>
         <BridgeModel deck={deck} pier={pier} braces={braces} />
       </group>
-      <group
+      <group name="study:path"
         ref={car}
         position={[-2.7, 0.846, 0]}
       >

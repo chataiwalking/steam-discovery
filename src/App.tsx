@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useEffect, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -480,6 +480,20 @@ function Lesson({
     [hidden, setHidden] = useState(document.hidden),
     [celebrate, setCelebrate] = useState(false),
     [feedback, setFeedback] = useState("");
+  const [pinObservation, setPinObservation] = useState(true);
+  const observationRef = useRef<HTMLElement>(null);
+  const instructionRef = useRef<HTMLParagraphElement>(null);
+  const handsOn = step > 0 && !focusMode && !sceneUnavailable;
+  useLayoutEffect(() => {
+    if (!handsOn || !window.matchMedia('(max-width: 640px) and (min-height: 500px)').matches) return;
+    if (pinObservation) {
+      instructionRef.current?.focus({ preventScroll: true });
+      instructionRef.current?.scrollIntoView({ block: "start", behavior: "instant" });
+    } else {
+      observationRef.current?.scrollIntoView({ block: "start", behavior: "instant" });
+    }
+  }, [step, handsOn, pinObservation]);
+
   const experiment=getExperiment(lesson.id);
   const handleSceneUnavailable = useCallback(() => {
     setSceneUnavailable(true);
@@ -671,6 +685,7 @@ function Lesson({
           {stageLabels.map((label, i) => (
             <button
               key={label}
+              aria-current={step === i ? "step" : undefined}
               className={step === i ? "current" : step > i ? "past" : ""}
               disabled={i > step}
               onClick={() => changeStep(i)}
@@ -681,18 +696,22 @@ function Lesson({
           ))}
         </div>
       </div>
-      <div className={`lesson-workspace${focusMode ? " lesson-workspace-focus" : ""}`}>
-        <section className="experiment">
-          <div className="experiment-badges">
+      <div className={`lesson-workspace${focusMode ? " lesson-workspace-focus" : ""}`} data-pin-observation={handsOn && pinObservation}>
+        <section ref={observationRef} className="experiment">
+          <div className="experiment-badges" data-observing={(experimentBusy || carBusy) && !effectivePaused && !hidden}>
             <span>
               <span className="live-dot" />
-              {experimentBusy ? "正在观察变化" : "观察实验室"}
+              {(experimentBusy || carBusy) ? "正在观察变化" : "观察实验室"}
             </span>
             <div className="experiment-playback-tools">
+            {handsOn && <button className="pin-observation" aria-expanded={!pinObservation} aria-controls="experiment-observation"
+              onClick={() => setPinObservation(pinned => !pinned)}>
+              {pinObservation ? "展开工具" : "固定小窗"}
+            </button>}
             <button className="speed-control" aria-label="半速观察" aria-pressed={playbackRate === .5} disabled={step === 0}
               title={step === 0 ? "亲手实验时可以放慢，讲解动画跟随语音" : "放慢实验，仔细看看变化"}
               onClick={() => setPlaybackRate(rate => rate === 1 ? .5 : 1)}>{playbackRate === .5 ? "0.5× 慢速" : "1× 常速"}</button>
-            <button aria-label={focusMode ? "收起展台" : "放大展台"} aria-pressed={focusMode} onClick={() => setFocusMode(value => !value)}>
+            <button className="focus-control" aria-label={focusMode ? "收起展台" : "放大展台"} aria-pressed={focusMode} onClick={() => setFocusMode(value => !value)}>
               {focusMode ? <Minimize2 size={16}/> : <Maximize2 size={16}/>}<span>{focusMode ? "收起" : "专注"}</span>
             </button>
             <button
@@ -711,7 +730,7 @@ function Lesson({
             </button>
             </div>
           </div>
-          <div className="experiment-canvas">
+          <div className="experiment-canvas" id="experiment-observation">
             <Suspense
               fallback={
                 <div className="canvas-loading">
@@ -733,7 +752,7 @@ function Lesson({
               />
             </Suspense>
           </div>
-          <div className="scene-caption">
+          <div className="scene-caption" key={step}>
             {step === 0 ? (
               <>
                 <Volume2 size={16} />
@@ -759,7 +778,7 @@ function Lesson({
               </span>
               <div>
                 <span>小岛讲解员</span>
-                <h2>{track.steps[step].title}</h2>
+                <h2 key={step}>{track.steps[step].title}</h2>
               </div>
               <span className="step-count">0{step + 1} / 03</span>
             </div>
@@ -840,7 +859,7 @@ function Lesson({
               </div>
             ) : (
               <>
-                <p className="task-instruction">{experiment?track.steps[step].instruction:taskHint(lesson.id, age)}</p>
+                <p className="task-instruction" ref={instructionRef} tabIndex={-1} key={step}>{experiment?track.steps[step].instruction:taskHint(lesson.id, age)}</p>
                 <fieldset className="lesson-controls" disabled={sceneUnavailable} aria-label="动手实验操作">
                   {experiment&&<div className="extended-controls" data-experiment={experiment.id}>
                     <label className="experiment-parameter"><span>{experiment.parameterLabel}<output>{w.experimentValue}</output></span><input type="range" aria-label={experiment.parameterLabel} min={experiment.min} max={experiment.max} step="1" value={w.experimentValue} disabled={experimentBusy} onChange={event=>update({...w,experimentValue:Number(event.target.value)})}/></label>

@@ -31,7 +31,7 @@ export default function Globe({ angle = 0, small = false, time }: { angle?: numb
         roughness={1} envMapIntensity={.08} />
     </mesh>
     <Atmosphere strength={small?.12:.22}/>
-    {!small && <group position={[1.23, .77, 0]} rotation={[0, 0, -1.01]}>
+    {!small && <group name="study:path" position={[1.23, .77, 0]} rotation={[0, 0, -1.01]}>
       <mesh position={[0, .015, 0]} receiveShadow>
         <cylinderGeometry args={[.22, .23, .035, 40]} />
         <PhysicalMaterial kind="stone" color="#bab6a3" />

@@ -1,10 +1,11 @@
+import LessonBase from './LessonBase';
 import { ShapeToy, shapeColors } from "./toyModels";
 import {useLayoutEffect,useRef,type ReactNode} from 'react';
 import {useFrame,useThree} from '@react-three/fiber';
 import {type Group} from 'three';
 import {FocusTarget,damping} from './MathCoreEffects';
 import type { ShapeKind } from "../types";
-import { Cube, Rod, SceneLabel, ToyPlatform, useSceneClock, type SceneProps } from "./shared";
+import { Cube, Rod, SceneLabel, useSceneClock, type SceneProps } from "./shared";
 
 function MovingShape({position,children,props,radius}:{position:[number,number,number];children:ReactNode;props:SceneProps;radius:number}) {
   const group=useRef<Group>(null),initial=useRef(position),time=useSceneClock(props);
@@ -23,7 +24,7 @@ function MovingShape({position,children,props,radius}:{position:[number,number,n
     group.current.position.z+=(position[2]-group.current.position.z)*alpha;
     group.current.rotation.y=props.demo?time.current*.24:0;
   });
-  return <group ref={group} position={initial.current}><FocusTarget radius={radius} paused={props.paused} enabled={!props.demo}>{children}</FocusTarget></group>;
+  return <group name="study:profile" ref={group} position={initial.current}><FocusTarget radius={radius} paused={props.paused} enabled={!props.demo}>{children}</FocusTarget></group>;
 }
 
 export default function Shapes(props: SceneProps) {
@@ -34,7 +35,7 @@ export default function Shapes(props: SceneProps) {
   const kinds: ShapeKind[] = ["sphere", "cube", "cylinder"];
   return (
     <group>
-      <ToyPlatform radius={3.65} color="#bcc1b8" />
+      <LessonBase subject="M" radius={3.65}/>
       <Cube kind="wood" color="#8c785b" position={[0, 0.06, -0.85]} scale={[5.85, 0.12, 2.85]} />
       <Cube kind="paint" color="#788b85" position={[0, 0.13, -0.85]} scale={[5.65, 0.025, 2.65]} />
       {shapes.map((kind, i) => {
